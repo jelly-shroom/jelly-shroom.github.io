@@ -31,7 +31,9 @@
     color: var(--lightAccent);
   }
 
-  .problem strong,
+  .problem :global(strong) {
+    color: var(--darkAccent);
+  }
   .problem h2 {
     color: var(--darkAccent);
   }
@@ -55,7 +57,7 @@
     margin: auto;
   }
 
-  .solution strong,
+  .solution :global(strong),
   .solution h2 {
     color: white;
   }
