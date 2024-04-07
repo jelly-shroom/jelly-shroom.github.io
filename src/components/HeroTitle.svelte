@@ -37,14 +37,14 @@
       gap: 1.75em !important;
     }
 
-    div svg {
-      height: 50;
+    #heroTitle {
+      margin-bottom: -125px;
     }
   }
 
   @media screen and (max-width: 800px) {
-    svg {
-      height: 125;
+    #heroTitle {
+      margin-bottom: -50px;
     }
   }
 
