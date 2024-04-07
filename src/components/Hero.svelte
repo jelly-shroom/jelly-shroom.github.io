@@ -23,5 +23,13 @@
 #scaleOnScroll {
     z-index: 0;
 }
+
+@media screen and (max-width: 400px) {
+  .contents {
+    max-width: 90%;
+    top: 50%;
+    left: 15%;
+  }
+}
 </style>
 

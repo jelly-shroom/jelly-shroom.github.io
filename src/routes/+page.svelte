@@ -14,3 +14,12 @@
     <Blobs />
 </div>
 
+<style>
+    #heroWrapper {
+        height: 90%;
+        width: 100%;
+    }
+
+    
+</style>
+
