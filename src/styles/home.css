@@ -31,12 +31,12 @@
   margin-bottom: -25px;
 }
 
-.main-section h1 {
+/* .main-section h1 {
   font-family: "Kodchasan";
   font-size: 3em;
-}
+} */
 
-.main-section h2 {
+/* .main-section h2 {
   font-size: 2.5em;
   font-weight: normal;
   margin-bottom: 20px;
@@ -54,20 +54,20 @@
   display: flex;
   justify-content: space-between;
   font-size: 0.9em;
-}
+} */
 
 @media screen and (max-width: 1620px) {
-  #main-head-wrapper {
+  /* #main-head-wrapper {
     flex-direction: column !important;
     align-items: left !important;
     justify-content: left !important;
 
     gap: 1.75em !important;
-  }
+  } */
 
-  #main-head-wrapper svg {
+  /* #main-head-wrapper svg {
     height: 50;
-  }
+  } */
 }
 
 @media screen and (max-width: 800px) {
@@ -75,9 +75,9 @@
     width: 100%;
   }
 
-  #main-head-wrapper svg {
+  /* #main-head-wrapper svg {
     height: 125;
-  }
+  } */
 
   .bottomContentWrapper {
     position: relative;
@@ -90,9 +90,9 @@
 }
 
 @media screen and (max-width: 400px) {
-  .main-section h1 {
+  /* .main-section h1 {
     font-size: 2.5em;
-  }
+  } */
 
   .main-section h2 {
     font-size: 2em;

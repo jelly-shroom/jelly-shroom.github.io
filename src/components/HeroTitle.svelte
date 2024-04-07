@@ -44,4 +44,16 @@
       height: 50;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    svg {
+      height: 125;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    h1 {
+      font-size: 2.5em;
+    }
+  }
 </style>
