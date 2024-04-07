@@ -1,7 +1,6 @@
 <script>
-    import HeroDetails from "./HeroDetails.svelte";
-    import HeroTitle from "./HeroTitle.svelte";
-  
+  import HeroDetails from "./HeroDetails.svelte";
+  import HeroTitle from "./HeroTitle.svelte";
 </script>
 
 <div class="contents" id="scaleOnScroll">
@@ -10,7 +9,7 @@
 </div>
 
 <style>
-    .contents {
+  .contents {
     z-index: 0;
     top: 45%;
     left: 20%;
@@ -18,18 +17,17 @@
     max-width: 60%;
 
     position: fixed;
-    }
-
-#scaleOnScroll {
-    z-index: 0;
-}
-
-@media screen and (max-width: 400px) {
-  .contents {
-    max-width: 90%;
-    top: 50%;
-    left: 15%;
   }
-}
-</style>
 
+  #scaleOnScroll {
+    z-index: 0;
+  }
+
+  @media screen and (max-width: 400px) {
+    .contents {
+      max-width: 90%;
+      top: 50%;
+      left: 15%;
+    }
+  }
+</style>

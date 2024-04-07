@@ -75,6 +75,35 @@
     animation: move infinite alternate;
   }
 
+  .blob-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    background-color: #ddffea;
+  }
+
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, #abbeb1, #a9b1aa);
+    animation: moveBlob 60s infinite ease-in-out alternate;
+
+    filter: blur(70px);
+  }
+
+  @keyframes moveBlob {
+    0% {
+      transform: translate(var(--start-x), var(--start-y));
+    }
+    100% {
+      transform: translate(var(--end-x), var(--end-y));
+    }
+  }
+
   @keyframes move {
     0% {
       transform: translate(var(--start-x), var(--start-y));
