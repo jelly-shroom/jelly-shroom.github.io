@@ -27,6 +27,8 @@ body {
     margin-right: auto;
     padding-top: 125px;
     padding-bottom: 125px;
+    padding-right: 10%;
+    padding-left: 10%;
   
     width: 100%;
     height: auto;
@@ -45,6 +47,8 @@ a huge gap at the top. only difference is padding-top value */
     margin-right: auto;
     padding-top: 0;
     padding-bottom: 125px;
+    padding-right: 5%;
+    padding-left: 5%;
   
     width: 100%;
     height: auto;

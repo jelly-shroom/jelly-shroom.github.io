@@ -17,6 +17,9 @@ const featuredProjects = ["dr-trust", "digisense"];
     <Blobs client:load />
   </div>
   <ProjectList>
+    <div>
+      <h1>featured projects</h1>
+    </div>
     {
       featuredProjects.map(async (slug) => {
         const project = await getEntry("projects", slug);

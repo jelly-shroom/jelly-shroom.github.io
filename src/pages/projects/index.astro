@@ -13,16 +13,18 @@ const projects: CollectionEntry<"projects">[] = (
 ---
 
 <Site>
-  <ProjectList>
-    {
-      projects.map((project) => (
-        <ProjectItem
-          project={{
-            slug: project.slug,
-            ...project.data,
-          }}
-        />
-      ))
-    }
-  </ProjectList>
+  <div class="glass-bg">
+    <ProjectList>
+      {
+        projects.map((project) => (
+          <ProjectItem
+            project={{
+              slug: project.slug,
+              ...project.data,
+            }}
+          />
+        ))
+      }
+    </ProjectList>
+  </div>
 </Site>
