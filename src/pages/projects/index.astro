@@ -1,4 +1,16 @@
 ---
-import ProjectList from "../../components/ProjectList.svelte";
+import ProjectList from "../../components/ProjectList.astro";
 import ProjectItem from "../../components/ProjectItem.svelte";
+
+import Site from "../../layouts/Site.astro";
+
+import { getCollection, type CollectionEntry } from "astro:content";
+
+const projects: CollectionEntry<"projects">[] = await getCollection("projects");
 ---
+
+<Site>
+  <ProjectList>
+    {projects.map((project) => <ProjectItem project={project.data} />)}
+  </ProjectList>
+</Site>
