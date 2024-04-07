@@ -9,5 +9,8 @@
 </script>
 
 <Navbar />
-<Hero />
-<Blobs />
+<div id="heroWrapper">
+    <Hero />
+    <Blobs />
+</div>
+

@@ -1,4 +1,4 @@
-<div>
+<div id="heroTitle">
   <h1>hi! i'm jessica, and i design</h1>
 
   <div class="text"></div>
@@ -19,9 +19,17 @@
 </div>
 
 <style>
-  div {
+  #heroTitle {
     height: 90%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: fixed;
+    top: fixed;
+
+    gap: 20px;
+    margin-bottom: -25px;
 
     font-family: "Kodchasan", sans-serif;
   }

@@ -33,5 +33,22 @@ ul {
     font-size: 0.9em;
 }
 
+@media screen and (max-width: 800px) {
+    ul {
+        display: none;
+    }
+
+    div {
+        position: relative;
+        top: -75px !important;  
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h2 {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+}
 
 </style>
