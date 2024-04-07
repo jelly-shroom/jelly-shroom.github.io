@@ -18,9 +18,7 @@
   <div>
     {#each links as link, index}
       <a href={link}>
-        <p>
-          {buttonText[index]}
-        </p>
+        {buttonText[index]}
       </a>
     {/each}
   </div>
@@ -50,6 +48,8 @@
   }
 
   a {
+    background-color: aqua;
+
     display: inline-block;
 
     font-family: "Sono";
