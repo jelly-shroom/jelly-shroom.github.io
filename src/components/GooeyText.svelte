@@ -100,4 +100,22 @@
   @keyframes items-even {
     @include keyframes(0);
   }
+
+  @media screen and (max-width: 1620px) {
+    .text {
+      left: -48.5% !important;
+      width: 200px !important;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .text {
+      left: -48.5% !important;
+      width: 200px !important;
+    }
+
+    body {
+      --scale: 0.085;
+    }
+  }
 </style>
