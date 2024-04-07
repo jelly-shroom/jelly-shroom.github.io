@@ -63,7 +63,7 @@
     margin-top: 5px;
   }
 
-  div > strong {
-    color: white;
+  div :global(strong) {
+    color: var(--darkAccent);
   }
 </style>
