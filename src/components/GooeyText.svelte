@@ -114,7 +114,7 @@
       width: 200px !important;
     }
 
-    body {
+    div {
       --scale: 0.085;
     }
   }
