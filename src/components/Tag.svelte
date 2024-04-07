@@ -1,8 +1,9 @@
 <script lang="ts">
   export let tag: string;
+  export let tagType: string = "tagsWhite";
 </script>
 
-<div class="tags">
+<div class={tagType}>
   {#if tag.startsWith("<Award/>")}
     <svg
       width="24"
@@ -22,7 +23,7 @@
 </div>
 
 <style>
-  .tags {
+  .tagsWhite {
     height: 40px;
     display: flex;
     align-items: center;
@@ -34,9 +35,13 @@
 
     font-family: "Sono";
     font-size: 14px;
+
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.3);
   }
 
-  .tags svg {
+  .tagsWhite svg {
     margin-left: -5px;
     margin-right: 5px;
 
@@ -44,5 +49,35 @@
     width: auto;
 
     fill: white;
+  }
+
+  .tagsGreen {
+    display: flex;
+    height: 40px;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 100px;
+    border: 1px solid var(--darkAccent);
+
+    color: var(--darkAccent);
+    font-family: "Sono";
+    font-weight: 500;
+    font-size: 14px;
+
+    text-transform: lowercase;
+    text-align: center;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tagsGreen svg {
+    margin-left: -5px;
+    margin-right: 5px;
+
+    height: 20px;
+    width: auto;
+    fill: var(--darkAccent);
   }
 </style>

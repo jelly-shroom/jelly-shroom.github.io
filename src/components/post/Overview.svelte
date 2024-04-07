@@ -1,12 +1,12 @@
 <script lang="ts">
+  import Tag from "../Tag.svelte";
+
   export let year: string;
   export let tags: string[];
 </script>
 
 <div>
-  <h1>
-    <slot name="header" />
-  </h1>
+  <slot name="header" />
   <h3>
     {year}
   </h3>
@@ -17,13 +17,15 @@
     <h2>Overview</h2>
   </div>
   <div class="bodyColumn">
-    <p>
-      <slot />
-    </p>
+    <div>
+      <slot name="overviewDescription" />
+    </div>
+
+    <br />
 
     <div class="tagContainer">
       {#each tags as tag}
-        <div class="tags">{tag}</div>
+        <Tag {tag} tagType="tagsGreen" />
       {/each}
     </div>
   </div>
@@ -41,33 +43,27 @@
     margin-top: 20px;
   }
 
-  .tags {
+  .columnContainer {
     display: flex;
-    height: 40px;
-    padding: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
-    border-radius: 100px;
-    border: 1px solid var(--darkAccent);
-
-    color: var(--darkAccent);
-    font-family: "Sono";
-    font-weight: 500;
-    font-size: 14px;
-
-    text-transform: lowercase;
-    text-align: center;
-
-    align-items: center;
-    justify-content: center;
+    /* justify-content: space-between; */
+    gap: 5%;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 
-  .tags svg {
-    margin-left: -5px;
-    margin-right: 5px;
+  .headColumn {
+    width: 25%;
+  }
 
-    height: 20px;
-    width: auto;
-    fill: var(--darkAccent);
+  .bodyColumn {
+    width: 65%;
+  }
+
+  .bodyColumn div {
+    margin-top: 5px;
+  }
+
+  strong {
+    color: white;
   }
 </style>

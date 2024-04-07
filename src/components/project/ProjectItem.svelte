@@ -44,16 +44,6 @@
     margin: 30px;
   }
 
-  .tagContainer .tags {
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    color: white;
-    background-color: rgba(255, 255, 255, 0.3);
-    text-transform: lowercase;
-
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-  }
-
   .portfolio-item {
     border-radius: 25px;
     overflow: hidden;

@@ -1,23 +1,21 @@
-<script lang="ts">
-  export let statements: {
-    problem: string;
-    solution: string;
-  };
-  const { problem, solution } = statements;
-</script>
-
 <div class="columnContainer">
   <div class="problem">
     <h2>Problem</h2>
-    <p>{problem}</p>
+    <slot name="problem" />
   </div>
   <div class="solution">
     <h2>Solution</h2>
-    <p>{solution}</p>
+    <slot name="solution" />
   </div>
 </div>
 
 <style>
+  .columnContainer {
+    display: flex;
+    gap: 5%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
   .problem {
     border: 1px solid var(--darkAccent);
     border-radius: 25px;
