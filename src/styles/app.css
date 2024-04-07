@@ -1,0 +1,190 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  background-color: #ddffea;
+
+  --nav-height: 75px;
+  --lightAccent: #5f9e83;
+  --darkAccent: #2e8b57;
+  --body-background: #ddffea;
+  --productFinalBackground: #d3ebda;
+}
+
+.glass-bg {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 125px;
+    padding-bottom: 125px;
+  
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+  }
+
+/* needed for individual projects without the div class = imgBanner so it doesn't have 
+a huge gap at the top. only difference is padding-top value */
+  .glass-bgImg {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0;
+    padding-bottom: 125px;
+  
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .glass-full {
+    overflow-y: visible;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+  
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -50px;
+  
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 125px;
+    border-radius: 40px 40px 0px 0px;
+  
+    width: 80%;
+  }
+
+
+
+  .button {
+    display: inline-block;
+  
+    font-family: "Sono";
+    font-weight: 500;
+    font-size: 0.9em;
+    text-transform: lowercase;
+  
+    background-color: var(--lightAccent);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+  
+    transition: 0.25s;
+  }
+  
+  .button:hover {
+    background-color: var(--darkAccent);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  @keyframes blurTransitionIn {
+    from {
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+    }
+  
+    to {
+      backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(0px);
+    }
+  }
+  
+  @keyframes blurTransitionOut {
+    from {
+      backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(0px);
+    }
+  
+    to {
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+    }
+  }
+  
+  @keyframes fadeTransitionIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeTransitionOut {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  #transitionOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure it's above other content */
+    pointer-events: none; /* Allow interaction with elements below */
+    animation: blurTransitionIn 1s ease-in-out forwards;
+  }
+  
+  #container {
+    max-width: 100%;
+    animation: fadeTransitionIn 1s ease-out;
+  }
+  
+  .externalLink {
+    color: var(--darkAccent);
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    max-width: 100%;
+  }
+  
+  .flex div {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .flex div img {
+    width: 100%;
+    height: 100%;
+  
+    object-fit: cover;
+    overflow: hidden;
+  }
