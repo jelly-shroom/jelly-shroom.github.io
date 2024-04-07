@@ -1,54 +1,8 @@
-<div class="portfolio">
-  <div>
-    <h1>featured projects</h1>
-  </div>
-
-  <div class="column-contents">
-    <slot />
-  </div>
-  <!-- portfolio content end-->
-  <div class="buttonWrapper">
-    <a class="button" href="jessicasheng-portfolio.html">view all projects</a>
-  </div>
+<div class="column-contents">
+  <slot />
 </div>
 
 <style>
-  .buttonWrapper {
-    padding: 20px;
-  }
-
-  .portfolio .button {
-    font-family: "Sono";
-    font-size: 14px;
-    text-transform: lowercase;
-    color: var(--lightAccent);
-
-    background: rgba(248, 255, 249, 0.3);
-    /* background: var(--lightAccent); */
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-
-    border-radius: 10px;
-    padding: auto;
-
-    cursor: pointer;
-
-    position: relative;
-
-    left: 50%;
-    transform: translate(-50%, 0%);
-
-    transition: 0.25s;
-  }
-
-  .portfolio .button:hover {
-    transform: translate(-50%, -3px) scale(1.005);
-    background: var(--darkAccent);
-    border: 1px solid var(--darkAccent);
-    color: #fff;
-  }
   .column-contents {
     display: grid;
     margin-bottom: 50px;
@@ -60,13 +14,5 @@
     gap: 30px;
 
     /* justify-content: center; */
-  }
-
-  .portfolio h1 {
-    font-family: "Kodchasan";
-    font-weight: 700;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    font-size: 1.25em;
   }
 </style>

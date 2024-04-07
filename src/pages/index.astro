@@ -6,6 +6,9 @@ import Blobs from "../components/Blobs.svelte";
 
 import ProjectItem from "../components/project/ProjectItem.svelte";
 import ProjectList from "../components/project/ProjectList.astro";
+import ViewProjectsButton from "../components/project/ViewProjectsButton.astro";
+
+import Footer from "../components/Footer.astro";
 
 import { getEntry } from "astro:content";
 const featuredProjects = ["dr-trust", "digisense"];
@@ -16,24 +19,36 @@ const featuredProjects = ["dr-trust", "digisense"];
     <Hero client:load />
     <Blobs client:load />
   </div>
-  <ProjectList>
+  <div class="glass-full">
     <div>
-      <h1>featured projects</h1>
+      <h1 id="featured-title">featured projects</h1>
     </div>
-    {
-      featuredProjects.map(async (slug) => {
-        const project = await getEntry("projects", slug);
-        if (!project) return null;
-        return <ProjectItem project={{ slug, ...project.data }} />;
-      })
-    }
-  </ProjectList>
-
-  <style>
-    #heroWrapper {
-      position: relative;
-      height: 90vh;
-      width: 100%;
-    }
-  </style>
+    <ProjectList>
+      {
+        featuredProjects.map(async (slug) => {
+          const project = await getEntry("projects", slug);
+          if (!project) return null;
+          return <ProjectItem project={{ slug, ...project.data }} />;
+        })
+      }
+    </ProjectList>
+    <ViewProjectsButton />
+    <Footer />
+  </div>
 </Site>
+
+<style>
+  #heroWrapper {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+  }
+
+  #featured-title {
+    font-family: "Kodchasan";
+    font-weight: 700;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 1.25em;
+  }
+</style>

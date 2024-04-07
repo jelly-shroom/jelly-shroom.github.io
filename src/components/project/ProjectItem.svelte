@@ -6,10 +6,10 @@
     tags: string[];
     slug: string;
   };
-  const { image, title, tags, description } = project;
+  const { image, title, tags, description, slug } = project;
 </script>
 
-<a href="dr_trust.html" class="portfolio-item">
+<a href={`projects/${slug}`} class="portfolio-item">
   <img src={image.src} alt="Dr. Trust" class="cover-image" />
   <div class="tagContainer">
     {#each tags as tag}

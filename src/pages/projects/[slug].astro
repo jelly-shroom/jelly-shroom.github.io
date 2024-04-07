@@ -1,0 +1,19 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import Site from "../../layouts/Site.astro";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((post) => ({ params: { slug: post.slug } }));
+}
+
+const { slug } = Astro.params;
+const project = await getEntry("projects", slug);
+const { Content } = await project.render();
+---
+
+<Site>
+  <div class="glass-bg">
+    <Content />
+  </div>
+</Site>

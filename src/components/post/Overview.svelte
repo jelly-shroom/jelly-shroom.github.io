@@ -1,11 +1,8 @@
 <script lang="ts">
-  export let overview: {
-    heading: string;
-    year: string;
-    description: string;
-    tags: string[];
-  };
-  const { heading, year, description, tags } = overview;
+  export let heading: string;
+  export let year: string;
+  export let description: string;
+  export let tags: string[];
 </script>
 
 <div>
