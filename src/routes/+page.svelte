@@ -1,2 +1,9 @@
-<h1>hello!!</h1>
-<p>i am jessica shengs super cool website</p>
+<script>
+    import Navbar from '../components/Navbar.svelte';
+    import Hero from '../components/Hero.svelte';
+    import Blobs from '../components/Blobs.svelte';
+</script>
+
+<Navbar />
+<Hero />
+<Blobs />
