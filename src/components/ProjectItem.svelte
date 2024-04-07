@@ -3,14 +3,11 @@
   export let tags = "Tags";
   export let header = "Header";
   export let description = "Description";
+  export let image: any;
 </script>
 
 <a href="dr_trust.html" class="portfolio-item">
-  <img
-    src="../resources/images/covers/Dr_Trust.jpg"
-    alt="Dr. Trust"
-    class="cover-image"
-  />
+  <img src={image} alt="Dr. Trust" class="cover-image" />
   <div class="tagContainer">
     <div class="tags">
       <svg
@@ -40,59 +37,6 @@
 </a>
 
 <style>
-  /* create margin for full width glass bg */
-  .portfolioContents {
-    width: 80%;
-    margin: auto;
-  }
-
-  /*start display of portfolio items, necessary for filters*/
-  .displayNone {
-    display: none;
-  }
-
-  #filterContainer {
-    display: flex;
-    justify-content: left;
-    gap: 20px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
-  .filters {
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 100px;
-
-    font-family: "Sono";
-    font-size: 14px;
-
-    border: 1px solid var(--lightAccent);
-    color: var(--lightAccent);
-    background-color: rgba(255, 255, 255, 0.3);
-
-    cursor: pointer;
-
-    transition: 0.25s;
-  }
-
-  .filters:hover {
-    border: 1px solid var(--lightAccent);
-    color: white;
-    background-color: var(--lightAccent);
-  }
-
-  .filters.active {
-    border: 1px solid var(--darkAccent);
-    color: white;
-    background-color: var(--darkAccent);
-  }
-
   .tagContainer {
     display: flex;
     pointer-events: none;
@@ -140,20 +84,6 @@
 
     fill: white;
   }
-
-  .column-contents {
-    display: grid;
-    margin-bottom: 50px;
-
-    /* grid-auto-columns: minmax(300px, auto);
-    grid-auto-rows: minmax(300px, auto); */
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-flow: dense; /* don't forget this */
-    gap: 30px;
-
-    /* justify-content: center; */
-  }
-
   .portfolio-item {
     border-radius: 25px;
     overflow: hidden;
@@ -200,10 +130,6 @@
     transition: 0.25s;
   }
 
-  .portfolio-item .description strong {
-    color: white;
-  }
-
   .portfolio-item .description h2 {
     color: white;
     font-family: "Kodchasan";
@@ -238,106 +164,14 @@
   }
 
   /*for the button on homepage portfolio*/
-  .buttonWrapper {
-    padding: 20px;
-  }
-
-  .portfolio .button {
-    font-family: "Sono";
-    font-size: 14px;
-    text-transform: lowercase;
-    color: var(--lightAccent);
-
-    background: rgba(248, 255, 249, 0.3);
-    /* background: var(--lightAccent); */
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-
-    border-radius: 10px;
-    padding: auto;
-
-    cursor: pointer;
-
-    position: relative;
-
-    left: 50%;
-    transform: translate(-50%, 0%);
-
-    transition: 0.25s;
-  }
-
-  .portfolio .button:hover {
-    transform: translate(-50%, -3px) scale(1.005);
-    background: var(--darkAccent);
-    border: 1px solid var(--darkAccent);
-    color: #fff;
-  }
-
-  .portfolio {
-    margin: 0px;
-  }
-
-  .portfolio h1,
-  .portfolioContents h1 {
-    font-family: "Kodchasan";
-    font-weight: 700;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    font-size: 1.25em;
-  }
-
-  .phoneDescription,
-  .phoneTagContainer,
-  .projectWrapperForPhone {
-    display: none;
-  }
 
   @media screen and (max-width: 800px) {
-    .portfolioContents {
-      width: 90%;
-    }
-
     .portfolio-item .description {
       width: 90%;
-    }
-
-    .portfolio h1,
-    .portfolioContents h1 {
-      margin-top: 40px;
-      margin-bottom: 30px;
-    }
-
-    .column-contents {
-      display: grid;
-      margin-bottom: 50px;
-
-      grid-template-columns: repeat(1, 1fr);
-      grid-auto-flow: dense;
-      gap: 30px;
-    }
-
-    #filterContainer {
-      flex-wrap: wrap;
     }
   }
 
   @media screen and (max-width: 400px) {
-    .column-contents a {
-      display: none;
-    }
-
-    .projectWrapperForPhone {
-      display: flex;
-      flex-direction: column;
-
-      margin-bottom: 50px;
-    }
-
-    .column-contents .projectWrapperForPhone a {
-      display: block;
-    }
     .portfolio-item .description,
     .tagContainer {
       display: none;
@@ -345,26 +179,6 @@
 
     .portfolio-item:hover .cover-image {
       filter: none;
-    }
-
-    .phoneDescription,
-    .phoneTagContainer {
-      display: block;
-    }
-
-    .phoneDescription {
-      font-family: "Kodchasan" !important;
-      font-size: 1em;
-    }
-
-    .phoneTagContainer {
-      display: flex;
-      flex-wrap: wrap;
-      float: left;
-      gap: 10px;
-
-      margin-top: 20px;
-      margin-bottom: 20px;
     }
 
     .tags {

@@ -7,6 +7,10 @@
   import "../styles/home.css";
   import "../styles/fonts.css";
   import ProjectItem from "../components/ProjectItem.svelte";
+
+  import DrTrust from "../images/covers/Dr_Trust.jpg";
+  import DigiSense from "../images/covers/DigiSense.jpg";
+  import ProjectList from "../components/ProjectList.svelte";
 </script>
 
 <Navbar />
@@ -16,36 +20,26 @@
     <Blobs />
   </div>
   <div class="glass-full">
-    <div class="portfolio">
-      <div>
-        <h1>featured projects</h1>
-      </div>
+    <ProjectList>
+      <ProjectItem
+        image={DrTrust}
+        title="MIT Reality Hack 2024 - Winner"
+        tags="spatial design"
+        header="Facilitating medical conversations through mixed reality collaboration"
+        description="In a world with deep patient distrust and misunderstanding, Dr. Trust
+        allows doctors to <strong>educate and reassure</strong>
+        patients through clear <strong>visualizations</strong> of medical issues and
+        how they can be treated."
+      />
 
-      <div class="column-contents">
-        <ProjectItem
-          title="MIT Reality Hack 2024 - Winner"
-          tags="spatial design"
-          header="Facilitating medical conversations through mixed reality collaboration"
-          description="In a world with deep patient distrust and misunderstanding, Dr. Trust
-          allows doctors to <strong>educate and reassure</strong>
-          patients through clear <strong>visualizations</strong> of medical issues and
-          how they can be treated."
-        />
-
-        <ProjectItem
-          title="Fostering time awareness and numerical understanding within dyscalculic children"
-          tags="product design, ui design"
-          header="Fostering time awareness and numerical understanding within dyscalculic children"
-          description="Dyscalculia is a condition that impairs people's grasps of fundamental math concepts and their <strong>sense of time</strong>. DigiSense bridges the gap between <strong>abstract concepts and real-world experiences</strong>."
-        />
-      </div>
-      <!-- portfolio content end-->
-      <div class="buttonWrapper">
-        <a class="button" href="jessicasheng-portfolio.html"
-          >view all projects</a
-        >
-      </div>
-    </div>
+      <ProjectItem
+        image={DigiSense}
+        title="Fostering time awareness and numerical understanding within dyscalculic children"
+        tags="product design, ui design"
+        header="Fostering time awareness and numerical understanding within dyscalculic children"
+        description="Dyscalculia is a condition that impairs people's grasps of fundamental math concepts and their <strong>sense of time</strong>. DigiSense bridges the gap between <strong>abstract concepts and real-world experiences</strong>."
+      />
+    </ProjectList>
     <!-- portfolio end-->
 
     <div class="callToAction">
