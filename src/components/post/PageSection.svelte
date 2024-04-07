@@ -1,10 +1,6 @@
-<script lang="ts">
-  export let sectionTitle: string;
-</script>
-
 <div class="columnContainer">
   <div class="headColumn">
-    <h2>{sectionTitle}</h2>
+    <slot name="sectionTitle" />
   </div>
 
   <div class="bodyColumn">

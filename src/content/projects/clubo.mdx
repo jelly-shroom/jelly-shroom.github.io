@@ -6,3 +6,232 @@ image: "../../images/covers/Clu-Bo.jpg"
 alt: "Clu-Bo"
 date: "1/1/2022"
 ---
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import Display from "../../images/cluBo/cluWithChild.jpg";
+import CompetitiveMatrix from "../../images/cluBo/Competition analysis 4x4 Matrix.png";
+import CompetitiveChart from "../../images/cluBo/Competitive Analysis Chart.png";
+import UISketches from "../../images/cluBo/controllerSketches.jpg";
+import CoverImage from "../../images/cluBo/coverImage_CluBo.jpg";
+
+import GroupPhoto1 from "../../images/drTrust/gallery_group2.jpg";
+import XReal from "../../images/drTrust/gallery_groupXReal.jpg";
+import Quest3 from "../../images/drTrust/gallery_prize.jpg";
+import BostonCommon from "../../images/drTrust/gallery_bostonCommon.jpg";
+import Multiplayer from "../../images/drTrust/gallery_multiplayerworking.jpg";
+import Lunch from "../../images/drTrust/gallery_groupLunch.jpg";
+import Umbrella from "../../images/drTrust/gallery_groupUmbrella.jpg";
+import Hacking from "../../images/drTrust/gallery_HACKING.jpg";
+
+import Overview from "../../components/post/Overview.svelte";
+import ProblemSolutionStatement from "../../components/post/ProblemSolutionStatement.svelte";
+import PageSection from "../../components/post/PageSection.svelte";
+import Gallery from "../../components/post/Gallery.svelte";
+import LinkToLive from "../../components/post/LinkToLive.svelte";
+import PhotoGallery from "../../components/post/PhotoGallery.svelte";
+
+<Overview
+  year="2024"
+  tags={["<Award/> Best use of Bezi", "duration - 2.5 days", "team size - 5", "tools - blender, bezi, unity", "role - 3d artist, spatial designer"]}
+>
+
+<h1 slot="header">
+  <span style="color: var(--darkAccent)">Dr. Trust</span> is a collaborative
+  mixed reality platform that facilitates difficult medical conversations
+  through 3D visualizations.
+</h1>
+<div slot="overviewDescription">
+  <p>
+    This was a project borne out of the <strong>MIT Reality Hack 2024</strong>{" "}
+    hackathon, where our team envisioned a more{" "}
+    <strong>connected future</strong> between patients and doctors. We
+    recognized there was a pervasive fear and mistrust of doctors that stemmed
+    from a <strong>lack of transparency</strong>, and we saw immersive
+    technology as a tool to bridge that gap.
+  </p>
+  <br />
+  <p>
+    For this hackathon, we focused on designing an experience for the{" "}
+    <strong>pre-surgery consultation</strong> of a{" "}
+    <strong>lung removal surgery</strong>.
+  </p>
+</div>
+
+</Overview>
+
+<ProblemSolutionStatement>
+  <p slot='problem'>
+    Just one medical horror story is enough to deter many of us from seeking critical medical care.
+    Up to <strong>92%</strong> of patients experience <strong>anxiety and doubt</strong> before going under an operation, and 
+    the most impactful stressor is psychological: <strong>patient mistrust of doctors</strong>. When patients don't trust their medical professionals, 
+    they end up refusing life-saving care.
+  </p>
+
+  <p slot="solution">
+    Dr. Trust allows doctors to <strong>educate and reassure</strong> patients by generating 
+    3D visualizations from their medical scans to provide an accurate representation
+    of their current condition. Both doctors and patients can interact with this model to call attention to specific areas, allowing 
+    patients to clearly <strong>understand their diagnosis and treatment options</strong>.
+  </p>
+</ProblemSolutionStatement>
+
+<PageSection>
+  <h2 slot="sectionTitle">Research</h2>
+  <p slot="description">
+    The majority of XR software in the medical field is tailored for medical
+    professionals and lacks <strong>patient-oriented design</strong>. Thousands
+    of horrendous medical stories are shared on social media platforms, and the
+    fear of becoming one of these stories is enough to deter many from seeking
+    proper medical care. This feeds into the prevalent <strong>mistrust</strong>
+    of medical professionals. With a few hours of research, we found that by 
+    <a class="externalLink" href="https://pubmed.ncbi.nlm.nih.gov/15122417/" target="_blank">providing more information</a>
+    to patients, we can <strong>reduce their anxiety</strong>
+    and <strong>increase their trust</strong> in their doctors.
+  </p>
+</PageSection>
+
+<PageSection>
+  <h2 slot="sectionTitle">Process</h2>
+  <p slot="description">
+    I mainly worked on the 3D visualizations of the program, working in{" "}
+    <strong>Blender</strong> to model and texture all the assets, and then
+    importing them into <strong>Bezi</strong> to prototype the spatial design
+    and interactions.
+  </p>
+</PageSection>
+
+<Gallery
+  imgSrc={[
+    BlenderViewport.src,
+    BeziViewport.src,
+    BeziStates.src,
+    LungRemoval.src,
+    LungExamine.src,
+  ]}
+  alt={[
+    "Blender viewport",
+    "Bezi viewport",
+    "Bezi states",
+    "Lung removal",
+    "Lung examine",
+  ]}
+  uniqueID={["blenderViewport"]}
+></Gallery>
+
+<LinkToLive
+  links={[
+    "https://devpost.com/software/dr-trust",
+    "https://codeberg.org/reality-hack-2024/DoctorTurst",
+  ]}
+  buttonText={[`view project on devpost >`, `try it out on codeberg >`]}
+>
+  <h2 slot="header">Next steps</h2>
+  <p slot="body">
+    Our vision for Dr. Trust extends beyond pre-surgery consultations. Providing
+    patients with a visual representation of their current condition is an
+    incredibly powerful experience, and that can be expanded to{" "}
+    <strong>all medical diagnoses</strong>. By expanding our application to
+    encompass a wide range of medical conditions and procedures, Dr. Trust
+    empowers patients with greater <strong>understanding and agency</strong> in
+    their healthcare journey.
+  </p>
+</LinkToLive>
+
+<PageSection>
+<h2 slot="sectionTitle">Reflections</h2>
+  <div  slot="description">
+      <h3>Things don't always go as planned.</h3>
+        <p>
+            Even after setting up our project’s real-time collaboration to work seamlessly when we tried it out, there was a lot of <strong>lag or even disconnection</strong>
+            when we ran it for judges while everyone was also on WiFi. However, we were able to pull through and present our project to the best of our abilities
+            given the circumstances.
+        </p>
+        <br />
+        <p>
+            Each one of us naturally fell into a role in an attempt to keep things afloat: <strong>Steven</strong> was on maintenance, getting the judge's headset to connect properly
+            after each use, <strong>Amanda</strong> was guiding the demo when it did work, <strong>Vikram</strong> and <strong>Coco</strong> pitched to the judges while maintenance was happening, and I fell into 
+            the role of being the <strong>line of communication</strong> between the pitchers and maintenance, hustling back and forth to make sure everyone was on the same page.
+        </p>
+
+        <br /><br />
+
+          <h3>Don't be shy to explore new territories!</h3>
+          <p>
+              While I didn't get the chance to step into an entirely foreign role during the hackathon like some of my other teammates, I was still able to
+              <strong>explore a new software</strong> and learn how to prototype spatial designs, behaviors, and interactions within <strong>Bezi</strong>.
+              Working with a software that is still in its beta version came with its own set of challenges, but the experience of figuring out why
+              something was behaving a certain way and finding workarounds to bugs was incredibly rewarding -
+              special thanks to <strong>Julian Park</strong> and <strong>Daniel Marqusee</strong> for helping us troubleshoot!
+          </p>
+          <br />
+          <p>
+              Even though this was my first hackathon, I can already see how easy it is to fall into the trap of sticking to the same
+              <strong>familiar roles</strong> every time. I'm grateful for the opportunity to have explored something new, and
+              moving forward, I hope to <strong>push myself even further</strong> out of my comfort zone. Maybe I'll even be a dev next time around :)
+          </p>
+
+          <br /><br />
+
+          <h3>It's all about having fun.</h3>
+          <p>
+              I like to approach each new experience with a sense of <strong>curiosity and enthusiasm</strong>, and this hackathon was no exception.
+              It's natural to feel a little scared or overwhelmed when you're trying something new, but it can be equally as exciting
+              to discover what these new experiences have to offer. Setting foot into MIT and meeting all these industry leaders, PhD students,
+              working professionals, and others from vastly different backgrounds was an incredibly <strong>intimidating but exciting</strong> experience.
+          </p>
+          <br />
+          <p>
+              I experienced some of the best teamwork and dynamics with my team, <strong>"4 Trojans + 1 Tree"</strong>,
+              and I have made some of my most favorite memories with them. Within the span of just 5 days (2.5 days of hacking!), we went from being
+              <strong>strangers to friends</strong> who have known each other for a lifetime. There wasn't a single moment where I felt
+              overwhelmed or stressed out during the hack, even through the all nighters and mind numbing bugs, simply because I had so much
+              <strong>fun</strong> working with them.
+          </p>
+          </div>
+
+</PageSection>
+<br /><br /><br /><br /><br />
+<PhotoGallery
+  imgSrc={[
+    GroupPhoto1.src,
+    XReal.src,
+    Quest3.src,
+    BostonCommon.src,
+    Multiplayer.src,
+    Lunch.src,
+    Umbrella.src,
+    Hacking.src,
+  ]}
+  alt={[
+    "Group photo",
+    "XReal",
+    "Quest 3",
+    "Boston Common",
+    "Multiplayer working",
+    "Group lunch",
+    "Group umbrella",
+    "Hacking",
+  ]}
+  imgCaption={[
+    "first day of the hackathon!",
+    "we got to try on xreal's air 2 ultra glasses :0",
+    'we won quest 3s as a prize for the "best use of bezi"!',
+    "we took the chance to visit boston common, the oldest park in america, right before our flight back!",
+    "caught the moment our devs finally got multiplayer working on the quest!",
+    "celebrating the end of the hackathon with a group lunch in chinatown <3",
+    "we went out for dessert after the hackathon to celebrate, and it started snowing (my first time seeing snowfall!)",
+    "Coco's drawing of us <3",
+  ]}
+  uniqueID={[
+    "",
+    "",
+    "",
+    "marginBottom",
+    "verticalImgLeft",
+    "",
+    "verticalImgRight",
+    "HACKING",
+  ]}
+></PhotoGallery>

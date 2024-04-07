@@ -77,27 +77,23 @@ import PhotoGallery from "../../components/post/PhotoGallery.svelte";
   </p>
 </ProblemSolutionStatement>
 
-<PageSection sectionTitle="Research">
+<PageSection>
+  <h2 slot="sectionTitle">Research</h2>
   <p slot="description">
     The majority of XR software in the medical field is tailored for medical
     professionals and lacks <strong>patient-oriented design</strong>. Thousands
     of horrendous medical stories are shared on social media platforms, and the
     fear of becoming one of these stories is enough to deter many from seeking
-    proper medical care. This feeds into the prevalent <strong>mistrust</strong>{" "}
-    of medical professionals. With a few hours of research, we found that by{" "}
-    <a
-      class="externalLink"
-      href="https://pubmed.ncbi.nlm.nih.gov/15122417/"
-      target="_blank"
-    >
-      <strong>providing more information</strong>
-    </a>{" "}
+    proper medical care. This feeds into the prevalent <strong>mistrust</strong>
+    of medical professionals. With a few hours of research, we found that by 
+    <a class="externalLink" href="https://pubmed.ncbi.nlm.nih.gov/15122417/" target="_blank">providing more information</a>
     to patients, we can <strong>reduce their anxiety</strong>
     and <strong>increase their trust</strong> in their doctors.
   </p>
 </PageSection>
 
-<PageSection sectionTitle="Process">
+<PageSection>
+  <h2 slot="sectionTitle">Process</h2>
   <p slot="description">
     I mainly worked on the 3D visualizations of the program, working in{" "}
     <strong>Blender</strong> to model and texture all the assets, and then
@@ -143,9 +139,8 @@ import PhotoGallery from "../../components/post/PhotoGallery.svelte";
   </p>
 </LinkToLive>
 
-<PageSection
-  sectionTitle="Reflections"
->
+<PageSection>
+<h2 slot="sectionTitle">Reflections</h2>
   <div  slot="description">
       <h3>Things don't always go as planned.</h3>
         <p>

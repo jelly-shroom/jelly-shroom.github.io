@@ -33,4 +33,8 @@
   #blenderViewport {
     grid-area: 1/ 1/ 1 / span 2;
   }
+
+  #fullImg {
+    grid-area: auto/ auto/ auto/ span 2;
+  }
 </style>

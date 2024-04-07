@@ -6,3 +6,56 @@ image: "../../images/covers/Children on a Country Road.jpg"
 alt: "Children on a Country Road"
 date: "1/1/2023"
 ---
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import Overview from "../../components/post/Overview.svelte";
+import PageSection from "../../components/post/PageSection.svelte";
+import Gallery from "../../components/post/Gallery.svelte";
+
+<Overview
+  year="2023"
+  tags={["individual project", "tools - blender"]}
+>
+
+<h1 slot="header">
+  Bringing stories to life - creating a visualization of Franz Kafka's short
+  story,{" "}
+  <span style="color: var(--darkAccent)">Children on a Country Road</span>.
+</h1>
+<div slot="overviewDescription">
+  <p>
+    This artwork is inspired by Kafka's short story, Children on a Country Road.
+    It's a tale that unfolds through the lens of a child, allowing the story to
+    beautifully emphasize the seemingly trivial things in life to evoke a sense
+    of innocence and nostalgia. From eating supper in the candlelight to running
+    across the bridge with their friends, Kafka masterfully crafts a tender
+    scene from a mundane experience. In my illustration, I aim to convey the
+    feeling of tranquility and serenity that resonates with the essence of
+    Kafka's work.
+  </p>
+</div>
+
+</Overview>
+
+<PageSection>
+ <h2 slot="sectionTitle">Excerpts from <em>Children on a Country Road</em>"</h2>
+  <p slot="description">
+        We ran our heads full tilt into the evening. There was no daytime and no nighttime.
+        <br />
+        “Where are you?” – “Come here!” – “All together!” – “What are you hiding for, drop your nonsense!” – “Don’t you know the mail’s gone past already?” – “Not already?” – “Of course; it went past while you were sleeping.” – “I wasn’t sleeping. What an idea!” – “Oh shut up, you’re still half asleep.” – “But I wasn’t.” – “Come on!”
+        <br />
+        At the bridge over the brook we came to a stop; those who had overrun it came back. The water below lapped against stones and roots as if it were not already late evening. There was no reason why one of us should not jump onto the parapet of the bridge.
+        <br />
+        So we sang, the forest behind us, for the ears of the distant travelers. The grownups were still awake in the village, the mothers were making down the beds for the night.
+        <br />
+        “There you’ll find queer folk! Just think, they never sleep!”
+        “And why not?”
+        “Because they never get tired.”
+        “And why not?”
+        “Because they’re fools.”
+        “Don’t fools get tired?”
+        “How could fools get tired!”
+  </p>
+</PageSection>
