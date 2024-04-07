@@ -6,8 +6,9 @@
 </script>
 
 <div>
-  <TargetUser />
-  <slot name="targetUser" />
+  <TargetUser>
+    <slot name="targetUser" slot="targetUser" />
+  </TargetUser>
 </div>
 
 <style>
