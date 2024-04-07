@@ -4,15 +4,16 @@
   export let project: {
     title: string;
     description: string;
+    alt: string;
     image: any;
     tags: string[];
     slug: string;
   };
-  const { image, title, tags, description, slug } = project;
+  const { image, title, tags, description, alt, slug } = project;
 </script>
 
-<a href={`projects/${slug}`} class="portfolio-item">
-  <img src={image.src} alt="Dr. Trust" class="cover-image" />
+<a href={`/projects/${slug}`} class="portfolio-item">
+  <img src={image.src} {alt} class="cover-image" />
   <div class="tagContainer">
     {#each tags as tag}
       <Tag {tag} />

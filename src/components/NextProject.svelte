@@ -1,16 +1,25 @@
+<script lang="ts">
+  export let project: {
+    title: string;
+    description: string;
+    image: any;
+    alt: string;
+    slug: string;
+  };
+  const { image, title, description, alt, slug } = project;
+</script>
+
 <div class="nextProjectContainer">
   <h2>Next Project</h2>
 
-  <a class="nextProjectButton" href="dr_trust.html">
-    <img src="resources/images/covers/Dr_Trust.jpg" />
+  <a class="nextProjectButton" href={`/projects/${slug}`}>
+    <img src={image.src} {alt} />
     <div>
       <h2>
-        Facilitating medical conversations through mixed reality collaboration
+        {title}
       </h2>
       <p>
-        Dr. Trust allows doctors to <strong>educate and reassure</strong>
-        patients through clear
-        <strong>visualizations</strong> of medical issues and how they can be treated.
+        {@html description}
       </p>
     </div>
   </a>
