@@ -3,16 +3,17 @@
   export let alt: string[];
 
   export let uniqueID: string[] = imgSrc.map((_, index) => `img${index}`);
+  export let galleryType: string = "withGap";
 </script>
 
-<div>
+<div class={galleryType}>
   {#each imgSrc as image, index}
     <img src={image} alt={alt[index]} id={uniqueID[index]} />
   {/each}
 </div>
 
 <style>
-  div {
+  .withGap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
@@ -21,7 +22,25 @@
     margin-bottom: 20px;
   }
 
-  div img {
+  .withGap img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    object-fit: cover;
+  }
+
+  .noGap {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    gap: 0px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
+
+  .noGap img {
     width: 100%;
     height: 100%;
     margin-bottom: 10px;

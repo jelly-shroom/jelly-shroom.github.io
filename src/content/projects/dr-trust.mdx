@@ -32,8 +32,13 @@ import Gallery from "../../components/post/Gallery.svelte";
 import LinkToLive from "../../components/post/LinkToLive.svelte";
 import PhotoGallery from "../../components/post/PhotoGallery.svelte";
 
-<div class="glass-bg">
+<div class="video">
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Eb-JIFDZGYc?si=IfbHEB1R1gKG2uji" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
+<div class="caseStudyVideo">
+
+  
 <Overview
   year="2024"
   tags={["<Award/> Best use of Bezi", "duration - 2.5 days", "team size - 5", "tools - blender, bezi, unity", "role - 3d artist, spatial designer"]}
@@ -87,14 +92,8 @@ import PhotoGallery from "../../components/post/PhotoGallery.svelte";
     of horrendous medical stories are shared on social media platforms, and the
     fear of becoming one of these stories is enough to deter many from seeking
     proper medical care. This feeds into the prevalent <strong>mistrust</strong>
-    of medical professionals. With a few hours of research, we found that by
-    <a
-      class="externalLink"
-      href="https://pubmed.ncbi.nlm.nih.gov/15122417/"
-      target="_blank"
-    >
-      providing more information
-    </a>
+    of medical professionals. With a few hours of research, we found that by 
+    [providing more information](https://pubmed.ncbi.nlm.nih.gov/15122417/) 
     to patients, we can <strong>reduce their anxiety</strong>
     and <strong>increase their trust</strong> in their doctors.
   </p>
@@ -201,6 +200,8 @@ import PhotoGallery from "../../components/post/PhotoGallery.svelte";
 
 </PageSection>
 <br /><br /><br /><br /><br />
+
+</div>
 <PhotoGallery
   imgSrc={[
     GroupPhoto1.src,
@@ -243,4 +244,3 @@ import PhotoGallery from "../../components/post/PhotoGallery.svelte";
     "HACKING",
   ]}
 ></PhotoGallery>
-</div>

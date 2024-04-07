@@ -10,11 +10,16 @@ date: "1/1/2019"
 import "../../styles/post.css";
 import Tag from "../../components/Tag.svelte";
 
+import CoverImage from "../../images/carTopology/coverImage_CarTopology.jpg";
 import Wireframes from "../../images/carTopology/wireframes.jpg";
 
 import Overview from "../../components/post/Overview.svelte";
 import Gallery from "../../components/post/Gallery.svelte";
 
+
+
+<img src={CoverImage.src} alt="Car Topology" class="fullImgCover"/>
+<div class="caseStudy">
 <Overview
   year="2019"
   tags={["individual project", "tools - blender"]}
@@ -36,3 +41,4 @@ import Gallery from "../../components/post/Gallery.svelte";
   alt={["Wireframes"]}
   uniqueID={["fullImg"]}
 ></Gallery>
+</div>
