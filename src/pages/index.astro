@@ -8,8 +8,7 @@ import ProjectItem from "../components/project/ProjectItem.svelte";
 import ProjectList from "../components/project/ProjectList.astro";
 
 import { getEntry } from "astro:content";
-const DrTrust = await getEntry("projects", "dr-trust");
-const DigiSense = await getEntry("projects", "digisense");
+const featuredProjects = ["dr-trust", "digisense"];
 ---
 
 <Site>
@@ -18,15 +17,20 @@ const DigiSense = await getEntry("projects", "digisense");
     <Blobs client:load />
   </div>
   <ProjectList>
-    <ProjectItem project={DrTrust.data} />
-    <ProjectItem project={DigiSense.data} />
+    {
+      featuredProjects.map(async (slug) => {
+        const project = await getEntry("projects", slug);
+        if (!project) return null;
+        return <ProjectItem project={{ slug, ...project.data }} />;
+      })
+    }
   </ProjectList>
-</Site>
 
-<style>
-  #heroWrapper {
-    position: relative;
-    height: 90vh;
-    width: 100%;
-  }
-</style>
+  <style>
+    #heroWrapper {
+      position: relative;
+      height: 90vh;
+      width: 100%;
+    }
+  </style>
+</Site>

@@ -14,6 +14,15 @@ const projects: CollectionEntry<"projects">[] = (
 
 <Site>
   <ProjectList>
-    {projects.map((project) => <ProjectItem project={project.data} />)}
+    {
+      projects.map((project) => (
+        <ProjectItem
+          project={{
+            slug: project.slug,
+            ...project.data,
+          }}
+        />
+      ))
+    }
   </ProjectList>
 </Site>
