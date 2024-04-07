@@ -26,6 +26,7 @@ import Overview from "../../components/post/Overview.svelte";
 import ProblemSolutionStatement from "../../components/post/ProblemSolutionStatement.svelte";
 import PageSection from "../../components/post/PageSection.svelte";
 import Gallery from "../../components/post/Gallery.svelte";
+import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
 
 <div class="bannerImgCover">
   <img src={CoverImage.src} alt="Clu-Bo" />
@@ -129,5 +130,35 @@ import Gallery from "../../components/post/Gallery.svelte";
   galleryType="noGap">
 </Gallery>
 
-
+<PageSection>
+  <h2 slot="sectionTitle">Final design</h2>
+  <p slot="description">
+  </p>
+</PageSection>
 </div>
+
+<ProjectShowcase
+  typeface = {[
+    "roboto-regular",
+    "roboto-medium",
+  ]}
+  
+  colorPalette = {[
+    "#6AB263",
+    "#E07A46",
+    "#63B7C7",
+    "#77467A"
+  ]}
+>
+<p slot="targetUser">Children with dyscalculia, ages **4-8**</p>
+</ProjectShowcase>
+
+<div class="caseStudy">
+  <div id="cluBoProduct">
+      <img src={FinalProduct.src} class="imageFill" />
+  </div>
+</div>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+<img src={Display.src} class="imageFill" />

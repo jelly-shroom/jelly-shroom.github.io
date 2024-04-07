@@ -6,3 +6,94 @@ image: "../../images/covers/DigiSense.jpg"
 alt: "DigiSense"
 date: "1/1/2019"
 ---
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import Bonnie from "../../images/digiSense/bonnieWeiss.jpg";
+import Flow from "../../images/digiSense/digisenseFlow.png";
+import Process1 from "../../images/digiSense/formProcess.jpg";
+import Process2 from "../../images/digiSense/formProcess1.jpg";
+import NumberSystems from "../../images/digiSense/mayanRomanNumerals.png";
+import PinYin from "../../images/digiSense/pinyin.png";
+import ProgressBars from "../../images/digiSense/progressBars.png";
+import Prototype1 from "../../images/digiSense/prototype1.jpg";
+import Prototype2 from "../../images/digiSense/prototype2.jpg";
+import Display from "../../images/digiSense/render.jpg";
+import Scenario from "../../images/digiSense/scenario.jpg";
+import UISketches from "../../images/digiSense/uiProcess.jpg";
+import Persona1 from "../../images/digiSense/User Persona-1.jpg";
+import Persona2 from "../../images/digiSense/User Persona.jpg";
+import CoverImage from "../../images/covers/DigiSense.jpg";
+
+
+import Overview from "../../components/post/Overview.svelte";
+import ProblemSolutionStatement from "../../components/post/ProblemSolutionStatement.svelte";
+import PageSection from "../../components/post/PageSection.svelte";
+import Gallery from "../../components/post/Gallery.svelte";
+import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
+import Interview from "../../components/post/Interview.svelte";
+
+<div class="bannerImgCover">
+  <img src={CoverImage.src} alt="DigiSense" />
+</div>
+<div class="caseStudy">
+<Overview
+  year="2021"
+  tags={["individual project", "tools - blender, procreate"]}
+>
+
+<h1 slot="header">
+  <span style="color: var(--darkAccent)">DigiSense</span> is a wristwatch that helps children with dyscalculia strengthen their 
+  understanding of time and numbers through visual learning aids.
+</h1>
+<div slot="overviewDescription">
+  <p>
+    I wanted to challenge myself to design a solution for a market of people who operate outside of the typical user experience, 
+    where existing solutions are not tailored to their needs. **Dyscalculia** is a condition that impairs a person's **understanding** of 
+    basic mathematical concepts, which in turn impacts their **perception of time**.
+  </p>
+  <br />
+  <p>
+    DigiSense emerges as a solution to **empower** children with dyscalculia by combining intuitive interfaces with 
+    innovative visualization techniques to bridge the gap between **abstract mathematical concepts and real-world experiences**.
+  </p>
+</div>
+
+</Overview>
+
+<ProblemSolutionStatement>
+  <p slot='problem'>
+   Dyscalculia greatly reducees a child's ability to **connect visual symbols** to their assigned values. 
+   This makes it difficult for them to understand and percieve the passage of time, which can lead to **anxiety and frustration** in their daily lives.
+  </p>
+
+  <p slot="solution">
+    DigiSense empowers children with dyscalculia to be more **confident and independent** in their daily lives by providing 
+    them with assistive UI elements to help them **visualize time** and strengthen their **understanding** of numbers.
+  </p>
+</ProblemSolutionStatement>
+
+<PageSection>
+  <h2 slot="sectionTitle">Research</h2>
+  <p slot="description">
+    Dyscalculia is a condition that is often **misunderstood and underdiagnosed**, and there is a **lack of resources** available 
+    to help children with dyscalculia succeed in their daily lives and in school. It is often thought of as "number dyslexia", and 
+    current interventions in therapy typically involve counting exercises and relying on physical tools to help **visualize** numbers.
+  </p>
+</PageSection>
+
+<Gallery
+  imgSrc={[
+    Persona1.src,
+    Persona2.src,
+  ]}
+  alt={[
+    "User Persona 1",
+    "User Persona 2",
+  ]}
+  uniqueID={["fullImg", "fullImg"]}>
+</Gallery>
+
+
+</div>
