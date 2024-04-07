@@ -48,8 +48,6 @@
   }
 
   a {
-    background-color: aqua;
-
     display: inline-block;
 
     font-family: "Sono";
