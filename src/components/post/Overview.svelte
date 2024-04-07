@@ -63,7 +63,7 @@
     margin-top: 5px;
   }
 
-  strong {
+  div > strong {
     color: white;
   }
 </style>

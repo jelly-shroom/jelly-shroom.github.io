@@ -31,7 +31,7 @@
     margin-top: 5px;
   }
 
-  strong {
-    color: white;
+  div :global(strong) {
+    color: var(--darkAccent);
   }
 </style>
