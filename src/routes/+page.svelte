@@ -6,6 +6,7 @@
   import "../styles/general.css";
   import "../styles/home.css";
   import "../styles/fonts.css";
+  import ProjectItem from "../components/ProjectItem.svelte";
 </script>
 
 <Navbar />
@@ -21,143 +22,22 @@
       </div>
 
       <div class="column-contents">
-        <a href="dr_trust.html" class="portfolio-item">
-          <img
-            src="../resources/images/covers/Dr_Trust.jpg"
-            alt="Dr. Trust"
-            class="cover-image"
-          />
-          <div class="tagContainer">
-            <div class="tags">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15.193 17.2454C14.3885 17.5171 13.4842 17.6083 12.5808 17.6083C11.6775 17.6083 10.7722 17.5171 9.96867 17.2454L9.06435 16.9728C8.66211 16.7913 8.46147 16.7011 8.16003 16.5197V21.4176C8.16003 21.6902 8.36163 21.9619 8.56227 22.1433C8.66211 22.2345 8.86371 22.2345 8.96355 22.2345C9.16515 22.2345 9.26499 22.2345 9.46563 22.1433L12.48 20.5113L15.4944 22.1433C15.6283 22.2323 15.7854 22.2798 15.9461 22.2798C16.1068 22.2798 16.2639 22.2323 16.3978 22.1433C16.6992 21.9619 16.8 21.7805 16.8 21.4176V16.5197C16.294 16.8225 15.7548 17.066 15.193 17.2454ZM12.48 15.5597C13.4255 15.5597 14.3618 15.3734 15.2353 15.0116C16.1089 14.6498 16.9026 14.1194 17.5712 13.4508C18.2398 12.7823 18.7701 11.9885 19.132 11.115C19.4938 10.2414 19.68 9.30519 19.68 8.35967C19.68 7.41415 19.4938 6.47789 19.132 5.60435C18.7701 4.7308 18.2398 3.93708 17.5712 3.2685C16.9026 2.59992 16.1089 2.06957 15.2353 1.70774C14.3618 1.3459 13.4255 1.15967 12.48 1.15967C10.5705 1.15967 8.73912 1.91824 7.38886 3.2685C6.0386 4.61876 5.28003 6.45011 5.28003 8.35967C5.28003 10.2692 6.0386 12.1006 7.38886 13.4508C8.73912 14.8011 10.5705 15.5597 12.48 15.5597Z"
-                />
-              </svg>
-              MIT Reality Hack 2024 - Winner
-            </div>
-            <div class="tags">spatial design</div>
-          </div>
+        <ProjectItem
+          title="MIT Reality Hack 2024 - Winner"
+          tags="spatial design"
+          header="Facilitating medical conversations through mixed reality collaboration"
+          description="In a world with deep patient distrust and misunderstanding, Dr. Trust
+          allows doctors to <strong>educate and reassure</strong>
+          patients through clear <strong>visualizations</strong> of medical issues and
+          how they can be treated."
+        />
 
-          <div class="description">
-            <h2>
-              Facilitating medical conversations through mixed reality
-              collaboration
-            </h2>
-            <p>
-              In a world with deep patient distrust and misunderstanding, Dr.
-              Trust allows doctors to <strong>educate and reassure</strong>
-              patients through clear <strong>visualizations</strong> of medical issues
-              and how they can be treated.
-            </p>
-          </div>
-        </a>
-        <div class="projectWrapperForPhone">
-          <a href="dr_trust.html" class="portfolio-item">
-            <img
-              src="../resources/images/covers/Dr_Trust.jpg"
-              alt="Dr. Trust"
-              class="cover-image"
-            />
-            <div class="tagContainer">
-              <div class="tags">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M15.193 17.2454C14.3885 17.5171 13.4842 17.6083 12.5808 17.6083C11.6775 17.6083 10.7722 17.5171 9.96867 17.2454L9.06435 16.9728C8.66211 16.7913 8.46147 16.7011 8.16003 16.5197V21.4176C8.16003 21.6902 8.36163 21.9619 8.56227 22.1433C8.66211 22.2345 8.86371 22.2345 8.96355 22.2345C9.16515 22.2345 9.26499 22.2345 9.46563 22.1433L12.48 20.5113L15.4944 22.1433C15.6283 22.2323 15.7854 22.2798 15.9461 22.2798C16.1068 22.2798 16.2639 22.2323 16.3978 22.1433C16.6992 21.9619 16.8 21.7805 16.8 21.4176V16.5197C16.294 16.8225 15.7548 17.066 15.193 17.2454ZM12.48 15.5597C13.4255 15.5597 14.3618 15.3734 15.2353 15.0116C16.1089 14.6498 16.9026 14.1194 17.5712 13.4508C18.2398 12.7823 18.7701 11.9885 19.132 11.115C19.4938 10.2414 19.68 9.30519 19.68 8.35967C19.68 7.41415 19.4938 6.47789 19.132 5.60435C18.7701 4.7308 18.2398 3.93708 17.5712 3.2685C16.9026 2.59992 16.1089 2.06957 15.2353 1.70774C14.3618 1.3459 13.4255 1.15967 12.48 1.15967C10.5705 1.15967 8.73912 1.91824 7.38886 3.2685C6.0386 4.61876 5.28003 6.45011 5.28003 8.35967C5.28003 10.2692 6.0386 12.1006 7.38886 13.4508C8.73912 14.8011 10.5705 15.5597 12.48 15.5597Z"
-                  />
-                </svg>
-                MIT Reality Hack 2024 - Winner
-              </div>
-              <div class="tags">spatial design</div>
-            </div>
-          </a>
-          <div class="phoneTagContainer">
-            <div class="tags">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15.193 17.2454C14.3885 17.5171 13.4842 17.6083 12.5808 17.6083C11.6775 17.6083 10.7722 17.5171 9.96867 17.2454L9.06435 16.9728C8.66211 16.7913 8.46147 16.7011 8.16003 16.5197V21.4176C8.16003 21.6902 8.36163 21.9619 8.56227 22.1433C8.66211 22.2345 8.86371 22.2345 8.96355 22.2345C9.16515 22.2345 9.26499 22.2345 9.46563 22.1433L12.48 20.5113L15.4944 22.1433C15.6283 22.2323 15.7854 22.2798 15.9461 22.2798C16.1068 22.2798 16.2639 22.2323 16.3978 22.1433C16.6992 21.9619 16.8 21.7805 16.8 21.4176V16.5197C16.294 16.8225 15.7548 17.066 15.193 17.2454ZM12.48 15.5597C13.4255 15.5597 14.3618 15.3734 15.2353 15.0116C16.1089 14.6498 16.9026 14.1194 17.5712 13.4508C18.2398 12.7823 18.7701 11.9885 19.132 11.115C19.4938 10.2414 19.68 9.30519 19.68 8.35967C19.68 7.41415 19.4938 6.47789 19.132 5.60435C18.7701 4.7308 18.2398 3.93708 17.5712 3.2685C16.9026 2.59992 16.1089 2.06957 15.2353 1.70774C14.3618 1.3459 13.4255 1.15967 12.48 1.15967C10.5705 1.15967 8.73912 1.91824 7.38886 3.2685C6.0386 4.61876 5.28003 6.45011 5.28003 8.35967C5.28003 10.2692 6.0386 12.1006 7.38886 13.4508C8.73912 14.8011 10.5705 15.5597 12.48 15.5597Z"
-                />
-              </svg>
-              MIT Reality Hack 2024 - Winner
-            </div>
-            <div class="tags">spatial design</div>
-          </div>
-
-          <div class="phoneDescription">
-            <h2>
-              Facilitating medical conversations through mixed reality
-              collaboration
-            </h2>
-          </div>
-        </div>
-
-        <a href="digiSense.html" class="portfolio-item">
-          <img
-            src="../resources/images/covers/DigiSense.jpg"
-            alt="DigiSense"
-            class="cover-image"
-          />
-          <div class="tagContainer">
-            <div class="tags">product design</div>
-            <div class="tags">ui design</div>
-          </div>
-
-          <div class="description">
-            <h2>
-              Fostering time awareness and numerical understanding within
-              dyscalculic children
-            </h2>
-            <p>
-              Dyscalculia is a condition that impairs people's grasps of
-              fundamental math concepts and their <strong>sense of time</strong
-              >. DigiSense bridges the gap between
-              <strong>abstract concepts and real-world experiences</strong>.
-            </p>
-          </div>
-        </a>
-        <div class="projectWrapperForPhone">
-          <a href="digiSense.html" class="portfolio-item">
-            <img
-              src="../resources/images/covers/DigiSense.jpg"
-              alt="DigiSense"
-              class="cover-image"
-            />
-            <div class="tagContainer">
-              <div class="tags">product design</div>
-              <div class="tags">ui design</div>
-            </div>
-          </a>
-
-          <div class="phoneTagContainer">
-            <div class="tags">product design</div>
-            <div class="tags">ui design</div>
-          </div>
-
-          <div class="phoneDescription">
-            <h2>
-              Fostering time awareness and numerical understanding within
-              dyscalculic children
-            </h2>
-          </div>
-        </div>
+        <ProjectItem
+          title="Fostering time awareness and numerical understanding within dyscalculic children"
+          tags="product design, ui design"
+          header="Fostering time awareness and numerical understanding within dyscalculic children"
+          description="Dyscalculia is a condition that impairs people's grasps of fundamental math concepts and their <strong>sense of time</strong>. DigiSense bridges the gap between <strong>abstract concepts and real-world experiences</strong>."
+        />
       </div>
       <!-- portfolio content end-->
       <div class="buttonWrapper">
