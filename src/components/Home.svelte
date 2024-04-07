@@ -22,18 +22,18 @@
   <div class="glass-full">
     <ProjectList>
       <ProjectItem
-        image={DrTrust}
+        image={DrTrust.src}
         title="MIT Reality Hack 2024 - Winner"
         tags="spatial design"
         header="Facilitating medical conversations through mixed reality collaboration"
         description="In a world with deep patient distrust and misunderstanding, Dr. Trust
-        allows doctors to <strong>educate and reassure</strong>
-        patients through clear <strong>visualizations</strong> of medical issues and
-        how they can be treated."
+          allows doctors to <strong>educate and reassure</strong>
+          patients through clear <strong>visualizations</strong> of medical issues and
+          how they can be treated."
       />
 
       <ProjectItem
-        image={DigiSense}
+        image={DigiSense.src}
         title="Fostering time awareness and numerical understanding within dyscalculic children"
         tags="product design, ui design"
         header="Fostering time awareness and numerical understanding within dyscalculic children"
