@@ -10,16 +10,13 @@
 
 <Navbar />
 <div id="heroWrapper">
-    <Hero />
-    <Blobs />
+  <Hero />
+  <Blobs />
 </div>
 
 <style>
-    #heroWrapper {
-        height: 90%;
-        width: 100%;
-    }
-
-    
+  #heroWrapper {
+    height: 90%;
+    width: 100%;
+  }
 </style>
-

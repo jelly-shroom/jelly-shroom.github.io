@@ -12,3 +12,97 @@
     >
   </div>
 </div>
+
+<style>
+  .navbar {
+    font-family: "Kodchasan", sans-serif;
+    z-index: 1000;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    height: var(--nav-height);
+    align-items: center;
+    font-size: 14px;
+    width: 80%;
+
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    padding-right: 40px;
+    padding-left: 40px;
+
+    border-radius: 20px;
+
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    transition: ease-out 0.25s;
+  }
+
+  .nav--hidden {
+    transform: translate(-50%, calc(-1 * var(--nav-height) - 30px));
+
+    box-shadow: none;
+  }
+
+  .navbar .home-link {
+    font-weight: bold;
+    text-transform: uppercase;
+
+    float: left;
+  }
+
+  .navbar .page-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: lowercase;
+    gap: 30px;
+
+    float: right;
+  }
+
+  .navbar a {
+    color: var(--lightAccent);
+  }
+
+  .navbar .page-links :hover {
+    color: var(--darkAccent);
+  }
+
+  /*tutorial: https://unclebigbay.com/how-to-create-an-hover-underline-animation-in-css/*/
+  .hover-underline-animation {
+    position: relative;
+    color: var(--darkAccent);
+    text-decoration: none;
+  }
+
+  .hover-underline-animation::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--darkAccent);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+
+    transform: scaleX(0);
+  }
+
+  .hover-underline-animation:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+
+  @media screen and (max-width: 800px) {
+    .navbar {
+      width: 90%;
+    }
+  }
+</style>
