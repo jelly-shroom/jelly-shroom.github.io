@@ -1,9 +1,6 @@
 ---
-import ProjectList from "../../components/project/ProjectList.svelte";
-import ProjectItem from "../../components/project/ProjectItem.svelte";
-import FilterableList from "../../components/project/FilterableList.svelte";
-
 import Site from "../../layouts/Site.astro";
+import ProjectList from "../../components/project/ProjectList.svelte";
 
 import { getCollection, type CollectionEntry } from "astro:content";
 
@@ -29,6 +26,6 @@ const tags = {
 
 <Site>
   <div class="glass-bg">
-    <FilterableList tags={tags} projects={projectData} client:load />
+    <ProjectList tags={tags} projects={projectData} client:load />
   </div>
 </Site>

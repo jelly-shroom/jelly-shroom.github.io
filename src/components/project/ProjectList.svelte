@@ -1,18 +1,18 @@
-<div class="column-contents">
-  <slot />
-</div>
+<script>
+  import FilterableList from "../FilterableList.svelte";
+  import ProjectContainer from "./ProjectContainer.svelte";
+  import ProjectItem from "./ProjectItem.svelte";
 
-<style>
-  .column-contents {
-    display: grid;
-    margin-bottom: 50px;
+  export let tags = [];
+  export let projects = [];
+  let selectedTag = "";
+</script>
 
-    /* grid-auto-columns: minmax(300px, auto);
-    grid-auto-rows: minmax(300px, auto); */
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-flow: dense; /* don't forget this */
-    gap: 30px;
-
-    /* justify-content: center; */
-  }
-</style>
+<FilterableList {tags} bind:selectedTag />
+<ProjectContainer>
+  {#key selectedTag}
+    {#each projects.filter(({ tags }) => selectedTag === "" || tags.includes(selectedTag)) as project}
+      <ProjectItem {project} />
+    {/each}
+  {/key}
+</ProjectContainer>

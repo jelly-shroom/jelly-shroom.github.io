@@ -13,8 +13,8 @@
       <h1>i’m jessica sheng, a designer based in la.</h1>
       <p>
         I am currently a student of the <strong>Iovine and Young Academy</strong
-        >{" "}
-        at the University of Southern California, and I am pursuing a degree in{" "}
+        >
+        at the University of Southern California, and I am pursuing a degree in
         <strong>Arts, Technology, and the Business of Innovation</strong>. I
         love tinkering with new technologies and testing out new solutions to
         problems, and I am always looking for new ways to apply my skills to

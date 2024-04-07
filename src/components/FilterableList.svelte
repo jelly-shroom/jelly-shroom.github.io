@@ -1,17 +1,6 @@
-<!-- chatbgp -->
-
 <script>
-  import ProjectItem from "./ProjectItem.svelte";
-  import ProjectList from "./ProjectList.svelte";
-  export let tags = []; // Expected to be an array of strings
-  export let projects = []; // Expected to be an array of project objects
-
-  let selectedTag = "";
-
-  function filterProjects(project) {
-    // If no tag is selected, or the project has the selected tag, display it
-    return selectedTag === "" || project.tags.includes(selectedTag);
-  }
+  export let tags = [];
+  export let selectedTag = "";
 </script>
 
 <div>
@@ -29,13 +18,6 @@
       </button>
     {/each}
   </div>
-  <ProjectList>
-    {#key selectedTag}
-      {#each projects.filter(filterProjects) as project}
-        <ProjectItem {project} />
-      {/each}
-    {/key}
-  </ProjectList>
 </div>
 
 <style>
