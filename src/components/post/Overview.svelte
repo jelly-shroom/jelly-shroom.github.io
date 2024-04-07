@@ -1,13 +1,11 @@
 <script lang="ts">
-  export let heading: string;
   export let year: string;
-  export let description: string;
   export let tags: string[];
 </script>
 
 <div>
   <h1>
-    {heading}
+    <slot name="header" />
   </h1>
   <h3>
     {year}
@@ -20,7 +18,7 @@
   </div>
   <div class="bodyColumn">
     <p>
-      {description}
+      <slot />
     </p>
 
     <div class="tagContainer">
