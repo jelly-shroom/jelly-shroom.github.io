@@ -1,6 +1,7 @@
 ---
-import ProjectList from "../../components/project/ProjectList.astro";
+import ProjectList from "../../components/project/ProjectList.svelte";
 import ProjectItem from "../../components/project/ProjectItem.svelte";
+import FilterableList from "../../components/project/FilterableList.svelte";
 
 import Site from "../../layouts/Site.astro";
 
@@ -10,21 +11,24 @@ import { getCollection, type CollectionEntry } from "astro:content";
 const projects: CollectionEntry<"projects">[] = (
   await getCollection("projects")
 ).sort((a, b) => (a.data.date > b.data.date ? -1 : 1));
+
+const projectData = projects.map((project) => ({
+  slug: project.slug,
+  ...project.data,
+}));
+
+const tags = {
+  "show all": "",
+  "spatial design": "spatial design",
+  "ui design": "ui design",
+  "product design": "product design",
+  "3d models": "3d model",
+  illustrations: "illustration",
+};
 ---
 
 <Site>
   <div class="glass-bg">
-    <ProjectList>
-      {
-        projects.map((project) => (
-          <ProjectItem
-            project={{
-              slug: project.slug,
-              ...project.data,
-            }}
-          />
-        ))
-      }
-    </ProjectList>
+    <FilterableList tags={tags} projects={projectData} client:load />
   </div>
 </Site>
