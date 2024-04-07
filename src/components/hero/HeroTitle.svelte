@@ -1,5 +1,5 @@
 <script>
-  import GooeyText from "./GooeyText.svelte";
+  import GooeyText from "../GooeyText.svelte";
 </script>
 
 <div id="heroTitle">

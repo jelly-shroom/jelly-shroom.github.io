@@ -3,7 +3,7 @@
     <img src="resources/images/covers/eDrops.jpg" id="coverImage_eDrops">
 </div>
 <div class="caseContainer-image">
-    <div class="title">
+    <div>
         <h1><a href="https://community.edroplets.org/" class="externalLink" target="_blank">eDrops Community</a> is a platform dedicated to 
             building a collaborative hub to inspire electrowetting on dielectric (EWOD) research and development.
         </h1>
@@ -55,5 +55,15 @@
 
     position:absolute;
     top: 0;
+}
+
+#coverImage_eDrops {
+    object-position: 50% 95%;
+}
+
+.caseContainer-image {
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
 }
 </style>
