@@ -7,8 +7,9 @@ import Blobs from "../components/Blobs.svelte";
 import ProjectItem from "../components/ProjectItem.svelte";
 import ProjectList from "../components/ProjectList.astro";
 
-import DrTrust from "../images/covers/Dr_Trust.jpg";
-import DigiSense from "../images/covers/DigiSense.jpg";
+import { getEntry } from "astro:content";
+const DrTrust = await getEntry("projects", "dr-trust");
+const DigiSense = await getEntry("projects", "digisense");
 ---
 
 <Site>
@@ -17,26 +18,8 @@ import DigiSense from "../images/covers/DigiSense.jpg";
     <Blobs client:load />
   </div>
   <ProjectList>
-    <ProjectItem
-      project={{
-        image: DrTrust.src,
-        title:
-          "Facilitating medical conversations through mixed reality collaboration",
-        tags: "spatial design",
-        description:
-          "In a world with deep patient distrust and misunderstanding, Dr. Trust allows doctors to <strong>educate and reassure</strong> patients through clear <strong>visualizations</strong> of medical issues and how they can be treated.",
-      }}
-    />
-    <ProjectItem
-      project={{
-        image: DigiSense.src,
-        title:
-          "Fostering time awareness and numerical understanding within dyscalculic children",
-        tags: "product design, ui design",
-        description:
-          "Dyscalculia is a condition that impairs people's grasps of fundamental math concepts and their <strong>sense of time</strong>. DigiSense bridges the gap between <strong>abstract concepts and real-world experiences</strong>.",
-      }}
-    />
+    <ProjectItem project={DrTrust.data} />
+    <ProjectItem project={DigiSense.data} />
   </ProjectList>
 </Site>
 
