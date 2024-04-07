@@ -1,11 +1,11 @@
 ---
 import Site from "../layouts/Site.astro";
 
-import Hero from "../components/Hero.svelte";
+import Hero from "../components/hero/Hero.svelte";
 import Blobs from "../components/Blobs.svelte";
 
-import ProjectItem from "../components/ProjectItem.svelte";
-import ProjectList from "../components/ProjectList.astro";
+import ProjectItem from "../components/project/ProjectItem.svelte";
+import ProjectList from "../components/project/ProjectList.astro";
 
 import { getEntry } from "astro:content";
 const DrTrust = await getEntry("projects", "dr-trust");

@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
-  import HeroDetails from "../HeroDetails.svelte";
-  import HeroTitle from "../HeroTitle.svelte";
+  import HeroDetails from "./HeroDetails.svelte";
+  import HeroTitle from "./HeroTitle.svelte";
 
   let scale = 1;
 
