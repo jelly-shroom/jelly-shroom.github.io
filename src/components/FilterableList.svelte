@@ -5,7 +5,6 @@
 
 <div>
   <div id="filterContainer">
-    <!-- Tag buttons -->
     {#each Object.entries(tags) as [tagName, tag]}
       <button
         class="filters"

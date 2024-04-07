@@ -4,15 +4,24 @@ import Site from "../layouts/Site.astro";
 import Blobs from "../components/Blobs.svelte";
 import Footer from "../components/Footer.astro";
 
-import Meow from "../components/AboutMe.svelte";
+import Bio from "../components/Bio.svelte";
+import PersonalList from "../components/personals/PersonalList.svelte";
+
+import { getCollection } from "astro:content";
+
+const personals = await getCollection("personals");
+const personalsData = Object.fromEntries(
+  personals.map(({ data }) => [data.label, data.label])
+);
 ---
 
 <Site>
   <div id="heroWrapper" slot="header">
-    <Meow client:load />
+    <Bio client:load />
     <Blobs client:load />
   </div>
   <div class="glass-full">
+    <PersonalList personals={personalsData} client:load />
     <Footer />
   </div>
 </Site>
