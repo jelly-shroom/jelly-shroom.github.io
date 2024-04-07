@@ -1,0 +1,380 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    color: #333;
+    background-color: #ddffea;
+
+    --nav-height: 75px;
+    --lightAccent: #5F9E83;
+    --darkAccent: #2E8B57;
+    --body-background: #ddffea;
+    --productFinalBackground: #d3ebda;
+}
+
+
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    max-width: 100%;
+}
+
+.flex div {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.flex div img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.glass-bg {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 125px;
+    padding-bottom: 125px;
+
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+}
+
+.glass-bgImg {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0;
+    padding-bottom: 125px;
+
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+}
+
+.glass-full {
+    overflow-y: visible;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -50px;
+
+    padding-right: 5% ;
+    padding-left: 5% ;
+    padding-bottom: 125px;
+    border-radius: 40px 40px 0px 0px ;
+
+    width: 80% ;
+}
+
+.button {
+    display: inline-block;
+
+    font-family: "Sono";
+    font-weight: 500;
+    font-size: 0.9em;
+    text-transform: lowercase;
+    
+    background-color: var(--lightAccent);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    
+
+    transition: 0.25s;
+}
+
+.button:hover {
+    background-color: var(--darkAccent);
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+
+@keyframes blurTransitionIn {
+    from {
+
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+    }
+
+    to {
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+
+    }
+}
+
+@keyframes blurTransitionOut {
+    from {
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+    }
+
+    to {
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+    }
+}
+
+@keyframes fadeTransitionIn {
+    from {
+        opacity: 0.0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeTransitionOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.0;
+    }
+}
+
+#transitionOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure it's above other content */
+    pointer-events: none; /* Allow interaction with elements below */
+    animation: blurTransitionIn 1s ease-in-out forwards;
+
+}
+
+#container {
+    max-width: 100%;
+    animation: fadeTransitionIn 1s ease-out;
+}
+
+
+/* chat gpt */
+.blob-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    background-color: #ddffea;
+}
+
+.blob-wrapper {
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, #abbeb1, #a9b1aa);
+    animation: moveBlob 60s infinite ease-in-out alternate;
+    
+    filter: blur(70px);
+}
+
+@keyframes moveBlob {
+    0% {
+        transform: translate(var(--start-x), var(--start-y));
+    }
+    100% {
+        transform: translate(var(--end-x), var(--end-y));
+    }
+}
+
+#container {
+    max-width: 100%;
+}
+
+.externalLink {
+    color: var(--darkAccent);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+
+.callToAction {
+    margin: auto;
+    border-radius: 25px;
+    
+    overflow: hidden;
+
+
+    width: 80%;
+    padding: 50px;
+    text-align: center;
+
+
+    gap: 20px;
+    /* margin-bottom: 125px; */
+    margin-top: 125px;
+}
+
+.callToAction h1 {
+    margin-bottom: 20px;
+    font-family: 'Kodchasan';
+}
+
+.callToAction h3 {
+    font-weight: normal;
+    font-family: "Quicksand";
+}
+
+.callToAction .icons{
+    
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+
+    align-items: center;
+}
+
+.callToAction .icons svg{
+    height: 50px;
+    width: auto;
+
+    transition: 0.25s;
+    fill: var(--lightAccent);
+}
+
+.callToAction a{
+    text-decoration: none;
+}
+
+.callToAction .icons svg:hover{
+    fill: var(--darkAccent);
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+
+    .glass-full {
+        margin-bottom: -50px !important;
+
+        padding-bottom: 75px !important;
+
+        width: 90% !important;
+
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .button {
+        padding: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+
+
+    .glass-full {
+        margin-bottom: -50px !important;
+
+        padding-bottom: 75px !important;
+
+        width: 95% !important;
+
+    }
+
+
+
+    .callToAction {
+        margin: auto;
+        border-radius: 25px;
+        
+        overflow: hidden;
+    
+
+        padding: 10px;
+        text-align: center;
+    
+    
+        gap: 20px;
+        /* margin-bottom: 125px; */
+        margin-top: 75px;
+    }
+    
+    .callToAction h1 {
+        margin-bottom: 20px;
+        font-family: 'Kodchasan';
+        font-size: 1.5em;
+    }
+    
+    .callToAction h3 {
+        font-weight: normal;
+        font-family: "Quicksand";
+        font-size: 1em;
+    }
+    
+    .callToAction .icons{
+        margin: auto;
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    
+        align-items: center;
+    }
+    
+    .callToAction .icons svg{
+        height: 50px;
+        width: auto;
+    
+        transition: 0.25s;
+        fill: var(--lightAccent);
+    }
+    
+    .callToAction a{
+        text-decoration: none;
+    }
+    
+    .callToAction .icons svg:hover{
+        fill: var(--darkAccent);
+    }
+}
