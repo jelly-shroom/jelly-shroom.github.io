@@ -10,10 +10,14 @@ date: "1/1/2023"
 import "../../styles/post.css";
 import Tag from "../../components/Tag.svelte";
 
+import CoverImage from "../../images/childrenOnACountryRoad/Children on a Country Road.jpg";
+
 import Overview from "../../components/post/Overview.svelte";
 import PageSection from "../../components/post/PageSection.svelte";
 import Gallery from "../../components/post/Gallery.svelte";
 
+<img src={CoverImage.src} alt="Children on a Country Road" class="fullImgCover"/>
+<div class="caseStudy">
 <Overview
   year="2023"
   tags={["individual project", "tools - blender"]}
@@ -61,3 +65,4 @@ import Gallery from "../../components/post/Gallery.svelte";
     </i>
   </p>
 </PageSection>
+</div>
