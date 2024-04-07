@@ -1,14 +1,11 @@
 <script lang="ts">
-  export let colorPalette: string[];
-  export let textColor: string[] = colorPalette.map(
-    (_, index) => `color${index}`
-  );
+  export let colorPalette: any[];
 </script>
 
 <div class="colorPalette">
-  {#each colorPalette as color, index}
-    <div style={`background-color: '${color}'; color: '${textColor[index]}'`}>
-      <p>{color}</p>
+  {#each colorPalette as { background, foreground }}
+    <div style={`background-color: ${background}; color: ${foreground}`}>
+      <p>{background}</p>
     </div>
   {/each}
 </div>

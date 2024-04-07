@@ -21,7 +21,6 @@ import CoverImage from "../../images/cluBo/coverImage_CluBo.jpg";
 import FinalUI from "../../images/cluBo/finalUI.png";
 import FinalProduct from "../../images/cluBo/productFinal.png";
 
-
 import Overview from "../../components/post/Overview.svelte";
 import ProblemSolutionStatement from "../../components/post/ProblemSolutionStatement.svelte";
 import PageSection from "../../components/post/PageSection.svelte";
@@ -38,19 +37,22 @@ import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
 >
 
 <h1 slot="header">
-  <span style="color: var(--darkAccent)">Clu-Bo</span> is a robot 
-  designed to help children with nonverbal learning disorders hone their social skills and recognize subtle social cues.
+  <span style="color: var(--darkAccent)">Clu-Bo</span> is a robot designed to
+  help children with nonverbal learning disorders hone their social skills and
+  recognize subtle social cues.
 </h1>
 <div slot="overviewDescription">
   <p>
-    I wanted to take on the challenge of designing a product that would help with **social challenges** that 
-    people may face in their daily lives. I decided to focus on nonverbal learning disorders (NLD), 
-    which are a group of disorders that affect a person's ability to **interpret nonverbal cues**.
+    I wanted to take on the challenge of designing a product that would help
+    with **social challenges** that people may face in their daily lives. I
+    decided to focus on nonverbal learning disorders (NLD), which are a group of
+    disorders that affect a person's ability to **interpret nonverbal cues**.
   </p>
   <br />
   <p>
-    Clu-Bo is a solution crafted to help children with NLD **recognize and interpret** social cues through **engaging and 
-    interactive activiites** that help them practice and strengthen their social skills.
+    Clu-Bo is a solution crafted to help children with NLD **recognize and
+    interpret** social cues through **engaging and interactive activiites** that
+    help them practice and strengthen their social skills.
   </p>
 </div>
 
@@ -71,8 +73,9 @@ import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
 <PageSection>
   <h2 slot="sectionTitle">Research</h2>
   <p slot="description">
-    Typical interventions for NLDs include teaching social stories and flash cards to help younger children understand social cues, 
-    and if left unattended, symptoms tend to worsen as children grow older.
+    Typical interventions for NLDs include teaching social stories and flash
+    cards to help younger children understand social cues, and if left
+    unattended, symptoms tend to worsen as children grow older.
   </p>
 </PageSection>
 
@@ -90,24 +93,16 @@ import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
 </div>
 
 <Gallery
-  imgSrc={[
-    CompetitiveMatrix.src,
-    CompetitiveChart.src,
-  ]}
-  alt={[
-    "Competitive Matrix",
-    "Competitive Chart",
-  ]}
+  imgSrc={[CompetitiveMatrix.src, CompetitiveChart.src]}
+  alt={["Competitive Matrix", "Competitive Chart"]}
   uniqueID={["fullImg", "fullImg"]}
-  
-  galleryType="noGap">
-</Gallery>
+  galleryType="noGap"
+></Gallery>
 
 <div class="caseStudy">
 <PageSection>
   <h2 slot="sectionTitle">Process</h2>
   <p slot="description">
-    
     I wanted the form factor of Clu-Bo to be **approachable and friendly** while also allowing for **expressive and engaging** interactions. 
     Additionally, I wanted the app to be **simple and intuitive** as a way for parents and guardians to easily 
     control Clu-Bo and track their child's progress.
@@ -115,20 +110,11 @@ import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
 </PageSection>
 
 <Gallery
-  imgSrc={[
-    RobotSketches.src,
-    UISketches.src
-    
-  ]}
-  alt={[
-    "Robot Sketches",
-    "UI Sketches"
-    
-  ]}
+  imgSrc={[RobotSketches.src, UISketches.src]}
+  alt={["Robot Sketches", "UI Sketches"]}
   uniqueID={["fullImg", "fullImg"]}
-  
-  galleryType="noGap">
-</Gallery>
+  galleryType="noGap"
+></Gallery>
 
 <PageSection>
   <h2 slot="sectionTitle">Final design</h2>
@@ -138,27 +124,48 @@ import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
 </div>
 
 <ProjectShowcase
-  typeface = {[
-    "roboto-regular",
-    "roboto-medium",
+  image={FinalUI.src}
+  typeface={[
+    { className: "roboto-regular", displayName: "Roboto Regular" },
+    { className: "roboto-medium", displayName: "Roboto Medium" },
   ]}
-  
-  colorPalette = {[
-    "#6AB263",
-    "#E07A46",
-    "#63B7C7",
-    "#77467A"
+  colorPalette={[
+    {
+      background: "#6AB263",
+      foreground: "#FFFFFF",
+    },
+    {
+      background: "#E07A46",
+      foreground: "#FFFFFF",
+    },
+    {
+      background: "#63B7C7",
+      foreground: "#FFFFFF",
+    },
+    {
+      background: "#77467A",
+      foreground: "#FFFFFF",
+    },
   ]}
 >
-<p slot="targetUser">Children with dyscalculia, ages **4-8**</p>
+  <p slot="targetUser">Children with dyscalculia, ages **4-8**</p>
 </ProjectShowcase>
 
 <div class="caseStudy">
   <div id="cluBoProduct">
-      <img src={FinalProduct.src} class="imageFill" />
+    <img src={FinalProduct.src} class="imageFill" />
   </div>
 </div>
 
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 <img src={Display.src} class="imageFill" />

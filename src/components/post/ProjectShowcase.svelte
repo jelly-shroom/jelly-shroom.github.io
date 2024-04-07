@@ -1,19 +1,29 @@
 <script lang="ts">
-  import { string } from "astro/zod";
-  import ProjectLogistics from "./ProjectLogistics.svelte";
+  import TargetUser from "./TargetUser.svelte";
+  import Typography from "./Typography.svelte";
+  import ColorPalette from "./ColorPalette.svelte";
+
   export let image: string;
+  export let typeface: any[];
+  export let colorPalette: any[];
 </script>
 
-<div>
-  <ProjectLogistics>
-    <slot name="targetUser" slot="targetUser" />
-  </ProjectLogistics>
+<div class="showcase">
+  <div style="width: 400px;">
+    <TargetUser>
+      <slot name="targetUser" slot="targetUser" />
+    </TargetUser>
+    <Typography {typeface}>
+      <slot name="typography" />
+    </Typography>
+    <ColorPalette {colorPalette} />
+  </div>
 
   <img src={image} alt="Project Showcase" />
 </div>
 
 <style>
-  div {
+  .showcase {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +33,7 @@
     gap: 100px;
   }
 
-  div img {
+  .showcase img {
     width: auto;
     height: 650px;
 

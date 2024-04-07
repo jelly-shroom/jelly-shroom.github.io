@@ -1,13 +1,13 @@
 <script lang="ts">
-  export let typeface: string[];
+  export let typeface: any[];
 </script>
 
 <div>
   <h3>Typography</h3>
   <br />
-  {#each typeface as font}
-    <p style={`font-family: '${font}';`}>
-      {font}
+  {#each typeface as { className, displayName }}
+    <p class={className}>
+      {displayName}
       <br />
       <br />
       ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -17,6 +17,7 @@
       1234567890
     </p>
   {/each}
+  <slot />
 </div>
 
 <style>
