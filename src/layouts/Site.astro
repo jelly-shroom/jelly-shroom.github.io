@@ -50,10 +50,10 @@ import "../styles/fonts.css";
           ) as HTMLElement;
 
           // Apply fade out animation
-          container.style.animation = "fadeTransitionOut .25s ease-in";
+          container.style.animation = "fadeTransitionOut .1s ease-in";
           // Apply blur transition animation
           transitionOverlay.style.animation =
-            "blurTransitionOut .25s ease-out backwards";
+            "blurTransitionOut .1s ease-out backwards";
 
           // Wait for the animations to complete before navigating to the new page
           transitionOverlay.addEventListener("animationend", onAnimationEnd);
