@@ -45,20 +45,4 @@
   p {
     text-align: left;
   }
-
-  #digiSenseAidContainer {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 20px;
-  }
-
-  #digiSenseAidContainer p {
-    text-align: center;
-    margin-top: 5px;
-  }
-
-  #digiSenseAidContainer svg {
-    fill: #ebebeb;
-  }
 </style>

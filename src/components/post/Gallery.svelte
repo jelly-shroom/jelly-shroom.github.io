@@ -13,6 +13,23 @@
 </div>
 
 <style>
+  .withGapExtra {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 40px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
+
+  .withGapExtra img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    object-fit: cover;
+  }
   .withGap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

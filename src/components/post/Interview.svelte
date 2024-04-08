@@ -10,6 +10,8 @@
     <slot name="info" />
     <slot name="furtherInfo" />
   </div>
+
+  <slot name="interview" />
 </div>
 
 <style>
@@ -43,13 +45,6 @@
 
     flex-shrink: 0;
   }
-  .columnContainer {
-    display: flex;
-    /* justify-content: space-between; */
-    gap: 5%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
 
   .halfColumn {
     width: 50%;
@@ -66,7 +61,6 @@
   }
 
   div :global(h3) {
-    color: var(--darkAccent);
     margin-top: 10px;
   }
 </style>

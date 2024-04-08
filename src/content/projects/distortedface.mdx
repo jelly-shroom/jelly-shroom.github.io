@@ -6,3 +6,32 @@ image: "../../images/covers/Distorted Face.jpg"
 alt: "Distorted face"
 date: "1/1/2020"
 ---
+
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import CoverImage from "../../images/illustrations/distortedFace.jpg";
+
+import Overview from "../../components/post/Overview.svelte";
+
+<img src={CoverImage.src} alt="Children on a Country Road" class="fullImgCover"/>
+<div class="caseStudy">
+<Overview
+  year="2020"
+  tags={["class project - basic drawing"]}
+>
+
+<h1 slot="header">
+  Capturing and embracing our imperfections.
+</h1>
+<div slot="overviewDescription">
+  <p>
+    This was an assignment in my Basic Drawing class during high school. The prompt was to draw a distorted face by smooshing our 
+    faces against a transparent surface, and the result was a distorted face that captured the essence of my features in a fun and playful way.
+  </p>
+</div>
+
+</Overview>
+
+</div>

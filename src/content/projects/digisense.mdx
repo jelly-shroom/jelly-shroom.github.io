@@ -25,6 +25,7 @@ import UISketches from "../../images/digiSense/uiProcess.jpg";
 import Persona1 from "../../images/digiSense/User Persona-1.jpg";
 import Persona2 from "../../images/digiSense/User Persona.jpg";
 import CoverImage from "../../images/covers/DigiSense.jpg";
+import Weasel from "../../images/digiSense/weasel.jpg";
 
 import Overview from "../../components/post/Overview.svelte";
 import ProblemSolutionStatement from "../../components/post/ProblemSolutionStatement.svelte";
@@ -97,12 +98,322 @@ import Interview from "../../components/post/Interview.svelte";
 ></Gallery>
 
 <div class="columnContainer">
+  <Interview pfp={Weasel} name="Wesley Lim">
+    <p slot="info">20 years old</p>
+    <p slot="furtherInfo">
+      Clinically diagnosed with dyscalculia since second grade
+    </p>
+
+    <div slot="interview">
+        <h3>How did you get your diagnosis?</h3>
+        <p>
+            When I was in second grade, my teachers noticed I was **constantly using fingers** and had difficulty doing 
+            the most basic addition and subtraction. My teacher recommended that I get tested, so my parents took me to a specialist and I got diagnosed with dyscalculia.
+        </p>
+        <br />
+        <h3>What do you do to keep track of time?</h3>
+        <p>
+            **I don't keep track of time**. I just write down everything I have to do, and I will never know how long something takes. I can't even give you an estimate.
+        </p>
+        <br />
+        <h3>How does the uncertainty of a task's duration present challenges in your day-to-day?</h3>
+        <p>
+            I'm always **worried about being late** to events so I end up going to places super early. 
+            I will have no idea how much time has passed and I end up just **waiting around** for a long time.
+        </p>
+        <br />
+        <h3>Tell me about your experience when trying to tell time elapsed using a clock.</h3>
+        <p>
+            I take a long time and have to **count with my fingers**. (Counting the time passed between 3:45 - 4:06) That's 21 minutes, right? 
+            I counted 22 the first time then **double checked**.
+        </p>
+    </div>
+  </Interview>
+
   <Interview pfp={Bonnie} name="Bonnie Weiss">
     <p slot="info">Educational therapist</p>
     <p slot="furtherInfo">
       Owner/Director of [The Family and Learning Center](https://tfalc.com/)
     </p>
+
+    <div slot="interview">
+        <h3>How would you describe dyscalculia?</h3>
+        <p>
+            Dyscalculia is a **math-related learning disability** that stems from challenges in **visual-spatial processing**, 
+            so it's difficult for people with dyscalculia to link the abstract meaning of something to its symbolic representation.
+        </p>
+        <br />
+        <h3>What are some tools and exercises used to help people with dyscalculia?</h3>
+        <p>
+            We use a variety of tools such as unit blocks, the number line, and just counting the number of **physical objects** in everyday life. 
+            Some of the tools that appear in school that can be helpful are multiplication tables, since it gives them a **visual representation** of the numbers.
+        </p>
+        <br />
+        <h3>What are some currently available solutions that help people with dyscalculia visualize the passage of time?</h3>
+        <p>
+            **Visual indications** such as **progress bars** are definitely helpful. Learning to read analogue clocks help with getting a sense 
+            of how much time has passed rather than just seeing a number on a digital clock. **Time Timers** are a great tool that implement progress 
+            bars as a visual representation of time passing.
+        </p>
+    </div>
   </Interview>
 </div>
 
+<Gallery
+  imgSrc={[NumberSystems.src]}
+  alt={["Number Systems"]}
+  uniqueID={["fullImg"]}
+></Gallery>
+<div class="columnContainer">
+    <div>
+        <h3>Roman numeral system</h3>
+            <p>
+                The Roman system relies heavily on the memorization of complex rules and symbol combinations to 
+                determine the overall value of a numeral. It requires a strong association between the **symbols** and their **values**, 
+                and similar systems will only serve to confuse children with dyscalculia.
+            </p>
+    </div>
+
+    <div>
+        <h3>Mayan numeral system</h3>
+            <p>
+                The Mayan system follows a clear pattern and straightforward rules, relying heavily on lines and dots to represent numbers. 
+                Having only 2 neccessary symbols to represent numbers makes this system **intuitive and easy** to understand, making it a great 
+                candidate for visual learning aids.
+            </p>
+    </div>
 </div>
+
+<Gallery
+  imgSrc={[PinYin.src, ProgressBars.src]}
+  alt={["PinYin", "Progress Bars"]}
+  uniqueID={[""]}
+></Gallery>
+<div class="columnContainer">
+    <div>
+        <h3>Pinyin</h3>
+            <p>
+                Pinyin is a system of romanization for standard Mandarin Chinese, and it is used to teach children how to read and write Chinese 
+                characters. It uses the latin alphabet to represent the sounds of characters, making it a great example of how **visual learning aids** 
+                can be used to bridge the gap between **abstract concepts and real-world experiences**.
+            </p>
+    </div>
+
+    <div>
+        <h3>Progress bars</h3>
+            <p>
+                Progress bars are a great example of how **visual indications** can be used to represent the passage of time. 
+                They are **simple and intuitive** to understand, and they are often used in everyday life to help people visualize a task's duration, 
+                progress, or completion. **Time Timers** are a great tool that implement progress bars as a visual representation of time passing.
+            </p>
+    </div>
+</div>
+
+<br/><br/>
+
+<PageSection>
+  <h2 slot="sectionTitle">Process</h2>
+  <p slot="description">
+    I wanted to create a product that would be **intuitive and easy to understand** for children with dyscalculia, 
+    so I started with designing the UI elements and learning aids that would be used to help them visualize time and numbers. 
+    I then moved on to designing a more **child-friendly and engaging** form factor for the wristwatch.
+  </p>
+</PageSection>
+
+<Gallery
+  imgSrc={[UISketches.src, Process1.src, Process2.src]}
+  alt={["UI Sketches", "Form Process", "Form Process 1"]}
+  uniqueID={[""]}
+  galleryType="noGap"
+></Gallery>
+
+<br/><br/>
+
+<PageSection>
+  <h2 slot="sectionTitle">Final design</h2>
+  <p slot="description">
+  </p>
+</PageSection>
+</div>
+
+<ProjectShowcase
+  image={Flow.src}
+  typeface={[
+    { className: "arialRoundedMtBold", displayName: "Arial Rounded MT Bold" },
+  ]}
+  colorPalette={[
+    {
+      background: "#6EA9E0",
+      foreground: "#FFFFFF",
+    },
+    {
+      background: "#EADC84",
+      foreground: "#0",
+    },
+    {
+      background: "#D28A56",
+      foreground: "#FFFFFF",
+    },
+    {
+      background: "#A07FEB",
+      foreground: "#FFFFFF",
+    },
+    {
+      background: "#87C987",
+      foreground: "#FFFFFF",
+    },
+  ]}
+>
+  <p slot="targetUser">Children with dyscalculia, ages **4-8**</p>
+
+  <div slot="typography">
+    <div id="digiSenseAidContainer">
+        <div>
+            <svg width="30" height="30" viewBox="0 0 100 100" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="14" />
+            </svg>
+
+            <p>1</p>
+        </div>
+
+        <div>
+            <svg width="30" height="30" viewBox="0 0 100 100" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="33" cy="66" r="14" />
+                <circle cx="66" cy="33" r="14" />
+            </svg>
+
+            <p>2</p>
+        </div>
+
+        <div>
+            <svg width="30" height="30" viewBox="0 0 100 100" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="80" r="14" />
+                <circle cx="50" cy="50" r="14" />
+                <circle cx="80" cy="20" r="14" />
+            </svg>
+
+            <p>3</p>
+        </div>
+
+
+        <div>
+            <svg width="30" height="30" viewBox="0 0 100 100" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="76" r="14" />
+                <circle cx="76" cy="76" r="14" />
+                <circle cx="24" cy="24" r="14" />
+                <circle cx="76" cy="24" r="14" />
+            </svg>
+
+            <p>4</p>
+        </div>
+
+        <div>
+            <svg width="30" height="30" viewBox="0 0 100 100" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="22" cy="78" r="14" />
+                <circle cx="78" cy="78" r="14" />
+                <circle cx="22" cy="22" r="14" />
+                <circle cx="78" cy="22" r="14" />
+                <circle cx="50" cy="50" r="14" />
+            </svg>
+
+            <p>5</p>
+        </div>
+
+    </div>
+
+    <div id="digiSenseAidContainer">
+        <div>
+            <svg width="30" height="30" viewBox="0 0 100 100" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="33" cy="84" r="14" />
+                <circle cx="67" cy="84" r="14" />
+                <circle cx="33" cy="16" r="14" />
+                <circle cx="67" cy="16" r="14" />
+                <circle cx="33" cy="50" r="14" />
+                <circle cx="67" cy="50" r="14" />
+            </svg>
+
+            <p>6</p>
+        </div>
+
+        <div>
+            <svg width="30" height="30" viewBox="0 0 100 100" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="14" />
+                <circle cx="16" cy="50" r="14" />
+                <circle cx="84" cy="16" r="14" />
+                <circle cx="84" cy="50" r="14" />
+                <circle cx="50" cy="16" r="14" />
+                <circle cx="50" cy="50" r="14" />
+                <circle cx="50" cy="84" r="14" />
+            </svg>
+
+            <p>7</p>
+        </div>
+
+        <div>
+            <svg width="30" height="30" viewBox="0 0 100 100" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="14" />
+                <circle cx="16" cy="50" r="14" />
+                <circle cx="84" cy="16" r="14" />
+                <circle cx="84" cy="50" r="14" />
+                <circle cx="50" cy="16" r="14" />
+                <circle cx="84" cy="84" r="14" />
+                <circle cx="16" cy="84" r="14" />
+                <circle cx="50" cy="84" r="14" />
+            </svg>
+
+            <p>8</p>
+        </div>
+
+
+        <div>
+            <svg width="30" height="30" viewBox="0 0 100 100" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="14" />
+                <circle cx="16" cy="50" r="14" />
+                <circle cx="84" cy="16" r="14" />
+                <circle cx="84" cy="50" r="14" />
+                <circle cx="50" cy="16" r="14" />
+                <circle cx="50" cy="50" r="14" />
+                <circle cx="84" cy="84" r="14" />
+                <circle cx="16" cy="84" r="14" />
+                <circle cx="50" cy="84" r="14" />
+            </svg>
+
+            <p>9</p>
+        </div>
+
+
+        <div>
+            <svg width="30" height="30" viewBox="0 0 100 100" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect x="44" y="98" width="96" height="12" rx="6" transform="rotate(-90 44 98)" />
+            </svg>
+
+            <p>10</p>
+        </div>
+    </div>
+  </div>
+</ProjectShowcase>
+
+<br/><br/><br/><br/>
+
+<div class="caseStudy">
+<Gallery
+  imgSrc={[Scenario.src]}
+  alt={["Scenario"]}
+  uniqueID={["fullImg"]}
+  />
+
+</div>
+
+<br/><br/><br/><br/>
+
+<img src={Display.src} class="fullImgCover" alt="Display"/>

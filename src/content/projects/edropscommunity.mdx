@@ -6,3 +6,151 @@ image: "../../images/covers/eDrops.jpg"
 alt: "eDrops Community"
 date: "1/1/2022"
 ---
+
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import Display from "../../images/eDrops/display.jpg";
+import CompetitiveAnalysis from "../../images/eDrops/analysis.png";
+import UISketches from "../../images/eDrops/sketches.png";
+import Wireframes from "../../images/eDrops/wireframes.png";
+import CoverImage from "../../images/covers/eDrops.jpg";
+import FinalUI from "../../images/eDrops/finalUI.png";
+import ColorProcess from "../../images/eDrops/colors.png";
+import Logic from "../../images/eDrops/projectLogic.png";
+
+import Overview from "../../components/post/Overview.svelte";
+import ProblemSolutionStatement from "../../components/post/ProblemSolutionStatement.svelte";
+import PageSection from "../../components/post/PageSection.svelte";
+import Gallery from "../../components/post/Gallery.svelte";
+import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
+
+<div class="bannerImgCover">
+  <img src={CoverImage.src} alt="eDrops Community" id = "eDropsCoverBanner"/>
+</div>
+<div class="caseStudy">
+<Overview
+  year="2022"
+  tags={["internship @ucla", "duration - 1 month", "team size - 3", "tools - figma, procreate", "role - ui designer, ux designer"]}
+>
+
+<h1 slot="header">
+  [eDrops Community](https://community.edroplets.org/) is a platform dedicated to building a collaborative hub to inspire electrowetting 
+  on dielectric (EWOD) research and development.
+</h1>
+<div slot="overviewDescription">
+  <p>
+    During my internship at UCLA's micro and nano manufacturing lab, I was tasked with designing a 
+    website centered around building a **community** for digital microfluidics enthusiasts, welcoming both beginners 
+    and experts in the field. The goal was to create a platform that would inspire **collaboration and innovation** in the field of EWOD research and development.
+  </p>
+  <br />
+  <p>
+    eDrops Community is an **open-source platform** that provides a space for anyone interested in microfluidics to come together and share their projects and ideas.
+  </p>
+  <br />
+  <p>
+    Outside of designing the website, I was also tasked with creating creative videos showcasing the capabilities 
+    of UCLA's fabricated EWOD chips. Working with PhD students allowed me to gain firsthand experience in the research process and expose myself to the world of academia.
+  </p>
+</div>
+
+</Overview>
+
+<ProblemSolutionStatement>
+  <p slot='problem'>
+    The current state of the field surrounding EWOD technology is **fragmented**, with research and 
+    development scattered across various institutions and companies that have **little collaboration** between them. 
+    Additionally, there is lack of resources to make this technology **accessible** to the public and beginners.
+  </p>
+
+  <p slot="solution">
+    eDrops Community is a platform that aims to **unify** the EWOD community by providing a space for researchers, 
+    students, and enthusiasts to come together and **inspire** one another. This platform features a forum for discussions 
+    and project library for users to **share** their work and resources.
+  </p>
+</ProblemSolutionStatement>
+
+<PageSection>
+  <h2 slot="sectionTitle">Research</h2>
+  <p slot="description">
+    EWOD technology is greatly **inaccessible** to the public due to its high level of skill entry, 
+    and the lack of standardization results in **no interoperability** between different devices 
+    produced by different institutions. This also leads to an inefficient production process, as 
+    individual labs are forced to design and manufacture their own chips from scratch.
+  </p>
+</PageSection>
+
+<Gallery
+  imgSrc={[Logic.src, CompetitiveAnalysis.src]}
+  alt={["Project Logic", "Competitive Analysis"]}
+  uniqueID={["fullImg", "fullImg"]}
+  galleryType="noGap"
+/>
+
+
+<PageSection>
+  <h2 slot="sectionTitle">Process</h2>
+  <p slot="description">
+    This project was my first exposure to working in a team alongside a developer and a project manager. 
+    Throughout the entire design process, I was in **constant communication** with the developer and manager 
+    to ensure that the designs were feasible and aligned with the project's goals.
+  </p>
+</PageSection>
+
+<Gallery
+  imgSrc={[UISketches.src, Wireframes.src, ColorProcess.src]}
+  alt={["UI Sketches", "Wireframes", "Color Process"]}
+  uniqueID={["fullImg", "fullImg", "fullImg"]}
+  galleryType="withGapExtra"
+/>
+
+<br/>
+
+<PageSection>
+  <h2 slot="sectionTitle">Final design</h2>
+  <p slot="description">
+  </p>
+</PageSection>
+</div>
+
+<ProjectShowcase
+  image={FinalUI.src}
+  typeface={[
+    { className: "roboto-regular", displayName: "Roboto Regular" },
+    { className: "roboto-medium", displayName: "Roboto Medium" },
+  ]}
+  colorPalette={[
+    {
+      background: "#6AB263",
+      foreground: "#FFFFFF",
+    },
+    {
+      background: "#E07A46",
+      foreground: "#FFFFFF",
+    },
+    {
+      background: "#63B7C7",
+      foreground: "#FFFFFF",
+    },
+    {
+      background: "#77467A",
+      foreground: "#FFFFFF",
+    },
+  ]}
+>
+  <p slot="targetUser">Children with NLDs, ages **3-10**</p>
+</ProjectShowcase>
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+<img src={Display.src} class="imageFill" />

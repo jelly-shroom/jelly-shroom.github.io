@@ -164,3 +164,7 @@
   font-family: "Arial Rounded MT Bold";
   src: url(../fonts/Arial\ Rounded\ MT\ Bold/arialroundedmtbold.ttf);
 }
+
+.arialRoundedMtBold {
+  font-family: "Arial Rounded MT Bold";
+}
