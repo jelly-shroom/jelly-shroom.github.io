@@ -95,5 +95,21 @@ import Interview from "../../components/post/Interview.svelte";
   uniqueID={["fullImg", "fullImg"]}>
 </Gallery>
 
+<Interview
+    person={[
+    {
+      pfp: {Bonnie},
+        name: "Bonnie Weiss",
+        info: "Educational therapist",
+        furtherInfo: "Owner/Director of [The Family and Learning Center](https://tfalc.com/)",
+    },
+  ]}
+>
+    <h3 slot="name">Bonnie Weiss</h3>
+    <p slot="info">Educational therapist</p>
+    <p slot="furtherInfo">Owner/Director of [The Family and Learning Center](https://tfalc.com/)</p>
+</Interview>
 
 </div>
+
+

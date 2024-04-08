@@ -16,6 +16,7 @@
       <br />
       1234567890
     </p>
+    <br /> <br />
   {/each}
   <slot />
 </div>
@@ -39,6 +40,10 @@
     font-size: 1.25em;
 
     text-align: center;
+  }
+
+  p {
+    text-align: left;
   }
 
   #digiSenseAidContainer {
