@@ -67,5 +67,9 @@
     .solution {
       width: 100%;
     }
+
+    .columnContainer {
+      flex-direction: column;
+    }
   }
 </style>

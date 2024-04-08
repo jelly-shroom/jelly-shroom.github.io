@@ -29,8 +29,16 @@
     </p>
   </div>
 </a>
+<div class="phoneDescription">
+  <h2>
+    {title}
+  </h2>
+</div>
 
 <style>
+  .phoneDescription {
+    display: none;
+  }
   .tagContainer {
     display: flex;
     pointer-events: none;
@@ -132,24 +140,22 @@
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 600px) {
     .portfolio-item .description,
     .tagContainer {
       display: none;
     }
 
+    .phoneDescription {
+      display: block;
+      font-family: "Kodchasan";
+      font-weight: 700;
+      text-align: left;
+      margin-top: -20px;
+    }
+
     .portfolio-item:hover .cover-image {
       filter: none;
-    }
-
-    .tags {
-      color: var(--darkAccent);
-      border: 1px solid var(--darkAccent);
-      text-transform: lowercase;
-    }
-
-    .tags svg {
-      fill: var(--darkAccent);
     }
   }
 </style>

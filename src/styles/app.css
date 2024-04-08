@@ -6,6 +6,33 @@
   padding: 0;
 }
 
+h1 {
+  line-height: 1.5;
+  font-size: 2em;
+}
+
+h2 {
+  font-family: "Kodchasan";
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+h3 {
+  font-family: "Kodchasan";
+  line-height: 1.5;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 1.25em;
+}
+
+p {
+  font-family: "Quicksand";
+  line-height: 1.5;
+}
+
 body {
   color: #333;
   background-color: #ddffea;
@@ -31,6 +58,7 @@ a {
   margin-left: auto;
   margin-right: auto;
 
+
   padding-bottom: 125px;
 
   width: 100%;
@@ -38,25 +66,6 @@ a {
   min-height: 100vh;
 }
 
-/* needed for individual projects without the div class = imgBanner so it doesn't have 
-a huge gap at the top. only difference is padding-top value */
-.glass-bgImg {
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 0;
-  padding-bottom: 125px;
-  padding-right: 5%;
-  padding-left: 5%;
-
-  width: 100%;
-  height: auto;
-  min-height: 100vh;
-}
 
 .glass-full {
   overflow-y: visible;
@@ -174,4 +183,19 @@ a {
   color: var(--darkAccent);
   text-decoration: underline;
   font-weight: bold;
+}
+
+@media screen and (max-width: 600px){
+  h1 {
+    font-size: 1.2em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  p {
+    font-size: 0.8em;
+  }
 }

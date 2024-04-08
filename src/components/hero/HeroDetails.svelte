@@ -1,25 +1,25 @@
 <div>
-    <h2>welcome to my creative hub :)</h2>
+  <h2>welcome to my creative hub :)</h2>
 
-    <ul>
-      <li>spatial design</li>
-      <li>product design</li>
-      <li>ui design</li>
-      <li>...and more!</li>
-    </ul>
+  <ul>
+    <li>spatial design</li>
+    <li>product design</li>
+    <li>ui design</li>
+    <li>...and more!</li>
+  </ul>
 
-    <a class="button" href="placeholder-nav-link.html">donwload resume</a>
+  <a class="button" href="placeholder-nav-link.html">donwload resume</a>
 </div>
 
 <style>
-h2 {
+  h2 {
     font-family: "Kodchasan";
     font-size: 2.5em;
     font-weight: normal;
     margin-bottom: 20px;
-}
+  }
 
-ul {
+  ul {
     margin-top: 0px;
     margin-bottom: 30px;
 
@@ -31,24 +31,23 @@ ul {
     display: flex;
     justify-content: space-between;
     font-size: 0.9em;
-}
+  }
 
-@media screen and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     ul {
-        display: none;
+      display: none;
     }
 
     div {
-        position: relative;
-        top: -75px !important;  
+      position: relative;
+      top: -75px !important;
     }
-}
+  }
 
-@media screen and (max-width: 400px) {
+  @media screen and (max-width: 600px) {
     h2 {
-        font-size: 2em;
-        margin-bottom: 40px;
+      font-size: 2em;
+      margin-bottom: 40px;
     }
-}
-
+  }
 </style>

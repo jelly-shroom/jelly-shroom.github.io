@@ -108,7 +108,7 @@
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 600px) {
     .text {
       left: -48.5% !important;
       width: 200px !important;

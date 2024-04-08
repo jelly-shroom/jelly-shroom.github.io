@@ -70,4 +70,42 @@
 
     flex-shrink: 0;
   }
+
+  @media screen and (max-width: 800px) {
+    .nextProjectContainer {
+      max-width: 70%;
+    }
+    .nextProjectButton {
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    .nextProjectButton h2,
+    p {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+    }
+
+    .nextProjectButton img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .nextProjectContainer {
+      max-width: 90%;
+    }
+    .nextProjectButton {
+      flex-direction: column;
+    }
+
+    .nextProjectButton img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  }
 </style>

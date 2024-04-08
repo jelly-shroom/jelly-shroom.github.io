@@ -41,4 +41,15 @@
 
     object-fit: cover;
   }
+
+  @media (max-width: 800px) {
+    .showcase {
+      flex-direction: column;
+    }
+
+    .showcase img {
+      width: 100%;
+      height: auto;
+    }
+  }
 </style>

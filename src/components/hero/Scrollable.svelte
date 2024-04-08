@@ -39,10 +39,10 @@
     z-index: 0;
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 600px) {
     .contents {
-      max-width: 90%;
-      left: 15%;
+      max-width: 80%;
+      left: 10%;
     }
   }
 </style>

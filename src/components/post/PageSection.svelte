@@ -34,4 +34,18 @@
   div :global(strong) {
     color: var(--darkAccent);
   }
+
+  @media screen and (max-width: 800px) {
+    .columnContainer {
+      flex-direction: column;
+    }
+
+    .headColumn {
+      width: 100%;
+    }
+
+    .bodyColumn {
+      width: 100%;
+    }
+  }
 </style>

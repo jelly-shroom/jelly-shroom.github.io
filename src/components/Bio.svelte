@@ -59,4 +59,12 @@
     gap: 5%;
     align-items: center;
   }
+
+  @media screen and (max-width: 800px) {
+    .aboutMeColumns {
+      margin-top: -100px;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
 </style>

@@ -67,10 +67,18 @@
     background: none;
 
     margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   a:hover {
     background-color: white;
     color: var(--darkAccent);
+  }
+
+  @media screen and (max-width: 800px) {
+    #linkToLive {
+      width: 90%;
+    }
   }
 </style>
