@@ -16,9 +16,9 @@ import "../styles/fonts.css";
     <title>Astro</title>
   </head>
   <body>
-    <div id="transitionOverlay"></div>
+    <Navbar />
     <div id="container">
-      <Navbar />
+      <div id="transitionOverlay"></div>
       <Blobs />
       <slot name="header" />
       <slot />
@@ -78,6 +78,7 @@ import "../styles/fonts.css";
             setTimeout(function () {
               // Navigate to the new page
               window.location.href = newPageURL;
+              container.style.opacity = "1.0";
             }, 0); // Wait for 1 second (same duration as the animations)
           }
         }
