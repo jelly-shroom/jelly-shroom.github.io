@@ -9,9 +9,11 @@ import PersonalList from "../components/personals/PersonalList.svelte";
 
 import { getCollection } from "astro:content";
 
-const personals = await getCollection("personals");
+const personals = (await getCollection("personals")).sort(
+  (a, b) => a.data.order - b.data.order
+);
 const personalsData = Object.fromEntries(
-  personals.map(({ data }) => [data.label, data.label])
+  personals.map(({ data, slug }) => [data.label, slug])
 );
 ---
 
@@ -21,7 +23,17 @@ const personalsData = Object.fromEntries(
     <Blobs client:load />
   </div>
   <div class="glass-full">
-    <PersonalList personals={personalsData} client:load />
+    <PersonalList personals={personalsData} client:only />
+    {
+      personals.map(async (personal) => {
+        const { Content } = await personal.render();
+        return (
+          <div id={`personal-${personal.slug}`} style="display: none">
+            <Content />
+          </div>
+        );
+      })
+    }
     <Footer />
   </div>
 </Site>

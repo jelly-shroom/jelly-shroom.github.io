@@ -17,6 +17,7 @@ const personals = defineCollection({
   type: "content",
   schema: z.object({
     label: z.string(),
+    order: z.number(),
   }),
 });
 
