@@ -16,9 +16,72 @@ import "../styles/fonts.css";
     <title>Astro</title>
   </head>
   <body>
-    <Navbar />
-    <Blobs />
-    <slot name="header" />
-    <slot />
+    <div id="transitionOverlay"></div>
+    <div id="container">
+      <Navbar />
+      <Blobs />
+      <slot name="header" />
+      <slot />
+    </div>
   </body>
 </html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get all links/buttons that trigger page changes
+    var pageChangeLinks = document.querySelectorAll("a, button.page-change");
+
+    // Add click event listener to each link/button
+    pageChangeLinks.forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        // Check if the link has the target="_blank" attribute
+        var isTargetBlank = link.getAttribute("target") === "_blank";
+
+        // Prevent the default page change behavior for non-blank targets
+        if (!isTargetBlank) {
+          event.preventDefault();
+        }
+
+        // Trigger the fade out and blur animations for non-blank targets
+        if (!isTargetBlank) {
+          let container = document.getElementById("container") as HTMLElement;
+          let transitionOverlay = document.getElementById(
+            "transitionOverlay"
+          ) as HTMLElement;
+
+          // Apply fade out animation
+          container.style.animation = "fadeTransitionOut .25s ease-in";
+          // Apply blur transition animation
+          transitionOverlay.style.animation =
+            "blurTransitionOut .25s ease-out backwards";
+
+          // Wait for the animations to complete before navigating to the new page
+          transitionOverlay.addEventListener("animationend", onAnimationEnd);
+          container.addEventListener("animationend", onAnimationEnd);
+
+          // Function to handle the end of animations
+          function onAnimationEnd() {
+            container.style.opacity = "0.0";
+            transitionOverlay.style.backdropFilter = "blur(3px)";
+
+            // Remove the event listeners to avoid multiple triggers
+            transitionOverlay.removeEventListener(
+              "animationend",
+              onAnimationEnd
+            );
+            container.removeEventListener("animationend", onAnimationEnd);
+
+            // Get the URL to navigate to
+            var newPageURL = link.getAttribute("href") || "";
+
+            // Wait for the animations to complete before navigating to the new page
+            setTimeout(function () {
+              // Navigate to the new page
+              window.location.href = newPageURL;
+            }, 0); // Wait for 1 second (same duration as the animations)
+          }
+        }
+      });
+    });
+  });
+</script>
