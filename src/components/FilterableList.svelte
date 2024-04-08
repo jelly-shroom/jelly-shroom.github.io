@@ -38,6 +38,12 @@
     transition: 0.25s;
   }
 
+  .filters:hover {
+    border: 1px solid var(--lightAccent);
+    color: white;
+    background-color: var(--lightAccent);
+  }
+
   .filters.active {
     border: 1px solid var(--darkAccent);
     color: white;
