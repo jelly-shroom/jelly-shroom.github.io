@@ -1,18 +1,15 @@
 <script lang="ts">
-  export let person: any[];
+  export let name: any;
+  export let pfp: any;
 </script>
 
-<div class="columnContainer">
-  {#each person as { pfp, name, info, furtherInfo }}
-    <div class="halfColumn">
-      <div class="profileCard">
-        <img src={pfp} alt={name} class="pfp" />
-        <h3>{name}</h3>
-        <p>{info}</p>
-        <p>{furtherInfo}</p>
-      </div>
-    </div>
-  {/each}
+<div class="halfColumn">
+  <div class="profileCard">
+    <img src={pfp.src} alt={name} class="pfp" />
+    <h3>{name}</h3>
+    <slot name="info" />
+    <slot name="furtherInfo" />
+  </div>
 </div>
 
 <style>
