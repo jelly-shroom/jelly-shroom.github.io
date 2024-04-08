@@ -6,3 +6,131 @@ image: "../../images/covers/lamp.jpg"
 alt: "lamp"
 date: "1/1/2023"
 ---
+
+
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import CoverImage from "../../images/covers/lamp.jpg";
+import CompetitiveMatrix from "../../images/lamp/Competition analysis 4x4 Matrix.png";
+import IdeationLogic from "../../images/lamp/ideationLogic.png";
+import Process1 from "../../images/lamp/process1.jpg";
+import Process2 from "../../images/lamp/process2.jpg";
+import Sketches from "../../images/lamp/sketches.jpg";
+import Kerfs from "../../images/lamp/kerfs.jpg";
+import AIImages from "../../images/lamp/aiIterations.jpg";
+import Model from "../../images/lamp/3dRender.jpg";
+import Display from "../../images/lamp/finalProduct.jpg";
+
+import Overview from "../../components/post/Overview.svelte";
+import ProblemSolutionStatement from "../../components/post/ProblemSolutionStatement.svelte";
+import PageSection from "../../components/post/PageSection.svelte";
+import Gallery from "../../components/post/Gallery.svelte";
+import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
+
+<div class="bannerImgCover">
+  <img src={CoverImage.src} alt="lamp" />
+</div>
+<div class="caseStudy">
+<Overview
+  year="2023"
+  tags={["class project - acad-245", "team size - 5", "tools - blender, laser cutter"]}
+>
+
+<h1 slot="header">
+  This desk lamp is designed to maximize working space while providing moody and aesthetic ambient lighting.
+</h1>
+<div slot="overviewDescription">
+  <p>
+    This was the final project for my Product Design class, ACAD-245. The task was to design a 
+    light source, and as a college student, what would be more fitting than a desk lamp for those 
+    late-night study sessions? I also could not get the idea of creating something culturally representative 
+    out of my head with the Mid-Autumn Festival just passing by, so I decided to incorporate some Chinese elements into the design.
+  </p>
+  <br />
+  <p>
+    This lamp is designed to provide a warm and **aesthetic** ambient light for the user's dorm room while also **maximizing space** on their desk.
+  </p>
+</div>
+
+</Overview>
+
+<ProblemSolutionStatement>
+  <p slot='problem'>
+    Many desk lamps tend to take up a lot of **space**, which can be a problem 
+    for college students with limited space in their dorms. Additionally, 
+    the lighting from these lamps can be too harsh, which can be **distracting and uncomfortable** for the user.
+  </p>
+
+  <p slot="solution">
+    This lamp is designed to have **storage space** for small items to help the user keep 
+    their desk organized and make use of the space it takes up. The lighting on this lamp 
+    is also arranged to be diffused to provide a **more comfortable** light for the user.
+  </p>
+</ProblemSolutionStatement>
+
+<PageSection>
+  <h2 slot="sectionTitle">Research</h2>
+  <p slot="description">
+    Since this was the final project and the professor wanted to give us 
+    space to create something that we were passionate about, we were given 
+    a lot of freedom in terms of what we ended up doing with the design. 
+    I, along with many of my classmates wanted to create something that was 
+    more **personal and artistic**. This definitely made it harder to create something 
+    that fell within the constraints of the research we did, but going through 
+    that process at least helped us understand what was already out there and 
+    what we could do to make our product stand out.
+  </p>
+</PageSection>
+
+
+</div>
+<Gallery
+  imgSrc={[
+    CompetitiveMatrix.src,
+    IdeationLogic.src,
+  ]}
+  alt={[
+    "Competitive Matrix",
+    "Ideation Logic"
+  ]}
+  uniqueID={["fullImg", "fullImg"]}>
+</Gallery>
+<div class="caseStudy">
+<PageSection>
+  <h2 slot="sectionTitle">Process</h2>
+  <p slot="description">
+    In true experimental college fashion, we were actually tasked 
+    with using **AI image generators** to help us in our sketching and 
+    ideation process! This was a really interesting experience-by using 
+    AI to render sketches, it ended up becoming an exchange of ideas between 
+    me and the AI, iterating upon whatever it spits out. This definitely 
+    helped me come up with some ideas that I would not have thought of otherwise.
+  </p>
+</PageSection>
+
+<Gallery
+  imgSrc={[Sketches.src, AIImages.src]}
+  alt={["Sketches", "AI generated images"]}
+  galleryType="noGap"
+></Gallery>
+<br />
+<Gallery
+  imgSrc={[Model.src, Kerfs.src, Process1.src, Process2.src]}
+  alt={["Model", "Kerfs", "Process 1", "Process 2"]}
+  galleryType="withGap"
+></Gallery>
+
+<PageSection>
+  <h2 slot="sectionTitle">Final design</h2>
+  <p slot="description">
+  </p>
+</PageSection>
+<img src={Display.src} class="imageFill" />
+</div>
+
+
+
+
+

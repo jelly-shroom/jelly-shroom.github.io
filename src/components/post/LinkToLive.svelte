@@ -17,7 +17,7 @@
 
   <div>
     {#each links as link, index}
-      <a href={link}>
+      <a href={link} target="_blank">
         {buttonText[index]}
       </a>
     {/each}

@@ -6,3 +6,129 @@ image: "../../images/covers/SoundSlope.jpg"
 alt: "SoundSlope"
 date: "1/1/2023"
 ---
+
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import CoverImage from "../../images/covers/SoundSlope.jpg";
+import CompetitiveMatrix from "../../images/soundSlope/Competition analysis 4x4 Matrix.png";
+import IdeationLogic from "../../images/soundSlope/ideationLogic.png";
+import Stickies from "../../images/soundSlope/ideationStickyNotes.png";
+import Sketches from "../../images/soundSlope/sketches.jpg";
+import LoFiFront from "../../images/soundSlope/loFiFront.jpg";
+import LoFiBack from "../../images/soundSlope/loFiBack.jpg";
+import LoFiHand from "../../images/soundSlope/loFiHand.jpg";
+import MidFiFront from "../../images/soundSlope/midFiFront.jpg";
+import MidFiSide from "../../images/soundSlope/midFiSide.jpg";
+import MidFiHandFront from "../../images/soundSlope/midFiHand.jpg";
+import MidFiHandSide from "../../images/soundSlope/midFiHandSide.jpg";
+import FinalProduct from "../../images/soundSlope/finalProduct.png";
+import Display from "../../images/soundSlope/displayRender.jpg";
+
+import Overview from "../../components/post/Overview.svelte";
+import ProblemSolutionStatement from "../../components/post/ProblemSolutionStatement.svelte";
+import PageSection from "../../components/post/PageSection.svelte";
+import Gallery from "../../components/post/Gallery.svelte";
+import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
+
+<div class="bannerImgCover">
+  <img src={CoverImage.src} alt="lamp" />
+</div>
+<div class="caseStudy">
+<Overview
+  year="2023"
+  tags={["class project - acad-245", "team size - 5", "tools - blender"]}
+>
+
+<h1 slot="header">
+  **SoundSlope** is a wearable speaker that effortlessly integrates into a skier's gear while delivering high quality sound.
+</h1>
+<div slot="overviewDescription">
+  <p>
+    This was a project for my Product Design class, ACAD-245. We 
+    were split into different groups to takle different categories 
+    of products, and I landed in the "bluetooth speaker" group. We 
+    did preliminary research and ideations as a team, but we split off 
+    individually when it came to putting our ideations onto paper. From 
+    the sketching process onwards, we all ended up with vastly different 
+    products targeting different niches.
+  </p>
+  <br />
+  <p>
+    SoundSlope is a wearable speaker that is designed to be integrated into a 
+    skier's gear so that it can be worn comfortably without inhibiting any **movement**.
+  </p>
+</div>
+
+</Overview>
+
+<ProblemSolutionStatement>
+  <p slot='problem'>
+    Many people who do extreme sports often enjoy listening 
+    to music through speakers, but the current options available 
+    are often **bulky and uncomfortable** to bring along. They tend to 
+    hinder movement and can be **easily damaged** by the elements.
+  </p>
+
+  <p slot="solution">
+    SoundSlope is a **compact and portable** speaker that can be securely attached 
+    over a skier's gloves. It is designed to seamlessly integrate with the skier's
+    **movements**, allowing them to enjoy their music without any distractions or discomfort.
+  </p>
+</ProblemSolutionStatement>
+
+<PageSection>
+  <h2 slot="sectionTitle">Research</h2>
+  <p slot="description">
+    In this class, our research was mainly focused on the options that are currently 
+    available in the market and figuring out how we can differentiate ourselves from them.
+  </p>
+</PageSection>
+
+
+</div>
+<Gallery
+  imgSrc={[
+    CompetitiveMatrix.src,
+    IdeationLogic.src,
+    Stickies.src
+  ]}
+  alt={[
+    "Competitive Matrix",
+    "Ideation Logic",
+    "Ideation Sticky Notes"
+  ]}
+  uniqueID={["fullImg", "fullImg", "fullImg"]}>
+</Gallery>
+<div class="caseStudy">
+<PageSection>
+  <h2 slot="sectionTitle">Process</h2>
+  <p slot="description">
+    After the initial research stages, everyone broke off to do their own individual sketches 
+    and ideations for the product. I started off without knowing what audience I wanted to target, 
+    but I eventually settled on skiers because I felt the wearable form factor was sleek and 
+    could be an interesting idea to explore further.
+  </p>
+</PageSection>
+
+<Gallery
+  imgSrc={[Sketches.src, LoFiFront.src, LoFiBack.src, LoFiHand.src, MidFiFront.src, MidFiSide.src, MidFiHandFront.src, MidFiHandSide.src]}
+  alt={["Sketches", "Lo-Fi Front", "Lo-Fi Back", "Lo-Fi Hand", "Mid-Fi Front", "Mid-Fi Side", "Mid-Fi Hand Front", "Mid-Fi Hand Side"]}
+  uniqueID={["fullImg", "", "", "fullImg", "", "", "", ""]}
+  galleryType="noGap"
+/>
+
+<br />
+
+<PageSection>
+  <h2 slot="sectionTitle">Final design</h2>
+  <p slot="description">
+  </p>
+</PageSection><br />
+<img src={FinalProduct.src} class="imageFill" />
+</div>
+
+<br /><br /><br /><br /><br /><br /><br />
+
+<img src={Display.src} class="imageFill" />

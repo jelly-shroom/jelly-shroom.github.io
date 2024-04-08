@@ -22,3 +22,14 @@
 <div>
   <FilterableList tags={personals} bind:selectedTag />
 </div>
+
+<style>
+  :global(p) {
+    font-family: "Quicksand";
+    line-height: 1.5;
+  }
+
+  :global(strong) {
+    color: var(--darkAccent);
+  }
+</style>

@@ -23,6 +23,7 @@ const personalsData = Object.fromEntries(
     <Blobs client:load />
   </div>
   <div class="glass-full">
+    <h2 id="featured-title">more about me</h2>
     <PersonalList personals={personalsData} client:load />
     {
       personals.map(async (personal: any) => {

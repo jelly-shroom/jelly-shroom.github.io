@@ -50,7 +50,7 @@
 
   .noGap {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: 0px;
     margin-top: -20px;

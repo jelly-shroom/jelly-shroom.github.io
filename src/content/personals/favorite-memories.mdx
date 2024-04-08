@@ -2,5 +2,65 @@
 label: "favorite memories"
 order: 0
 ---
+import "../../styles/app.css";
 
-i ate apple pie
+import SnowFall from "../../images/aboutMe/favMemos_snowfall.jpg";
+import NoSleep from "../../images/aboutMe/favMemos_noSleep.jpg";
+import Dog from "../../images/aboutMe/favMemos_dog.jpg";
+import Retreat from "../../images/aboutMe/favMemos_retreat.jpg";
+import UCLAInternship from "../../images/aboutMe/favMemos_UCLAInternship.jpg";
+import MiddleSchoolReunion from "../../images/aboutMe/favMemos_middleSchoolReunion.jpg";
+import DisneylandSteps from "../../images/aboutMe/favMemos_DisneylandSteps.jpg";
+import IceCream from "../../images/aboutMe/favMemos_iceCream.jpg";
+import GymMedals from "../../images/aboutMe/favMemos_gymMedals.jpg";
+
+
+import PhotoGallery from "../../components/PhotoGallery.svelte";
+
+<p>
+    These are some of my favorite moments that I never want to forget. Experiences are 
+    special because they are **fleeting**, and these are some of those fleeting moments 
+    that make life so special.
+</p>
+<br/>
+
+<PhotoGallery
+  imgSrc={[
+    SnowFall.src,
+    NoSleep.src,
+    Dog.src,
+    Retreat.src,
+    UCLAInternship.src,
+    MiddleSchoolReunion.src,
+    DisneylandSteps.src,
+    IceCream.src,
+    GymMedals.src,
+  ]}
+  alt={[
+    "snowfall",
+    "no sleep", 
+    "dog",
+    "retreat",
+    "ucla internship",
+    "middle school reunion",
+    "disneyland steps",
+    "ice cream",
+    "gym medals",
+  ]}
+  imgCaption={[
+    "first day of the hackathon!",
+    "we got to try on xreal's air 2 ultra glasses :0",
+    'we won quest 3s as a prize for the "best use of bezi"!',
+    "we took the chance to visit boston common, the oldest park in america, right before our flight back!",
+    "caught the moment our devs finally got multiplayer working on the quest!",
+    "celebrating the end of the hackathon with a group lunch in chinatown <3",
+    "we went out for dessert after the hackathon to celebrate, and it started snowing (my first time seeing snowfall!)",
+    "Coco's drawing of us <3",
+  ]}
+  uniqueID={[
+    
+  ]}
+></PhotoGallery>
+
+
+

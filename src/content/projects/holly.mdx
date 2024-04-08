@@ -6,3 +6,33 @@ image: "../../images/covers/Holly.jpg"
 alt: "Holly"
 date: "1/1/2022"
 ---
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import CoverImage from "../../images/illustrations/holly_charcoal.jpg";
+
+import Overview from "../../components/post/Overview.svelte";
+
+<img src={CoverImage.src} alt="Holly" class="fullImgCover"/>
+<div class="caseStudy">
+<Overview
+  year="2022"
+  tags={["class project - mixed mediaa"]}
+>
+
+<h1 slot="header">
+  Preserving a moment in my dog's everyday life.
+</h1>
+<div slot="overviewDescription">
+  <p>
+    This was an assignment in my Mixed Media class during high school, and we were tasked 
+    with creating any piece of artwork using charcoal on our handmade toned paper. Knowing 
+    I will be off to college soon, I wanted to create a piece that preserved a moment in my dog's everyday life. 
+    Sometimes, when you take a step back and observe the little things, you realize how precious they are.
+  </p>
+</div>
+
+</Overview>
+
+</div>

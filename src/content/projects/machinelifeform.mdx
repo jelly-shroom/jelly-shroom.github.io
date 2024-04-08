@@ -6,3 +6,43 @@ image: "../../images/covers/Machine Lifeform.jpg"
 alt: "Machine Lifeform"
 date: "1/1/2019"
 ---
+
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import CoverImage from "../../images/machineLifeform/coverImage_MachineLifeform.jpg";
+import Nodes from "../../images/machineLifeform/nodes.jpg";
+
+import Overview from "../../components/post/Overview.svelte";
+import PageSection from "../../components/post/PageSection.svelte";
+import Gallery from "../../components/post/Gallery.svelte";
+
+<img src={CoverImage.src} alt="Machine Lifeform" class="fullImgCover"/>
+<div class="caseStudy">
+<Overview
+  year="2019"
+  tags={["individual project", "tools - blender"]}
+>
+
+<h1 slot="header">
+  A tribute to NieR: Automata.
+</h1>
+<div slot="overviewDescription">
+  <p>
+    This project features a fully procedural texture made from a series of node networks within Blender's scripting environment.
+  </p>
+</div>
+
+</Overview>
+<Gallery
+  imgSrc={[
+    Nodes.src
+  ]}
+  alt={[
+    "Nodes"
+  ]}
+  uniqueID={["fullImg"]} />
+
+
+</div>

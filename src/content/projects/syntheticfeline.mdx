@@ -6,3 +6,52 @@ image: "../../images/covers/Synthetic Feline.jpg"
 alt: "Synthetic Feline"
 date: "1/1/2019"
 ---
+
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import CoverImage from "../../images/syntheticFeline/coverImage_SyntheticFeline.jpg";
+import Process from "../../images/syntheticFeline/process.jpg";
+import Wireframes from "../../images/syntheticFeline/wireframes.jpg";
+
+import Overview from "../../components/post/Overview.svelte";
+import Gallery from "../../components/post/Gallery.svelte";
+import PageSection from "../../components/post/PageSection.svelte";
+
+
+
+<img src={CoverImage.src} alt="Synthetic Feline" class="fullImgCover"/>
+<div class="caseStudy">
+<Overview
+  year="2019"
+  tags={["individual project", "tools - blender, procreate"]}
+>
+    <h1 slot="header">
+        An organic-hard surface design fusion for topology practice.
+    </h1>
+    <div slot="overviewDescription">
+    <p>
+        I wanted to create and model a design that was a fusion of organic and hard surface elements to practice my topology skills.
+    </p>
+    </div>
+
+</Overview>
+
+<PageSection>
+    <h2 slot="sectionTitle">References + Sketches</h2>
+</PageSection>
+<Gallery
+  imgSrc={[Process.src]}
+  alt={["Process"]}
+  uniqueID={["fullImg"]}
+/>
+</div>
+
+<br/><br/><br/><br/>
+
+<Gallery
+  imgSrc={[Wireframes.src]}
+  alt={["Wireframes"]}
+  uniqueID={["fullImg"]}
+></Gallery>

@@ -25,6 +25,7 @@ import ProblemSolutionStatement from "../../components/post/ProblemSolutionState
 import PageSection from "../../components/post/PageSection.svelte";
 import Gallery from "../../components/post/Gallery.svelte";
 import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
+import LinkToLive from "../../components/post/LinkToLive.svelte";
 
 <div class="bannerImgCover">
   <img src={CoverImage.src} alt="eDrops Community" id = "eDropsCoverBanner"/>
@@ -119,38 +120,92 @@ import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
   image={FinalUI.src}
   typeface={[
     { className: "roboto-regular", displayName: "Roboto Regular" },
-    { className: "roboto-medium", displayName: "Roboto Medium" },
+    { className: "roboto-bold", displayName: "Roboto Bold" },
   ]}
   colorPalette={[
     {
-      background: "#6AB263",
+      background: "#334155",
       foreground: "#FFFFFF",
     },
     {
-      background: "#E07A46",
-      foreground: "#FFFFFF",
+      background: "#CBD5E1",
+      foreground: "#000000",
     },
     {
-      background: "#63B7C7",
-      foreground: "#FFFFFF",
+      background: "#F8FAFC",
+      foreground: "#000000",
     },
     {
-      background: "#77467A",
+      background: "#F1F5F9",
+      foreground: "#000000",
+    },
+    {
+      background: "#0369A1",
       foreground: "#FFFFFF",
     },
   ]}
 >
-  <p slot="targetUser">Children with NLDs, ages **3-10**</p>
+  <p slot="targetUser">People interested in EWOD technology, ages **18-65**</p>
 </ProjectShowcase>
+<br /><br /><br /><br />
+<LinkToLive
+  links={[
+    "https://community.edroplets.org/"
+  ]}
+  buttonText={[`check out edrops community! >`]}
+>
+  <h2 slot="header">Take a look</h2>
+  <p slot="body">
+    As of my current re-write of this case study (April 4, 2024), the eDrops Community website 
+    is still in development. But! At least it is now public, so feel free to check it out!
+  </p>
+</LinkToLive>
+<br />
 
+<div class="caseStudy">
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+<PageSection>
+<h2 slot="sectionTitle">Reflections</h2>
+  <div  slot="description">
+      <h3>Academia is a scary place.</h3>
+        <p>
+            Just kidding! But in all seriousness, working with PhD students was a very eye-opening experience. 
+            While it may seem fun to go into research and just do a deep dive into a topic you're passionate about, 
+            seeing it with my own eyes made me realize that it's not all fun and games. I would watch the students 
+            stay in the lab day in and day out, conducting experiments and drafting up their own papers. Hearing about 
+            their experiences within academia made me realize doing a deep dive into a topic you're passionate about comes 
+            with a lot of **other responsibilities and stressors** that I hadn't considered before.
+        </p>
+
+        <br /><br />
+
+          <h3>Working with a team is completely different from working alone.</h3>
+          <p>
+              This was my first time working with a team on a project, and it was such an interesting experience. 
+              Before, I would be the one to make all the decisions and do all the work. In a team, it was more 
+              about **collaboration and communication**. Working with a developer ensured that my designs were feasible, 
+              and working with a project manager ensured that the project was on track according to their vision, rather 
+              than my own. All this meant that I had to be **flexible and open-minded** to other people's ideas and opinions. 
+              I would be sending emails back and forth with the developer and manager, asking if certain designs were possible 
+              and which ones would be the best to implement. It was a lot of back and forth, but it was a great learning experience.
+          </p>
+
+          <br /><br />
+
+          <h3>It's a lot of public speaking.</h3>
+          <p>
+              Every Friday we would have a group presentation to the professor to discuss our work throughout 
+              the week and next steps. It was definitely a nerve-wracking experience, especially since the professor was 
+              critical with his critiques, but it was a great way to practice my **public speaking** skills. While I wouldn't have 
+              voluntarily put myself through this experience, I am immensely grateful that I had to go through the process of defending 
+              my thought processes and decisions. This taught me so much about how to present my work in a way that is **understandable 
+              and engaging** to others while **cutting the BS**.
+          </p>
+          </div>
+
+</PageSection>
+</div>
+<br /><br /><br /><br />
 
 
 <img src={Display.src} class="imageFill" />

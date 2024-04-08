@@ -6,7 +6,7 @@
 <Scrollable>
   <div class="aboutMeColumns">
     <div class="pfp">
-      <img src={ProfilePicture.src} width="200" alt="jessica sheng" />
+      <img src={ProfilePicture.src} alt="jessica sheng" />
     </div>
 
     <div class="description">
@@ -25,6 +25,11 @@
 </Scrollable>
 
 <style>
+  .pfp {
+    width: 150px;
+    height: auto;
+    flex-shrink: 0;
+  }
   strong {
     color: var(--darkAccent);
   }
@@ -48,6 +53,7 @@
   }
 
   .aboutMeColumns {
+    margin-top: 100px;
     display: flex;
     justify-content: space-between;
     gap: 5%;

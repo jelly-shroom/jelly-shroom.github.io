@@ -6,3 +6,156 @@ image: "../../images/covers/MoodiMe.jpg"
 alt: "MoodiMe"
 date: "1/1/2022"
 ---
+
+
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import CoverImage from "../../images/moodiMe/coverImage_MoodiMe.jpg";
+import ColorProcess from "../../images/moodiMe/colorExploration.png";
+import HiFi from "../../images/moodiMe/hiFiIteration.jpg";
+import IconSketches from "../../images/moodiMe/iconSketches.png";
+import Display from "../../images/moodiMe/moodimeDisplay.jpg";
+import FinalUI from "../../images/moodiMe/finalUI.png";
+import UISketches from "../../images/moodiMe/uiSketches.png";
+import Persona1 from "../../images/moodiMe/User Persona-1.jpg";
+import Persona2 from "../../images/moodiMe/User Persona.jpg";
+
+import Overview from "../../components/post/Overview.svelte";
+import ProblemSolutionStatement from "../../components/post/ProblemSolutionStatement.svelte";
+import PageSection from "../../components/post/PageSection.svelte";
+import Gallery from "../../components/post/Gallery.svelte";
+import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
+import LinkToLive from "../../components/post/LinkToLive.svelte";
+
+<div class="bannerImgCover">
+  <img src={CoverImage.src} alt="MoodiMe" id = "moodiMeCoverBanner"/>
+</div>
+<div class="caseStudy">
+<Overview
+  year="2022"
+  tags={["individual project", "tools - figma, procreate"]}
+>
+
+<h1 slot="header">
+  **MoodiMe** is a wellness app that helps guide users towards a more balanced lifestyle through insights based on their mood and habits.
+</h1>
+<div slot="overviewDescription">
+  <p>
+    While fluctuations in mood are a normal part of life, they can sometimes be a sign of underlying issues that need to be addressed. 
+    A lack of awareness regarding one's emotional fluctuations becomes a barrier to seeking help and making positive changes.
+  </p>
+  <br />
+  <p>
+    MoodiMe is a wellness app that helps users track their **mood and habits** to find patterns and provide 
+    **personalized recommendations** to empower users to take control of their mental health and well-being.
+  </p>
+  <br />
+  <p>
+    Outside of designing the website, I was also tasked with creating creative videos showcasing the capabilities 
+    of UCLA's fabricated EWOD chips. Working with PhD students allowed me to gain firsthand experience in the research process and expose myself to the world of academia.
+  </p>
+</div>
+
+</Overview>
+
+<ProblemSolutionStatement>
+  <p slot='problem'>
+    Many people realize the importance of understanding how their dailiy habits and lifestyle 
+    choices affect their mood, but they often **lack the tools** to do so. The most common reason 
+    people don't track their moods and behaviors is because they think it's **"too much work"** 
+    or too **difficult to manage** the data.
+  </p>
+
+  <p slot="solution">
+    MoodiMe aims to streamline the process of tracking mood and habits by providing 
+    a **simple and intuitive** interface while still providing a **comprehensive** collection of 
+    data. The app will provide **personalized** insights based on the user's data to help them 
+    understand their mood patterns and make positive changes.
+  </p>
+</ProblemSolutionStatement>
+
+<PageSection>
+  <h2 slot="sectionTitle">Research</h2>
+  <p slot="description">
+    With 1 in 4 adults and 1 in 5 adolescents in the U.S. 
+    experiencing mental illness each year, it is more important 
+    than ever to provide tools that help people understand and manage 
+    their mental health. Emotional regulation is a key component of 
+    mental health and well-being, and research articles have shown that 
+    one's daily habits have a significant impact on their ability to <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3817414/">regulate their emotions</a>.
+  </p>
+</PageSection>
+
+<Gallery
+  imgSrc={[Persona1.src, Persona2.src]}
+  alt={["Persona 1", "Persona 2"]}
+  uniqueID={["fullImg", "fullImg"]}
+/>
+
+
+<PageSection>
+  <h2 slot="sectionTitle">Process</h2>
+  <p slot="description" >
+    My vision for MoodiMe involved an **organic yet modern** feel, 
+    keeping a balance between the two to create a calming and inviting 
+    atmosphere. This involved thoughtful design of not just the UI but the icons as well.
+  </p>
+</PageSection>
+
+<Gallery
+  imgSrc={[UISketches.src, IconSketches.src, ColorProcess.src, HiFi.src]}
+  alt={["UI Sketches", "Icon Sketches", "Color Process", "Hi-Fi Iteration"]}
+  uniqueID={["fullImg", "fullImg", "fullImg", "fullImg"]}
+  galleryType="withGap"
+/>
+
+<br/>
+
+<PageSection>
+  <h2 slot="sectionTitle">Final design</h2>
+  <p slot="description">
+  </p>
+</PageSection>
+</div>
+
+<ProjectShowcase
+  image={FinalUI.src}
+  typeface={[
+    { className: "roboto-regular", displayName: "Roboto Regular" },
+    { className: "roboto-medium", displayName: "Roboto Medium" },
+  ]}
+  colorPalette={[
+    {
+      background: "#555B6E",
+      foreground: "#FFFFFF",
+    },
+    {
+      background: "#89B0AE",
+      foreground: "#FFFFFF",
+    },
+    {
+      background: "#BEE3DB",
+      foreground: "#000000",
+    },
+    {
+      background: "#FAF9F9",
+      foreground: "#000000",
+    },
+    {
+      background: "#FFD6BA",
+      foreground: "#000000",
+    },
+  ]}
+>
+  <p slot="targetUser">People who want better self-awareness, ages **14-45**</p>
+</ProjectShowcase>
+
+<div class="caseStudy">
+
+</div>
+<br /><br /><br /><br />
+
+
+<img src={Display.src} class="imageFill" />
