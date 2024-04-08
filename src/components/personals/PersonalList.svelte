@@ -1,25 +1,22 @@
 <script>
   import FilterableList from "../FilterableList.svelte";
   export let personals = {};
-
-  let currentTag = "";
   let selectedTag = "";
+  let currentTag = "";
+
+  selectedTag = Object.values(personals)[0];
 
   $: {
-    if (selectedTag) {
-      document
-        .getElementById(`personal-${selectedTag}`)
-        .style.setProperty("display", "block");
+    if (!import.meta.env.SSR) {
+      if (currentTag !== "") {
+        document.getElementById(currentTag).style = "display: none";
+      }
+      if (selectedTag !== "") {
+        document.getElementById(selectedTag).style = "display: block";
+        currentTag = selectedTag;
+      }
     }
-    if (currentTag) {
-      document
-        .getElementById(`personal-${currentTag}`)
-        .style.setProperty("display", "none");
-    }
-    currentTag = selectedTag;
   }
-
-  selectedTag = Object.keys(personals)[0];
 </script>
 
 <div>
