@@ -9,7 +9,7 @@
 </script>
 
 <div class="showcase">
-  <div style="width: 400px;">
+  <div class="logistics">
     <TargetUser>
       <slot name="targetUser" slot="targetUser" />
     </TargetUser>
@@ -23,6 +23,9 @@
 </div>
 
 <style>
+  .logistics {
+    width: 400px;
+  }
   .showcase {
     display: flex;
     justify-content: center;
@@ -47,6 +50,9 @@
       flex-direction: column;
     }
 
+    .logistics {
+      width: 90%;
+    }
     .showcase img {
       width: 100%;
       height: auto;
