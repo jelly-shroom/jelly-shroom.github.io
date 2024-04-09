@@ -35,13 +35,13 @@ import "../styles/fonts.css";
       return new Promise((resolve) => {
         container.style.animation = "fadeTransitionOut .1s ease-in";
         overlay.style.animation = "blurTransitionOut .1s ease-out backwards";
-        setTimeout(() => {
-          container.style.opacity = "0";
-        }, 100);
+        // setTimeout(() => {
+        //   container.style.opacity = "0";
+        // }, 100);
 
-        setTimeout(() => {
-          resolve(0);
-        }, 200);
+        // setTimeout(() => {
+        //   resolve(0);
+        // }, 200);
       });
     } else {
       return new Promise((resolve) => {
