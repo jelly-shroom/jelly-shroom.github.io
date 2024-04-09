@@ -9,6 +9,12 @@ import "../styles/fonts.css";
 
 <html lang="en">
   <head>
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
@@ -61,10 +67,4 @@ import "../styles/fonts.css";
   // window.addEventListener("popstate", () => {
   //   handleTransition();
   // });
-
-  var perfEntries = performance.getEntriesByType("navigation");
-
-  if ((perfEntries[0] as PerformanceNavigationTiming).type === "back_forward") {
-    location.reload();
-  }
 </script>
