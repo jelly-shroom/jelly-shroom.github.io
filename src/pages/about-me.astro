@@ -25,6 +25,7 @@ const personalsData = Object.fromEntries(
   </div>
   <div class="glass-full">
     <h2 id="featured-title">more about me</h2>
+    <PhotoGallery client:load />
     <PersonalList personals={personalsData} client:load />
     {
       personals.map(async (personal: any) => {
