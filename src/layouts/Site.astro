@@ -58,7 +58,13 @@ import "../styles/fonts.css";
   });
 
   // Intercept back/forward button navigation
-  window.addEventListener("popstate", () => {
-    handleTransition();
-  });
+  // window.addEventListener("popstate", () => {
+  //   handleTransition();
+  // });
+
+  var perfEntries = performance.getEntriesByType("navigation");
+
+  if ((perfEntries[0] as PerformanceNavigationTiming).type === "back_forward") {
+    location.reload();
+  }
 </script>
