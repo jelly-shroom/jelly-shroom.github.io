@@ -62,7 +62,7 @@
 
   @media screen and (max-width: 800px) {
     .aboutMeColumns {
-      margin-top: -100px;
+      margin-top: -50px;
       flex-direction: column;
       gap: 20px;
     }

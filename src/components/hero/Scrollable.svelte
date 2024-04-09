@@ -41,6 +41,7 @@
 
   @media screen and (max-width: 600px) {
     .contents {
+      top: 20%;
       max-width: 80%;
       left: 10%;
     }
