@@ -63,20 +63,16 @@ import "../styles/fonts.css";
     }
   });
 
-  window.addEventListener("pageshow", function (event) {
-    var historyTraversal =
-      event.persisted ||
-      (typeof window.performance != "undefined" &&
-        window.performance.getEntriesByType("navigation")[2]);
-
-    if (historyTraversal) {
-      // Handle page restore.
-      window.location.reload();
-    }
-  });
-
   // Intercept back/forward button navigation
   // window.addEventListener("popstate", () => {
   //   handleTransition();
   // });
+
+  (function () {
+    window.onpageshow = function (event) {
+      if (event.persisted) {
+        window.location.reload();
+      }
+    };
+  })();
 </script>
