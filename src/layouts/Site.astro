@@ -72,12 +72,12 @@ import "../styles/fonts.css";
             container.removeEventListener("animationend", onAnimationEnd);
 
             // Get the URL to navigate to
-            var newPageURL = link.getAttribute("href") || "";
+            var newPageURL = link.getAttribute("href");
 
             // Wait for the animations to complete before navigating to the new page
             setTimeout(function () {
               // Navigate to the new page
-              window.location.href = newPageURL;
+              if (newPageURL) window.location.href = newPageURL;
             }, -100); // Wait for 1 second (same duration as the animations)
           }
         }

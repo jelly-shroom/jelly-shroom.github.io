@@ -16,6 +16,7 @@ import GymMedals from "../../images/aboutMe/favMemos_gymMedals.jpg";
 
 
 import PhotoGallery from "../../components/PhotoGallery.svelte";
+import GalleryItem from "../../components/GalleryItem.svelte";
 
 <p>
     These are some of my favorite moments that I never want to forget. Experiences are 
@@ -25,50 +26,26 @@ import PhotoGallery from "../../components/PhotoGallery.svelte";
 <br/>
 
 <PhotoGallery 
-  imgSrc={[
-    SnowFall.src,
-    NoSleep.src,
-    Dog.src,
-    Retreat.src,
-    UCLAInternship.src,
-    MiddleSchoolReunion.src,
-    DisneylandSteps.src,
-    IceCream.src,
-    GymMedals.src
+  galleryLayout={[
+    "a b c",
+    "d e f",
+    "d g f",
+    "h h h"
   ]}
-  alt={[
-    "snowfall",
-    "no sleep", 
-    "dog",
-    "retreat",
-    "ucla internship",
-    "middle school reunion",
-    "disneyland steps",
-    "ice cream",
-    "gym medals"
-  ]}
-  imgCaption={[
-    "first day of the hackathon!",
-    "we got to try on xreal's air 2 ultra glasses :0",
-    'we won quest 3s as a prize for the "best use of bezi"!',
-    "we took the chance to visit boston common, the oldest park in america, right before our flight back!",
-    "caught the moment our devs finally got multiplayer working on the quest!",
-    "celebrating the end of the hackathon with a group lunch in chinatown <3",
-    "we went out for dessert after the hackathon to celebrate, and it started snowing (my first time seeing snowfall!)",
-    "Coco's drawing of us <3"
-  ]}
-  uniqueID={[
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-  ]}
-></PhotoGallery>
+>
+    <GalleryItem
+      image={SnowFall}
+      alt="Group photo"
+      caption="first day of the hackathon!"
+      gridArea="a"
+    />
+    <GalleryItem
+      image={NoSleep}
+      alt="Multiplayer working"
+      caption="caught the moment our devs finally got multiplayer working on the quest!"
+      gridArea="b"
+    />
+</PhotoGallery>
 
 
 
