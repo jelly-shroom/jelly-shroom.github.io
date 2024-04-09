@@ -213,57 +213,63 @@ import GalleryItem from "../../components/GalleryItem.svelte";
 
 </div>
 
-<PhotoGallery>
-  <div>
+<PhotoGallery 
+  galleryType="drTrustGallery"
+  >
+  
     <GalleryItem
       image={GroupPhoto1}
       alt="Group photo"
       caption="first day of the hackathon!"
+      gridArea="a"
     />
-        <GalleryItem
+    <GalleryItem
       image={Multiplayer}
       alt="Multiplayer working"
       caption="caught the moment our devs finally got multiplayer working on the quest!"
+      gridArea="d"
     />
-  </div>
-  <div>
+  
+
     <GalleryItem
       image={XReal}
       alt="XReal"
       caption="we got to try on xreal's air 2 ultra glasses :0"
+      gridArea="b"
     />
         <GalleryItem
       image={Lunch}
       alt="Group lunch"
       caption="celebrating the end of the hackathon with a group lunch in chinatown <3"
+      gridArea="e"
     />
 
     <GalleryItem
       image={BostonCommon}
       alt="Boston Common"
       caption="we took the chance to visit boston common, the oldest park in america, right before our flight back!"
+      gridArea="g"
     />
 
-  </div>
-  <div>
+  
 
     <GalleryItem
       image={Quest3}
       alt="Quest 3"
       caption='we won quest 3s as a prize for the "best use of bezi"!'
+      gridArea="c"
     />
-      <GalleryItem
-    image={Umbrella}
-    alt="Group umbrella"
-    caption="we went out for dessert after the hackathon to celebrate, and it started snowing (my first time seeing snowfall!)"
+    <GalleryItem
+      image={Umbrella}
+      alt="Group umbrella"
+      caption="we went out for dessert after the hackathon to celebrate, and it started snowing (my first time seeing snowfall!)"
+      gridArea="f"
 
-/>
-
-  </div>
-
-  <GalleryItem
-    image={Hacking}
-    alt="Hacking"
-    caption="Coco's drawing of us <3"
-  />
+    />
+    <GalleryItem
+      image={Hacking}
+      alt="Hacking"
+      caption="Coco's drawing of us <3"
+      gridArea="h"
+    />
 </PhotoGallery>
