@@ -73,4 +73,12 @@
   #fullImg {
     grid-area: auto/ auto/ auto/ span 2;
   }
+
+  @media screen and (max-width: 800px) {
+    .withGapExtra,
+    .withGap,
+    .noGap {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 </style>

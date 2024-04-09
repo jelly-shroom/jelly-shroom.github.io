@@ -25,66 +25,51 @@ import GalleryItem from "../../components/GalleryItem.svelte";
 </p>
 <br/>
 
-<PhotoGallery 
-  galleryLayout={[
-    "a b c",
-    "d e f",
-    "g h i"
-  ]}
->
+<PhotoGallery >
   <GalleryItem
     image={SnowFall}
     alt="Snowfall"
     caption="my first experience of snowfall was with my teammates while celebrating our win <33"
-    gridArea="a"
   />
   <GalleryItem
     image={NoSleep}
     alt="No Sleep"
     caption="pulling my first all-nighter with my team at reality hack!"
-    gridArea="b"
   />
   <GalleryItem
     image={Dog}
     alt="Dog"
     caption="loved the daily walks i would take my dog on before college. it's the small things in life"
-    gridArea="c"
   />
   <GalleryItem
     image={Retreat}
     alt="Retreat"
     caption="cohort x's first retreat together! we fit 48 people in a 10 person airbnb!"
-    gridArea="d"
   />
   <GalleryItem
     image={UCLAInternship}
     alt="UCLA Internship"
     caption="my first exposure to research and academia was at ucla while i interned with phd students"
-    gridArea="e"
   />
   <GalleryItem
     image={MiddleSchoolReunion}
     alt="Middle School Reunion"
     caption="reuinion with my closest friends from middle school <3"
-    gridArea="f"
   />
   <GalleryItem
     image={DisneylandSteps}
     alt="Disneyland Steps"
     caption="went to disneyland with my friend when we led sedentary lives. i'll never forget the pain in my feet"
-    gridArea="g"
   />
   <GalleryItem
     image={IceCream}
     alt="Ice Cream"
     caption="when a group of middle schoolers (us) raided some poor fast food restaurant after a school dance"
-    gridArea="h"
   />
   <GalleryItem
     image={GymMedals}
     alt="Gym Medals"
     caption="my first and last national gymnastics competition </3"
-    gridArea="i"
   />
 </PhotoGallery>
 

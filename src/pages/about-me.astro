@@ -9,6 +9,7 @@ import PersonalList from "../components/personals/PersonalList.svelte";
 
 import { getCollection } from "astro:content";
 import PhotoGallery from "../components/PhotoGallery.svelte";
+import GalleryItem from "../components/GalleryItem.svelte";
 
 const personals = (await getCollection("personals")).sort(
   (a, b) => a.data.order - b.data.order
@@ -26,6 +27,7 @@ const personalsData = Object.fromEntries(
   <div class="glass-full">
     <h2 id="featured-title">more about me</h2>
     <PhotoGallery client:load />
+    <GalleryItem client:load />
     <PersonalList personals={personalsData} client:load />
     {
       personals.map(async (personal: any) => {

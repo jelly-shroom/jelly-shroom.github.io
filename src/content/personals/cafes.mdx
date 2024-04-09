@@ -2,9 +2,42 @@
 label: "cafes <3"
 order: 3
 ---
+import "../../styles/post.css";
+
+import Cafe1 from "../../images/aboutMe/cafes_1.jpg";
+import Cafe2 from "../../images/aboutMe/cafes_2.jpg";
+import Cafe3 from "../../images/aboutMe/cafes_3.jpg";
+import Cafe4 from "../../images/aboutMe/cafes_4.jpg";
+
+import PhotoGallery from "../../components/PhotoGallery.svelte";
+import GalleryItem from "../../components/GalleryItem.svelte";
+
+
 
 <p>
     Love love love cafes. I love the atmosphere, 
     the coffee + food, and the people. I love the feeling 
     of being in a place where everyone is doing their own thing **together**.
 </p>
+
+<br/>
+
+<PhotoGallery >
+    <GalleryItem
+        image={Cafe1}
+        alt="cafe 1"
+    />
+    <GalleryItem
+        image={Cafe2}
+        alt="cafe 2"
+    />
+    <GalleryItem
+        image={Cafe3}
+        alt="cafe 3"
+    />
+    <GalleryItem
+        image={Cafe4}
+        alt="cafe 4"
+    />
+
+</PhotoGallery>
