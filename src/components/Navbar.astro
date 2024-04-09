@@ -9,6 +9,25 @@
   </div>
 </div>
 
+<script>
+  const nav = document.querySelector(".navbar");
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    if (lastScrollY < window.scrollY && window.scrollY > 0) {
+      if (nav) {
+        nav.classList.add("nav--hidden");
+      }
+    } else {
+      if (nav) {
+        nav.classList.remove("nav--hidden");
+      }
+    }
+
+    lastScrollY = window.scrollY;
+  });
+</script>
+
 <style>
   .navbar {
     font-family: "Kodchasan", sans-serif;

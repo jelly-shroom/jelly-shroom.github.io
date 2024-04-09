@@ -27,7 +27,7 @@
 <style>
   .pfp {
     width: 200px;
-    height: auto;
+    height: 200px;
     flex-shrink: 0;
   }
   strong {
