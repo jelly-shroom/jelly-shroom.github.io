@@ -2,7 +2,29 @@
 label: "gym!"
 order: 2
 ---
+import "../../styles/post.css";
+
+import PhotoGallery from "../../components/PhotoGallery.svelte";
+import GalleryItem from "../../components/GalleryItem.svelte";
+
 
 <p>
     I like to do weird stuff with my body :p
 </p>
+
+<br/>
+
+<PhotoGallery 
+  galleryLayout={[
+    ". b ."
+  ]}
+>
+    <div style="grid-area: b; width: 640px; height: 360px; margin: auto;">
+        <iframe width="100%" height="100%" style="margin-bottom: 10px;"  
+            src="https://www.youtube.com/embed/jlTYOkrlvM4?si=3aUU2zPp_78RbCyK" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen
+        />
+    </div>
+
+</PhotoGallery>

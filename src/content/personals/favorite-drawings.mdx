@@ -2,6 +2,15 @@
 label: "favorite drawings"
 order: 1
 ---
+import "../../styles/post.css";
+
+import BloodyKermie from "../../images/aboutMe/favDrawings_bloodyKermie.jpg";
+import PixelKermie from "../../images/aboutMe/favDrawings_pixelKermie.jpg";
+import Water from "../../images/aboutMe/favDrawings_water.jpg";
+
+import PhotoGallery from "../../components/PhotoGallery.svelte";
+import GalleryItem from "../../components/GalleryItem.svelte";
+
 
 <p>
     I started drawing cursed images in high school, 
@@ -10,3 +19,28 @@ order: 1
     nice to **break free** from the mindset of having creating a 
     "perfect" piece of art by deliberately making something ugly and weird.
 </p>
+
+<br/>
+
+<PhotoGallery 
+  galleryLayout={[
+    "a b c",
+  ]}
+>
+  <GalleryItem
+    image={BloodyKermie}
+    alt="Bloody Kermie"
+    gridArea="a"
+  />
+  <GalleryItem
+    image={PixelKermie}
+    alt="Pixel Kermie"
+    gridArea="b"
+  />
+  <GalleryItem
+    image={Water}
+    alt="Water"
+    gridArea="c"
+  />
+
+</PhotoGallery>
