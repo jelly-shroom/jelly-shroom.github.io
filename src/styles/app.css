@@ -58,14 +58,12 @@ a {
   margin-left: auto;
   margin-right: auto;
 
-
   padding-bottom: 125px;
 
   width: 100%;
   height: auto;
   min-height: 100vh;
 }
-
 
 .glass-full {
   overflow-y: visible;
@@ -86,8 +84,6 @@ a {
 
   width: 80%;
 }
-
-
 
 .button {
   display: inline-block;
@@ -185,7 +181,7 @@ a {
   font-weight: bold;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   h1 {
     font-size: 1.2em;
   }

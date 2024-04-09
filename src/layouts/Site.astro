@@ -27,61 +27,38 @@ import "../styles/fonts.css";
 </html>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get all links/buttons that trigger page changes
-    var pageChangeLinks = document.querySelectorAll("a, button.page-change");
+  function handleTransition() {
+    const container = document.getElementById("container") as HTMLElement;
+    const overlay = document.getElementById("transitionOverlay") as HTMLElement;
 
-    // Add click event listener to each link/button
-    pageChangeLinks.forEach(function (link) {
-      link.addEventListener("click", function (event) {
-        // Check if the link has the target="_blank" attribute
-        var isTargetBlank = link.getAttribute("target") === "_blank";
+    return new Promise((resolve) => {
+      container.style.animation = "fadeTransitionOut .1s ease-in";
+      overlay.style.animation = "blurTransitionOut .1s ease-out backwards";
+      setTimeout(() => {
+        container.style.opacity = "0";
+      }, 100);
 
-        // Prevent the default page change behavior for non-blank targets
-        if (!isTargetBlank) {
-          event.preventDefault();
-        }
-
-        // Trigger the fade out and blur animations for non-blank targets
-        if (!isTargetBlank) {
-          let container = document.getElementById("container") as HTMLElement;
-          let transitionOverlay = document.getElementById(
-            "transitionOverlay"
-          ) as HTMLElement;
-
-          // Apply fade out animation
-          container.style.animation = "fadeTransitionOut .1s ease-in";
-          // Apply blur transition animation
-          transitionOverlay.style.animation =
-            "blurTransitionOut .1s ease-out backwards";
-
-          // Wait for the animations to complete before navigating to the new page
-          transitionOverlay.addEventListener("animationend", onAnimationEnd);
-          container.addEventListener("animationend", onAnimationEnd);
-
-          // Function to handle the end of animations
-          function onAnimationEnd() {
-            container.style.opacity = "0.0";
-            transitionOverlay.style.backdropFilter = "blur(3px)";
-
-            // Remove the event listeners to avoid multiple triggers
-            transitionOverlay.removeEventListener(
-              "animationend",
-              onAnimationEnd
-            );
-            container.removeEventListener("animationend", onAnimationEnd);
-
-            // Get the URL to navigate to
-            var newPageURL = link.getAttribute("href");
-
-            // Wait for the animations to complete before navigating to the new page
-            setTimeout(function () {
-              // Navigate to the new page
-              if (newPageURL) window.location.href = newPageURL;
-            }, -100); // Wait for 1 second (same duration as the animations)
-          }
-        }
-      });
+      setTimeout(() => {
+        resolve(0);
+      }, 200);
     });
+  }
+
+  // Intercept link clicks
+  document.addEventListener("click", (event: any) => {
+    const target = event.target.closest("a");
+
+    if (target && target.href && !target.target) {
+      event.preventDefault();
+
+      handleTransition().then(() => {
+        window.location.href = target.href;
+      });
+    }
+  });
+
+  // Intercept back/forward button navigation
+  window.addEventListener("popstate", () => {
+    handleTransition();
   });
 </script>
