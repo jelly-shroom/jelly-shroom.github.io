@@ -5,23 +5,31 @@
   export let gridArea: string;
 </script>
 
-<div style="grid-area: {gridArea};">
+<div
+  style="grid-area: {gridArea};
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex: 1 1 30%;"
+>
   <img
     src={image.src}
     {alt}
-    style="max-width: 100%; max-height: 100%; object-fit: cover;"
+    style="position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    object-fit: cover;"
   />
   <p>{caption}</p>
 </div>
 
 <style>
   div {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1 1 30%;
   }
   p {
     font-size: 1em;

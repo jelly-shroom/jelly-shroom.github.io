@@ -26,22 +26,25 @@ import GalleryItem from "../../components/GalleryItem.svelte";
 <br/>
 
 <PhotoGallery 
-  galleryType="column"
+  galleryLayout={[
+    "a b c",
+    "d e f",
+    "d g f",
+    "h h h"
+  ]}
 >
-  <div>
     <GalleryItem
       image={SnowFall}
       alt="Group photo"
       caption="first day of the hackathon!"
-
+      gridArea="a"
     />
     <GalleryItem
       image={NoSleep}
       alt="Multiplayer working"
       caption="caught the moment our devs finally got multiplayer working on the quest!"
-
+      gridArea="b"
     />
-  </div>
 </PhotoGallery>
 
 
