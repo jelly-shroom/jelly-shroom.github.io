@@ -26,8 +26,11 @@ const personalsData = Object.fromEntries(
   </div>
   <div class="glass-full">
     <h2 id="featured-title">more about me</h2>
-    <PhotoGallery client:load />
-    <GalleryItem client:load />
+    <div style="position: absolute; display: none;">
+      <PhotoGallery client:load />
+      <GalleryItem client:load />
+    </div>
+
     <PersonalList personals={personalsData} client:load />
     {
       personals.map(async (personal: any) => {
@@ -43,25 +46,3 @@ const personalsData = Object.fromEntries(
     <Footer />
   </div>
 </Site>
-
-<style>
-  #heroWrapper {
-    position: relative;
-    height: 90vh;
-    width: 100%;
-  }
-
-  #featured-title {
-    font-family: "Kodchasan";
-    font-weight: 700;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    font-size: 1.25em;
-  }
-
-  @media (max-width: 800px) {
-    .glass-full {
-      width: 90%;
-    }
-  }
-</style>

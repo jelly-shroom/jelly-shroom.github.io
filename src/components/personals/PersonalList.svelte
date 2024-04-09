@@ -12,7 +12,8 @@
         document.getElementById(currentTag).style = "display: none";
       }
       if (selectedTag !== "") {
-        document.getElementById(selectedTag).style = "display: block";
+        document.getElementById(selectedTag).style =
+          "display: block; animation: fadeTransitionIn 0.5s ease-out forwards;";
         currentTag = selectedTag;
       }
     }

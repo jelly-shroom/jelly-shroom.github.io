@@ -8,7 +8,7 @@
     <li>...and more!</li>
   </ul>
 
-  <a class="button" href="placeholder-nav-link.html">donwload resume</a>
+  <!-- <a class="button" href="placeholder-nav-link.html">donwload resume</a> -->
 </div>
 
 <style>

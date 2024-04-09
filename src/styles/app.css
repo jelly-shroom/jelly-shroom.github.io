@@ -181,7 +181,32 @@ a {
   font-weight: bold;
 }
 
+#featured-title {
+  font-family: "Kodchasan";
+  font-weight: 700;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-size: 1.25em;
+}
+
+#heroWrapper {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .glass-full {
+    width: 90%;
+  }
+}
+
 @media screen and (max-width: 600px) {
+  #featured-title {
+    margin-top: 40px;
+    font-size: 1.2em;
+  }
+
   h1 {
     font-size: 1.2em;
   }
