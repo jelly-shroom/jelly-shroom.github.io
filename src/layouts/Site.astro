@@ -31,17 +31,31 @@ import "../styles/fonts.css";
     const container = document.getElementById("container") as HTMLElement;
     const overlay = document.getElementById("transitionOverlay") as HTMLElement;
 
-    return new Promise((resolve) => {
-      container.style.animation = "fadeTransitionOut .1s ease-in";
-      overlay.style.animation = "blurTransitionOut .1s ease-out backwards";
-      setTimeout(() => {
-        container.style.opacity = "0";
-      }, 100);
+    if (container.style.opacity === "1") {
+      return new Promise((resolve) => {
+        container.style.animation = "fadeTransitionOut .1s ease-in";
+        overlay.style.animation = "blurTransitionOut .1s ease-out backwards";
+        setTimeout(() => {
+          container.style.opacity = "0";
+        }, 100);
 
-      setTimeout(() => {
-        resolve(0);
-      }, 200);
-    });
+        setTimeout(() => {
+          resolve(0);
+        }, 200);
+      });
+    } else {
+      return new Promise((resolve) => {
+        container.style.animation = "fadeTransitionIn .1s ease-out";
+        overlay.style.animation = "blurTransitionIn .1s ease-out backwards";
+        setTimeout(() => {
+          container.style.opacity = "1";
+        }, 100);
+
+        setTimeout(() => {
+          resolve(0);
+        }, 200);
+      });
+    }
   }
 
   // Intercept link clicks
