@@ -31,6 +31,7 @@ import PageSection from "../../components/post/PageSection.svelte";
 import Gallery from "../../components/post/Gallery.svelte";
 import LinkToLive from "../../components/post/LinkToLive.svelte";
 import PhotoGallery from "../../components/PhotoGallery.svelte";
+import GalleryItem from "../../components/GalleryItem.svelte";
 
 <div style="height: 125px" />
 <div class="video">
@@ -211,45 +212,58 @@ import PhotoGallery from "../../components/PhotoGallery.svelte";
 <br /><br /><br /><br /><br />
 
 </div>
-<PhotoGallery
-  imgSrc={[
-    GroupPhoto1.src,
-    XReal.src,
-    Quest3.src,
-    BostonCommon.src,
-    Multiplayer.src,
-    Lunch.src,
-    Umbrella.src,
-    Hacking.src,
-  ]}
-  alt={[
-    "Group photo",
-    "XReal",
-    "Quest 3",
-    "Boston Common",
-    "Multiplayer working",
-    "Group lunch",
-    "Group umbrella",
-    "Hacking",
-  ]}
-  imgCaption={[
-    "first day of the hackathon!",
-    "we got to try on xreal's air 2 ultra glasses :0",
-    'we won quest 3s as a prize for the "best use of bezi"!',
-    "we took the chance to visit boston common, the oldest park in america, right before our flight back!",
-    "caught the moment our devs finally got multiplayer working on the quest!",
-    "celebrating the end of the hackathon with a group lunch in chinatown <3",
-    "we went out for dessert after the hackathon to celebrate, and it started snowing (my first time seeing snowfall!)",
-    "Coco's drawing of us <3",
-  ]}
-  uniqueID={[
-    "",
-    "",
-    "",
-    "marginBottom",
-    "verticalImgLeft",
-    "",
-    "verticalImgRight",
-    "HACKING",
-  ]}
-></PhotoGallery>
+
+<PhotoGallery>
+  <div>
+    <GalleryItem
+      image={GroupPhoto1}
+      alt="Group photo"
+      caption="first day of the hackathon!"
+    />
+        <GalleryItem
+      image={Multiplayer}
+      alt="Multiplayer working"
+      caption="caught the moment our devs finally got multiplayer working on the quest!"
+    />
+  </div>
+  <div>
+    <GalleryItem
+      image={XReal}
+      alt="XReal"
+      caption="we got to try on xreal's air 2 ultra glasses :0"
+    />
+        <GalleryItem
+      image={Lunch}
+      alt="Group lunch"
+      caption="celebrating the end of the hackathon with a group lunch in chinatown <3"
+    />
+
+    <GalleryItem
+      image={BostonCommon}
+      alt="Boston Common"
+      caption="we took the chance to visit boston common, the oldest park in america, right before our flight back!"
+    />
+
+  </div>
+  <div>
+
+    <GalleryItem
+      image={Quest3}
+      alt="Quest 3"
+      caption='we won quest 3s as a prize for the "best use of bezi"!'
+    />
+      <GalleryItem
+    image={Umbrella}
+    alt="Group umbrella"
+    caption="we went out for dessert after the hackathon to celebrate, and it started snowing (my first time seeing snowfall!)"
+
+/>
+
+  </div>
+
+  <GalleryItem
+    image={Hacking}
+    alt="Hacking"
+    caption="Coco's drawing of us <3"
+  />
+</PhotoGallery>
