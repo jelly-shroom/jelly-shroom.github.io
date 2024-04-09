@@ -1,6 +1,6 @@
 <script>
-  import ProfilePicture from "../images/aboutMe/aboutMepfp.jpg";
-  import Scrollable from "./hero/Scrollable.svelte";
+  import ProfilePicture from "../../images/aboutMe/aboutMepfp.jpg";
+  import Scrollable from "../hero/Scrollable.svelte";
 </script>
 
 <Scrollable>
