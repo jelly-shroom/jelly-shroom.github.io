@@ -3,23 +3,21 @@
   const gridTemplate = galleryLayout.map((area) => `"${area}"`).join(" ");
 </script>
 
-<div class="fwa" style={`grid-template-areas: ${gridTemplate};`}>
+<div class="gallery" style={`grid-template-areas: ${gridTemplate};`}>
   <slot />
-  <style>
-    .fwa {
-      margin: auto;
-      width: 90%;
-      display: grid;
-
-      gap: 20px;
-      margin-top: -20px;
-      margin-bottom: 20px;
-    }
-
-    div :global(div) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  </style>
 </div>
+
+<style>
+  .gallery {
+    margin: auto;
+    width: 100%;
+    display: grid;
+    gap: 20px;
+  }
+
+  div :global(div) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
