@@ -6,7 +6,11 @@
 </script>
 
 <div style="grid-area: {gridArea};">
-  <img src={image.src} {alt} />
+  <img
+    src={image.src}
+    {alt}
+    style="max-width: 100%; max-height: 100%; object-fit: cover;"
+  />
   <p>{caption}</p>
 </div>
 

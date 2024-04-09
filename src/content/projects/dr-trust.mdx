@@ -214,8 +214,13 @@ import GalleryItem from "../../components/GalleryItem.svelte";
 </div>
 
 <PhotoGallery 
-  galleryType="drTrustGallery"
-  >
+  galleryLayout={[
+    "a b c",
+    "d e f",
+    "d g f",
+    "h h h"
+  ]}
+>
   
     <GalleryItem
       image={GroupPhoto1}
@@ -229,7 +234,6 @@ import GalleryItem from "../../components/GalleryItem.svelte";
       caption="caught the moment our devs finally got multiplayer working on the quest!"
       gridArea="d"
     />
-  
 
     <GalleryItem
       image={XReal}
@@ -251,7 +255,7 @@ import GalleryItem from "../../components/GalleryItem.svelte";
       gridArea="g"
     />
 
-  
+
 
     <GalleryItem
       image={Quest3}
@@ -272,4 +276,5 @@ import GalleryItem from "../../components/GalleryItem.svelte";
       caption="Coco's drawing of us <3"
       gridArea="h"
     />
+
 </PhotoGallery>

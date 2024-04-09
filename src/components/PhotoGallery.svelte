@@ -1,28 +1,18 @@
 <script lang="ts">
-  export let galleryType: string;
+  export let galleryLayout: string[] = [];
+  const gridTemplate = galleryLayout.map((area) => `"${area}"`).join(" ");
 </script>
 
-<div class={galleryType}>
+<div style={`grid-template-areas: ${gridTemplate};`}>
   <slot />
 </div>
 
 <style>
-  .column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .drTrustGallery {
+  div {
     margin: auto;
     width: 90%;
     display: grid;
-    grid-template-areas:
-      "a b c"
-      "d e f"
-      "d g f"
-      "h h h";
 
-    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: -20px;
     margin-bottom: 20px;
