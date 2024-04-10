@@ -109,9 +109,6 @@ a {
   background-color: var(--darkAccent);
 }
 
-/* a {
-  text-decoration: none;
-} */
 
 @keyframes blurTransitionIn {
   from {

@@ -29,8 +29,7 @@
 </script>
 
 <style>
-  .page-links a,
-  .home-link a {
+  .navbar a {
     color: var(--darkAccent);
     font-weight: normal;
     text-decoration: none;
@@ -70,14 +69,13 @@
     box-shadow: none;
   }
 
-  .navbar .home-link {
-    font-weight: bold;
+  .home-link {
     text-transform: uppercase;
 
     float: left;
   }
 
-  .navbar .page-links {
+  .page-links {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,11 +85,7 @@
     float: right;
   }
 
-  .navbar a {
-    color: var(--lightAccent);
-  }
-
-  .navbar .page-links :hover {
+  .page-links :hover {
     color: var(--darkAccent);
   }
 
