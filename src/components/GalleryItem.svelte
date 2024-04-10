@@ -30,7 +30,6 @@
   }
 
   p {
-    font-size: 1em;
     margin-bottom: 20px;
     text-align: center;
   }
