@@ -63,4 +63,15 @@
   div :global(h3) {
     margin-top: 10px;
   }
+
+  @media screen and (max-width: 800px) {
+    .halfColumn {
+      width: 100%;
+    }
+
+    .pfp {
+      width: 100px;
+      height: 100px;
+    }
+  }
 </style>
