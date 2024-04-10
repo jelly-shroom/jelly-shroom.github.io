@@ -65,7 +65,7 @@
 
   @media screen and (max-width: 800px) {
     .aboutMeHero {
-      margin-top: -30px;
+      margin-top: 0px;
       flex-direction: column;
       gap: 20px;
     }
