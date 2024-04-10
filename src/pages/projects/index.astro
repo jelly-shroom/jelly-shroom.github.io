@@ -1,6 +1,7 @@
 ---
 import Site from "../../layouts/Site.astro";
 import ProjectList from "../../components/project/ProjectList.svelte";
+import Footer from "../../components/Footer.astro";
 
 import { getCollection, type CollectionEntry } from "astro:content";
 
@@ -27,6 +28,8 @@ const tags = {
 <Site>
   <div class="glass-bg" style="padding-top: 125px;">
     <ProjectList tags={tags} projects={projectData} client:load />
+
+    <Footer />
   </div>
 </Site>
 

@@ -12,13 +12,14 @@
     <div class="description">
       <h1>i’m jessica sheng, a designer based in la.</h1>
       <p>
-        I am currently a student of the <strong>Iovine and Young Academy</strong
+        I am currently a student of the <a
+          href="https://iovine-young.usc.edu/"
+          target="blank_">Iovine and Young Academy</a
         >
-        at the University of Southern California, and I am pursuing a degree in
-        <strong>Arts, Technology, and the Business of Innovation</strong>. I
-        love tinkering with new technologies and testing out new solutions to
-        problems, and I am always looking for new ways to apply my skills to
-        create meaningful experiences for others. Thanks for stopping by!
+        at the University of Southern California. I love tinkering with new technologies
+        and testing out new solutions to problems, and I am always looking for new
+        ways to apply my skills to create meaningful experiences for others. Thanks
+        for stopping by!
       </p>
     </div>
   </div>
@@ -30,8 +31,10 @@
     height: 200px;
     flex-shrink: 0;
   }
-  strong {
+  a {
     color: var(--darkAccent);
+    font-weight: bold;
+    text-decoration: underline;
   }
   h1 {
     font-family: "Kodchasan";
