@@ -4,7 +4,7 @@
 </script>
 
 <Scrollable>
-  <div class="aboutMeColumns">
+  <div class="aboutMeHero">
     <div class="pfp">
       <img src={ProfilePicture.src} alt="jessica sheng" />
     </div>
@@ -55,7 +55,7 @@
     border-radius: 100%;
   }
 
-  .aboutMeColumns {
+  .aboutMeHero {
     margin-top: 100px;
     display: flex;
     justify-content: space-between;
@@ -64,8 +64,8 @@
   }
 
   @media screen and (max-width: 800px) {
-    .aboutMeColumns {
-      margin-top: -50px;
+    .aboutMeHero {
+      margin-top: -30px;
       flex-direction: column;
       gap: 20px;
     }
