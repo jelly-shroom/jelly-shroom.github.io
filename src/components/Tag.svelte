@@ -39,6 +39,7 @@
     color: white;
     border: 1px solid rgba(255, 255, 255, 1);
     background-color: rgba(255, 255, 255, 0.3);
+    text-transform: lowercase;
   }
 
   .tagsWhite svg {
@@ -62,7 +63,7 @@
 
     color: var(--darkAccent);
     font-family: "Sono";
-    font-weight: 500;
+    font-weight: normal;
     font-size: 14px;
 
     text-transform: lowercase;

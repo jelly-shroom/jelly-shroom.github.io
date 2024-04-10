@@ -26,6 +26,10 @@
 </div>
 
 <style>
+  a {
+    font-weight: 400;
+    text-decoration: none;
+  }
   .nextProjectContainer {
     margin: auto;
     max-width: 50%;

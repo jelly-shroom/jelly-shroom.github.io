@@ -1,4 +1,8 @@
-
+a {
+    color: var(--darkAccent);
+    text-decoration: underline;
+    font-weight: bold;
+  }
 
 .video {
     margin: auto;

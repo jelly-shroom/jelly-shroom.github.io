@@ -46,7 +46,7 @@ body {
 
 a {
   color: var(--darkAccent);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .glass-bg {
@@ -109,9 +109,9 @@ a {
   background-color: var(--darkAccent);
 }
 
-a {
+/* a {
   text-decoration: none;
-}
+} */
 
 @keyframes blurTransitionIn {
   from {

@@ -69,6 +69,9 @@
     margin-right: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
+
+    text-decoration: none;
+    font-weight: normal;
   }
 
   a:hover {
