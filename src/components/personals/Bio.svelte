@@ -69,5 +69,12 @@
       flex-direction: column;
       gap: 20px;
     }
+
+    h1 {
+      font-family: "Kodchasan";
+      line-height: 1.5;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
   }
 </style>
