@@ -56,7 +56,7 @@
   }
 
   .aboutMeHero {
-    margin-top: 100px;
+    margin-top: 75px;
     display: flex;
     justify-content: space-between;
     gap: 5%;
