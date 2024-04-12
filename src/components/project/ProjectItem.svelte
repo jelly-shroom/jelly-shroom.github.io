@@ -39,6 +39,10 @@
   .description :global(strong) {
     color: white;
   }
+
+  h2 :global() {
+    color: white;
+  }
   .phoneDescription {
     display: none;
   }
