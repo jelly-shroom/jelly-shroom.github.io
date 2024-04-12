@@ -2,6 +2,7 @@
 import { getCollection, getEntry } from "astro:content";
 import Site from "../../layouts/Site.astro";
 import NextProject from "../../components/NextProject.svelte";
+import Footer from "../../components/Footer.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -29,6 +30,7 @@ const nextProject = projects[(idx + 1) % projects.length];
         ...nextProject.data,
       }}
     />
+    <Footer />
   </div>
 </Site>
 
