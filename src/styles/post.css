@@ -132,12 +132,12 @@ a {
 
 @media screen and (max-width: 600px) {
     .video {
-        width: 320px;
+        width: 340px;
         height: 200px;
     }
 
     .caseStudyVideo {
-        width: 320px;
+        width: 340px;
     }
 
     
