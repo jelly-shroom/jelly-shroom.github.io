@@ -80,5 +80,9 @@
     .noGap {
       grid-template-columns: repeat(1, 1fr);
     }
+
+    #blenderViewport {
+      grid-area: auto;
+    }
   }
 </style>
