@@ -36,6 +36,9 @@
 </div>
 
 <style>
+  .description :global(strong) {
+    color: white;
+  }
   .phoneDescription {
     display: none;
   }

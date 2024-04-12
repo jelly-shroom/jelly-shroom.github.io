@@ -1,3 +1,7 @@
+<script>
+  import ViewResumeButton from "../ViewResumeButton.svelte";
+</script>
+
 <div>
   <h2>welcome to my creative hub :)</h2>
 
@@ -8,9 +12,7 @@
     <li>...and more!</li>
   </ul>
 
-  <a class="button" href="placeholder-nav-link.html"
-    >donwload resume (i dont have it up yet lol)</a
-  >
+  <ViewResumeButton />
 </div>
 
 <style>
