@@ -80,13 +80,13 @@
       padding-right: 30px;
       padding-left: 30px;
 
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     .columnContainer {
       gap: 0 !important;
-      margin-bottom: 30px;
-      margin-top: 0px;
+      margin-bottom: 10px;
+      margin-top: -20px;
     }
   }
 </style>
