@@ -24,4 +24,14 @@
 
     text-align: center;
   }
+
+  @media screen and (max-width: 600px) {
+    div {
+      padding: 20px;
+      padding-right: 30px;
+      padding-left: 30px;
+
+      margin-bottom: 10px;
+    }
+  }
 </style>

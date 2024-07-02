@@ -58,4 +58,10 @@
       height: auto;
     }
   }
+
+  @media (max-width: 600px) {
+    .showcase {
+      margin-top: -10px;
+    }
+  }
 </style>

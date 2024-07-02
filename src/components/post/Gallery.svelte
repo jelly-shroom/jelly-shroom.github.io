@@ -85,4 +85,12 @@
       grid-area: auto;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    .withGapExtra,
+    .withGap,
+    .noGap {
+      gap: 0px !important;
+    }
+  }
 </style>

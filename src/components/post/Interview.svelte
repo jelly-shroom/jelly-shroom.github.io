@@ -74,4 +74,19 @@
       height: 100px;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    .profileCard {
+      padding: 20px;
+      padding-right: 30px;
+      padding-left: 30px;
+
+      margin-bottom: 20px;
+    }
+
+    .pfp {
+      width: 80px;
+      height: 80px;
+    }
+  }
 </style>

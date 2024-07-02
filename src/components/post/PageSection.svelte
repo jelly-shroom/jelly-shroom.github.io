@@ -48,4 +48,12 @@
       width: 100%;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    .columnContainer {
+      gap: 0;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  }
 </style>

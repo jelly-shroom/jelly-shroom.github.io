@@ -87,6 +87,7 @@
     }
     .columnContainer {
       margin-top: 10px;
+      margin-bottom: 30px;
     }
 
     .bodyColumn div {

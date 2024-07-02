@@ -72,4 +72,21 @@
       flex-direction: column;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    .problem,
+    .solution {
+      padding: 20px;
+      padding-right: 30px;
+      padding-left: 30px;
+
+      margin-bottom: 10px;
+    }
+
+    .columnContainer {
+      gap: 0 !important;
+      margin-bottom: 30px;
+      margin-top: 0px;
+    }
+  }
 </style>

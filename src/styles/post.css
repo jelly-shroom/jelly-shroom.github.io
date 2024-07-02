@@ -55,7 +55,6 @@ a {
 
 .columnContainer {
     display: flex;
-    /* justify-content: space-between; */
     gap: 5%;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -141,5 +140,8 @@ a {
         width: 340px;
     }
 
-
+    .columnContainer {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }

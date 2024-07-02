@@ -84,4 +84,24 @@
       width: 90%;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    #linkToLive {
+      padding: 20px;
+      padding-right: 30px;
+      padding-left: 30px;
+
+      margin-bottom: 40px;
+    }
+
+    a {
+      width: 100%;
+      padding: 15px;
+      padding-right: 20px;
+      padding-left: 20px;
+
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
 </style>
