@@ -5,7 +5,7 @@
   export let tags: string[];
 </script>
 
-<div>
+<div class="heading">
   <slot name="header" />
   <h3>
     {year}
@@ -45,7 +45,6 @@
 
   .columnContainer {
     display: flex;
-    /* justify-content: space-between; */
     gap: 5%;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -78,6 +77,20 @@
 
     .bodyColumn {
       width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .heading {
+      margin-top: -10px;
+      font-size: 1.2rem;
+    }
+    .columnContainer {
+      margin-top: 10px;
+    }
+
+    .bodyColumn div {
+      margin-top: 0;
     }
   }
 </style>

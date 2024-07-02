@@ -2,7 +2,7 @@ a {
     color: var(--darkAccent);
     text-decoration: underline;
     font-weight: bold;
-  }
+}
 
 .video {
     margin: auto;
@@ -127,11 +127,12 @@ a {
     }
 
 
-    
+
 }
 
 @media screen and (max-width: 600px) {
     .video {
+        margin-top: -30px;
         width: 340px;
         height: 200px;
     }
@@ -140,5 +141,5 @@ a {
         width: 340px;
     }
 
-    
+
 }

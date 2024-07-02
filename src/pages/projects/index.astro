@@ -26,7 +26,7 @@ const tags = {
 ---
 
 <Site>
-  <div class="glass-bg" style="padding-top: 125px;">
+  <div class="glass-bg">
     <ProjectList tags={tags} projects={projectData} client:load />
 
     <Footer />
@@ -37,12 +37,14 @@ const tags = {
   .glass-bg {
     padding-right: 10%;
     padding-left: 10%;
+    padding-top: 125px;
   }
 
   @media (max-width: 800px) {
     .glass-bg {
       padding-right: 5%;
       padding-left: 5%;
+      padding-top: 70px;
     }
   }
 </style>

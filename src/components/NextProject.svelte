@@ -58,11 +58,20 @@
     margin-top: 10px;
   }
 
+  .nextProjectButton h2 {
+    color: var(--darkAccent);
+
+    transition: 0.25s;
+  }
+
   .nextProjectButton:hover {
     border: 1px solid var(--darkAccent);
     border-radius: 25px;
     background-color: var(--darkAccent);
     color: #ebebeb;
+  }
+  .nextProjectButton:hover h2 {
+    color: white;
   }
 
   .nextProjectButton img {
@@ -110,6 +119,11 @@
       width: 100%;
       height: auto;
       margin-bottom: 20px;
+    }
+
+    .nextProjectButton h2,
+    p {
+      margin-top: -10px;
     }
   }
 </style>

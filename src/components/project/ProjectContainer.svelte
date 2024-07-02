@@ -8,12 +8,9 @@
     margin-bottom: 50px;
 
     grid-auto-columns: minmax(200px, auto);
-    /* grid-auto-rows: minmax(300px, auto); */
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-flow: dense; /* don't forget this */
+    grid-auto-flow: dense;
     gap: 30px;
-
-    /* justify-content: center; */
   }
 
   @media screen and (max-width: 1400px) {

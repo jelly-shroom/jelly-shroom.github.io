@@ -20,11 +20,11 @@
     gap: 20px;
     margin-bottom: -25px;
 
-    font-family: "Kodchasan", sans-serif;
+    font-family: "Nunito", sans-serif;
   }
 
   h1 {
-    font-family: "Kodchasan";
+    font-family: "Nunito";
     font-size: 3em;
   }
 

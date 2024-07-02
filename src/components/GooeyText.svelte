@@ -19,7 +19,7 @@
   // CHANGE THESE
   $series: "space", "ui", "products", "experiences";
   $duration: 1;
-  $transition: 0.7;
+  $transition: 0.5;
 
   //---------------------------------------------------
   // APPEND EXTRA ITEM - An extra item is needed if the series is of odd length
@@ -43,14 +43,14 @@
     --scale: 0.1;
   }
   .text {
-    font: 900 1em/1.2 Kodchasan;
+    font: 800 1em/1.2 Nunito;
     position: relative;
     color: #2e8b57; //sea green
     backdrop-filter: blur(12px);
     font-size: 500px;
     filter: url(#gooey);
     transform: scale(var(--scale));
-    text-shadow: 20px 0px 0px #2e8b57;
+    // text-shadow: 0px 0px 0px #2e8b57;
 
     &::before,
     &::after {

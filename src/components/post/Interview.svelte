@@ -50,7 +50,7 @@
     width: 50%;
   }
 
-  div :global(strong) {
+  :global(.profileCard h3) {
     color: var(--darkAccent);
   }
 

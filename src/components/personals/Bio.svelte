@@ -38,7 +38,7 @@
     text-decoration: underline;
   }
   h1 {
-    font-family: "Kodchasan";
+    font-family: "Nunito";
     line-height: 1.5;
     font-size: 2em;
     margin-bottom: 10px;
@@ -72,7 +72,7 @@
     }
 
     h1 {
-      font-family: "Kodchasan";
+      font-family: "Nunito";
       line-height: 1.5;
       font-size: 1.2em;
       margin-bottom: 10px;

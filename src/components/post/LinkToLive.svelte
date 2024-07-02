@@ -43,7 +43,7 @@
     color: rgb(235, 235, 235);
   }
 
-  h2 {
+  :global(#linkToLive h2) {
     color: rgb(255, 255, 255);
   }
 

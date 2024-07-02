@@ -17,7 +17,7 @@
 
 <style>
   h2 {
-    font-family: "Kodchasan";
+    font-family: "Nunito";
     font-size: 2.5em;
     font-weight: normal;
     margin-bottom: 20px;

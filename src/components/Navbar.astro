@@ -1,3 +1,8 @@
+<link
+  rel="stylesheet"
+  href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
 <div class="navbar">
   <div class="home-link">
     <a href="/">Jessica Sheng</a>
@@ -9,7 +14,25 @@
   </div>
 </div>
 
+<div class="phoneMenu">
+  <header class="header">
+    <div class="menu">
+      <button class="btn-menu">
+        <span class="line"></span><span class="line"></span>
+      </button>
+      <div class="menu-container">
+        <div class="logo"><a href="/">Jessica Sheng</a></div>
+        <ul class="menu-list">
+          <li class="menu-item"><a href="/projects">project dump</a></li>
+          <li class="menu-item"><a href="/about-me">about me</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+</div>
+
 <script>
+  /*normal nav bar mvt function*/
   const nav = document.querySelector(".navbar");
   let lastScrollY = window.scrollY;
 
@@ -23,10 +46,162 @@
         nav.classList.remove("nav--hidden");
       }
     }
-
     lastScrollY = window.scrollY;
   });
+
+  /*phone nav*/
+
+  var btnMenu = document.querySelectorAll(".btn-menu");
+  var menuClickHandler = function (e: any) {
+    e.target.parentElement.parentElement.classList.toggle("-open");
+  };
+
+  btnMenu.forEach(function (item, index) {
+    item.addEventListener("click", menuClickHandler);
+  });
 </script>
+
+<style lang="scss">
+  /*phone nav*/
+
+  .phoneMenu a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  .phoneMenu {
+    margin: 0 30px;
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+
+    color: #fff;
+
+    .btn-menu {
+      position: fixed;
+      z-index: 99;
+      width: 24px;
+      height: 24px;
+      background: 0;
+      border: 0;
+      top: 35px;
+
+      .line {
+        position: absolute;
+        left: 0;
+
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--lightAccent);
+        pointer-events: none;
+        transition: all 0.3s;
+
+        &:first-child {
+          top: 7px;
+        }
+
+        &:last-child {
+          top: 14px;
+        }
+      }
+    }
+
+    .menu-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 80%;
+      height: 100%;
+      z-index: 98;
+
+      .logo {
+        font-size: 14px;
+        font-family: "Nunito", sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+        position: absolute;
+        top: 35px;
+        right: 30px;
+      }
+
+      .menu-list {
+        margin-top: 100px;
+        margin-left: 35px;
+        list-style: none;
+        font-size: 16px;
+        font-family: "Nunito", sans-serif;
+      }
+
+      .menu-item {
+        margin: 14px 0;
+        padding: 4px;
+        overflow: hidden;
+        display: block;
+        padding: 10px 0;
+        overflow: hidden;
+
+        a {
+          display: block;
+          opacity: 100;
+          transform: translateZ(0);
+        }
+      }
+    }
+  }
+
+  //-------------
+
+  .header.-open {
+    .btn-menu .line {
+      &:first-child {
+        transform: translate3d(0px, 0, 0) rotate(-45deg);
+      }
+      &:last-child {
+        transform: translate3d(0px, -7px, 0) rotate(45deg);
+      }
+    }
+    .menu-item {
+      a {
+        animation: Ani_menu-show 1s cubic-bezier(0.19, 1, 0.22, 1) backwards;
+        opacity: 1;
+        transition: opacity 1.4s 100ms;
+      }
+    }
+  }
+
+  .phoneMenu {
+    .menu-container {
+      transform: translateX(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        transform 400ms,
+        opacity 300ms,
+        visibility 400ms;
+      background-color: var(--lightAccent);
+    }
+
+    .header.-open {
+      .line {
+        background-color: #fff;
+      }
+      .menu-container {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+      }
+    }
+  }
+</style>
 
 <style>
   .navbar a {
@@ -39,7 +214,7 @@
     font-weight: 500;
   }
   .navbar {
-    font-family: "Kodchasan", sans-serif;
+    font-family: "Nunito", sans-serif;
     z-index: 1000;
     text-align: center;
     display: flex;
@@ -75,7 +250,6 @@
 
   .home-link {
     text-transform: uppercase;
-
     float: left;
   }
 
@@ -132,6 +306,16 @@
     .home-link {
       margin: 0;
       padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .navbar {
+      display: none;
+    }
+
+    .phoneMenu {
+      display: block !important;
     }
   }
 </style>

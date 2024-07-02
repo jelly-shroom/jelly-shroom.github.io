@@ -105,7 +105,7 @@
 
   .portfolio-item .description h2 {
     color: white;
-    font-family: "Kodchasan";
+    font-family: "Nunito";
     font-weight: 700;
 
     margin-bottom: 20px;
@@ -152,7 +152,7 @@
 
     .phoneDescription {
       display: block;
-      font-family: "Kodchasan";
+      font-family: "Nunito";
       font-weight: 700;
       text-align: left;
       margin-top: -20px;
