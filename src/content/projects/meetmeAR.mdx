@@ -1,0 +1,162 @@
+---
+title: "Encouraging real world engagement through AR social media"
+description: "In an age where social media prioritizes user retention over socializing, MeetMe AR presents itself as a truly <em>social</em> social media, encouraging users to <strong>meet up and engage</strong> in real life activities."
+tags: ["<Award/> Reality Shift 2024 - Winner", "spatial design"]
+image: "../../images/covers/MeetMe AR.jpg"
+alt: "MeetMe AR"
+date: "4/1/2024"
+---
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import CoverImage from "../../images/meetMeAR/coverImage_MeetMe AR.jpg";
+import Storyboard from "../../images/meetMeAR/Storyboard.png";
+import BeziViewport from "../../images/meetMeAR/BeziViewport.jpg";
+import Brainstorm from "../../images/meetMeAR/Brainstorm.jpg";
+import FigmaFrames from "../../images/meetMeAR/FigmaFrames.jpg";
+import UI from "../../images/meetMeAR/UIScreens.jpg";
+import GaussianSplatting from "../../images/meetMeAR/GaussianSplatting.gif";
+
+import Overview from "../../components/post/Overview.svelte";
+import ProblemSolutionStatement from "../../components/post/ProblemSolutionStatement.svelte";
+import PageSection from "../../components/post/PageSection.svelte";
+import Gallery from "../../components/post/Gallery.svelte";
+import PhotoGallery from "../../components/PhotoGallery.svelte";
+import GalleryItem from "../../components/GalleryItem.svelte";
+
+<div class="bannerImgCover">
+  <img src={CoverImage.src} alt="MeetMe AR" style=""/>
+</div>
+
+<div class="caseStudy">
+<Overview
+  year="2024"
+  tags={["<Award/> 2nd place", "duration - 6 hours", "team size - 3", "tools - bezi, figma", "role - spatial designer, project manager"]}
+>
+
+<h1 slot="header">
+  <span style="color: var(--darkAccent)">MeetMe AR</span> is a social media app that promotes social activities through location-based AR interactions and personalized avatars.
+</h1>
+<div slot="overviewDescription">
+  <p>
+    This was a project borne out of <strong>RealityShift 2024</strong>, a pitching 
+    competition where our teams envisioned a more ethical future through the use of XR 
+    technology. We recognized the prevalent issue of social media trapping users in a 
+    cycle of endless scrolling, resulting in an abandonment of real experiences for the allure of technology.
+  </p>
+  <br />
+  <p>
+    To address this, we decided to create a social media platform that 
+    encourages users to live through <strong>experiences with their friends, not vicariously through them</strong>.
+  </p>
+</div>
+
+</Overview>
+
+<ProblemSolutionStatement>
+  <p slot='problem'>
+    How many of you are aware of the time you spend on your phone? 
+    And, have you thought about how that replaces your time connecting with reality? 
+    The way social media is curated is not **socially responsible**. It looks to exploit users rather than benefit them, which leads to 
+    people staying locked up, scrolling on their phones, and feeling satisfied **experiencing life only through others' posts**.
+  </p>
+
+  <p slot="solution">
+    MeetMe AR is a social media platform that encourages users to **meet up and engage** in real life activities through **location-based AR media**, 
+    where users can view and interact with friends' AR content at specific real-world locations. Instead of experiencing life through their 
+    friends' posts, they will be experiencing life through their friends' **shared experiences**.
+  </p>
+</ProblemSolutionStatement>
+
+<PageSection>
+  <h2 slot="sectionTitle">Research</h2>
+  <p slot="description">
+    A while ago, people were participating in a social media trend of making **"[core-core](https://mashable.com/article/explaining-corecore-tiktok)"** videos. These videos would act as a wake-up call to its viewers: they start 
+    off with a high energy video of someone doing something exciting, only to reveal that the viewer is actually just watching the video on their phone while huddled up in bed. 
+    Based on this trend and general discussions of social media, this generation understands the harm of being sucked into our phones. However, they have a hard time breaking the mold. 
+  </p>
+</PageSection>
+
+<PageSection>
+  <h2 slot="sectionTitle">Process</h2>
+  <p slot="description">
+    For this project, I played the role of a project manager and spatial designer, while leaving the UI designs to my teammates. (It was an interesting experience being 
+    in a team of only designers).
+  </p>
+</PageSection>
+</div>
+
+<Gallery
+  imgSrc={[Brainstorm.src]}
+  alt={["Brainstorm"]}
+  uniqueID={["fullImg"]}
+></Gallery>
+
+<div class="caseStudy">
+<Gallery
+  imgSrc={[Storyboard.src]}
+  alt={["Storyboard"]}
+  uniqueID={["fullImg"]}
+></Gallery>
+<Gallery
+  imgSrc={[FigmaFrames.src, BeziViewport.src]}
+  alt={["Figma Frames", "Bezi Viewport"]}
+></Gallery>
+<br />
+<Gallery
+  imgSrc={[UI.src]}
+  alt={["Brainstorm"]}
+  uniqueID={["fullImg"]}
+></Gallery>
+
+<p style="text-align: center; margin-top: -10px;">*Phone UI done by my teammates*</p>
+
+<br /><br />
+<div class="video">
+  <iframe
+    width="100%"
+    height="100%"
+    src="https://www.youtube.com/embed/3Xog8a0M2Os?si=54JsAIkxlmow-KQ9&vq=hd1080"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+
+  ></iframe>
+</div>
+
+<PageSection>
+<h2 slot="sectionTitle">Next Steps</h2>
+  <div  slot="description">
+      <h3>Gaussian splatting</h3>
+      <p>
+          Our vision for the future of MeetMe AR expands further than what was covered within the scope of this competition. 
+          We ultimately want to include gaussian splatting in order to make **4D content** a reality. 
+          Doing so will allow for more immersive content to be viewed on site. Rather than just looking at the media being posted by friends, 
+          users will be able to fully interact with it. Sharing experiences asynchronously through MeetMe AR will **preserve** the essence of an individual's 
+          unique experience while **enriching** it with a fully immersive AR experience of their friends' shared moments.
+      </p>
+      <br /><br />
+      <Gallery
+        imgSrc={[GaussianSplatting.src]}
+        alt={["Gaussian Splatting"]}
+        uniqueID={["fullImg"]}
+      ></Gallery>
+      <p style="text-align: center; margin-top: -10px;">*4D content taken from GMIX.ai* </p>
+
+      <br /><br />
+
+        <h3>Personalized avatars</h3>
+        <p>
+            We also plan to introduce personalized avatars that users will be able to use to represent themselves 
+            in the AR space. These avatars will be customizable to the user's liking, allowing them to **express** themselves 
+            in a way that is unique to them. This will be achieved through a partnership with **Genies**, a company that specializes 
+            in creating digital avatars. 
+        </p>
+      </div>
+
+</PageSection>
+
+</div>
+
