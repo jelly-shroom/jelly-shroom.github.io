@@ -10,6 +10,10 @@ a {
     font-family: "Quicksand";
 }
 
+.halfColumn {
+    width: 50%;
+  }
+
 .video {
     margin: auto;
     width: 1120px;
@@ -131,7 +135,9 @@ a {
         width: 90%;
     }
 
-
+    .halfColumn {
+        width: 100%;
+    }
 
 }
 
