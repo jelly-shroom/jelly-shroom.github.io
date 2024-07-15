@@ -4,6 +4,12 @@ a {
     font-weight: bold;
 }
 
+.caption {
+    text-align: center; 
+    margin-top: -10px;
+    font-family: "Quicksand";
+}
+
 .video {
     margin: auto;
     width: 1120px;
@@ -56,8 +62,8 @@ a {
 .columnContainer {
     display: flex;
     gap: 5%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .columnContainer strong {

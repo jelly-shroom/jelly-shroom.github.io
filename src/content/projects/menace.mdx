@@ -1,0 +1,192 @@
+---
+title: "Menace"
+description: "360 social media"
+tags: ["ui design"]
+image: "../../images/covers/DigiSense.jpg"
+alt: "Menace"
+date: "2/1/2024"
+---
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import KeyIdea from "../../images/menace/KeyIdea.png";
+import Competitors from "../../images/menace/Competitors.jpg";
+import ValueProp from "../../images/menace/ValueProp.jpg";
+import References from "../../images/menace/References.jpg";
+import Ideation1 from "../../images/menace/Flow1-Liquid.png";
+import Ideation2 from "../../images/menace/Flow2-Liquid.png";
+import Ideation3 from "../../images/menace/Flow1-Structure.png";
+import Ideation4 from "../../images/menace/Flow2-Wispy.png";
+import LoFi from "../../images/menace/LowFi.jpg";
+import MidFi from "../../images/menace/MidFi.jpg";
+import ExploreIterations from "../../images/menace/ExploreIterations.jpg";
+import Colors from "../../images/menace/Colors.jpg";
+import Persona1 from "../../images/digiSense/User Persona (1).jpg";
+import Persona2 from "../../images/digiSense/User Persona.jpg";
+import CoverImage from "../../images/covers/DigiSense.jpg";
+import Weasel from "../../images/digiSense/weasel.jpg";
+
+import Overview from "../../components/post/Overview.svelte";
+import ProblemSolutionStatement from "../../components/post/ProblemSolutionStatement.svelte";
+import PageSection from "../../components/post/PageSection.svelte";
+import Gallery from "../../components/post/Gallery.svelte";
+import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
+import Interview from "../../components/post/Interview.svelte";
+
+<div class="bannerImgCover">
+  <img src={CoverImage.src} alt="DigiSense" />
+</div>
+<div class="caseStudy">
+<Overview
+  year="2024"
+  tags={["contract", "duration - 5 weeks", "team size - 4", "tools - figma, procreate", "role - UI/UX designer, product lead"]}
+>
+
+<h1 slot="header">
+  <span style="color: var(--darkAccent)">DigiSense</span> is a wristwatch that
+  helps children with dyscalculia strengthen their understanding of time and
+  numbers through visual learning aids.
+</h1>
+<div slot="overviewDescription">
+  <p>
+    I wanted to challenge myself to design a solution for a market of people who
+    operate outside of the typical user experience, where existing solutions are
+    not tailored to their needs. **Dyscalculia** is a condition that impairs a
+    person's **understanding** of basic mathematical concepts, which in turn
+    impacts their **perception of time**.
+  </p>
+  <br />
+  <p>
+    DigiSense emerges as a solution to **empower** children with dyscalculia by
+    combining intuitive interfaces with innovative visualization techniques to
+    bridge the gap between **abstract mathematical concepts and real-world
+    experiences**.
+  </p>
+</div>
+
+</Overview>
+
+<ProblemSolutionStatement>
+  <p slot='problem'>
+   Dyscalculia greatly reducees a child's ability to **connect visual symbols** to their assigned values. 
+   This makes it difficult for them to understand and percieve the passage of time, which can lead to **anxiety and frustration** in their daily lives.
+  </p>
+
+  <p slot="solution">
+    DigiSense empowers children with dyscalculia to be more **confident and independent** in their daily lives by providing 
+    them with assistive UI elements to help them **visualize time** and strengthen their **understanding** of numbers.
+  </p>
+</ProblemSolutionStatement>
+
+<PageSection>
+  <h2 slot="sectionTitle">Research</h2>
+  <p slot="description">
+    Dyscalculia is a condition that is often **misunderstood and
+    underdiagnosed**, and there is a **lack of resources** available to help
+    children with dyscalculia succeed in their daily lives and in school. It is
+    often thought of as "number dyslexia", and current interventions in therapy
+    typically involve counting exercises and relying on physical tools to help
+    **visualize** numbers.
+  </p>
+</PageSection>
+<Gallery
+    imgSrc={[KeyIdea.src]}
+    alt={["Key Idea"]}
+    uniqueID={["fullImg"]}
+    galleryType="noGap"
+ />
+ <p class="caption" style="margin-top: -30px; margin-bottom: 5em;">*Core theme: beehive pattern with sandbox-like navigation*</p>
+
+ <Gallery
+    imgSrc={[Competitors.src, ValueProp.src]}
+    alt={["Competitors", "Value Proposition"]}
+    uniqueID={["", ""]}
+ />
+
+ <div class="columnContainer">
+    <div class="halfColumn">
+        Amo stuff blah blah and instagram what i am trying to accomplish etc etc 
+        lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Amo stuff blah blah and instagram what i am trying to accomplish etc etc
+    </div>
+    <div class="halfColumn">
+        Amo stuff blah blah and instagram what i am trying to accomplish etc etc 
+        lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Amo stuff blah blah and instagram what i am trying to accomplish etc etc
+    </div>
+ </div>
+
+ <div style="height: 70vh; margin-bottom: 50px;">
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%" 
+    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fboard%2FlWeWM4sLUvknvBUYYuQ8Yu%2FMenace-Flow-(Web)%3Fnode-id%3D0-1%26t%3DrmhZRoh5ceIFFAta-1" 
+    allowfullscreen></iframe>
+</div>
+
+<Gallery 
+    imgSrc={[References.src]}
+    alt={["References"]}
+    uniqueID={["fullImg"]}
+    galleryType="noGap"
+/>
+
+<PageSection>
+  <h2 slot="sectionTitle">Process</h2>
+  <p slot="description">
+    I wanted to create a product that would be **intuitive and easy to understand** for children with dyscalculia, 
+    so I started with designing the UI elements and learning aids that would be used to help them visualize time and numbers. 
+    I then moved on to designing a more **child-friendly and engaging** form factor for the wristwatch.
+  </p>
+</PageSection>
+
+</div>
+
+<div style="margin-left: 5%; margin-right: 5%;">
+    <Gallery 
+        imgSrc={[Ideation3.src, Ideation4.src]}
+        alt={["Ideation 3", "Ideation 4"]}
+        galleryType="noGap"
+    />
+    <Gallery 
+        imgSrc={[Ideation1.src, Ideation2.src]}
+        alt={["Ideation 1", "Ideation 2"]}
+    />
+    <br />
+    <Gallery 
+    imgSrc={[LoFi.src, MidFi.src]}
+    alt={["LowFi", "MidFi"]}
+    />
+</div>
+
+<div class="caseStudy">
+<PageSection>
+  <h2 slot="sectionTitle">Challenges</h2>
+  <p slot="description">
+    I wanted to create a product that would be **intuitive and easy to understand** for children with dyscalculia, 
+    so I started with designing the UI elements and learning aids that would be used to help them visualize time and numbers. 
+    I then moved on to designing a more **child-friendly and engaging** form factor for the wristwatch.
+  </p>
+</PageSection>
+
+<Gallery 
+    imgSrc={[ExploreIterations.src]}
+    alt={["Scenario"]}
+    uniqueID={["fullImg"]}
+/>
+<p class="caption" style="margin-bottom: 5em;">*Explore page iterations*</p>
+
+<Gallery 
+    imgSrc={[Colors.src]}
+    alt={["Scenario"]}
+    uniqueID={["fullImg"]}
+/>
+<p class="caption" style="margin-bottom: 5em;">*Color exploration*</p>
+
+<PageSection>
+  <h2 slot="sectionTitle">Final design</h2>
+  <p slot="description">
+
+  </p>
+</PageSection>
+</div>
+

@@ -13,7 +13,6 @@
 <style>
   .columnContainer {
     display: flex;
-    /* justify-content: space-between; */
     gap: 5%;
     margin-top: 50px;
     margin-bottom: 50px;
