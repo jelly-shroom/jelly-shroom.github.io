@@ -8,6 +8,7 @@ a {
     text-align: center; 
     margin-top: -10px;
     font-family: "Quicksand";
+    margin-bottom: 4em;
 }
 
 .halfColumn {
@@ -29,7 +30,7 @@ a {
 }
 
 .caseStudy {
-    width: 70%;
+    width: 60%;
     margin: auto;
     margin-top: 30px;
 }
@@ -137,6 +138,7 @@ a {
 
     .halfColumn {
         width: 100%;
+        margin-bottom: 20px;
     }
 
 }
@@ -155,5 +157,9 @@ a {
     .columnContainer {
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    .caption {
+        margin-bottom: 2em;
     }
 }

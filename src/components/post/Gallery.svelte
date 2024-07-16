@@ -91,6 +91,7 @@
     .withGap,
     .noGap {
       gap: 0px !important;
+      margin-top: 0;
     }
 
     .withGap {

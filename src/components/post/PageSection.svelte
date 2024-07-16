@@ -1,57 +1,32 @@
-<div class="columnContainer">
-  <div class="headColumn">
-    <slot name="sectionTitle" />
-  </div>
+<div class="header">
+  <slot name="sectionTitle" />
+</div>
 
-  <div class="bodyColumn">
-    <div>
-      <slot name="description" />
-    </div>
-  </div>
+<div class="body">
+  <slot name="description" />
 </div>
 
 <style>
-  .columnContainer {
+  .header {
     display: flex;
-    gap: 5%;
+    justify-content: center;
     margin-top: 50px;
+  }
+
+  .body {
     margin-bottom: 50px;
-  }
-
-  .headColumn {
-    width: 25%;
-  }
-
-  .bodyColumn {
-    width: 65%;
-  }
-
-  .bodyColumn div {
-    margin-top: 5px;
   }
 
   div :global(strong) {
     color: var(--darkAccent);
   }
 
-  @media screen and (max-width: 800px) {
-    .columnContainer {
-      flex-direction: column;
-    }
-
-    .headColumn {
-      width: 100%;
-    }
-
-    .bodyColumn {
-      width: 100%;
-    }
-  }
-
   @media screen and (max-width: 600px) {
-    .columnContainer {
-      gap: 0;
+    .body {
       margin-bottom: 10px;
+    }
+
+    .header {
       margin-top: 10px;
     }
   }
