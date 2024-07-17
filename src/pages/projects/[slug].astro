@@ -12,12 +12,14 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 
 // use date
-let projects = (await getCollection("projects")).sort((a, b) =>
+const projects = (await getCollection("projects")).sort((a, b) =>
   a.data.date > b.data.date ? -1 : 1
 );
 
 // Filter out projects with a specific alt string
-projects = projects.filter((project) => project.data.alt !== "Menace");
+const filteredProjects = projects.filter(
+  (project) => project.data.alt !== "Menace"
+);
 
 const idx = projects.findIndex((p) => p.slug === slug);
 
