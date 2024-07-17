@@ -21,10 +21,10 @@ const filteredProjects = projects.filter(
   (project) => project.data.alt !== "Menace"
 );
 
-const idx = projects.findIndex((p) => p.slug === slug);
+const idx = filteredProjects.findIndex((p) => p.slug === slug);
 
-const { Content } = await projects[idx].render();
-const nextProject = projects[(idx + 1) % projects.length];
+const { Content } = await filteredProjects[idx].render();
+const nextProject = filteredProjects[(idx + 1) % filteredProjects.length];
 ---
 
 <Site>
