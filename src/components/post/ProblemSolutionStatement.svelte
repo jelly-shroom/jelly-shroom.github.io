@@ -12,7 +12,7 @@
 <style>
   .columnContainer {
     display: flex;
-    gap: 5%;
+    gap: 2%;
     margin-top: 50px;
     margin-bottom: 50px;
   }

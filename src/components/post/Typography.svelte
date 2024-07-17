@@ -9,7 +9,6 @@
     <p class={className}>
       {displayName}
       <br />
-      <br />
       ABCDEFGHIJKLMNOPQRSTUVWXYZ
       <br />
       abcdefghijklmnopqrstuvwxyz

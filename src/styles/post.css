@@ -4,6 +4,17 @@ a {
     font-weight: bold;
 }
 
+.caption {
+    text-align: center; 
+    margin-top: -10px;
+    font-family: "Quicksand";
+    margin-bottom: 4em;
+}
+
+.halfColumn {
+    width: 50%;
+  }
+
 .video {
     margin: auto;
     width: 1120px;
@@ -19,7 +30,7 @@ a {
 }
 
 .caseStudy {
-    width: 70%;
+    width: 60%;
     margin: auto;
     margin-top: 30px;
 }
@@ -56,8 +67,8 @@ a {
 .columnContainer {
     display: flex;
     gap: 5%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .columnContainer strong {
@@ -125,7 +136,10 @@ a {
         width: 90%;
     }
 
-
+    .halfColumn {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
 }
 
@@ -143,5 +157,9 @@ a {
     .columnContainer {
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    .caption {
+        margin-bottom: 2em;
     }
 }
