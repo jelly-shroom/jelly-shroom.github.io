@@ -28,7 +28,7 @@
     margin-bottom: 10px;
     overflow: hidden;
 
-    object-fit: fill;
+    object-fit: cover;
   }
   .withGap {
     display: grid;
@@ -45,7 +45,7 @@
     margin-bottom: 10px;
     overflow: hidden;
 
-    object-fit: fill;
+    object-fit: cover;
   }
 
   .noGap {
@@ -63,7 +63,7 @@
     margin-bottom: 10px;
     overflow: hidden;
 
-    object-fit: fill;
+    object-fit: cover;
   }
 
   #blenderViewport {
@@ -91,7 +91,6 @@
     .withGap,
     .noGap {
       gap: 0px !important;
-      margin-top: 0;
     }
 
     .withGap {

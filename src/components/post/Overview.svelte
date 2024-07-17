@@ -44,7 +44,7 @@
   }
 
   .columnContainer {
-    /* display: block; */
+    display: flex;
     gap: 5%;
     margin-top: 50px;
     margin-bottom: 50px;

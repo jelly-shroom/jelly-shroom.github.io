@@ -15,16 +15,10 @@ const { slug } = Astro.params;
 const projects = (await getCollection("projects")).sort((a, b) =>
   a.data.date > b.data.date ? -1 : 1
 );
+const idx = projects.findIndex((p) => p.slug === slug);
 
-// Filter out projects with a specific alt string
-const filteredProjects = projects.filter(
-  (project) => project.data.alt !== "Menace"
-);
-
-const idx = filteredProjects.findIndex((p) => p.slug === slug);
-
-const { Content } = await filteredProjects[idx].render();
-const nextProject = filteredProjects[(idx + 1) % projects.length];
+const { Content } = await projects[idx].render();
+const nextProject = projects[(idx + 1) % projects.length];
 ---
 
 <Site>
