@@ -24,7 +24,7 @@ const filteredProjects = projects.filter(
 const idx = filteredProjects.findIndex((p) => p.slug === slug);
 
 const { Content } = await filteredProjects[idx].render();
-const nextProject = filteredProjects[(idx + 1) % projects.length];
+const nextProject = filteredProjects[(idx + 1) % filteredProjects.length];
 ---
 
 <Site>
