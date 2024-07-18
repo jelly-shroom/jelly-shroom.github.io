@@ -55,7 +55,10 @@
   @media screen and (max-width: 600px) {
     .heading {
       margin-top: -1rem;
-      font-size: 1.2rem;
+    }
+
+    :global(.heading p) {
+      font-size: 1.5rem;
     }
 
     .tagContainer {
