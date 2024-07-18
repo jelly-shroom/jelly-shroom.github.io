@@ -18,7 +18,6 @@
 
   div :global(strong),
   h3 {
-    font-weight: 700;
     color: white;
     font-size: 1.25em;
 

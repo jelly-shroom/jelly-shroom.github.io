@@ -14,7 +14,7 @@
   }
 
   .body {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   div :global(strong) {

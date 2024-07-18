@@ -29,7 +29,7 @@
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 100px;
-    font-family: "Sono";
+    font-family: "Work Sans";
     font-size: 14px;
     border: 1px solid var(--lightAccent);
     color: var(--lightAccent);

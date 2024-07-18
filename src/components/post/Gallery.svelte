@@ -18,8 +18,6 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: 40px;
-    margin-top: -20px;
-    margin-bottom: 20px;
   }
 
   .withGapExtra img {
@@ -35,8 +33,6 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: 20px;
-    margin-top: -20px;
-    margin-bottom: 20px;
   }
 
   .withGap img {

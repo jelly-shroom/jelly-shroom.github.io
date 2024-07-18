@@ -4,16 +4,20 @@ a {
     font-weight: bold;
 }
 
+h1 {
+    font-family: "Quicksand" !important;
+}
+
 .caption {
-    text-align: center; 
-    margin-top: -10px;
-    font-family: "Quicksand";
+    text-align: center;
+    margin-top: 10px;
+    font-family: "Work Sans";
     margin-bottom: 4em;
 }
 
 .halfColumn {
     width: 50%;
-  }
+}
 
 .video {
     margin: auto;

@@ -26,7 +26,7 @@
 
 <style>
   :global(p) {
-    font-family: "Quicksand";
+    font-family: "Work Sans";
     line-height: 1.5;
   }
 

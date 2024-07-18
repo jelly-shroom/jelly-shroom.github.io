@@ -38,14 +38,15 @@
     text-decoration: underline;
   }
   h1 {
-    font-family: "Nunito";
+    font-family: "Quicksand";
+    font-weight: bold;
     line-height: 1.5;
     font-size: 2em;
     margin-bottom: 10px;
   }
 
   p {
-    font-family: "Quicksand";
+    font-family: "Work Sans";
     line-height: 1.5;
   }
 
@@ -72,7 +73,7 @@
     }
 
     h1 {
-      font-family: "Nunito";
+      font-family: "Work Sans";
       line-height: 1.5;
       font-size: 1.2em;
       margin-bottom: 10px;

@@ -9,27 +9,28 @@
 h1 {
   line-height: 1.5;
   font-size: 2em;
+  font-weight: 500;
 }
 
 h2 {
-  font-family: "Nunito";
+  font-family: "Work Sans";
   line-height: 1.5;
   margin-bottom: 10px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.5em;
 }
 
 h3 {
-  font-family: "Nunito";
+  font-family: "Work Sans";
   line-height: 1.5;
   margin-bottom: 10px;
   margin-top: 10px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.25em;
 }
 
 p {
-  font-family: "Quicksand";
+  font-family: "Work Sans";
   line-height: 1.5;
 }
 
@@ -47,6 +48,11 @@ body {
 a {
   color: var(--darkAccent);
   text-decoration: none;
+}
+
+strong {
+  font-weight: 600;
+
 }
 
 .glass-bg {
@@ -88,7 +94,7 @@ a {
 .button {
   display: inline-block;
 
-  font-family: "Sono";
+  font-family: "Work Sans";
   font-weight: 500;
   font-size: 0.9em;
   text-transform: lowercase;
@@ -179,8 +185,8 @@ a {
 }
 
 #featured-title {
-  font-family: "Nunito";
-  font-weight: 700;
+  font-family: "Quicksand";
+  font-weight: bold;
   margin-top: 60px;
   margin-bottom: 30px;
   font-size: 1.25em;

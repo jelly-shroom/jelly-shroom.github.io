@@ -22,7 +22,7 @@
     padding: 30px;
 
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 2.5em;
 
     color: var(--lightAccent);
 

@@ -50,7 +50,7 @@
   a {
     display: inline-block;
 
-    font-family: "Sono";
+    font-family: "Work Sans";
     font-weight: 500;
     font-size: 0.9em;
     text-transform: lowercase;

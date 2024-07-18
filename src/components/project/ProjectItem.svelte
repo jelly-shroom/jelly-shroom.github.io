@@ -129,14 +129,14 @@
 
   .portfolio-item .description h2 {
     color: white;
-    font-family: "Nunito";
-    font-weight: 700;
+    /* font-family: "Work Sans";
+    font-weight: 600; */
 
     margin-bottom: 20px;
   }
 
   .portfolio-item .description p {
-    font-family: "Quicksand";
+    font-family: "Work Sans";
     line-height: 1.5;
   }
 
@@ -200,8 +200,8 @@
 
     .phoneDescription {
       display: block;
-      font-family: "Nunito";
-      font-weight: 700;
+      font-family: "Work Sans";
+      font-weight: 600;
       text-align: left;
       margin-top: -20px;
     }

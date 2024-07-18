@@ -43,7 +43,7 @@
     --scale: 0.1;
   }
   .text {
-    font: 800 1em/1.2 Nunito;
+    font: 900 1em/1.2 Quicksand;
     position: relative;
     color: #2e8b57; //sea green
     backdrop-filter: blur(12px);
@@ -57,7 +57,7 @@
     filter: url(#gooey);
 
     transform: scale(var(--scale));
-    // text-shadow: 0px 0px 0px #2e8b57;
+    text-shadow: 15px 0px 0px #2e8b57;
 
     &::before,
     &::after {

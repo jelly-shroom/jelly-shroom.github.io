@@ -19,13 +19,12 @@
 
     gap: 20px;
     margin-bottom: -25px;
-
-    font-family: "Nunito", sans-serif;
   }
 
   h1 {
-    font-family: "Nunito";
+    font-family: "Quicksand";
     font-size: 3em;
+    font-weight: 900;
   }
 
   @media screen and (max-width: 1620px) {

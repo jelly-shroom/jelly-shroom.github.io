@@ -33,7 +33,7 @@
     padding-right: 20px;
     border-radius: 100px;
 
-    font-family: "Sono";
+    font-family: "Work Sans";
     font-size: 14px;
 
     color: white;
@@ -62,7 +62,7 @@
     border: 1px solid var(--darkAccent);
 
     color: var(--darkAccent);
-    font-family: "Sono";
+    font-family: "Work Sans";
     font-weight: normal;
     font-size: 14px;
 
