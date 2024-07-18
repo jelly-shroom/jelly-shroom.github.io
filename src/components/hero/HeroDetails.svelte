@@ -34,7 +34,7 @@
     font-family: "Work Sans";
     font-size: 2rem;
     font-weight: normal;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
   }
 
   .contact {
@@ -66,7 +66,7 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 1px;
+    height: 2px;
     bottom: 0;
     left: 0;
     background-color: var(--darkAccent);

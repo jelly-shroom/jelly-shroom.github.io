@@ -103,9 +103,7 @@ strong {
   color: #fff;
   border: none;
   border-radius: 10px;
-  padding: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 1.25rem 1.5rem;
   cursor: pointer;
 
   transition: 0.25s;
@@ -187,8 +185,8 @@ strong {
 #featured-title {
   font-family: "Quicksand";
   font-weight: bold;
-  margin-top: 60px;
-  margin-bottom: 30px;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
   font-size: 1.25rem;
 }
 
@@ -206,7 +204,6 @@ strong {
 
 @media screen and (max-width: 600px) {
   #featured-title {
-    margin-top: 40px;
     font-size: 1rem;
   }
 
