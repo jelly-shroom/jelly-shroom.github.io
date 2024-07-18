@@ -12,36 +12,23 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 
 // use date
-// Fetch all projects
-const projects = await getCollection("projects");
+const projects = (await getCollection("projects"))
+  .filter((project) => project?.data?.alt !== "Menace")
+  .sort((a, b) => (a.data.date > b.data.date ? -1 : 1));
 
-// Ensure all projects have the data structure we're expecting
-const filteredProjects = projects
-  .filter((project) => project?.data?.alt !== "Menace") // Filter out projects with specific alt string
-  .sort((a, b) => (a.data.date > b.data.date ? -1 : 1)); // Sort the remaining projects by date
+projects.map((project) => ({
+  slug: project.slug,
+  ...project.data,
+}));
 
-// Find the index of the current project
-const idx = filteredProjects.findIndex((p) => p.slug === slug);
-
-// Handle cases where the project might not be found
+const idx = projects.findIndex((p) => p.slug === slug);
 if (idx === -1) {
   throw new Error(`Project with slug '${slug}' not found`);
 }
 
-// Render the content of the current project
-const { Content } = await filteredProjects[idx].render();
+const { Content } = await projects[idx].render();
 
-// Get the next project in the list
-const nextProject = filteredProjects[(idx + 1) % filteredProjects.length];
-
-// const projects = (await getCollection("projects"))
-//   .filter((project) => project.data.alt !== "Menace")
-//   .sort((a, b) => (a.data.date > b.data.date ? -1 : 1));
-
-// const idx = projects.findIndex((p) => p.slug === slug);
-
-// const { Content } = await projects[idx].render();
-// const nextProject = projects[(idx + 1) % projects.length];
+const nextProject = projects[(idx + 1) % projects.length];
 ---
 
 <Site>
