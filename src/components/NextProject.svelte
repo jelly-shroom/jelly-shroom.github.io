@@ -31,11 +31,8 @@
     text-decoration: none;
   }
   .nextProjectContainer {
-    margin: auto;
+    margin: 8rem auto;
     max-width: 50%;
-
-    margin-top: 75px;
-    margin-bottom: 75px;
 
     color: var(--darkAccent);
   }
@@ -44,9 +41,10 @@
     border: 1px solid var(--darkAccent);
     border-radius: 25px;
 
-    margin-top: 20px;
-    padding: 10px;
-    padding-right: 20px;
+    margin-top: 1rem;
+
+    padding: 0.5rem;
+    /* padding-right: 1rem; */
     color: var(--darkAccent);
 
     display: flex;
@@ -55,7 +53,8 @@
   }
 
   .nextProjectButton div {
-    margin-top: 10px;
+    /* margin-top: 0.5rem; */
+    margin: 0.5rem 1rem;
   }
 
   .nextProjectButton h2 {
@@ -79,7 +78,6 @@
     height: 180px;
     border-radius: 15px;
     overflow: hidden;
-    margin-right: 30px;
 
     flex-shrink: 0;
   }
@@ -90,20 +88,16 @@
     }
     .nextProjectButton {
       flex-direction: column;
-      padding: 10px;
     }
 
     .nextProjectButton h2,
     p {
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-bottom: 20px;
+      margin: 0.5rem 0;
     }
 
     .nextProjectButton img {
       width: 100%;
       height: auto;
-      margin-bottom: 20px;
     }
   }
 
@@ -111,19 +105,10 @@
     .nextProjectContainer {
       max-width: 90%;
     }
-    .nextProjectButton {
-      flex-direction: column;
-    }
-
-    .nextProjectButton img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-    }
 
     .nextProjectButton h2,
     p {
-      margin-top: -10px;
+      margin: 0.25rem 0;
     }
   }
 </style>

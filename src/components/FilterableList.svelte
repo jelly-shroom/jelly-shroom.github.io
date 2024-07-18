@@ -20,17 +20,22 @@
 </div>
 
 <style>
+  #filterContainer {
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
   .filters {
-    height: 40px;
+    height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 1rem;
     border-radius: 100px;
     font-family: "Work Sans";
-    font-size: 14px;
+    font-size: small;
     border: 1px solid var(--lightAccent);
     color: var(--lightAccent);
     background-color: rgba(255, 255, 255, 0.3);
@@ -55,12 +60,5 @@
     #filterContainer {
       flex-wrap: wrap;
     }
-  }
-  #filterContainer {
-    display: flex;
-    justify-content: left;
-    gap: 20px;
-    margin-top: 30px;
-    margin-bottom: 30px;
   }
 </style>

@@ -5,12 +5,12 @@
 <style>
   .column-contents {
     display: grid;
-    margin-bottom: 50px;
+    margin-bottom: 4rem;
 
     grid-auto-columns: minmax(200px, auto);
     grid-template-columns: repeat(2, 1fr);
     grid-auto-flow: dense;
-    gap: 30px;
+    gap: 2rem;
   }
 
   @media screen and (max-width: 1400px) {

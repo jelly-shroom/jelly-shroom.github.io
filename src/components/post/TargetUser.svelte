@@ -7,30 +7,24 @@
   div {
     background-color: var(--darkAccent);
     border-radius: 25px;
-    padding: 30px;
+    padding: 2rem;
     color: #ebebeb;
     text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
 
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
   }
 
   div :global(strong),
   h3 {
     color: white;
-    font-size: 1.25em;
+    font-size: 1.25rem;
 
     text-align: center;
   }
 
   @media screen and (max-width: 600px) {
     div {
-      padding: 20px;
-      padding-right: 30px;
-      padding-left: 30px;
-
-      margin-bottom: 10px;
+      padding: 1rem 1.5rem;
     }
   }
 </style>

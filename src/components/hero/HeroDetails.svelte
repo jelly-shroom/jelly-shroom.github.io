@@ -32,15 +32,15 @@
 <style>
   h2 {
     font-family: "Work Sans";
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: normal;
-    margin-bottom: 50px;
+    margin-bottom: 4rem;
   }
 
   .contact {
     display: flex;
     align-items: center;
-    gap: 2em;
+    gap: 2rem;
 
     font-family: "Work Sans";
   }
@@ -79,17 +79,6 @@
   a:hover::after {
     transform-origin: bottom left;
     transform: scaleX(1);
-  }
-
-  @media screen and (max-width: 800px) {
-    div {
-      position: relative;
-      top: -75px !important;
-    }
-
-    .contact {
-      margin-top: 100px;
-    }
   }
 
   @media screen and (max-width: 600px) {

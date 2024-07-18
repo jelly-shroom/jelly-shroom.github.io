@@ -23,18 +23,17 @@
 </div>
 
 <style>
-  .tagsWhite {
-    height: 40px;
+  .tagsWhite,
+  .tagsGreen {
+    height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 1rem;
     border-radius: 100px;
 
     font-family: "Work Sans";
-    font-size: 14px;
+    font-size: small;
 
     color: white;
     border: 1px solid rgba(255, 255, 255, 1);
@@ -42,7 +41,8 @@
     text-transform: lowercase;
   }
 
-  .tagsWhite svg {
+  .tagsWhite svg,
+  .tagsGreen svg {
     margin-left: -5px;
     margin-right: 5px;
 
@@ -53,32 +53,12 @@
   }
 
   .tagsGreen {
-    display: flex;
-    height: 40px;
-    padding: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
-    border-radius: 100px;
     border: 1px solid var(--darkAccent);
 
     color: var(--darkAccent);
-    font-family: "Work Sans";
-    font-weight: normal;
-    font-size: 14px;
-
-    text-transform: lowercase;
-    text-align: center;
-
-    align-items: center;
-    justify-content: center;
   }
 
   .tagsGreen svg {
-    margin-left: -5px;
-    margin-right: 5px;
-
-    height: 20px;
-    width: auto;
     fill: var(--darkAccent);
   }
 </style>

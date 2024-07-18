@@ -13,53 +13,25 @@
 </div>
 
 <style>
-  .withGapExtra {
+  .withGap,
+  .noGap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    gap: 40px;
+    gap: 1rem;
   }
 
-  .withGapExtra img {
+  .withGap img,
+  .noGap img {
     width: 100%;
     height: 100%;
-    margin-bottom: 10px;
-    overflow: hidden;
-
-    object-fit: fill;
-  }
-  .withGap {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 20px;
-  }
-
-  .withGap img {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 10px;
     overflow: hidden;
 
     object-fit: fill;
   }
 
   .noGap {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
     gap: 0px;
-    margin-top: -20px;
-    margin-bottom: 20px;
-  }
-
-  .noGap img {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 10px;
-    overflow: hidden;
-
-    object-fit: fill;
   }
 
   #blenderViewport {

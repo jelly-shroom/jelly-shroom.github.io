@@ -13,17 +13,16 @@
 <style>
   .colorPalette {
     display: flex;
-    margin-top: 20px;
+    margin-top: 1rem;
   }
 
   .colorPalette p {
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
 
   .colorPalette div {
     flex: 1;
-    height: 35px;
-    color: white;
+    height: 2rem;
 
     display: flex;
     align-items: center;

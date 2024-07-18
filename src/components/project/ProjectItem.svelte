@@ -74,11 +74,11 @@
     transition: 0.25s;
 
     justify-content: left;
-    gap: 10px;
+    gap: 1rem;
     position: absolute;
     align-self: flex-start;
     float: left;
-    margin: 30px;
+    margin: 2rem;
   }
 
   .portfolio-item {
@@ -114,10 +114,9 @@
     opacity: 0;
 
     position: absolute;
-    /* text-align: center; */
     margin: 0 auto;
     color: rgb(235, 235, 235);
-    width: 85%;
+    width: 90%;
     height: auto;
 
     left: 50%;
@@ -129,10 +128,8 @@
 
   .portfolio-item .description h2 {
     color: white;
-    /* font-family: "Work Sans";
-    font-weight: 600; */
 
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
   }
 
   .portfolio-item .description p {
@@ -161,7 +158,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 2rem;
     text-align: center;
   }
   .cover-image {
@@ -186,12 +183,6 @@
 
   /*for the button on homepage portfolio*/
 
-  @media screen and (max-width: 800px) {
-    .portfolio-item .description {
-      width: 90%;
-    }
-  }
-
   @media screen and (max-width: 600px) {
     .portfolio-item .description,
     .tagContainer {
@@ -203,7 +194,7 @@
       font-family: "Work Sans";
       font-weight: 600;
       text-align: left;
-      margin-top: -20px;
+      margin-top: -1rem;
     }
 
     .portfolio-item:hover .cover-image {

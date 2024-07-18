@@ -41,8 +41,8 @@
     font-family: "Quicksand";
     font-weight: bold;
     line-height: 1.5;
-    font-size: 2em;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
 
   p {
@@ -58,7 +58,7 @@
   }
 
   .aboutMeHero {
-    margin-top: 75px;
+    margin-top: 4rem;
     display: flex;
     justify-content: space-between;
     gap: 5%;
@@ -67,9 +67,9 @@
 
   @media screen and (max-width: 800px) {
     .aboutMeHero {
-      margin-top: 0px;
+      margin-top: 0;
       flex-direction: column;
-      gap: 20px;
+      gap: 1rem;
     }
 
     h1 {

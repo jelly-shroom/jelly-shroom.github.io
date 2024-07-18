@@ -19,10 +19,10 @@
     border: 1px solid var(--darkAccent);
     border-radius: 25px;
 
-    padding: 30px;
+    padding: 2rem;
 
-    margin-top: 20px;
-    margin-bottom: 2.5em;
+    margin-top: 4rem;
+    margin-bottom: 2em;
 
     color: var(--lightAccent);
 
@@ -54,14 +54,8 @@
     color: var(--darkAccent);
   }
 
-  div :global(p),
   div :global(h3) {
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-
-  div :global(h3) {
-    margin-top: 10px;
+    margin-top: 1rem;
   }
 
   @media screen and (max-width: 800px) {
@@ -77,11 +71,7 @@
 
   @media screen and (max-width: 600px) {
     .profileCard {
-      padding: 20px;
-      padding-right: 30px;
-      padding-left: 30px;
-
-      margin-bottom: 20px;
+      padding: 1rem;
     }
 
     .pfp {

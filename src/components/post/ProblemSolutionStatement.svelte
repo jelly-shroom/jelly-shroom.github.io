@@ -39,9 +39,7 @@
     border: 1px solid var(--darkAccent);
     border-radius: 25px;
 
-    padding: 2rem;
-    padding-right: 2.5rem;
-    padding-left: 2.5rem;
+    padding: 2rem 2.5rem;
 
     background: var(--darkAccent);
     color: #ebebeb;
@@ -71,9 +69,7 @@
   @media screen and (max-width: 600px) {
     .problem,
     .solution {
-      padding: 20px;
-      padding-right: 30px;
-      padding-left: 30px;
+      padding: 1.75rem;
     }
 
     .columnContainer {

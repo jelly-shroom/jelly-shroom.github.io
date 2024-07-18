@@ -11,7 +11,7 @@
     grid-template-columns: repeat(3, 1fr);
     margin: auto;
     display: grid;
-    gap: 20px;
+    gap: 1rem;
   }
 
   .drTrustPhotoGallery {

@@ -32,12 +32,9 @@
     border: 1px solid var(--darkAccent);
     border-radius: 25px;
 
-    padding: 30px;
-    padding-right: 40px;
-    padding-left: 40px;
+    padding: 1.5rem 2rem;
 
-    margin-top: 75px;
-    margin-bottom: 80px;
+    margin-top: 8rem;
 
     background: var(--darkAccent);
     color: rgb(235, 235, 235);
@@ -52,13 +49,11 @@
 
     font-family: "Work Sans";
     font-weight: 500;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     text-transform: lowercase;
 
     border-radius: 10px;
-    padding: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 1rem;
     cursor: pointer;
 
     transition: 0.25s;
@@ -66,9 +61,7 @@
     border: 1px solid white;
     background: none;
 
-    margin-right: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 0 1rem 0 0;
 
     text-decoration: none;
     font-weight: normal;
@@ -86,23 +79,9 @@
   }
 
   @media screen and (max-width: 600px) {
-    #linkToLive {
-      padding: 20px;
-      padding-right: 30px;
-      padding-left: 30px;
-
-      margin-bottom: 40px;
-      margin-top: 40px;
-    }
-
     a {
       width: 100%;
-      padding: 15px;
-      padding-right: 20px;
-      padding-left: 20px;
-
-      margin-top: 5px;
-      margin-bottom: 5px;
+      margin-top: 1rem;
     }
   }
 </style>

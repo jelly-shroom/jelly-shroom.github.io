@@ -16,14 +16,14 @@
     align-items: center;
     left: fixed;
     top: fixed;
+    margin-bottom: -2rem;
 
-    gap: 20px;
-    margin-bottom: -25px;
+    gap: 1rem;
   }
 
   h1 {
     font-family: "Quicksand";
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: 900;
   }
 
@@ -33,17 +33,11 @@
       align-items: left !important;
       justify-content: left !important;
 
-      gap: 1.75em !important;
+      gap: 2em !important;
     }
 
     #heroTitle {
-      margin-bottom: -125px;
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    #heroTitle {
-      margin-bottom: -50px;
+      margin-bottom: -8rem;
     }
   }
 
