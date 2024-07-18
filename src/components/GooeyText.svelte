@@ -49,6 +49,10 @@
     backdrop-filter: blur(12px);
     font-size: 500px;
     filter: url(#gooey);
+    -moz-filter: url(#gooey);
+    -ms-filter: url(#gooey);
+    -o-filter: url(#gooey);
+    -webkit-filter: url(#gooey);
     transform: scale(var(--scale));
     // text-shadow: 0px 0px 0px #2e8b57;
 
