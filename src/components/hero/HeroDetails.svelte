@@ -101,8 +101,10 @@
       flex-direction: column;
       gap: 1em;
       align-items: start;
+    }
 
-      font-size: small;
+    a {
+      font-size: 1.25em;
     }
   }
 </style>

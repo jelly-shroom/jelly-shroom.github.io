@@ -73,7 +73,6 @@
     }
 
     h1 {
-      font-family: "Work Sans";
       line-height: 1.5;
       font-size: 1.2em;
       margin-bottom: 10px;
