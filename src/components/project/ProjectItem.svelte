@@ -146,6 +146,9 @@
   .portfolio-item.locked .cover-image {
     filter: grayscale(100%) blur(15px) brightness(50%);
     -webkit-filter: grayscale(100%) blur(15px) brightness(50%);
+    -moz-filter: grayscale(100%) blur(15px) brightness(50%);
+    -ms-filter: grayscale(100%) blur(15px) brightness(50%);
+    -o-filter: grayscale(100%) blur(15px) brightness(50%);
   }
 
   .lockedOverlay {
