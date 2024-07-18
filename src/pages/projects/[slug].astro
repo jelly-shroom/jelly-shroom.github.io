@@ -6,29 +6,30 @@ import Footer from "../../components/Footer.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
-  return projects.map((post) => ({ params: { slug: post.slug } }));
+  const filteredProjects = projects.filter(
+    (project) => project?.data?.alt !== "Menace"
+  );
+  return filteredProjects.map((post) => ({ params: { slug: post.slug } }));
 }
 
 const { slug } = Astro.params;
 
 // use date
-const projects = (await getCollection("projects"))
-  .filter((project) => project?.data?.alt !== "Menace")
-  .sort((a, b) => (a.data.date > b.data.date ? -1 : 1));
+const projects = (await getCollection("projects")).sort((a, b) =>
+  a.data.date > b.data.date ? -1 : 1
+);
+const filteredProjects = projects.filter(
+  (project) => project?.data?.alt !== "Menace"
+);
 
-projects.map((project) => ({
-  slug: project.slug,
-  ...project.data,
-}));
-
-const idx = projects.findIndex((p) => p.slug === slug);
+const idx = filteredProjects.findIndex((p) => p.slug === slug);
 if (idx === -1) {
   throw new Error(`Project with slug '${slug}' not found`);
 }
 
-const { Content } = await projects[idx].render();
+const { Content } = await filteredProjects[idx].render();
 
-const nextProject = projects[(idx + 1) % projects.length];
+const nextProject = filteredProjects[(idx + 1) % filteredProjects.length];
 ---
 
 <Site>
