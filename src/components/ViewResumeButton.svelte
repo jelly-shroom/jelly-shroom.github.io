@@ -8,4 +8,11 @@
   a {
     font-weight: normal;
   }
+
+  @media screen and (max-width: 600px) {
+    a {
+      width: 70%;
+      text-align: center;
+    }
+  }
 </style>

@@ -86,11 +86,23 @@
       position: relative;
       top: -75px !important;
     }
+
+    .contact {
+      margin-top: 100px;
+    }
   }
 
   @media screen and (max-width: 600px) {
     h2 {
       font-size: 2em;
+    }
+
+    .contact {
+      flex-direction: column;
+      gap: 1em;
+      align-items: start;
+
+      font-size: small;
     }
   }
 </style>
