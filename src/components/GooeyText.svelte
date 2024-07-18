@@ -48,11 +48,14 @@
     color: #2e8b57; //sea green
     backdrop-filter: blur(12px);
     font-size: 500px;
+
+    -moz-filter: blur(0px);
+    -ms-filter: blur(0px);
+    -o-filter: blur(0px);
+    -webkit-filter: blur(0px);
+
     filter: url(#gooey);
-    -moz-filter: url(#gooey);
-    -ms-filter: url(#gooey);
-    -o-filter: url(#gooey);
-    -webkit-filter: url(#gooey);
+
     transform: scale(var(--scale));
     // text-shadow: 0px 0px 0px #2e8b57;
 
