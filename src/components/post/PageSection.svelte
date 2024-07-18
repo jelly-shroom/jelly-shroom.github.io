@@ -10,11 +10,11 @@
   .header {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 8rem;
   }
 
   .body {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
   }
 
   div :global(strong) {
@@ -22,12 +22,8 @@
   }
 
   @media screen and (max-width: 600px) {
-    .body {
-      margin-bottom: 10px;
-    }
-
     .header {
-      margin-top: 10px;
+      margin-top: 4rem;
     }
   }
 </style>

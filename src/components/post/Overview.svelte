@@ -25,7 +25,7 @@
 
 <style>
   .heading {
-    margin-bottom: 50px;
+    margin-bottom: 3rem;
   }
 
   :global(.heading p) {
@@ -40,8 +40,8 @@
     align-self: flex-start;
     flex-wrap: wrap;
 
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin-top: 1rem;
+    margin-bottom: 8rem;
   }
 
   h2 {
@@ -52,13 +52,14 @@
     color: var(--darkAccent);
   }
 
-  @media screen and (max-width: 800px) {
-  }
-
   @media screen and (max-width: 600px) {
     .heading {
-      margin-top: -10px;
+      margin-top: -1rem;
       font-size: 1.2rem;
+    }
+
+    .tagContainer {
+      margin-bottom: 4rem;
     }
   }
 </style>

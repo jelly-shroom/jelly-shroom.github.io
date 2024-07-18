@@ -12,21 +12,18 @@
 <style>
   .columnContainer {
     display: flex;
-    gap: 2%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    gap: 1rem;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
   }
   .problem {
     border: 1px solid var(--darkAccent);
     border-radius: 25px;
     width: 50%;
 
-    padding: 30px;
-    padding-right: 40px;
-    padding-left: 40px;
-
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding: 2rem;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
 
     color: var(--lightAccent);
   }
@@ -42,12 +39,9 @@
     border: 1px solid var(--darkAccent);
     border-radius: 25px;
 
-    padding: 30px;
-    padding-right: 40px;
-    padding-left: 40px;
-
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding: 2rem;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
 
     background: var(--darkAccent);
     color: #ebebeb;
@@ -70,6 +64,7 @@
 
     .columnContainer {
       flex-direction: column;
+      gap: 1rem;
     }
   }
 
@@ -79,14 +74,11 @@
       padding: 20px;
       padding-right: 30px;
       padding-left: 30px;
-
-      margin-bottom: 20px;
     }
 
     .columnContainer {
-      gap: 0 !important;
-      margin-bottom: 10px;
-      margin-top: -20px;
+      margin-bottom: 4rem;
+      margin-top: 4rem;
     }
   }
 </style>
