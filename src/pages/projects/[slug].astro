@@ -6,13 +6,7 @@ import Footer from "../../components/Footer.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
-  const filteredProjects = projects.filter(
-    (project) =>
-      project?.data?.alt !== "Menace" && project?.data?.alt !== "Dr. Trust"
-  );
-
   return projects.map((post) => ({ params: { slug: post.slug } }));
-  return filteredProjects.map((post) => ({ params: { slug: post.slug } }));
 }
 
 const { slug } = Astro.params;
@@ -21,10 +15,6 @@ const { slug } = Astro.params;
 const projects = (await getCollection("projects")).sort((a, b) =>
   a.data.date > b.data.date ? -1 : 1
 );
-
-// const filteredProjects = projects.filter(
-//   (project) => project?.data?.alt !== "Menace"
-// );
 
 const idx = projects.findIndex((p) => p.slug === slug);
 if (idx === -1) {
@@ -36,27 +26,11 @@ const { Content } = await projects[idx].render();
 let nextProject;
 for (let i = 1; i < projects.length; i++) {
   const nextIdx = (idx + i) % projects.length;
-  if (
-    projects[nextIdx].data.alt !== "Menace" &&
-    projects[nextIdx].data.alt !== "Dr. Trust"
-  ) {
+  if (projects[nextIdx].data.alt !== "Menace") {
     nextProject = projects[nextIdx];
     break;
   }
 }
-
-// const filteredProjects = projects.filter(
-//   (project) => project?.data?.alt !== "Menace"
-// );
-
-// const idx = filteredProjects.findIndex((p) => p.slug === slug);
-// if (idx === -1) {
-//   throw new Error(`Project with slug '${slug}' not found`);
-// }
-
-// const { Content } = await filteredProjects[idx].render();
-
-// const nextProject = filteredProjects[(idx + 1) % filteredProjects.length];
 ---
 
 <Site>
