@@ -12,7 +12,7 @@
   const { image, title, tags, description, alt, slug } = project;
 
   export let itemClass: string = "portfolio-item";
-  if (alt == "Menace") {
+  if (alt == "hidden") {
     itemClass += " locked";
   }
 </script>
@@ -146,6 +146,8 @@
     -moz-filter: grayscale(100%) blur(15px) brightness(50%);
     -ms-filter: grayscale(100%) blur(15px) brightness(50%);
     -o-filter: grayscale(100%) blur(15px) brightness(50%);
+
+    user-select: none;
   }
 
   .lockedOverlay {

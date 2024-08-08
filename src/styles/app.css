@@ -182,12 +182,16 @@ strong {
   font-weight: bold;
 }
 
-#featured-title {
-  font-family: "Quicksand";
-  font-weight: bold;
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.25rem;
+#featured-projects {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+  font-size: 1.2rem;
+}
+
+#about-me {
+  margin-top: 1.75rem;
+  margin-bottom: -0.5rem;
+  font-size: 1.2rem;
 }
 
 #heroWrapper {

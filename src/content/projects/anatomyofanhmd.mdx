@@ -1,0 +1,67 @@
+---
+title: "Anatomy of an HMD"
+description: "An interactive experience that breaks down the components of the Wide5 HMD headset."
+tags: ["3d model", "spatial design"]
+image: "../../images/covers/Anatomy of an HMD.jpg"
+alt: "Anatomy of an HMD"
+date: "2/1/2024"
+---
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import Blender1 from "../../images/anatomyOfAnHMD/blenderviewport1.jpg";
+import Blender2 from "../../images/anatomyOfAnHMD/blenderviewport2.jpg";
+
+import Overview from "../../components/post/Overview.svelte";
+import Gallery from "../../components/post/Gallery.svelte";
+import PageSection from "../../components/post/PageSection.svelte";
+
+
+
+
+<div style="height: 125px" />
+<div class="video">
+<iframe
+    width="100%"
+    height="100%"
+    src="https://www.youtube.com/embed/bySTFOn35G8?si=KzGKuSXRpDY88vM_"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+</div>
+<div class="caseStudyVideo">
+
+<Overview
+  year="2024"
+  tags={["team size - 4", "tools - blender, unity, elevenlabs", "role - 3d artist"]}
+>
+
+  <h1 slot="header">
+    Exploring educational MR experiences through the Apple Vision Pro
+  </h1>
+  <div slot="overviewDescription">
+    A quick and dirty project with a few classmates to explore the capabilities of the Apple Vision Pro. 
+    We wanted to create an interactive experience that breaks down the components of the Wide5 HMD headset in 
+    a fun and engaging manner. 
+  </div>
+</Overview>
+<PageSection>
+  <h2 slot="sectionTitle">Process & Research</h2>
+  <p slot="description">
+    With access to the MxR Lab founded by Mark Bolas, we were inspired by the huge display of VR and AR headsets sitting out in the 
+    hallway. Staring at the headsets, we thought it would be interesting to create an educational experience that breaks down the 
+    inner components of a headset while making it engaging and fun to interact with. With the help of an [old post](https://www.mtbs3d.com/phpBB/viewtopic.php?f=120&t=13741) by 
+    Palmer Luckey, we were able to gather enough information about the Wide5 HMD to create an informative experience.
+  </p>
+</PageSection>
+<Gallery
+  imgSrc={[Blender1.src, Blender2.src]}
+  alt={["Blender Viewport 1", "Blender Viewport 2"]}
+  uniqueID={[""]}
+/ >
+
+</div>
+
