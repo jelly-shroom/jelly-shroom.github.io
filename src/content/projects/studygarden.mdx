@@ -1,0 +1,278 @@
+---
+title: "Cultivating real-world productivity through gamification"
+description: "Study Garden is a calm, 3D gardening game to <strong>gamify productivity</strong>. Users earn rewards for completing tasks and maintaining focus, ultimately growing their virtual garden one plant at a time."
+tags: ["dev"]
+image: "../../images/covers/Study Garden.jpg"
+alt: "Study Garden"
+date: "8/1/2024"
+---
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import Habitica from "../../images/studyGarden/habitica.jpg";
+import Forest from "../../images/studyGarden/forest.jpg";
+import WaterDo from "../../images/studyGarden/waterdo.jpg";
+import Sketch from "../../images/studyGarden/sketch.jpg";
+import DataPersistence from "../../images/studyGarden/dataPersistenceManager.jpg";
+import GameManager from "../../images/studyGarden/gameManager.jpg";
+import GameDataHeirarchy from "../../images/studyGarden/gameDataHeirarchy.jpg";
+import GameManagerHeirarchy from "../../images/studyGarden/gameManagerHeirarchy.jpg";
+import HomeScene from "../../images/studyGarden/homeScene.jpg";
+import EditScene from "../../images/studyGarden/editScene.jpg";
+import ShopScene from "../../images/studyGarden/shopScene.jpg";
+import StudyScene from "../../images/studyGarden/studyScene.jpg";
+import MorningEnvironment from "../../images/studyGarden/morningStillshot.jpg";
+import NoonEnvironment from "../../images/studyGarden/noonStillshot.jpg";
+import NightEnvironment from "../../images/studyGarden/nightStillshot.jpg";
+
+import Overview from "../../components/post/Overview.svelte";
+import ProblemSolutionStatement from "../../components/post/ProblemSolutionStatement.svelte";
+import Gallery from "../../components/post/Gallery.svelte";
+import PageSection from "../../components/post/PageSection.svelte";
+
+
+
+
+<div style="height: 125px" />
+<div class="video">
+<iframe
+    width="100%"
+    height="100%"
+    src="https://www.youtube.com/embed/24gXQr4iYt0?si=wRgbN471vdD-a2EA?vq=hd1080"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+</div>
+<div class="caseStudyVideo">
+
+<Overview
+  year="2024"
+  tags={["individual project", "tools - unity, figma"]}
+>
+
+  <h1 slot="header">
+    <span style="color: var(--darkAccent)">Study Garden</span> is a productivity app that gamifies the task management experience by rewarding focus and task completion.
+  </h1>
+  <div slot="overviewDescription">
+    Study Garden was born out of a desire to better understand Unity and game development as a designer. 
+    Even though design may not require coding, it is important to understand the **limitations and possibilities** of the tools that developers use. 
+    As I started working professionally on projects that were built with Unity, I realized that I needed to understand the engine and all it's capabilities 
+    better in order to design more **effectively**.
+  <br />
+    While many productivity apps focus on tracking habits or organizing tasks, this project aims to make completing tasks a 
+    **rewarding experience** by providing an interactive and aesthetically pleasing environment where users can cultivate a garden 
+    based on their efforts. In Study Garden, users set specific tasks and goals. Completing these tasks and maintaining 
+    focus earns virtual currency that can be spent on new plants and decorations for their virtual garden. As the garden grows, 
+    so does the user's sense of accomplishment, reinforcing positive behaviors while offering a **playful creative outlet**.
+  </div>
+</Overview>
+
+<ProblemSolutionStatement>
+  <p slot="problem">
+    Staying focused and consistently completing tasks is a common challenge, especially in an increasingly **distracted** world. 
+    Traditional task management apps often lack the incentive to **motivate** users or make productivity enjoyable. 
+    Without rewards, completing tasks can feel like a chore.
+  </p>
+  <p slot="solution">
+    Study Garden **gamifies** productivity. Through completing tasks and maintaining focus, users will be able to grow their 
+    garden and unlock new plants and decorations.
+    This approach combines task management with gamification, making the process both **engaging and visually rewarding**.
+  </p>
+</ProblemSolutionStatement>
+
+<PageSection>
+  <h2 slot="sectionTitle">Research</h2>
+  <div slot="description">
+    I explored the psychology behind productivity apps and gamification, identifying that users are 
+    <a target="_blank" href="https://www.ntnu.edu/documents/139799/1279149990/04+Article+Final_camildah_fors%C3%B8k_2017-12-06-13-53-55_TPD4505.Camilla.Dahlstr%C3%B8m.pdf">more motivated</a> 
+    when they have a tangible reward or progress to work toward. By providing a virtual garden that users can personalize and 
+    grow over time, Study Garden leverages this motivation, offering a consistent sense of achievement. Inspiration was 
+    also drawn from existing apps like **Habitica**, which gamifies habit-building, but with a stronger emphasis on **visual 
+    creativity and design**.
+  </div>
+</PageSection>
+
+<Gallery
+  imgSrc={[Habitica.src]}
+  alt={["Habitica"]}
+  uniqueID={["fullImg"]}
+/ >
+  <p class="caption">*Habitica UI. Image courtesy of <a target="_blank" href="https://medium.com/@dnlholliday/habitica-a-self-improvement-app-that-sticks-4334f699eb80">Daniel Holliday</a>*</p>
+
+
+<div class="columnContainer">
+  Other popular examples with a heavier focus on visual design include **Forest** and **WaterDo**, which have demonstrated how attaching 
+  a visual reward system to task completion can help users stay focused. 
+  Forest encourages focus by letting users grow virtual trees that wither if they leave the app before completing their focus 
+  sessions. WaterDo, on the other hand, combines task management with a playful interface where users pop bubbles that represent 
+  completed tasks. 
+
+</div>
+<Gallery
+  imgSrc={[Forest.src, WaterDo.src]}
+  alt={["Forest", "WaterDo"]}
+  uniqueID={[""]}
+/ >
+<div class="columnContainer">
+  <p class="caption halfColumn">*Forest UI. Image courtesy of <a target="_blank" href="https://www.factorytwofour.com/the-forest-app-grows-your-productivity/">Christian Wutz</a>*</p>
+  <p class="caption halfColumn">*WaterDo UI. Image courtesy of <a target="_blank" href="https://zapier.com/blog/best-android-to-do-list-apps/">Ryan Kane</a>*</p>
+</div>
+
+<div class="columnContainer">
+  While these apps succeed in making productivity engaging, they focus more on **short-term** rewards 
+  (like growing a single tree or popping a task bubble). Study Garden's main value is providing a persistent virtual 
+  space where users continuously grow and customize their gardens as they complete more tasks. The focus is not just on 
+  one-off rewards but on building something over time—a garden that reflects the user's **consistent efforts and progress**.
+  Additionally, Study Garden takes a more creative approach by emphasizing visual and spatial design. 
+  While apps like Forest and WaterDo offer predefined visuals and limited customization, Study Garden allows users to 
+  **curate and design** their garden, giving them a sense of ownership and expression that goes beyond simple task tracking.
+</div>
+
+
+<PageSection>
+  <h2 slot="sectionTitle">Process</h2>
+  <div slot="description">
+    The development has been an ongoing learning experience focused on gaining familiarity with Unity and C#. 
+    The early stages involved prototyping the core gameplay loop, creating a simple system for users to add tasks, 
+    track focus sessions, earning rewards, and most importantly of all, storing game data.
+    <br />
+    Because my main focus for this project was to learn more about Unity's systems and its API, I tried to stay away from designing 
+    assets as much as possible. As a solo project, designing assets from scratch would have taken away valuable time that I could invest in mastering Unity’s features. 
+    I opted to use free assets from the Unity Asset Store whenever possible and focused on the **gameplay mechanics**.
+  </div>
+</PageSection>
+
+<Gallery
+  imgSrc={[Sketch.src]}
+  alt={["Sketch"]}
+  uniqueID={["fullImg"]}
+  />
+  <p class="caption">*First sketch of Study Garden's initial concept*</p>
+
+<div class="columnContainer">
+<div>
+    While I had some programming experience with Unity before, this project introduced me to more complex concepts 
+    like **data and file management** and the role of a **GameManager** in a game environment. The GameManager was 
+    central to handling core game logic and managing game states. 
+    In a game that relies on tracking user progress, having a reliable structure to save and load data is crucial. 
+    I learned how to implement persistent data storage while ensuring that the game remains responsive and consistent 
+    even as the player interacts with multiple systems. 
+    <br/>
+    This was probably the most challenging system to implement. Some objects can't be referenced directly, so I had to create 
+    what felt like a convoluted system of references to ensure that the data was being saved and loaded correctly. I think a good 90% of the 
+    errors I encountered were either null or missing reference errors, and it took a lot of trial and error to get it right.
+</div>
+</div>
+<Gallery
+  imgSrc={[DataPersistence.src, GameManager.src, GameDataHeirarchy.src, GameManagerHeirarchy.src]}
+  alt={["Data Persistence Manager", "Game Manager", "Game Data Heirarchy", "Game Manager Heirarchy"]}
+  uniqueID={[""]}
+  />
+<div class="columnContainer">
+  <p class="caption halfColumn">*The DataPersistenceManager object and its scripts, responsible for storing and retrieving user progress across sessions.*</p>
+  <p class="caption halfColumn">*The GameManager object and all manager scripts, which orchestrates core game logic and handles game states.*</p>
+</div>
+
+<div class="columnContainer">
+    After fully implementing the game management and persistence systems, I was finally able to focus on bringing the various 
+    scenes to life. The layout of the final screens closely reflects the structure envisioned in the initial sketch. 
+</div>
+<Gallery
+  imgSrc={[HomeScene.src, StudyScene.src, EditScene.src, ShopScene.src]}
+  alt={["Home Scene", "Study Scene", "Edit Scene", "Shop Scene"]}
+  uniqueID={[""]}
+/>
+  <p class="caption">*Study Garden in-game screens*</p>
+
+<PageSection>
+  <h2 slot="sectionTitle">Challenges</h2>
+  <h3 slot="description">Developing a full, non-buggy product takes a lot of time</h3>
+  <div slot="description">
+    I started this project with the assumption that this was going to be a simple one. After all, I deliberately chose 
+    something simple, and at its core, it's just managing data of some plants and currency. I was aware of how much work game dev 
+    actually is going into this, but all my previous experiences were very **hacky**. Sure, I could crank out a functional 
+    prototype in a day, but it would be filled with **placeholders and bugs**. 
+    <br />
+    As a hackathon enthusiast, I have already done my fair share of **quick and dirty** projects. This time, I wanted to flesh things 
+    out as much as possible and make sure that the project was **scalable**. As I started debugging, I realized that 
+    the smallest bugs are sometimes the most time consuming to fix. There were many times where I considered making something a 
+    "feature" instead of fixing it, but I couldn't be satisfied with that. Although sometimes, I think I went a bit overboard. There 
+    was this one "bug" where the images on buttons wouldn't be tinted when pressed, but it worked completely fine. I ended up making a 
+    custom script just to fix that. There were also so many other nit-picky things I wanted to fix, especially regarding how the 
+    edit mode worked. Each tiny issue took hours to fix, but it's those **small details** that make the product feel like an actual 
+    game rather than a hackathon project.
+    <br />
+    
+
+    <div class="columnContainer">
+      <div class="halfColumn">
+        ### ButtonImageTint.cs
+        <iframe style="min-width: 200px; width: 100%; height: 80vh;" 
+        scrolling="yes" seamless="seamless" srcdoc='<html><body><style type="text/css">.gist .gist-data { height: 100%; }</style>
+        <script src="https://gist.github.com/jelly-shroom/9cc91a5dc5cbcece1f90620845404bc4.js"></script></body></html>'>
+        </iframe>
+        <p class="caption">*The ButtonTint script that I made to fix a "bug" where the images on buttons wouldn't be tinted when pressed*</p>
+      </div>
+
+      <div class="halfColumn">
+        ### PlantBehavior.cs
+        <iframe style="min-width: 200px; width: 100%; height: 80vh;" 
+        scrolling="yes" seamless="seamless" srcdoc='<html><body><style type="text/css">.gist .gist-data { height: 100%; }</style>
+        <script src="https://gist.github.com/jelly-shroom/fd84074c3bd05669a11f5b589a7272ca.js"></script></body></html>'>
+        </iframe>
+        <p class="caption">*My PlantBehavior script that started off as a simple movement handler grew to be my largest script*</p>
+      </div>
+    </div>
+
+    Aside from bugs, there were also many **tiny features** that would improve the user experience came to mind as I was developing. 
+    The core gameplay loop was already implemented at this point, so there was no real need for any prioritization. Because of this, 
+    it kind of felt like a **never-ending project**. "It would be cool if the environment changed based on the time of day" -- 
+    "Why don't we have multiple songs and backgrounds and make it randomized each time you enter focus mode?" 
+    Eventually, I realized I needed to **get a grip and start PM-ing myself**. I decided to cut off all tweaking and coding by a certain date 
+    no matter where I was at. I will always come up with more features that are "nice to have". If I kept going, I really will end up 
+    making a full-fledged game. This was just a learning project.
+
+    <br/>
+    <div class="columnContainer">
+      <div class="halfColumn">
+        ### Home Environment
+        <Gallery 
+          imgSrc={[MorningEnvironment.src, NoonEnvironment.src, NightEnvironment.src]}
+          alt={["Morning Environment", "Noon Environment", "Night Environment"]}
+          uniqueID={["fullImg", "fullImg", "fullImg"]}
+        />
+        <p class="caption">*“It would be cool if the environment changed based on the time of day.” -- and it happened. It comes with an 
+        audio controller script too.*</p>
+      </div>
+
+      <div class="halfColumn">
+        ### StudySceneManager.cs
+        <iframe style="min-width: 200px; width: 100%; height: 112.7vh;" 
+        scrolling="yes" seamless="seamless" srcdoc='<html><body><style type="text/css">.gist .gist-data { height: 100%; }</style>
+        <script src="https://gist.github.com/jelly-shroom/750666ba5a5961e5e28084c462bb4360.js"></script></body></html>'>
+        </iframe>
+        <p class="caption">*The focus scene manager, which was not even neccessary for this project, that randomly selects a background and song*</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 slot="description">Learning new software will always be a bumpy road</h3>
+  <div slot="description">
+    While I'm not new to Unity, it contains so many features and editor tools that I've never touched before. This project 
+    contained a lot of **firsts** for me. I learned to work with in depth with Unity's **UI system**, which was a lot more complex than I thought. I 
+    expected to get the hang of its Canvas system quickly as a designer, but it took 
+    many many **failures** of trial and error to get the UI to work and respond the way I wanted it to. Only now does it 
+    feel natural for me to work with.
+    <br />
+    Other than UI, this was my first time with **audio**, **video**, **tilemaps**, and **sprite editor**. Although I didn't dive as 
+    deep into these as I did with the UI, simply implementing them opens up doors I otherwise wouldn't have known about.
+  </div>
+
+</PageSection>
+
+
+</div>
+
