@@ -80,6 +80,7 @@
     overflow: hidden;
 
     flex-shrink: 0;
+    margin: auto 0;
   }
 
   @media screen and (max-width: 800px) {

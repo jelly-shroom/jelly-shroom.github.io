@@ -30,6 +30,7 @@ import Overview from "../../components/post/Overview.svelte";
 import ProblemSolutionStatement from "../../components/post/ProblemSolutionStatement.svelte";
 import Gallery from "../../components/post/Gallery.svelte";
 import PageSection from "../../components/post/PageSection.svelte";
+import LinkToLive from "../../components/post/LinkToLive.svelte";
 
 
 
@@ -109,7 +110,6 @@ import PageSection from "../../components/post/PageSection.svelte";
   Forest encourages focus by letting users grow virtual trees that wither if they leave the app before completing their focus 
   sessions. WaterDo, on the other hand, combines task management with a playful interface where users pop bubbles that represent 
   completed tasks. 
-
 </div>
 <Gallery
   imgSrc={[Forest.src, WaterDo.src]}
@@ -158,11 +158,11 @@ import PageSection from "../../components/post/PageSection.svelte";
     like **data and file management** and the role of a **GameManager** in a game environment. The GameManager was 
     central to handling core game logic and managing game states. 
     In a game that relies on tracking user progress, having a reliable structure to save and load data is crucial. 
-    I learned how to implement persistent data storage while ensuring that the game remains responsive and consistent 
+    This required me to implement persistent data storage while ensuring that the game remains responsive and consistent 
     even as the player interacts with multiple systems. 
     <br/>
-    This was probably the most challenging system to implement. Some objects can't be referenced directly, so I had to create 
-    what felt like a convoluted system of references to ensure that the data was being saved and loaded correctly. I think a good 90% of the 
+    The data management system was probably the most challenging system to implement for me. Some objects can't be referenced directly, so I had to create 
+    what had felt like a convoluted system of references to ensure that the data was being saved and loaded correctly. I think a good 90% of the 
     errors I encountered were either null or missing reference errors, and it took a lot of trial and error to get it right.
 </div>
 </div>
@@ -170,7 +170,7 @@ import PageSection from "../../components/post/PageSection.svelte";
   imgSrc={[DataPersistence.src, GameManager.src, GameDataHeirarchy.src, GameManagerHeirarchy.src]}
   alt={["Data Persistence Manager", "Game Manager", "Game Data Heirarchy", "Game Manager Heirarchy"]}
   uniqueID={[""]}
-  />
+/>
 <div class="columnContainer">
   <p class="caption halfColumn">*The DataPersistenceManager object and its scripts, responsible for storing and retrieving user progress across sessions.*</p>
   <p class="caption halfColumn">*The GameManager object and all manager scripts, which orchestrates core game logic and handles game states.*</p>
@@ -189,24 +189,22 @@ import PageSection from "../../components/post/PageSection.svelte";
 
 <PageSection>
   <h2 slot="sectionTitle">Challenges</h2>
-  <h3 slot="description">Developing a full, non-buggy product takes a lot of time</h3>
   <div slot="description">
+    ### Developing a full, non-buggy product takes a lot of time
     I started this project with the assumption that this was going to be a simple one. After all, I deliberately chose 
-    something simple, and at its core, it's just managing data of some plants and currency. I was aware of how much work game dev 
-    actually is going into this, but all my previous experiences were very **hacky**. Sure, I could crank out a functional 
+    something simple. At its core, it's just managing data of some plants and currency. I was aware of how much work game dev 
+    is going into this, but all my previous experiences were very **hacky**. I could crank out a functional 
     prototype in a day, but it would be filled with **placeholders and bugs**. 
     <br />
     As a hackathon enthusiast, I have already done my fair share of **quick and dirty** projects. This time, I wanted to flesh things 
     out as much as possible and make sure that the project was **scalable**. As I started debugging, I realized that 
     the smallest bugs are sometimes the most time consuming to fix. There were many times where I considered making something a 
-    "feature" instead of fixing it, but I couldn't be satisfied with that. Although sometimes, I think I went a bit overboard. There 
-    was this one "bug" where the images on buttons wouldn't be tinted when pressed, but it worked completely fine. I ended up making a 
-    custom script just to fix that. There were also so many other nit-picky things I wanted to fix, especially regarding how the 
-    edit mode worked. Each tiny issue took hours to fix, but it's those **small details** that make the product feel like an actual 
-    game rather than a hackathon project.
+    "feature" instead of fixing it, but I couldn't be satisfied with that. Sometimes, I think I went a bit overboard with debugging. There 
+    was one "bug" where the images on buttons wouldn't be tinted when pressed when it worked completely fine, and I ended up making a 
+    custom script just to fix that. There were so many other nit-picky things I wanted to fix, and each tiny issue could take hours. 
+    It's those **small details** that make the product feel like an actual game rather than a hackathon project.
     <br />
     
-
     <div class="columnContainer">
       <div class="halfColumn">
         ### ButtonImageTint.cs
@@ -227,9 +225,9 @@ import PageSection from "../../components/post/PageSection.svelte";
       </div>
     </div>
 
-    Aside from bugs, there were also many **tiny features** that would improve the user experience came to mind as I was developing. 
+    Aside from bugs, there were also many **tiny features** that came to mind as I was developing. 
     The core gameplay loop was already implemented at this point, so there was no real need for any prioritization. Because of this, 
-    it kind of felt like a **never-ending project**. "It would be cool if the environment changed based on the time of day" -- 
+    it felt like a **never-ending project**. "It would be cool if the environment changed based on the time of day" -- 
     "Why don't we have multiple songs and backgrounds and make it randomized each time you enter focus mode?" 
     Eventually, I realized I needed to **get a grip and start PM-ing myself**. I decided to cut off all tweaking and coding by a certain date 
     no matter where I was at. I will always come up with more features that are "nice to have". If I kept going, I really will end up 
@@ -259,8 +257,8 @@ import PageSection from "../../components/post/PageSection.svelte";
     </div>
   </div>
 
-  <h3 slot="description">Learning new software will always be a bumpy road</h3>
   <div slot="description">
+    ### Learning new software will always be a bumpy road
     While I'm not new to Unity, it contains so many features and editor tools that I've never touched before. This project 
     contained a lot of **firsts** for me. I learned to work with in depth with Unity's **UI system**, which was a lot more complex than I thought. I 
     expected to get the hang of its Canvas system quickly as a designer, but it took 
@@ -271,6 +269,54 @@ import PageSection from "../../components/post/PageSection.svelte";
     deep into these as I did with the UI, simply implementing them opens up doors I otherwise wouldn't have known about.
   </div>
 
+</PageSection>
+
+<LinkToLive
+  links={[
+    "https://github.com/jelly-shroom/Study-Garden"
+  ]}
+  buttonText={[`check out Study Garden! >`]}
+>
+  <h2 slot="header">Try it out</h2>
+  <p slot="body">
+    Check out the project on GitHub to see the code and assets used in the project.
+  </p>
+</LinkToLive>
+
+<PageSection>
+  <h2 slot="sectionTitle">Next Steps</h2>
+  <div slot="description">
+    ### Onboarding and alerts
+    The next steps for Study Garden would be to implement a more comprehensive onboarding process to guide new users through the app. 
+    This would include a basic walkthrough of the features and how they're used. Currently, new users may not fully understand the 
+    available features or how to interact with the game. A step-by-step introduction would help bridge this gap, ensuring that 
+    users start off with a **clear understanding** of the app's core functionality. Additionally, integrating more contextual 
+    alerts and notifications would provide essential **user feedback**. For instance, users should be notified when they've completed a 
+    task, earned rewards, or when certain milestones are reached. Without these, the app can feel **unresponsive and confusing** 
+    at times.
+    <br />
+
+    ### Expanding customization options
+    Another priority is expanding the **variety** of plants, decorations, and layout options available in the garden. 
+    Offering more customization choices will enhance user engagement by allowing players to personalize their garden further, and it is
+    especially important since Study Garden's main differentiatiation is its focus on **visuals and customization**. 
+    Adding seasonal items or themed content, such as holiday-specific plants, could introduce limited-time events and encourage 
+    continued interaction.
+    <br/>
+
+    ### Refining the reward system
+    The current reward system works well for motivating users, but there is room for improvement in how rewards **scale** as users 
+    progress. Implementing more dynamic rewards based on task difficulty, streaks, or focus duration could make the game feel more 
+    rewarding over time. This would create a stronger connection between effort and reward, helping users stay motivated as their 
+    gardens grow.
+    <br/>
+
+    ### Optimization and cross-platform support
+    As more features are added, performance optimization will become increasingly important. Further work is needed to ensure that 
+    scene transitions remain smooth and that the game performs consistently even with a fully decorated garden. Bringing the game 
+    to Android and iOS would also make it more accessible and reach a broader audience, opening up possibilities for mobile-specific 
+    features like notifications and simplified touch controls.
+  </div>
 </PageSection>
 
 
