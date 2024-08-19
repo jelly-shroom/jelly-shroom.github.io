@@ -22,7 +22,9 @@ import Ideation3 from "../../images/menace/Flow1-Structure.png";
 import Ideation4 from "../../images/menace/Flow2-Wispy.png";
 import LoFi from "../../images/menace/LowFi.jpg";
 import MidFi from "../../images/menace/MidFi.jpg";
+import Simplification from "../../images/menace/Simplification.jpg";
 import ExploreIterations from "../../images/menace/ExploreIterations.jpg";
+import ExploreExamples from "../../images/menace/ExploreIterationExamples.jpg";
 import Colors from "../../images/menace/Colors.jpg";
 import CoverImage from "../../images/covers/Menace.jpg";
 import Handoff from "../../images/menace/DevHandoff.jpg";
@@ -181,18 +183,24 @@ import ColorPalette from "../../components/post/ColorPalette.svelte";
 <div class="caseStudy">
 <PageSection>
   <h2 slot="sectionTitle">Challenges</h2>
-  <h3 slot="description">Simplicity vs. innovation</h3>
-  <p slot="description">
+    <div slot="description">
+    ### Simplicity vs. innovation
     By far the greatest challenge in this project was making everything intuitive. I had a lot of interesting ideas working with 3D space that I 
     really wanted to incorporate and make a reality, but I needed to prioritize ease of use and comprehension. Ultimately, I reluctantly 
     decided to adopt a more conventional 2D design. I realized that forcing users to work with a 3D space would be a huge barrier. People 
     are used to 2D interfaces, and anything that takes more than a few seconds to figure out and get used to is a huge turnoff. **Good design 
     is invisible**. It should be intuitive and easy to use, and the user should never have to think about it.
     <br />
-  </p>
-  
-  <h3 slot="description">Structure vs. freedom</h3>
-  <p slot="description">
+
+    <Gallery 
+      imgSrc={[Simplification.src]}
+      alt={["Simplification"]}
+      uniqueID={["fullImg"]}
+    />
+    <p class="caption">*I ended up simplifying my 3D honeycomb idea that I really loved to prioritize usability*</p>
+  </div>
+  <div slot="description">
+    ### Structure vs. freedom
     Another challenge I faced was providing structure to a freeform system. I wanted to give users the freedom to explore and discover new 
     topics, but I also needed to provide some framework to enhance **usability**. Without this, it'll be easy for users to experience a sense of 
     **confusion and uncertainty**, and *any* degree of uncertainty is a barrier to engagement. It is easy to fall into the same "trap" as Amo, 
@@ -200,7 +208,21 @@ import ColorPalette from "../../components/post/ColorPalette.svelte";
     manipulating opacity, playing around with size, shape, and more to figure out how to guide users and provide that structure without being too intrusive. 
     Over many days of experimentation, I finally found a balance that I was happy with, using **size** as the main indicator of heirarchy.
     <br />
-  </p>
+
+    <Gallery 
+      imgSrc={[ExploreIterations.src]}
+      alt={["Explore Iterations"]}
+      uniqueID={["fullImg"]}
+    />
+    <p class="caption">*All the iterations I did for a single screen exploring 360° navigation*</p>
+    <Gallery 
+      imgSrc={[ExploreExamples.src]}
+      alt={["Explore Iteration Examples"]}
+      uniqueID={["fullImg"]}
+    />
+    <p class="caption">*Screens of some design explorations--designing indicators for reccommended content, post popularity, and overall navigation. I ended up settling 
+    on the right-most screen*</p>
+  </div>
 
   <h3 slot="description">Avoiding clutter</h3>
   <p slot="description">
@@ -223,25 +245,18 @@ import ColorPalette from "../../components/post/ColorPalette.svelte";
 </PageSection>
 
 <Gallery 
-    imgSrc={[ExploreIterations.src]}
-    alt={["Explore Iterations"]}
-    uniqueID={["fullImg"]}
-/>
-<p class="caption">*Explore page iterations--simplicity vs. innovation; structure vs. freedom; avoiding clutter*</p>
-
-<Gallery 
     imgSrc={[Colors.src]}
     alt={["Colors"]}
     uniqueID={["fullImg"]}
 />
-<p class="caption">*Color exploration--designer vs. client*</p>
+<p class="caption">*The color explorations I did even if it didn't match the provided moodboard*</p>
 
 <Gallery 
     imgSrc={[Handoff.src]}
     alt={["Scenario"]}
     uniqueID={["fullImg"]}
 />
-<p class="caption">*The final version I handed off to the devs.*</p>
+<p class="caption">*The final version I handed off to the devs*</p>
 
 <PageSection>
   <h2 slot="sectionTitle">Final design</h2>
