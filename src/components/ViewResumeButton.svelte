@@ -1,6 +1,6 @@
 <a
   class="button"
-  href="https://media.jessicasheng.me/resume_JessicaSheng.pdf"
+  href="https://media.jessicasheng.me/ShengJessica_resume.pdf"
   target="_blank">view resume</a
 >
 
