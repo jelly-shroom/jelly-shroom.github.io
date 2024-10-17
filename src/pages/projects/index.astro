@@ -1,4 +1,5 @@
 ---
+import { SEO } from "astro-seo";
 import Site from "../../layouts/Site.astro";
 import ProjectList from "../../components/project/ProjectList.svelte";
 import Footer from "../../components/Footer.astro";
@@ -24,6 +25,20 @@ const tags = {
 };
 ---
 
+<html>
+  <SEO
+    title="Jessica Sheng - All Projects"
+    description="this page is the complete collection of all of my projects, big and small. here, you can view my explorations in spatial design, product design, art, and development."
+    openGraph={{
+      basic: {
+        title: "Jessica Sheng - All Projects",
+        type: "A type.",
+        image:
+          "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+      },
+    }}
+  />
+</html>
 <Site>
   <div class="glass-bg">
     <ProjectList tags={tags} projects={projectData} client:load />

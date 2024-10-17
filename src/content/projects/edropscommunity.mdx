@@ -6,7 +6,7 @@ image: "../../images/covers/eDrops.jpg"
 alt: "eDrops Community"
 date: "5/1/2022"
 ---
-
+import { SEO } from "astro-seo";
 
 import "../../styles/post.css";
 import Tag from "../../components/Tag.svelte";
@@ -26,6 +26,19 @@ import PageSection from "../../components/post/PageSection.svelte";
 import Gallery from "../../components/post/Gallery.svelte";
 import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
 import LinkToLive from "../../components/post/LinkToLive.svelte";
+
+<SEO
+  title="Jessica Sheng - eDrops Community"
+  description="Streamlining access to electrowetting on dielectric (EWOD) technology via open-source - eDrops Community is an open-source platform designed to democratize access to EWOD technology, enabling users to create and share their own EWOD projects and designs."
+  openGraph={{
+    basic: {
+      title: "Jessica Sheng - eDrops Community",
+      type: "A type.",
+      image:
+        "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+    },
+  }}
+/>
 
 <div class="bannerImgCover">
   <img src={CoverImage.src} alt="eDrops Community" id = "eDropsCoverBanner"/>

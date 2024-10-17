@@ -6,7 +6,7 @@ image: "../../images/covers/Synthetic Feline.jpg"
 alt: "Synthetic Feline"
 date: "2/1/2019"
 ---
-
+import { SEO } from "astro-seo";
 
 import "../../styles/post.css";
 import Tag from "../../components/Tag.svelte";
@@ -19,7 +19,18 @@ import Overview from "../../components/post/Overview.svelte";
 import Gallery from "../../components/post/Gallery.svelte";
 import PageSection from "../../components/post/PageSection.svelte";
 
-
+<SEO
+  title="Jessica Sheng - Synthetic Feline"
+  description="Synthetic Feline - Creating and modeling a design that blends organic and hard surface modeling techniques together."
+  openGraph={{
+    basic: {
+      title: "Jessica Sheng - Synthetic Feline",
+      type: "A type.",
+      image:
+        "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+    },
+  }}
+/>
 
 <img src={CoverImage.src} alt="Synthetic Feline" class="fullImgCover"/>
 <div class="caseStudy">

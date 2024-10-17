@@ -6,14 +6,25 @@ image: "../../images/covers/Distorted Face.jpg"
 alt: "Distorted face"
 date: "1/1/2020"
 ---
-
+import { SEO } from "astro-seo";
 
 import "../../styles/post.css";
 import Tag from "../../components/Tag.svelte";
-
 import CoverImage from "../../images/illustrations/distortedFace.jpg";
-
 import Overview from "../../components/post/Overview.svelte";
+
+<SEO
+  title="Jessica Sheng - Distorted Face"
+  description="Capturing and embracing our imperfections. - graphite on bristol paper."
+  openGraph={{
+    basic: {
+      title: "Jessica Sheng - Distorted Face",
+      type: "A type.",
+      image:
+        "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+    },
+  }}
+/>
 
 <img src={CoverImage.src} alt="Children on a Country Road" class="fullImgCover"/>
 <div class="caseStudy">

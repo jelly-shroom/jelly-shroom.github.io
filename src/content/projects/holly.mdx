@@ -6,13 +6,25 @@ image: "../../images/covers/Holly.jpg"
 alt: "Holly"
 date: "9/1/2022"
 ---
-
+import { SEO } from "astro-seo";
 import "../../styles/post.css";
 import Tag from "../../components/Tag.svelte";
 
 import CoverImage from "../../images/illustrations/holly_charcoal.jpg";
-
 import Overview from "../../components/post/Overview.svelte";
+
+<SEO
+  title="Jessica Sheng - Holly"
+  description="Preserving a moment in my dog's everyday life - charcoal on paper toned with charcoal and glycerin."
+  openGraph={{
+    basic: {
+      title: "Jessica Sheng - Holly",
+      type: "A type.",
+      image:
+        "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+    },
+  }}
+/>
 
 <img src={CoverImage.src} alt="Holly" class="fullImgCover"/>
 <div class="caseStudy">

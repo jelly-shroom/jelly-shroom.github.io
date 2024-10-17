@@ -17,6 +17,9 @@ dependencies:
   astro:
     specifier: ^4.5.16
     version: 4.5.16(sass@1.74.1)(typescript@5.4.4)
+  astro-seo:
+    specifier: ^0.8.4
+    version: 0.8.4(typescript@5.4.4)
   lucide-svelte:
     specifier: ^0.365.0
     version: 0.365.0(svelte@4.2.12)
@@ -1339,6 +1342,16 @@ packages:
   /astring@1.8.6:
     resolution: {integrity: sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==}
     hasBin: true
+    dev: false
+
+  /astro-seo@0.8.4(typescript@5.4.4):
+    resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
+    dependencies:
+      '@astrojs/check': 0.5.10(typescript@5.4.4)
+    transitivePeerDependencies:
+      - prettier
+      - prettier-plugin-astro
+      - typescript
     dev: false
 
   /astro@4.5.16(sass@1.74.1)(typescript@5.4.4):

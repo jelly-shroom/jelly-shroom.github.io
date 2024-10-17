@@ -6,7 +6,7 @@ image: "../../images/covers/Children on a Country Road.jpg"
 alt: "Children on a Country Road"
 date: "1/1/2023"
 ---
-
+import { SEO } from "astro-seo";
 import "../../styles/post.css";
 import Tag from "../../components/Tag.svelte";
 
@@ -15,6 +15,19 @@ import CoverImage from "../../images/childrenOnACountryRoad/Children on a Countr
 import Overview from "../../components/post/Overview.svelte";
 import PageSection from "../../components/post/PageSection.svelte";
 import Gallery from "../../components/post/Gallery.svelte";
+
+<SEO
+  title="Jessica Sheng - Franz Kafka: Children on a Country Road"
+  description="Bringing stories to life - an illustration that seeks to capture the serenity and tranquility of Kafka's short story, Children on a Country Road."
+  openGraph={{
+    basic: {
+      title: "Jessica Sheng - Franz Kafka: Children on a Country Road",
+      type: "A type.",
+      image:
+        "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+    },
+  }}
+/>
 
 <img src={CoverImage.src} alt="Children on a Country Road" class="fullImgCover"/>
 <div class="caseStudy">

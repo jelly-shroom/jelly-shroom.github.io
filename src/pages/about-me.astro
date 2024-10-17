@@ -1,6 +1,6 @@
 ---
 import Site from "../layouts/Site.astro";
-
+import { SEO } from "astro-seo";
 import Blobs from "../components/Blobs.svelte";
 import Footer from "../components/Footer.astro";
 
@@ -19,6 +19,20 @@ const personalsData = Object.fromEntries(
 );
 ---
 
+<html>
+  <SEO
+    title="Jessica Sheng - About Me"
+    description="i’m jessica sheng, a designer based in la. I am currently a student of the Iovine and Young Academy at the University of Southern California. I love tinkering with new technologies and testing out new solutions to problems, and I am always looking for new ways to apply my skills to create meaningful experiences for others. Thanks for stopping by!"
+    openGraph={{
+      basic: {
+        title: "Jessica Sheng - About Me",
+        type: "A type.",
+        image:
+          "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+      },
+    }}
+  />
+</html>
 <Site>
   <div id="heroWrapper" slot="header">
     <Bio client:load />
