@@ -48,34 +48,37 @@ import PageSection from "../../components/post/PageSection.svelte";
 </div>
 <div class="caseStudyVideo">
 
-<Overview
-  year="2024"
-  tags={["team size - 4", "tools - blender, unity, elevenlabs", "role - 3d artist"]}
->
+  <Overview
+    year="2024"
+    tags={["team size - 4", "tools - blender, unity, elevenlabs", "role - 3d artist"]}
+  >
 
-  <h1 slot="header">
-    Exploring educational MR experiences through the Apple Vision Pro
-  </h1>
-  <div slot="overviewDescription">
-    A quick and dirty project with a few classmates to explore the capabilities of the Apple Vision Pro. 
-    We wanted to create an interactive experience that breaks down the components of the Wide5 HMD headset in 
-    a fun and engaging manner. 
-  </div>
-</Overview>
-<PageSection>
-  <h2 slot="sectionTitle">Process & Research</h2>
-  <p slot="description">
-    With access to the MxR Lab founded by Mark Bolas, we were inspired by the huge display of VR and AR headsets sitting out in the 
-    hallway. Staring at the headsets, we thought it would be interesting to create an educational experience that breaks down the 
-    inner components of a headset while making it engaging and fun to interact with. With the help of an <a target="_blank" href="https://www.mtbs3d.com/phpBB/viewtopic.php?f=120&t=13741">old post</a>  by 
-    Palmer Luckey, we were able to gather enough information about the Wide5 HMD to create an informative experience.
-  </p>
-</PageSection>
-<Gallery
-  imgSrc={[Blender1.src, Blender2.src]}
-  alt={["Blender Viewport 1", "Blender Viewport 2"]}
-  uniqueID={[""]}
-/ >
+    <h1 slot="header">
+      Exploring educational MR experiences through the Apple Vision Pro
+    </h1>
+    <div slot="overviewDescription">
+      A quick and dirty project with a few classmates to explore the capabilities of the Apple Vision Pro. 
+      We wanted to create an interactive experience that breaks down the components of the Wide5 HMD headset in 
+      a fun and engaging manner. 
+      <br/>
+      Team: Spencer (Programmer), Sherry Xie (Designer), David Liao (3D Artist), Jessica Sheng (3D Artist)
+    </div>
+  </Overview>
+  <PageSection>
+    <h2 slot="sectionTitle">Process & Research</h2>
+    <p slot="description">
+      With access to the MxR Lab founded by Mark Bolas, we were inspired by the huge display of VR and AR headsets sitting out in the 
+      hallway. Staring at the headsets, we thought it would be interesting to create an educational experience that breaks down the 
+      inner components of a headset while making it engaging and fun to interact with. With the help of an <a target="_blank" href="https://www.mtbs3d.com/phpBB/viewtopic.php?f=120&t=13741">old post</a>  by 
+      Palmer Luckey, we were able to gather enough information about the Wide5 HMD to create an informative experience.
+    </p>
+  </PageSection>
+  <Gallery
+    imgSrc={[Blender1.src, Blender2.src]}
+    alt={["Blender Viewport 1", "Blender Viewport 2"]}
+    uniqueID={[""]}
+  / >
+  <p class="caption">*Model for exploded headset view*</p>
 
 </div>
 
