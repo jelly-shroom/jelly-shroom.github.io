@@ -92,7 +92,7 @@
     transform: scaleX(1);
   }
   .navContainer {
-    margin: 8rem 0;
+    margin: 4rem 0;
     display: flex;
     justify-content: space-between;
   }

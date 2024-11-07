@@ -52,7 +52,7 @@
   }
 
   .journalEntry:hover {
-    background-color: var(--darkAccent);
+    background-color: var(--lightAccent);
     color: white;
   }
 
