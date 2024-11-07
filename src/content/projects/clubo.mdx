@@ -12,10 +12,10 @@ import "../../styles/post.css";
 import Tag from "../../components/Tag.svelte";
 
 import Display from "../../images/cluBo/cluWithChild.jpg";
-// import Persona1 from "../../images/cluBo/User Persona (1).jpg";
-// import Persona2 from "../../images/cluBo/User Persona.jpg";
-// import CompetitiveMatrix from "../../images/cluBo/Competition analysis 4x4 Matrix.png";
-// import CompetitiveChart from "../../images/cluBo/Competitive Analysis Chart.png";
+import Persona1 from "../../images/cluBo/User Persona (1).jpg";
+import Persona2 from "../../images/cluBo/User Persona.jpg";
+import CompetitiveMatrix from "../../images/cluBo/Competition analysis 4x4 Matrix.png";
+import CompetitiveChart from "../../images/cluBo/Competitive Analysis Chart.png";
 import UISketches from "../../images/cluBo/controllerSketches.jpg";
 import RobotSketches from "../../images/cluBo/robotSketches.jpg";
 import CoverImage from "../../images/cluBo/coverImage_CluBo.jpg";
@@ -94,8 +94,8 @@ import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
 </PageSection>
 <Gallery
   imgSrc={[
-    "https://images2.imgbox.com/b9/08/xEWIah8K_o.jpg",
-    "https://images2.imgbox.com/e7/78/VA6vqDcJ_o.jpg",
+    Persona1.src,
+    Persona2.src,
   ]}
   alt={[
     "User Persona 1",
@@ -106,7 +106,7 @@ import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
 </div>
 
 <Gallery
-  imgSrc={["https://images2.imgbox.com/40/f7/mNcRts19_o.png", "https://images2.imgbox.com/88/21/60QVTDDf_o.png"]}
+  imgSrc={[CompetitiveMatrix.src, CompetitiveChart.src]}
   alt={["Competitive Matrix", "Competitive Chart"]}
   uniqueID={["fullImg", "fullImg"]}
   galleryType="noGap"
