@@ -24,8 +24,10 @@
 </script>
 
 <a href={`/journal/${slug}`} class={itemClass}>
-  <div>
-    <img src={image} {alt} class="cover-image" />
+  <div class="imageWrapper">
+    <img src={image} {alt} />
+  </div>
+  <div class="text">
     <h2>{title}</h2>
     <p>{formattedDate}</p>
   </div>
@@ -43,7 +45,8 @@
 
     position: relative;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
 
     cursor: pointer;
 
@@ -56,11 +59,22 @@
     color: white;
   }
 
-  .cover-image {
+  .journalEntry .imageWrapper {
+    display: flex;
+    align-items: start;
     border-radius: 5px;
+    margin-bottom: 10px;
+    transition: 0.25s;
+    background-color: var(--imageFiller);
+    height: 100%;
+  }
+
+  .imageWrapper img {
     width: 100%;
     height: 100%;
-    object-fit: fit;
+    object-fit: scale-down;
+    border-radius: 5px;
+
     object-position: center center;
   }
 

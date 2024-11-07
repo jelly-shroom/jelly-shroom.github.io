@@ -21,6 +21,11 @@
 
 <style>
   .heading {
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
+  }
+
+  h3 {
+    margin-top: 0.25rem;
   }
 </style>

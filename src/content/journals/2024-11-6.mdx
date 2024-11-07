@@ -1,0 +1,55 @@
+---
+title: "I'm addicted to the \"flow\""
+image: "https://images2.imgbox.com/b0/06/hThRkd4N_o.jpg"
+alt: "11/6/2024 doodle"
+date: "11/6/2024"
+---
+import { SEO } from "astro-seo";
+
+import "../../styles/journalEntry.css";
+
+import JournalHeading from "../../components/journal/JournalHeading.svelte";
+import JournalBody from "../../components/journal/JournalBody.svelte";
+
+
+<SEO
+  title="Jessica Sheng - I'm addicted to the flow"
+  description="Exploring educational MR experiences through the Apple Vision Pro - an interactive experience that breaks down the components of the Wide5 HMD headset."
+  openGraph={{
+    basic: {
+      title: "Jessica Sheng - I'm addicted to the \"flow\" state",
+      type: "A type.",
+      image:
+        "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+    },
+  }}
+/>
+
+<img src={"https://images2.imgbox.com/b0/06/hThRkd4N_o.jpg"} alt="11/6/2024"/>
+<JournalHeading date={frontmatter.date}>
+    <h1 slot="header">I'm addicted to the \"flow\"</h1>
+</JournalHeading>
+<JournalBody>
+    <div slot="body">
+        Entering the flow is such a magical experience. It's like I'm in a trance, and I'm just doing things without thinking. 
+        The flow is a state often used by athletes, artists, and musicians to describe when they are performing at their best. It is 
+        when you are so focused and entranced in what you are doing that you lose track of time and everything else around you. Whenever I 
+        enter the flow, time passes by so so so quickly, and I feel like **I can continue doing what I'm doing forever.**
+        <br/>
+        It has been a while since I've entered the flow, but working on adding in this blog/journal section to my website has 
+        brought me back. If only I could enter the flow for my schoolwork or job! Can you imagine how much more productive I would be? It would 
+        make the **mental game** of getting work done so much easier.
+        <br/>
+        I think what sets this apart from other activities is that **I have a vision** I really want to fulfill. I can clearly visualize what I want, exactly 
+        how I can do it, and all that is left is simply to execute. A lot of what I have been doing recently has been more exploratory. With startups 
+        especially, you really never know what your end product will look like. You have a general idea, but the specifics are always changing. Even the 
+        very core of your product can change. Because so much of the time is spent thinking about a project's features, value proposition, how it can be marketed, 
+        business model, etc., it's hard to get into the flow and simply focus on *executing*.
+        <br/>
+        Once I get into the flow, I notice that I tend to get caught up on the details even when I consciously recognize what I am doing. I am 
+        completely aware of my inefficient workflow, but I *want* to get caught up in the details in order to keep my state of mind **undisrupted**. I am willing 
+        to sacrifice *a lot* just to keep the momentum going. I will work for hours on end without taking a break, and I can become very **anti-social**.
+        I also tend to not eat or take care of myself at all... oops. While I think it is one of the most satisfying feelings in the world, it probably is a good thing that 
+        I don't enter the flow too often. I would probably become a complete shut-in who never touches grass, eats or sleeps.
+    </div>
+</JournalBody>
