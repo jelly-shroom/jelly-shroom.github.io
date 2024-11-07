@@ -21,7 +21,18 @@ const personals = defineCollection({
   }),
 });
 
+const journals = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    image: z.string(),
+    alt: z.string(),
+    date: z.coerce.date(),
+  }),
+});
+
 export const collections = {
   projects,
   personals,
+  journals,
 };

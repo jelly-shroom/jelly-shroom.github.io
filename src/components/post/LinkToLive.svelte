@@ -5,12 +5,8 @@
 
 <div id="linkToLive">
   <div>
-    <h2>
-      <slot name="header" />
-    </h2>
-    <p>
-      <slot name="body" />
-    </p>
+    <slot name="header" />
+    <slot name="body" />
   </div>
 
   <br />
@@ -32,7 +28,7 @@
     border: 1px solid var(--darkAccent);
     border-radius: 25px;
 
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1.5rem;
 
     margin-top: 8rem;
 

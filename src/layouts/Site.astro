@@ -36,15 +36,15 @@ import "../styles/fonts.css";
     const overlay = document.getElementById("transitionOverlay") as HTMLElement;
 
     return new Promise((resolve) => {
-      container.style.animation = "fadeTransitionOut .1s ease-in";
-      overlay.style.animation = "blurTransitionOut .1s ease-out backwards";
+      container.style.animation = "fadeTransitionOut .05s ease-in";
+      overlay.style.animation = "blurTransitionOut .05s ease-out backwards";
       setTimeout(() => {
         container.style.opacity = "0";
-      }, 100);
+      }, 50);
 
       setTimeout(() => {
         resolve(0);
-      }, 100);
+      }, 50);
     });
   }
 

@@ -15,16 +15,16 @@ h1 {
 h2 {
   font-family: "Work Sans";
   line-height: 1.5;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   font-weight: 500;
   font-size: 1.5rem;
 }
 
 h3 {
   font-family: "Work Sans";
-  line-height: 1.5;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  line-height: 1.15;
+  margin-bottom: 0px;
+  margin-top: 0px;
   font-weight: 500;
   font-size: 1.25rem;
 }
@@ -96,14 +96,14 @@ strong {
 
   font-family: "Work Sans";
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-transform: lowercase;
 
   background-color: var(--lightAccent);
   color: #fff;
   border: none;
   border-radius: 10px;
-  padding: 1.25rem 1.5rem;
+  padding: 1rem;
   cursor: pointer;
 
   transition: 0.25s;
@@ -168,12 +168,12 @@ strong {
   /* Ensure it's above other content */
   pointer-events: none;
   /* Allow interaction with elements below */
-  animation: blurTransitionIn 1s ease-in-out forwards;
+  animation: blurTransitionIn .5s ease-in-out forwards;
 }
 
 #container {
   max-width: 100%;
-  animation: fadeTransitionIn 1s ease-out;
+  animation: fadeTransitionIn .5s ease-out;
 }
 
 .externalLink {
