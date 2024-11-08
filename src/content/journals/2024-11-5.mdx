@@ -28,9 +28,8 @@ import JournalBody from "../../components/journal/JournalBody.svelte";
 />
 
 <img src={"https://images2.imgbox.com/6d/18/xWQFRdGa_o.jpg"} alt="11/5/2024"/>
-<JournalHeading date={frontmatter.date}>
-    <h1 slot="header">Hitting a PR is hard!</h1>
-</JournalHeading>
+<JournalHeading date={frontmatter.date} header={frontmatter.title} />
+
 <JournalBody>
     <div slot="body">
         I used to only work out alone. It felt nice to not worry about anyone else, 

@@ -38,8 +38,6 @@
     border-radius: 7px;
     overflow: hidden;
     width: fit-content;
-    max-width: 30vw;
-    max-height: 80vh;
     padding: 1rem;
     background-color: white;
 

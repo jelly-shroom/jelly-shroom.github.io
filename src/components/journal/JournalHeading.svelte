@@ -1,5 +1,6 @@
 <script lang="ts">
   export let date: Date;
+  export let header: string;
 
   const formatDate = (date: Date) => {
     return new Date(date).toLocaleDateString("en-US", {
@@ -13,7 +14,9 @@
 </script>
 
 <div class="heading">
-  <slot name="header" />
+  <h1>
+    {header}
+  </h1>
   <h3>
     {date}
   </h3>

@@ -21,6 +21,7 @@
   @media screen and (max-width: 800px) {
     .column-contents {
       width: 100%;
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 </style>

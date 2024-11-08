@@ -1,5 +1,4 @@
 <script>
-  import FilterableList from "../FilterableList.svelte";
   import JournalContainer from "./JournalContainer.svelte";
   import JournalItem from "./JournalItem.svelte";
 
