@@ -1,4 +1,24 @@
-<div class="text"></div>
+<script lang="ts">
+  import { onMount } from "svelte";
+  let supportsFilter = true; // Default to true
+
+  onMount(() => {
+    try {
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      const feGaussianBlur = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "feGaussianBlur"
+      );
+      supportsFilter =
+        typeof svg.style.filter !== "undefined" &&
+        typeof feGaussianBlur.stdDeviationX !== "undefined";
+    } catch (e) {
+      supportsFilter = false;
+    }
+  });
+</script>
+
+<div class="text" class:no-gooey={!supportsFilter}></div>
 <!-- SVG GOOEY FILTER-->
 <svg>
   <filter id="gooey">
@@ -45,19 +65,21 @@
   .text {
     font: 900 1em/1.2 Quicksand;
     position: relative;
-    color: #2e8b57; //sea green
+    color: #2e8b57;
     backdrop-filter: blur(12px);
     font-size: 500px;
-
-    -moz-filter: blur(0px);
-    -ms-filter: blur(0px);
-    -o-filter: blur(0px);
-    -webkit-filter: blur(0px);
-
-    filter: url(#gooey);
-
     transform: scale(var(--scale));
-    text-shadow: 15px 0px 0px #2e8b57;
+
+    &:not(.no-gooey) {
+      filter: url(#gooey);
+      text-shadow: 15px 0px 0px #2e8b57;
+    }
+
+    &.no-gooey {
+      filter: none;
+      text-shadow: none;
+      // Add fallback animation or style here
+    }
 
     &::before,
     &::after {
@@ -67,7 +89,6 @@
       animation-duration: $totalDuration + s;
       animation-timing-function: ease;
       animation-iteration-count: infinite;
-      filter: blur(9px);
     }
     &::before {
       content: nth($series, $seriesLength - 1);
