@@ -3,7 +3,7 @@
     title: string;
     alt: string;
     image: string;
-    date: string | Date;
+    date: Date;
     slug: string;
   };
 
@@ -11,12 +11,10 @@
     year: "numeric",
     month: "numeric",
     day: "numeric",
+    timeZone: "UTC",
   };
 
-  const formattedDate = new Date(journal.date).toLocaleDateString(
-    "en-US",
-    dateOptions
-  );
+  const formattedDate = journal.date.toLocaleDateString("en-US", dateOptions);
 
   const { image, title, alt, slug } = journal;
 
