@@ -1,0 +1,40 @@
+---
+title: "Hackathon diaries"
+image: "https://thumbs2.imgbox.com/50/7a/S7VIPh7c_t.jpg"
+alt: "11/9/2024 doodle"
+date: "11/9/2024"
+---
+import { SEO } from "astro-seo";
+
+import "../../styles/journalEntry.css";
+
+import JournalHeading from "../../components/journal/JournalHeading.svelte";
+import JournalBody from "../../components/journal/JournalBody.svelte";
+
+
+<SEO
+  title="Jessica Sheng - Hackathon diaries"
+  description="Exploring educational MR experiences through the Apple Vision Pro - an interactive experience that breaks down the components of the Wide5 HMD headset."
+  openGraph={{
+    basic: {
+      title: "Hackathon diaries",
+      type: "A type.",
+      image:
+        "https://thumbs2.imgbox.com/50/7a/S7VIPh7c_t.jpg",
+    },
+  }}
+/>
+
+<img src={"https://thumbs2.imgbox.com/50/7a/S7VIPh7c_t.jpg"} alt={frontmatter.alt}/>
+<JournalHeading date={frontmatter.date} header={frontmatter.title} />
+<JournalBody>
+    <div slot="body">
+        Hackathons are so much fun when you are with the right people. I am so grateful to work with such amazing individuals. 
+        <br/>
+        This has been 
+        quite a unique hack as well. It is my first time doing an actual game for a hackathon, and the difference seems to be reflected in the type 
+        of assets needed. I'm putting my design skills to good use.
+        <br/>
+        Back to hacking!
+    </div>
+</JournalBody>
