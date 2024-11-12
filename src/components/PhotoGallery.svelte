@@ -14,6 +14,10 @@
     gap: 1rem;
   }
 
+  .caseGallery {
+    max-width: 80%;
+  }
+
   .drTrustPhotoGallery {
     max-width: 80%;
     grid-template-areas:

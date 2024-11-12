@@ -17,14 +17,10 @@ import RunicWallMaterial from "../../images/runeWars/runicWallsMaterial.jpg";
 import Onboarding from "../../images/runeWars/onboarding.jpg";
 import ShortStack from "../../images/runeWars/shortStack.jpg";
 
-import GroupPhoto1 from "../../images/drTrust/gallery_group2.jpg";
-import XReal from "../../images/drTrust/gallery_groupXReal.jpg";
-import Quest3 from "../../images/drTrust/gallery_prize.jpg";
-import BostonCommon from "../../images/drTrust/gallery_bostonCommon.jpg";
-import Multiplayer from "../../images/drTrust/gallery_multiplayerworking.jpg";
-import Lunch from "../../images/drTrust/gallery_groupLunch.jpg";
-import Umbrella from "../../images/drTrust/gallery_groupUmbrella.jpg";
-import Hacking from "../../images/drTrust/gallery_HACKING.jpg";
+import TeamLunch from "../../images/runeWars/teamLunch.jpg";
+import PostHackRest from "../../images/runeWars/postHackRest.jpg";
+import RealityHack from "../../images/runeWars/realityHack.jpg";
+import BeatSaber from "../../images/runeWars/beatSaber.jpg";
 
 import Overview from "../../components/post/Overview.svelte";
 import ProblemSolutionStatement from "../../components/post/ProblemSolutionStatement.svelte";
@@ -183,63 +179,27 @@ import GalleryItem from "../../components/GalleryItem.svelte";
 
 </div>
 
-<PhotoGallery 
-  galleryStyle = "drTrustPhotoGallery"
->
-  
+<PhotoGallery galleryStyle="caseGallery">
     <GalleryItem
-      image={GroupPhoto1}
-      alt="Group photo"
-      caption="first day of the hackathon!"
-      gridArea="a"
+      image={RealityHack}
+      alt="reality hack acceptance"
+      caption="admission to reality hack as a winning perk!"
     />
     <GalleryItem
-      image={Multiplayer}
-      alt="Multiplayer working"
-      caption="caught the moment our devs finally got multiplayer working on the quest!"
-      gridArea="d"
-    />
-
-    <GalleryItem
-      image={XReal}
-      alt="XReal"
-      caption="we got to try on xreal's air 2 ultra glasses :0"
-      gridArea="b"
-    />
-        <GalleryItem
-      image={Lunch}
-      alt="Group lunch"
-      caption="celebrating the end of the hackathon with a group lunch in chinatown <3"
-      gridArea="e"
-    />
-
-    <GalleryItem
-      image={BostonCommon}
-      alt="Boston Common"
-      caption="we took the chance to visit boston common, the oldest park in america, right before our flight back!"
-      gridArea="g"
-    />
-
-
-
-    <GalleryItem
-      image={Quest3}
-      alt="Quest 3"
-      caption='we won quest 3s as a prize for the "best use of bezi"!'
-      gridArea="c"
+      image={BeatSaber}
+      alt="Beat Saber"
+      caption="post-hack beat saber tourney"
     />
     <GalleryItem
-      image={Umbrella}
-      alt="Group umbrella"
-      caption="we went out for dessert after the hackathon to celebrate, and it started snowing (my first time seeing snowfall!)"
-      gridArea="f"
-
+      image={PostHackRest}
+      alt="tabletop rest"
+      caption="Cole resting on the table after our hack..."
     />
     <GalleryItem
-      image={Hacking}
-      alt="Hacking"
-      caption="Coco's drawing of us <3"
-      gridArea="h"
+      image={TeamLunch}
+      alt="Team lunch"
+      caption="the stanford dining experence :o"
     />
+    
 
 </PhotoGallery>
