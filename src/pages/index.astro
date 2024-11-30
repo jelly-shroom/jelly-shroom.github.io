@@ -4,6 +4,8 @@ import Site from "../layouts/Site.astro";
 
 import Hero from "../components/hero/Hero.svelte";
 import Blobs from "../components/Blobs.svelte";
+import Particles from "../components/Particles.svelte";
+import Cursor from "../components/Cursor.svelte";
 
 import ProjectItem from "../components/project/ProjectItem.svelte";
 import ProjectContainer from "../components/project/ProjectContainer.svelte";
@@ -33,21 +35,24 @@ const featuredProjects = ["studygarden", "dr-trust", "rune-wars"];
   <div id="heroWrapper" slot="header">
     <Hero client:load />
     <Blobs client:load />
+    <Particles client:load />
+    <Cursor client:only />
   </div>
-  <div class="glass-full">
-    <div>
+  <div class="glass-bg">
+    <div style="margin: auto; width: 70vw;">
       <h2 id="featured-projects">featured projects</h2>
+
+      <ProjectContainer>
+        {
+          featuredProjects.map(async (slug) => {
+            const project = await getEntry("projects", slug);
+            if (!project) return null;
+            return <ProjectItem project={{ slug, ...project.data }} />;
+          })
+        }
+      </ProjectContainer>
+      <ViewProjectsButton />
     </div>
-    <ProjectContainer>
-      {
-        featuredProjects.map(async (slug) => {
-          const project = await getEntry("projects", slug);
-          if (!project) return null;
-          return <ProjectItem project={{ slug, ...project.data }} />;
-        })
-      }
-    </ProjectContainer>
-    <ViewProjectsButton />
     <Footer />
   </div>
 </Site>

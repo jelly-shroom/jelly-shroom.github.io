@@ -1,6 +1,8 @@
 ---
 import Blobs from "../components/Blobs.svelte";
+import Particles from "../components/Particles.svelte";
 import Navbar from "../components/Navbar.astro";
+import Cursor from "../components/Cursor.svelte";
 
 import "../styles/app.css";
 import "../styles/fonts.css";
@@ -23,7 +25,9 @@ import "../styles/fonts.css";
     <Navbar />
     <div id="container">
       <div id="transitionOverlay"></div>
+      <!-- <Cursor />
       <Blobs />
+      <Particles /> -->
       <slot name="header" />
       <slot />
     </div>

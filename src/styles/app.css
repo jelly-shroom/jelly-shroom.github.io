@@ -10,6 +10,10 @@ h1 {
   line-height: 1.5;
   font-size: 2rem;
   font-weight: 500;
+
+  text-shadow:
+    0 0 15px #00f4ff,
+    0 0 30px #00f4ff;
 }
 
 h2 {
@@ -18,6 +22,10 @@ h2 {
   margin-bottom: 0px;
   font-weight: 500;
   font-size: 1.5rem;
+
+  text-shadow:
+    0 0 15px #00f4ff,
+    0 0 30px #00f4ff;
 }
 
 h3 {
@@ -34,21 +42,44 @@ p {
   line-height: 1.5;
 }
 
+:root {
+  --glow-primary: #00f4ff;
+  --glow-secondary: #0091ff;
+}
+
+a,
+button,
+[role="button"] {
+  cursor: none;
+}
+
 body {
+  cursor: none;
   color: #333;
   background-color: #ddffea;
 
-  --nav-height: 75px;
+  --nav-height: 100px;
   --lightAccent: #5f9e83;
   --darkAccent: #2e8b57;
   --body-background: #ddffea;
   --productFinalBackground: #d3ebda;
   --imageFiller: #d1e3d9;
+
+  --bioluminescent-bg: #001e2b;
+  --glow-primary: #00f4ff;
+  --glow-secondary: #0091ff;
+  --glow-tertiary: #00ffb3;
+  background-color: var(--bioluminescent-bg);
+  color: #e0f7ff;
 }
 
 a {
   color: var(--darkAccent);
   text-decoration: none;
+}
+
+a:hover {
+  cursor: none;
 }
 
 strong {
@@ -57,39 +88,13 @@ strong {
 }
 
 .glass-bg {
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-
   margin-left: auto;
   margin-right: auto;
-
   padding-bottom: 125px;
 
   width: 100%;
   height: auto;
   min-height: 100vh;
-}
-
-.glass-full {
-  overflow-y: visible;
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: -50px;
-
-  padding-right: 5%;
-  padding-left: 5%;
-  padding-bottom: 125px;
-  border-radius: 40px 40px 0px 0px;
-
-  width: 80%;
 }
 
 .button {

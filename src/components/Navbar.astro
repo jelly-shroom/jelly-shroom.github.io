@@ -24,7 +24,7 @@
       <div class="menu-container">
         <div class="logo"><a href="/">Jessica Sheng</a></div>
         <ul class="menu-list">
-          <li class="menu-item"><a href="/projects">project dump</a></li>
+          <li class="menu-itema"><a href="/projects">project dump</a></li>
           <li class="menu-item"><a href="/journal">journal</a></li>
           <li class="menu-item"><a href="/about-me">about me</a></li>
         </ul>
@@ -207,9 +207,11 @@
 
 <style>
   .navbar a {
-    color: var(--darkAccent);
+    color: rgb(255, 255, 255, 0.9);
     font-weight: normal;
     text-decoration: none;
+    mix-blend-mode: screen;
+    transition: all 0.25s;
   }
 
   .home-link a {
@@ -223,30 +225,12 @@
     justify-content: space-between;
     height: var(--nav-height);
     align-items: center;
-    font-size: 14px;
-    width: 80%;
-
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.9);
-
-    padding: 0 2.5rem;
-
-    border-radius: 20px;
+    font-size: 1.2rem;
+    width: 70%;
 
     position: fixed;
-    top: 1rem;
     left: 50%;
     transform: translate(-50%, 0%);
-    transition: ease-out 0.25s;
-  }
-
-  .nav--hidden {
-    transform: translate(-50%, calc(-1 * var(--nav-height) - 30px));
-
-    box-shadow: none;
   }
 
   .home-link {
@@ -264,34 +248,10 @@
     float: right;
   }
 
-  .page-links :hover {
-    color: var(--darkAccent);
-  }
-
-  /*tutorial: https://unclebigbay.com/how-to-create-an-hover-underline-animation-in-css/*/
-  .hover-underline-animation {
-    position: relative;
-    color: var(--darkAccent);
-    text-decoration: none;
-  }
-
-  .hover-underline-animation::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--darkAccent);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-
-    transform: scaleX(0);
-  }
-
-  .hover-underline-animation:hover::after {
-    transform-origin: bottom left;
-    transform: scaleX(1);
+  .page-links :hover,
+  .home-link :hover {
+    color: white;
+    text-shadow: 0 0 4px var(--glow-primary);
   }
 
   @media screen and (max-width: 800px) {
