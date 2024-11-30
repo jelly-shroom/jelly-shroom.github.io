@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount, onDestroy } from "svelte";
 
-  let cursor: HTMLDivElement;
+  let cursorBlob: HTMLDivElement;
   let smallCircle: HTMLDivElement;
 
   const amount = 20;
@@ -42,7 +42,7 @@
       this.limit = width * 0.75 * this.scale;
       this.element = document.createElement("span");
       this.element.style.transform = `scale(${this.scale})`;
-      cursor?.appendChild(this.element);
+      cursorBlob?.appendChild(this.element);
     }
 
     lock() {
@@ -85,11 +85,18 @@
       dots.push(new Dot(i));
     }
   }
+  let queuedCallback: (() => void) | null = null;
 
   function onMouseMove(event: MouseEvent) {
-    mousePosition.x = event.clientX;
-    mousePosition.y = event.clientY;
-    resetIdleTimer();
+    if (!queuedCallback) {
+      requestAnimationFrame(() => {
+        mousePosition.x = event.clientX + window.scrollX;
+        mousePosition.y = event.clientY + window.scrollY;
+        resetIdleTimer();
+        queuedCallback = null;
+      });
+    }
+    queuedCallback = () => {};
   }
 
   function onTouchMove(event: TouchEvent) {
@@ -98,14 +105,45 @@
     resetIdleTimer();
   }
 
+  // Add at the top with other state variables
+  let isHovered = false;
+
+  // Add these functions
+  function onMouseHover() {
+    if (cursorBlob) {
+      const spans = cursorBlob.querySelectorAll("span");
+      spans.forEach((span) => {
+        span.style.width = "60px"; // Double the original width
+        span.style.height = "60px"; // Double the original height
+      });
+    }
+  }
+
+  function onMouseHoverOut() {
+    if (cursorBlob) {
+      const spans = cursorBlob.querySelectorAll("span");
+      spans.forEach((span) => {
+        span.style.width = "30px"; // Return to original width
+        span.style.height = "30px"; // Return to original height
+      });
+    }
+  }
+
   function render(timestamp: number) {
     const delta = timestamp - lastFrame;
-    positionCursor(delta);
+
+    // Update positions only once per frame
+    if (queuedCallback) {
+      queuedCallback();
+      queuedCallback = null;
+    }
+
+    positioncursorBlob(delta);
     lastFrame = timestamp;
     requestAnimationFrame(render);
   }
 
-  function positionCursor(delta: number) {
+  function positioncursorBlob(delta: number) {
     let x = mousePosition.x;
     let y = mousePosition.y;
 
@@ -132,6 +170,13 @@
     window.addEventListener("mousemove", onMouseMove);
     window.addEventListener("touchmove", onTouchMove);
     lastFrame = Date.now();
+    const hoverableElements = document.querySelectorAll(
+      'a, button, [role="button"], .hoverable'
+    );
+    hoverableElements.forEach((element) => {
+      element.addEventListener("mouseenter", onMouseHover);
+      element.addEventListener("mouseleave", onMouseHoverOut);
+    });
     buildDots();
     requestAnimationFrame(render);
   });
@@ -139,6 +184,14 @@
   onDestroy(() => {
     window.removeEventListener("mousemove", onMouseMove);
     window.removeEventListener("touchmove", onTouchMove);
+
+    const hoverableElements = document.querySelectorAll(
+      'a, button, [role="button"], .hoverable'
+    );
+    hoverableElements.forEach((element) => {
+      element.removeEventListener("mouseenter", onMouseHover);
+      element.removeEventListener("mouseleave", onMouseHoverOut);
+    });
     window.clearTimeout(timeoutID);
   });
 </script>
@@ -158,33 +211,39 @@
   </defs>
 </svg>
 
-<div bind:this={cursor} class="cursor">
+<div bind:this={cursorBlob} class="cursorBlob">
   <div bind:this={smallCircle} class="small-circle" />
 </div>
 
 <style lang="scss">
-  .cursor {
+  .cursorBlob {
     pointer-events: none;
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
+
     border-radius: 0;
     transform-origin: center center;
+    transform: translate(-50%, -50%);
     mix-blend-mode: difference;
     top: 0;
     left: 0;
     z-index: 1000;
     filter: url("#goo");
+    transition: transform 0.3s ease;
 
     :global(span) {
       position: absolute;
       display: block;
       width: 30px;
       height: 30px;
-      border-radius: 20px;
+      border-radius: 100px;
       background-color: var(--glow-primary);
       transform-origin: center center;
+      transition:
+        width 0.3s ease,
+        height 0.3s ease; // Add transition for smooth sizing
     }
   }
 
