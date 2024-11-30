@@ -4,6 +4,10 @@
   let cursorBlob: HTMLDivElement;
   let smallCircle: HTMLDivElement;
 
+  const DOT_SCALE_FACTOR = 0.03;
+  const NORMAL_DOT_SIZE = 30;
+  const HOVER_DOT_SIZE = 60;
+
   const amount = 20;
   const sineDots = Math.floor(amount * 0.3);
   const width = 26;
@@ -15,19 +19,6 @@
   let idle = false;
 
   class Dot {
-    index: number;
-    anglespeed: number;
-    x: number;
-    y: number;
-    scale: number;
-    range: number;
-    limit: number;
-    element: HTMLSpanElement;
-    lockX: number;
-    lockY: number;
-    angleX: number;
-    angleY: number;
-
     constructor(index = 0) {
       this.index = index;
       this.anglespeed = 0.03;
@@ -41,7 +32,6 @@
       this.range = width / 2 - (width / 2) * this.scale + 2;
       this.limit = width * 0.75 * this.scale;
       this.element = document.createElement("span");
-      this.element.style.transform = `scale(${this.scale})`;
       cursorBlob?.appendChild(this.element);
     }
 
@@ -85,23 +75,10 @@
       dots.push(new Dot(i));
     }
   }
-  let queuedCallback: (() => void) | null = null;
 
-  function onMouseMove(event: MouseEvent) {
-    if (!queuedCallback) {
-      requestAnimationFrame(() => {
-        mousePosition.x = event.clientX + window.scrollX;
-        mousePosition.y = event.clientY + window.scrollY;
-        resetIdleTimer();
-        queuedCallback = null;
-      });
-    }
-    queuedCallback = () => {};
-  }
-
-  function onTouchMove(event: TouchEvent) {
-    mousePosition.x = event.touches[0].clientX;
-    mousePosition.y = event.touches[0].clientY;
+  function trackMouseMovement(event: MouseEvent) {
+    mousePosition.x = event.clientX;
+    mousePosition.y = event.clientY;
     resetIdleTimer();
   }
 
@@ -110,12 +87,12 @@
 
   // Add these functions
   function onMouseHover() {
-    if (cursorBlob) {
-      const spans = cursorBlob.querySelectorAll("span");
-      spans.forEach((span) => {
-        span.style.width = "60px"; // Double the original width
-        span.style.height = "60px"; // Double the original height
-      });
+    const spans = cursorBlob?.getElementsByTagName("span");
+    if (!spans) return;
+
+    for (let i = 0; i < spans.length; i++) {
+      spans[i].style.width = `${HOVER_DOT_SIZE}px`;
+      spans[i].style.height = `${HOVER_DOT_SIZE}px`;
     }
   }
 
@@ -131,14 +108,8 @@
 
   function render(timestamp: number) {
     const delta = timestamp - lastFrame;
-
-    // Update positions only once per frame
-    if (queuedCallback) {
-      queuedCallback();
-      queuedCallback = null;
-    }
-
     positioncursorBlob(delta);
+
     lastFrame = timestamp;
     requestAnimationFrame(render);
   }
@@ -167,8 +138,7 @@
   }
 
   onMount(() => {
-    window.addEventListener("mousemove", onMouseMove);
-    window.addEventListener("touchmove", onTouchMove);
+    window.addEventListener("mousemove", trackMouseMovement);
     lastFrame = Date.now();
     const hoverableElements = document.querySelectorAll(
       'a, button, [role="button"], .hoverable'
@@ -182,8 +152,7 @@
   });
 
   onDestroy(() => {
-    window.removeEventListener("mousemove", onMouseMove);
-    window.removeEventListener("touchmove", onTouchMove);
+    window.removeEventListener("mousemove", trackMouseMovement);
 
     const hoverableElements = document.querySelectorAll(
       'a, button, [role="button"], .hoverable'
@@ -218,7 +187,7 @@
 <style lang="scss">
   .cursorBlob {
     pointer-events: none;
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -236,8 +205,8 @@
     :global(span) {
       position: absolute;
       display: block;
-      width: 30px;
-      height: 30px;
+      width: var(--dot-size);
+      height: var(--dot-size);
       border-radius: 100px;
       background-color: var(--glow-primary);
       transform-origin: center center;
@@ -249,7 +218,7 @@
 
   .small-circle {
     z-index: inherit;
-    position: absolute;
+    position: fixed;
     width: 12px; // Smaller size
     height: 12px;
     border-radius: 50%;

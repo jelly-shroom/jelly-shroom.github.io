@@ -15,6 +15,10 @@
   if (alt == "hidden") {
     itemClass += " locked";
   }
+
+  let isHovered = false;
+  const handleHover = () => (isHovered = true);
+  const handleLeave = () => (isHovered = false);
 </script>
 
 <a href={`/projects/${slug}`} class={itemClass}>
@@ -36,171 +40,98 @@
       <p>This project is not publicly available yet</p>
     </div>
   {/if}
+
   <img src={image.src} {alt} class="cover-image" />
 
-  <div class="tagContainer">
-    {#each tags as tag}
-      <Tag {tag} />
-    {/each}
-  </div>
+  <div class="content">
+    <div class="tagContainer">
+      {#each tags as tag}
+        <Tag {tag} />
+      {/each}
+    </div>
 
-  <div class="description">
-    <h2>
-      {title}
-    </h2>
-    <p>
-      {@html description}
-    </p>
+    <div class="description">
+      <h2>
+        {title}
+      </h2>
+      <p>
+        {@html description}
+      </p>
+    </div>
   </div>
+  <div class="glow-overlay"></div>
 </a>
-<div class="phoneDescription">
-  <h2>
-    {title}
-  </h2>
-</div>
 
 <style>
-  .description :global(strong) {
-    color: white;
-  }
-
-  .phoneDescription {
-    display: none;
-  }
-  .tagContainer {
-    display: flex;
-    pointer-events: none;
-    opacity: 0;
-    transition: 0.25s;
-
-    justify-content: left;
-    gap: 1rem;
-    position: absolute;
-    align-self: flex-start;
-    float: left;
-    margin: 2rem;
-  }
-
   .portfolio-item {
-    border-radius: 25px;
-    overflow: hidden;
-    width: 100%;
-    padding: 0px;
-
-    position: relative;
     display: flex;
-    align-items: center;
-
-    cursor: pointer;
-
-    animation: fadeTransitionIn 0.5s ease-out forwards;
+    background: rgba(0, 30, 43, 0.95);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
   }
 
-  .portfolio-item::after {
-    content: "";
-    border-radius: 25px;
+  .portfolio-item:hover {
+    transform: translateY(-2px);
+  }
+
+  .portfolio-item:hover .glow-overlay {
+    opacity: 1;
+    animation: pulseGlow 2s infinite;
+  }
+
+  .glow-overlay {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0px;
-    right: 0px;
-    box-shadow:
-      rgba(122, 124, 122, 0.5) 4px 4px 2px 0px inset,
-      rgba(255, 255, 255, 0.9) -4px -4px 2px 0px inset,
-      rgba(0, 0, 0, 0.3) 0px 30px 100px -24px;
-  }
-
-  .portfolio-item .description {
+    inset: 0;
+    background: radial-gradient(
+      circle at var(--mouse-x, center) var(--mouse-y, center),
+      rgba(0, 244, 255, 0.15),
+      transparent 60%
+    );
     opacity: 0;
-
-    position: absolute;
-    margin: 0 auto;
-    color: rgb(235, 235, 235);
-    width: 90%;
-    height: auto;
-
-    left: 50%;
-    transform: translate(-50%, 0%);
-
+    transition: opacity 0.3s ease;
     pointer-events: none;
-    transition: 0.25s;
+  }
+  .content {
+    padding: 1.5rem;
+    color: #e0f7ff;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
-  .portfolio-item .description h2 {
-    color: white;
-
-    margin-bottom: 1rem;
+  .content h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #e0f7ff;
   }
-
-  .portfolio-item .description p {
-    font-family: "Work Sans";
+  .content p {
+    margin: 0;
+    opacity: 0.9;
     line-height: 1.5;
   }
 
-  .portfolio-item.locked {
-    pointer-events: none;
-  }
-  .portfolio-item.locked .cover-image {
-    filter: grayscale(100%) blur(15px) brightness(50%);
-    -webkit-filter: grayscale(100%) blur(15px) brightness(50%);
-    -moz-filter: grayscale(100%) blur(15px) brightness(50%);
-    -ms-filter: grayscale(100%) blur(15px) brightness(50%);
-    -o-filter: grayscale(100%) blur(15px) brightness(50%);
-
-    user-select: none;
-  }
-
-  .lockedOverlay {
-    position: absolute;
-    z-index: 10;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    color: white;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    text-align: center;
-  }
   .cover-image {
-    width: 100%;
-    height: 100%;
+    width: 280px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 25px;
-    object-position: center center;
-
-    transition: 0.25s;
+    flex-shrink: 0;
   }
 
-  .portfolio-item:hover .cover-image {
-    filter: brightness(50%) blur(5px);
-    -webkit-filter: blur(5px) brightness(50%);
+  .description {
+    color: #e0f7ff;
+    text-shadow: 0 0 10px rgba(0, 244, 255, 0.3);
   }
 
-  .portfolio-item:hover .description,
-  .portfolio-item:hover .tagContainer {
-    opacity: 1;
-  }
-
-  /*for the button on homepage portfolio*/
-
-  @media screen and (max-width: 600px) {
-    .portfolio-item .description,
-    .tagContainer {
-      display: none;
+  @keyframes pulseGlow {
+    0%,
+    100% {
+      opacity: 0.3;
     }
-
-    .phoneDescription {
-      display: block;
-      font-family: "Work Sans";
-      font-weight: 600;
-      text-align: left;
-      margin-top: -1rem;
-    }
-
-    .portfolio-item:hover .cover-image {
-      filter: none;
+    50% {
+      opacity: 0.6;
     }
   }
 </style>

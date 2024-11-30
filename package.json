@@ -15,6 +15,7 @@
     "@astrojs/svelte": "^5.3.0",
     "astro": "^4.5.16",
     "astro-seo": "^0.8.4",
+    "gsap": "1.20.3",
     "lucide-svelte": "^0.365.0",
     "svelte": "^4.2.12",
     "typescript": "^5.4.4"
