@@ -143,7 +143,7 @@ pre {
 }
 
 #digiSenseAidContainer svg {
-    fill: #ebebeb;
+    fill: var(--dim-text);
 }
 
 @media screen and (max-width: 800px) {

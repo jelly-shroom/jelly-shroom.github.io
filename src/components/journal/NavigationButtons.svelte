@@ -105,13 +105,14 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: white;
+    color: var(--dim-text);
 
     transition: 0.25s;
   }
 
   .forward:hover,
   .back:hover {
+    color: white;
     text-shadow: 0 0 10px var(--glow-primary);
   }
 

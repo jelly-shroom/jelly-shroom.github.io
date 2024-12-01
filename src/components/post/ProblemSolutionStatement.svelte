@@ -26,7 +26,7 @@
     padding-right: 2.5rem;
     padding-left: 2.5rem;
 
-    color: white;
+    color: var(--dim-text);
   }
 
   .problem :global(strong) {
@@ -47,7 +47,7 @@
     padding: 2rem 2.5rem;
 
     background-color: #a4faff5e;
-    color: #ebebeb;
+    color: var(--dim-text);
 
     width: 50%;
 

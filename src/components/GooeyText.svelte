@@ -18,21 +18,7 @@
   });
 </script>
 
-<div class="text" class:no-gooey={!supportsFilter}></div>
-<!-- SVG GOOEY FILTER-->
-<svg>
-  <filter id="gooey">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blur"
-    ></feGaussianBlur>
-    <feColorMatrix
-      in="blur"
-      mode="matrix"
-      values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 28 -8"
-      result="gooey"
-    ></feColorMatrix>
-    <feComposite in="SourceGraphic" in2="gooey" operator="atop"></feComposite>
-  </filter>
-</svg>
+<div class="text" />
 
 <style lang="scss">
   //---------------------------------------------------
@@ -59,27 +45,18 @@
   //---------------------------------------------------
 
   // STYLE STUFF
-  div {
-    --scale: 0.1;
-  }
+
+  // div {
+  //   --scale: 0.1;
+  // }
+
   .text {
-    font: 900 1em/1.2 Quicksand;
+    font: 900 3rem Quicksand;
     position: relative;
-    color: #2e8b57;
+    color: white;
     backdrop-filter: blur(12px);
-    font-size: 500px;
     transform: scale(var(--scale));
-
-    &:not(.no-gooey) {
-      filter: url(#gooey);
-      text-shadow: 15px 0px 0px #2e8b57;
-    }
-
-    &.no-gooey {
-      filter: none;
-      text-shadow: none;
-      // Add fallback animation or style here
-    }
+    text-shadow: 0 0 100px 100px var(--glow-primary);
 
     &::before,
     &::after {

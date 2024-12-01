@@ -1,5 +1,4 @@
 a {
-    color: color;
     text-shadow:  0 0 6px var(--glow-primary);
     text-decoration: underline;
     font-weight: bold;

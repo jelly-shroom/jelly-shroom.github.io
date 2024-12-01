@@ -118,8 +118,12 @@
   }
   .content {
     padding: 1.5rem;
-    color: #e0f7ff;
+    color: var(--dim-text);
     gap: 1rem;
+  }
+
+  h2 :global() {
+    color: white;
   }
 
   .portfolio-item > *:not(.lockedOverlay) {
@@ -141,7 +145,7 @@
   }
 
   .description {
-    color: #e0f7ff;
+    color: var(--dim-text);
     text-shadow: 0 0 10px rgba(0, 244, 255, 0.3);
   }
 

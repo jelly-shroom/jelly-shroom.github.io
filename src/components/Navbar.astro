@@ -236,6 +236,32 @@
     transform: translate(-50%, 0%);
   }
 
+  .hover-underline-animation {
+    position: relative;
+    color: white;
+    text-decoration: none;
+  }
+
+  .hover-underline-animation::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 10px var(--glow-primary);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+
+    transform: scaleX(0);
+  }
+
+  .hover-underline-animation:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+
   .home-link {
     text-transform: uppercase;
     float: left;

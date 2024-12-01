@@ -26,7 +26,7 @@
     margin-top: 4rem;
     margin-bottom: 2em;
 
-    color: white;
+    color: var(--dim-text);
 
     display: flex;
     flex-direction: column;
@@ -36,6 +36,10 @@
     flex-shrink: 0;
 
     width: 100%;
+  }
+
+  h3 :global() {
+    color: white;
   }
 
   .pfp {

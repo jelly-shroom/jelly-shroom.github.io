@@ -32,13 +32,13 @@
     margin-top: 8rem;
 
     border: 1px solid white;
-    color: white;
+    color: var(--dim-text);
     background-color: #a4faff5e;
     box-shadow: 0 0 10px 0 var(--glow-primary);
   }
 
   :global(#linkToLive h2) {
-    color: rgb(255, 255, 255);
+    color: white;
   }
 
   a {

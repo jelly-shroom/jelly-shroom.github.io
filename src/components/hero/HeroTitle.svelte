@@ -18,7 +18,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: -2rem;
+    color: white;
+    text-shadow: 0 0 10px var(--glow-primary);
 
     gap: 1rem;
   }

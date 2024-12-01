@@ -46,7 +46,7 @@
   }
 
   a {
-    color: white;
+    color: var(--dim-text);
     font-weight: 600;
     font-size: 1.5em;
     display: flex;
@@ -59,6 +59,8 @@
   }
 
   a:hover {
+    color: white;
+
     text-shadow: 0 0 10px var(--glow-primary);
   }
 

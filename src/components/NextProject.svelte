@@ -33,8 +33,6 @@
   .nextProjectContainer {
     margin: 8rem auto;
     max-width: 50%;
-
-    color: white;
   }
 
   .nextProjectButton {
@@ -52,7 +50,6 @@
   }
 
   .nextProjectButton div {
-    /* margin-top: 0.5rem; */
     margin: 0.5rem 1rem;
   }
 
@@ -64,12 +61,12 @@
 
   .nextProjectButton:hover {
     border: 1px solid white;
-    color: white;
+    color: var(--dim-text);
     background-color: #a4faff5e;
-    box-shadow: 0 0 10px 0 var(--glow-primary);
   }
   .nextProjectButton:hover h2 {
     color: white;
+    text-shadow: 0 0 6px 0 var(--glow-primary);
   }
 
   .nextProjectButton img {

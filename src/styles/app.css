@@ -63,6 +63,7 @@ body {
   --glow-primary: #00f4ff;
   --glow-secondary: #0091ff;
   --glow-tertiary: #00ffb3;
+  --dim-text: #e0f7ff;
   background-color: var(--bioluminescent-bg);
   color: #e0f7ff;
 }

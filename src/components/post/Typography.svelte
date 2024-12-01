@@ -28,7 +28,7 @@
 
     border-radius: 25px;
     padding: 2rem;
-    color: #ebebeb;
+    color: var(--dim-text);
     text-align: center;
 
     margin-bottom: 1rem;
