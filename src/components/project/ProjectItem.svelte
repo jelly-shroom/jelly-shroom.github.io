@@ -146,7 +146,6 @@
 
   .description {
     color: var(--dim-text);
-    text-shadow: 0 0 10px rgba(0, 244, 255, 0.3);
   }
 
   .portfolio-item.locked {

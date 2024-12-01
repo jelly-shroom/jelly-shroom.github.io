@@ -36,12 +36,12 @@ for (let i = 1; i < projects.length; i++) {
 <Site>
   <div class="glass-bg">
     <Content />
-    <NextProject
-      project={{
-        slug: nextProject?.slug,
-        ...(nextProject?.data || {}),
-      }}
-    />
-    <Footer />
   </div>
+  <NextProject
+    project={{
+      slug: nextProject?.slug,
+      ...(nextProject?.data || {}),
+    }}
+  />
+  <Footer />
 </Site>

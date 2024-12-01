@@ -39,7 +39,6 @@
     border: 1px solid rgba(255, 255, 255, 0.5);
     color: rgba(255, 255, 255, 0.5);
     background-color: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
     text-transform: lowercase;
     transition: 0.25s;
   }

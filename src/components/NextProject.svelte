@@ -32,7 +32,7 @@
   }
   .nextProjectContainer {
     margin: 8rem auto;
-    max-width: 50%;
+    width: 40%;
   }
 
   .nextProjectButton {
@@ -55,6 +55,7 @@
 
   .nextProjectButton h2 {
     color: rgba(255, 255, 255, 0.5);
+    text-shadow: none;
 
     transition: 0.25s;
   }
@@ -77,6 +78,22 @@
 
     flex-shrink: 0;
     margin: auto 0;
+
+    filter: saturate(0.3) contrast(0.5) brightness(0.8);
+    transition: all 0.7s ease;
+  }
+
+  .nextProjectButton:hover img {
+    filter: saturate(1) contrast(1) brightness(1);
+  }
+
+  .nextProjectButton p :global(strong) {
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.25s;
+  }
+
+  .nextProjectButton:hover p :global(strong) {
+    color: white;
   }
 
   @media screen and (max-width: 800px) {

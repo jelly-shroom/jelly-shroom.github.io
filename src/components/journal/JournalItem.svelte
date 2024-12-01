@@ -44,10 +44,12 @@
     flex-direction: column;
     justify-content: space-between;
 
-    cursor: pointer;
-
     animation: fadeTransitionIn 0.5s ease-out forwards;
     transition: 0.25s;
+  }
+
+  .journalEntry * {
+    filter: saturate(0.7) contrast(0.7) brightness(0.7);
   }
 
   .journalEntry:hover {
@@ -57,13 +59,17 @@
     color: white;
   }
 
+  .journalEntry:hover * {
+    filter: saturate(1) contrast(1) brightness(1);
+  }
+
   .journalEntry .imageWrapper {
     display: flex;
     align-items: start;
     border-radius: 5px;
     margin-bottom: 10px;
     transition: 0.25s;
-    background-color: var(--imageFiller);
+    background-color: var(--bioluminescent-bg);
     height: 100%;
   }
 
@@ -75,8 +81,6 @@
 
     object-position: center center;
   }
-
-  /*for the button on homepage portfolio*/
 
   @media screen and (max-width: 600px) {
   }

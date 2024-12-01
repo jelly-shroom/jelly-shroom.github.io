@@ -1,9 +1,6 @@
 a {
-    color: white;
     text-decoration: underline;
     font-weight: bold;
-    
-    text-shadow: 0 0 6px 0 var(--glow-primary);
 }
 
 h1 {
@@ -98,7 +95,7 @@ pre {
 
 .columnContainer {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     margin: 1rem 0;
 }
 

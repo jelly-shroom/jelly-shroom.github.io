@@ -31,11 +31,9 @@
 
   .problem :global(strong) {
     color: white;
-    text-shadow: 0 0 10px var(--glow-primary);
   }
   .problem h2 {
     color: white;
-    text-shadow: 0 0 10px var(--glow-primary);
   }
 
   .solution {
@@ -57,7 +55,6 @@
   .solution :global(strong),
   .solution h2 {
     color: white;
-    text-shadow: 0 0 10px var(--glow-primary);
   }
 
   @media screen and (max-width: 800px) {

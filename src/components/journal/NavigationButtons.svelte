@@ -60,6 +60,7 @@
 <style>
   h3 {
     margin: 0;
+    color: var(--dim-text);
   }
   a {
     font-weight: 400;
@@ -69,7 +70,7 @@
     position: relative;
   }
 
-  a:hover {
+  a:hover h3 {
     color: white;
   }
 

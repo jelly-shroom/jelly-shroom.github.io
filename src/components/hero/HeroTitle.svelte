@@ -9,7 +9,9 @@
   </h1>
   <!-- Visible H2 that users see -->
   <h2 class="visible-title">hi! i'm jessica, and i design</h2>
-  <GooeyText />
+  <div class="gooeyWrapper">
+    <GooeyText />
+  </div>
 </div>
 
 <style>
@@ -19,9 +21,13 @@
     justify-content: center;
     align-items: center;
     color: white;
-    text-shadow: 0 0 10px var(--glow-primary);
+    text-shadow: 0 0 30px var(--glow-primary);
 
     gap: 1rem;
+  }
+
+  .gooeyWrapper {
+    transform: translate(-50%, 0%);
   }
 
   h1 {
@@ -51,20 +57,17 @@
   /* Your existing media queries */
   @media screen and (max-width: 1620px) {
     /* Update selector to use visible-title */
-    .visible-title {
-      font-size: 3em;
+
+    .gooeyWrapper {
+      margin-left: -1rem;
     }
 
-    div {
+    #heroTitle {
       flex-direction: column !important;
       align-items: left !important;
       justify-content: left !important;
 
       gap: 2em !important;
-    }
-
-    #heroTitle {
-      margin-bottom: -8rem;
     }
   }
 

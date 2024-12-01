@@ -10,10 +10,8 @@ h1 {
   line-height: 1.5;
   font-size: 2rem;
   font-weight: 500;
-
-  text-shadow:
-    0 0 15px #00f4ff,
-    0 0 30px #00f4ff;
+  color: white;
+  text-shadow: 0 0 20px #00f4ff;
 }
 
 h2 {
@@ -22,7 +20,8 @@ h2 {
   margin-bottom: 0px;
   font-weight: 500;
   font-size: 1.5rem;
-
+  color: white;
+  text-shadow: 0 0 20px #00f4ff;
 
 }
 
@@ -33,6 +32,8 @@ h3 {
   margin-top: 0px;
   font-weight: 500;
   font-size: 1.25rem;
+  color: white;
+
 }
 
 p {
@@ -45,6 +46,7 @@ a,
 button,
 [role="button"] {
   cursor: none;
+  color: white;
 }
 
 body {
@@ -63,7 +65,7 @@ body {
   --glow-primary: #00f4ff;
   --glow-secondary: #0091ff;
   --glow-tertiary: #00ffb3;
-  --dim-text: #e0f7ff;
+  --dim-text: #b5dce9;
   background-color: var(--bioluminescent-bg);
   color: #e0f7ff;
 }
@@ -77,20 +79,16 @@ a {
 
 a:hover {
   cursor: none;
-  text-shadow:
-  0 0 6px #00f2ffb7;
 }
 
 strong {
   font-weight: 600;
-  text-shadow:
-  0 0 6px #00f2ffb7;
+  color: white;
 }
 
 .glass-bg {
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 125px;
 
   width: 100%;
   height: auto;
@@ -110,7 +108,7 @@ strong {
   font-size: 1rem;
   text-transform: lowercase;
   backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 
   background-color: rgba(255, 255, 255, 0.3);
   color: rgba(255, 255, 255, 0.5);
@@ -123,9 +121,9 @@ strong {
 
 .button:hover {
   border: 1px solid white;
-    color: white;
-    background-color: #a4faff5e;
-    box-shadow: 0 0 10px 0 var(--glow-primary);
+  color: white;
+  background-color: #a4faff5e;
+  box-shadow: 0 0 10px 0 var(--glow-primary);
 }
 
 
@@ -194,7 +192,6 @@ strong {
 
 .externalLink {
   color: white;
-  text-shadow: 0 0 6px 0 var(--glow-primary);
   text-decoration: underline;
   font-weight: bold;
 }

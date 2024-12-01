@@ -25,7 +25,7 @@
 <style>
   .contents {
     z-index: 0;
-    top: 20%;
+    top: 25%;
     left: 20%;
     transform: translate(0%, -50%);
     max-width: 60%;

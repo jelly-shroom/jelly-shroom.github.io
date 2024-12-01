@@ -84,6 +84,11 @@
     transform: scaleX(1);
   }
 
+  @media screen and (max-width: 1620px) {
+    h2 {
+      margin-top: 2.5rem;
+    }
+  }
   @media screen and (max-width: 600px) {
     h2 {
       font-size: 2em;

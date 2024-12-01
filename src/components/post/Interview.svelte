@@ -56,10 +56,6 @@
     width: 50%;
   }
 
-  :global(.profileCard p) {
-    text-shadow: 0 0 2px 0 var(--glow-primary);
-  }
-
   div :global(h3) {
     margin-top: 1rem;
   }

@@ -56,7 +56,6 @@
     color: white;
     backdrop-filter: blur(12px);
     transform: scale(var(--scale));
-    text-shadow: 0 0 100px 100px var(--glow-primary);
 
     &::before,
     &::after {
