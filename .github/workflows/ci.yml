@@ -33,11 +33,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/setup-node
-      - run: npm run build:auto
-      - run: npm run build:bioluminescence
-
-      # - run: pnpm build
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - name: Build auto version
+        run: pnpm run build:auto
+      - run: ls -la dist # Debugging step
+      - name: Build bioluminescence version
+        run: pnpm run build:bioluminescence
+      - run: ls -la dist/bioluminescence # Debugging step
       - name: Upload root version
         uses: actions/upload-pages-artifact@v3
         with:

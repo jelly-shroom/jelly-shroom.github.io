@@ -4,16 +4,16 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+
     "build:auto": "cross-env VERSION=auto astro check && astro build --outdir dist",
     "build:bioluminescence": "cross-env VERSION=bioluminescence astro check && astro build --outdir dist/bioluminescence",
+    "build": "pnpm run build:auto && pnpm run build:bioluminescence",
+    "start": "astro dev",
+    "preview": "astro preview",
+    "astro": "astro",
 
     "dev:auto": "cross-env VERSION=auto astro build",
-    "dev:bioluminescence": "cross-env VERSION=bioluminescence astro dev",
-    "start": "astro dev",
-    "build": "npm run build:auto && npm run build:bioluminescence",
-
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev:bioluminescence": "cross-env VERSION=bioluminescence astro dev"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
