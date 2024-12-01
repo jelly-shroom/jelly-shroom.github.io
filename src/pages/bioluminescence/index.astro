@@ -1,0 +1,55 @@
+---
+import { SEO } from "astro-seo";
+import Site from "../../../bioluminescence/layouts/Site.astro";
+
+import Hero from "../../../bioluminescence/components/hero/Hero.svelte";
+import Blobs from "../../../bioluminescence/components/Blobs.svelte";
+import Particles from "../../../bioluminescence/components/Particles.svelte";
+import Cursor from "../../../bioluminescence/components/Cursor.svelte";
+
+import ProjectItem from "../../../bioluminescence/components/project/ProjectItem.svelte";
+import ProjectContainer from "../../../bioluminescence/components/project/ProjectContainer.svelte";
+import ViewProjectsButton from "../../../bioluminescence/components/project/ViewProjectsButton.astro";
+
+import Footer from "../../../bioluminescence/components/Footer.astro";
+
+import { getEntry } from "astro:content";
+const featuredProjects = ["studygarden", "dr-trust", "rune-wars"];
+---
+
+<html>
+  <SEO
+    title="Jessica Sheng"
+    description="hi! i'm jessica, and i design experiences. welcome to my creative hub :) here, you can see my portfolio and all my other little project sprints."
+    openGraph={{
+      basic: {
+        title: "Jessica Sheng",
+        type: "website",
+        image:
+          "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+      },
+    }}
+  />
+</html>
+<Site>
+  <div id="heroWrapper" slot="header">
+    <Hero client:load />
+    <Blobs client:load />
+    <Particles client:load />
+  </div>
+  <div style="margin: auto; width: 70vw;">
+    <h2 style="margin-bottom: 2rem;">featured projects</h2>
+
+    <ProjectContainer>
+      {
+        featuredProjects.map(async (slug) => {
+          const project = await getEntry("projects", slug);
+          if (!project) return null;
+          return <ProjectItem project={{ slug, ...project.data }} />;
+        })
+      }
+    </ProjectContainer>
+    <ViewProjectsButton />
+    <Footer />
+  </div>
+</Site>

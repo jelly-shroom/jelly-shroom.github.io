@@ -1,0 +1,70 @@
+---
+import { SEO } from "astro-seo";
+import Site from "../../../../bioluminescence/layouts/Site.astro";
+import Footer from "../../../../bioluminescence/components/Footer.astro";
+import JournalList from "../../../../bioluminescence/components/journal/JournalList.svelte";
+
+import { getCollection, type CollectionEntry } from "astro:content";
+
+// use date
+const journals: CollectionEntry<"journals">[] = (
+  await getCollection("journals")
+).sort((a, b) => (a.data.date > b.data.date ? -1 : 1));
+
+const journalData = journals.map((journal) => ({
+  slug: journal.slug,
+  ...journal.data,
+}));
+---
+
+<html>
+  <SEO
+    title="Jessica Sheng - Journal"
+    description="this a collection of my journal entries where I reflect on my day to day and other introspective thoughts."
+    openGraph={{
+      basic: {
+        title: "Jessica Sheng - Journal",
+        type: "A type.",
+        image:
+          "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+      },
+    }}
+  />
+</html>
+<Site>
+  <div class="glass-bg">
+    <div class="head">
+      <h1>Journal</h1>
+      <p>
+        This is a collection of entries where I document things for safekeeping.
+        This is just a dump of my day to day experiences and introspective
+        thoughts.
+      </p>
+    </div>
+    <JournalList journals={journalData} client:load />
+    <Footer />
+  </div>
+</Site>
+
+<style>
+  h1 {
+    font-family: "Quicksand";
+    font-weight: 700;
+  }
+
+  .head {
+    margin: 20px 0;
+  }
+
+  .glass-bg {
+    width: 70%;
+  }
+
+  @media (max-width: 800px) {
+    .glass-bg {
+      padding-right: 5%;
+      padding-left: 5%;
+      padding-top: 70px;
+    }
+  }
+</style>
