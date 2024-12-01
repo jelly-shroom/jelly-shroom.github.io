@@ -45,11 +45,12 @@
     justify-content: space-between;
 
     animation: fadeTransitionIn 0.5s ease-out forwards;
-    transition: 0.25s;
   }
 
   .journalEntry * {
     filter: saturate(0.7) contrast(0.7) brightness(0.7);
+
+    transition: all 0.7s ease;
   }
 
   .journalEntry:hover {
@@ -68,7 +69,6 @@
     align-items: start;
     border-radius: 5px;
     margin-bottom: 10px;
-    transition: 0.25s;
     background-color: var(--bioluminescent-bg);
     height: 100%;
   }

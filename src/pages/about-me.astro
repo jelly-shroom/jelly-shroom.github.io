@@ -3,6 +3,7 @@ import Site from "../layouts/Site.astro";
 import { SEO } from "astro-seo";
 import Blobs from "../components/Blobs.svelte";
 import Footer from "../components/Footer.astro";
+import Particles from "../components/Particles.svelte";
 
 import Bio from "../components/personals/Bio.svelte";
 import PersonalList from "../components/personals/PersonalList.svelte";
@@ -37,6 +38,7 @@ const personalsData = Object.fromEntries(
   <div id="heroWrapper" slot="header">
     <Bio client:load />
     <Blobs client:load />
+    <Particles client:load />
   </div>
   <div class="aboutMeInfo">
     <h2>more about me</h2>
