@@ -12,6 +12,28 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+
+      - name: Build auto version
+        run: |
+          cross-env VERSION=old astro build
+          mv dist dist-auto
+
+      - name: Build bioluminescence version
+        run: |
+          cross-env VERSION=new astro build
+          mv dist dist-bioluminescence
+
+      - name: Upload auto artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: auto-version
+          path: dist-auto
+
+      - name: Upload bioluminescence artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: bioluminescence-version
+          path: dist-bioluminescence
   deploy:
     needs: build
     permissions:
@@ -22,5 +44,15 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Download auto artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: auto-version
+
+      - name: Download bioluminescence artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: bioluminescence-version
+
       - uses: actions/deploy-pages@v4
         id: deployment

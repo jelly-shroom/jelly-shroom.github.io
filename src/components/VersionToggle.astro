@@ -11,19 +11,21 @@
         ? "auto"
         : "bioluminescence";
     localStorage.setItem("version", currentVersion);
+    const newPath =
+      currentVersion === "bioluminescence" ? "/bioluminescence/" : "/auto/";
+    window.location.pathname = newPath; // Redirect to the new version
+
     location.reload(); // Reload the page to apply changes
   };
 
   // On page load, set the correct version
   window.onload = () => {
     const savedVersion = localStorage.getItem("version") || "auto";
-    if (savedVersion === "bioluminescence") {
-      document.body.classList.add("bioluminescence");
-      console.log("Bioluminescence version loaded");
-      // Additional logic to dynamically load content if needed
-    } else {
-      document.body.classList.remove("bioluminescence");
-      console.log("Default version loaded");
+    const newPath =
+      savedVersion === "bioluminescence" ? "/bioluminescence/" : "/auto/";
+
+    if (window.location.pathname !== newPath) {
+      window.location.pathname = newPath; // Redirect to the correct version
     }
   };
 </script>
