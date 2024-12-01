@@ -10,7 +10,8 @@
     "dev:auto": "cross-env VERSION=auto astro build",
     "dev:bioluminescence": "cross-env VERSION=bioluminescence astro dev",
     "start": "astro dev",
-    "build": "npm run build:auto && npm run build:bioluminescence",
+    "build": "astro check && astro build",
+
     "preview": "astro preview",
     "astro": "astro"
   },
