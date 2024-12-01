@@ -3,20 +3,18 @@
   export let selectedTag = "";
 </script>
 
-<div>
-  <div id="filterContainer">
-    {#each Object.entries(tags) as [tagName, tag]}
-      <button
-        class="filters"
-        class:active={selectedTag === tag}
-        on:click={() => {
-          selectedTag = tag;
-        }}
-      >
-        {tagName}
-      </button>
-    {/each}
-  </div>
+<div id="filterContainer">
+  {#each Object.entries(tags) as [tagName, tag]}
+    <button
+      class="filters"
+      class:active={selectedTag === tag}
+      on:click={() => {
+        selectedTag = tag;
+      }}
+    >
+      {tagName}
+    </button>
+  {/each}
 </div>
 
 <style>

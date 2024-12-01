@@ -107,19 +107,14 @@
 
   @media screen and (max-width: 1620px) {
     .text {
-      left: -48.5% !important;
       width: 200px !important;
     }
   }
 
   @media screen and (max-width: 600px) {
     .text {
-      left: -48.5% !important;
       width: 200px !important;
-    }
-
-    div {
-      --scale: 0.085;
+      font-size: 2.5rem;
     }
   }
 </style>

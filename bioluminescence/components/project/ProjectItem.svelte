@@ -44,7 +44,9 @@
       </div>
     {/if}
 
-    <img src={image.src} {alt} />
+    <div class="imageWrapper">
+      <img src={image.src} {alt} />
+    </div>
 
     <div class="content">
       <div class="description">
@@ -134,14 +136,25 @@
     filter: saturate(1) contrast(1) brightness(1);
   }
 
-  img {
-    width: 600px;
-    height: 400px;
-    border-radius: 15px;
-    overflow: hidden;
-
+  .imageWrapper {
+    display: flex;
     flex-shrink: 0;
-    margin: auto 0;
+
+    align-items: start;
+    border-radius: 5px;
+    margin: auto;
+    background-color: var(--bioluminescent-bg);
+    height: 100%;
+    width: 40%;
+  }
+
+  .imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 5px;
+
+    object-position: center center;
   }
 
   .description {
@@ -189,6 +202,31 @@
     }
     50% {
       opacity: 0.6;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .portfolio-item {
+      flex-direction: column;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .imageWrapper {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .portfolio-item {
+      width: 100%;
+    }
+
+    .timeline-dot {
+      display: none;
     }
   }
 </style>

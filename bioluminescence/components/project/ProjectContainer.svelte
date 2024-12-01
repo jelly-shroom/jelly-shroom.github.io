@@ -52,4 +52,16 @@
       grid-template-columns: 1fr;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    .column-contents {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .timeline-line {
+      left: 50%;
+    }
+  }
 </style>

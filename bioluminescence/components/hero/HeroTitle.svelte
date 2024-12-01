@@ -27,7 +27,9 @@
   }
 
   .gooeyWrapper {
-    transform: translate(-50%, 0%);
+    transform-origin: left;
+    width: 100%;
+    transform: translate(-1rem, 0);
   }
 
   h1 {
@@ -52,6 +54,8 @@
     font-family: "Quicksand";
     font-size: 3rem;
     font-weight: 900;
+    width: 100%;
+    flex-shrink: 0;
   }
 
   /* Your existing media queries */
@@ -59,7 +63,7 @@
     /* Update selector to use visible-title */
 
     .gooeyWrapper {
-      margin-left: -1rem;
+      transform: translate(0, 0);
     }
 
     #heroTitle {
@@ -72,6 +76,9 @@
   }
 
   @media screen and (max-width: 600px) {
+    .gooeyWrapper {
+      /* margin-left: -4rem; */
+    }
     .visible-title {
       font-size: 2.5em;
     }
