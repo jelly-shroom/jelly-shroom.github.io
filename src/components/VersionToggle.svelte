@@ -1,4 +1,6 @@
 <body>
+  <button onclick="toggleVersion()">Switch Version</button>
+
   <script>
     function toggleVersion() {
       const currentVersion =
@@ -22,8 +24,6 @@
       }
     };
   </script>
-
-  <button onclick="toggleVersion()">Switch Version</button>
 </body>
 
 <style>
