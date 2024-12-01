@@ -36,9 +36,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "16"
-      - run: npm install
-      - run: npm run build:auto
-      - run: npm run build:bioluminescence
+      - run: pnpm run build:auto
+      - run: pnpm run build:bioluminescence
       - name: Upload root version
         uses: actions/upload-pages-artifact@v3
         with:
