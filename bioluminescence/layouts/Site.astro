@@ -1,0 +1,75 @@
+---
+import Blobs from "../components/Blobs.svelte";
+import Particles from "../components/Particles.svelte";
+import Navbar from "../components/Navbar.astro";
+import Cursor from "../components/Cursor.svelte";
+
+import "../styles/app.css";
+import "../styles/fonts.css";
+---
+
+<html lang="en">
+  <head>
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <Navbar />
+    <div id="container">
+      <div id="transitionOverlay"></div>
+      <Cursor client:only />
+      <Blobs client:load />
+      <Particles client:load />
+      <slot name="header" />
+      <slot />
+    </div>
+  </body>
+</html>
+
+<script>
+  function handleTransition() {
+    const container = document.getElementById("container") as HTMLElement;
+    const overlay = document.getElementById("transitionOverlay") as HTMLElement;
+
+    return new Promise((resolve) => {
+      container.style.animation = "fadeTransitionOut .05s ease-in";
+      overlay.style.animation = "blurTransitionOut .05s ease-out backwards";
+      setTimeout(() => {
+        container.style.opacity = "0";
+      }, 50);
+
+      setTimeout(() => {
+        resolve(0);
+      }, 50);
+    });
+  }
+
+  // Intercept link clicks
+  document.addEventListener("click", (event: any) => {
+    const target = event.target.closest("a");
+
+    if (target && target.href && !target.target) {
+      event.preventDefault();
+
+      handleTransition().then(() => {
+        window.location.href = target.href;
+      });
+    }
+  });
+
+  (function () {
+    window.onpageshow = function (event) {
+      if (event.persisted) {
+        window.location.reload();
+      }
+    };
+  })();
+</script>

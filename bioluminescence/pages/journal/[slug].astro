@@ -1,0 +1,54 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import Site from "../../layouts/Site.astro";
+import Navigation from "../../components/journal/NavigationButtons.svelte";
+import Footer from "../../components/Footer.astro";
+
+export async function getStaticPaths() {
+  const journals = await getCollection("journals");
+  return journals.map((journals) => ({ params: { slug: journals.slug } }));
+}
+
+const { slug } = Astro.params;
+
+// use date
+const journals = (await getCollection("journals")).sort((a, b) =>
+  a.data.date > b.data.date ? -1 : 1
+);
+
+const idx = journals.findIndex((p) => p.slug === slug);
+if (idx === -1) {
+  throw new Error(`Journal with slug '${slug}' not found`);
+}
+
+const { Content } = await journals[idx].render();
+
+// Check if we're at the first or last entry
+const hasNext = idx < journals.length - 1;
+const hasPrevious = idx > 0;
+
+const navigationData = {
+  nextJournal: hasNext
+    ? {
+        nextTitle: journals[idx + 1].data.title,
+        nextSlug: journals[idx + 1].slug,
+      }
+    : null,
+  previousJournal: hasPrevious
+    ? {
+        previousTitle: journals[idx - 1].data.title,
+        previousSlug: journals[idx - 1].slug,
+      }
+    : null,
+};
+---
+
+<Site>
+  <div class="glass-bg">
+    <div class="journal">
+      <Content />
+      <Navigation {...navigationData} />
+    </div>
+    <Footer />
+  </div>
+</Site>

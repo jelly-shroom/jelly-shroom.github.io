@@ -1,0 +1,84 @@
+<script lang="ts">
+  export let name: any;
+  export let pfp: any;
+</script>
+
+<div class="halfColumn">
+  <div class="profileCard">
+    <img src={pfp.src} alt={name} class="pfp" />
+    <h3>{name}</h3>
+    <slot name="info" />
+    <slot name="furtherInfo" />
+  </div>
+
+  <slot name="interview" />
+</div>
+
+<style>
+  .profileCard {
+    border: 1px solid white;
+    box-shadow: 0 0 6px 0 var(--glow-primary);
+    filter: background-blur(5px);
+    border-radius: 25px;
+
+    padding: 2rem;
+
+    margin-top: 4rem;
+    margin-bottom: 2em;
+
+    color: var(--dim-text);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+
+    width: 100%;
+  }
+
+  h3 :global() {
+    color: white;
+  }
+
+  .pfp {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+
+    flex-shrink: 0;
+  }
+
+  .halfColumn {
+    width: 50%;
+  }
+
+  div :global(h3) {
+    margin-top: 1rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    .halfColumn {
+      width: 100%;
+    }
+
+    .pfp {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .profileCard {
+      padding: 1rem;
+    }
+
+    .pfp {
+      width: 80px;
+      height: 80px;
+    }
+  }
+</style>

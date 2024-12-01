@@ -1,0 +1,52 @@
+a {
+    text-decoration: underline;
+    font-weight: bold;
+
+}
+
+h1 {
+    font-family: "Quicksand";
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.journal {
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    top: 0;
+
+    overflow: hidden;
+}
+
+
+.imageFill {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+
+@media screen and (max-width: 800px) {
+    .columnContainer {
+        flex-direction: column;
+    }
+
+    .journal {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .caption {
+        margin-bottom: 2rem;
+    }
+}

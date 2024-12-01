@@ -4,6 +4,11 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "build:auto": "cross-env VERSION=auto astro build",
+    "build:bioluminescence": "cross-env VERSION=bioluminescence astro dev",
+
+    "dev:auto": "cross-env VERSION=auto astro build",
+    "dev:bioluminescence": "cross-env VERSION=bioluminescence astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
@@ -20,6 +25,7 @@
     "typescript": "^5.4.4"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "sass": "^1.74.1"
   }
 }

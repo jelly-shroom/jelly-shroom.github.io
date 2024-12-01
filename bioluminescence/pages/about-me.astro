@@ -1,0 +1,64 @@
+---
+import Site from "../layouts/Site.astro";
+import { SEO } from "astro-seo";
+import Blobs from "../components/Blobs.svelte";
+import Footer from "../components/Footer.astro";
+import Particles from "../components/Particles.svelte";
+
+import Bio from "../components/personals/Bio.svelte";
+import PersonalList from "../components/personals/PersonalList.svelte";
+
+import { getCollection } from "astro:content";
+import PhotoGallery from "../components/PhotoGallery.svelte";
+import GalleryItem from "../components/GalleryItem.svelte";
+
+const personals = (await getCollection("personals")).sort(
+  (a, b) => a.data.order - b.data.order
+);
+const personalsData = Object.fromEntries(
+  personals.map(({ data, slug }) => [data.label, slug])
+);
+---
+
+<html>
+  <SEO
+    title="Jessica Sheng - About Me"
+    description="i’m jessica sheng, a designer based in la. I am currently a student of the Iovine and Young Academy at the University of Southern California. I love tinkering with new technologies and testing out new solutions to problems, and I am always looking for new ways to apply my skills to create meaningful experiences for others. Thanks for stopping by!"
+    openGraph={{
+      basic: {
+        title: "Jessica Sheng - About Me",
+        type: "A type.",
+        image:
+          "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+      },
+    }}
+  />
+</html>
+<Site>
+  <div id="heroWrapper" slot="header">
+    <Bio client:load />
+    <Blobs client:load />
+    <Particles client:load />
+  </div>
+  <div class="aboutMeInfo">
+    <h2>more about me</h2>
+    <div style="position: absolute; display: none;">
+      <PhotoGallery client:load />
+      <GalleryItem client:load />
+    </div>
+
+    <PersonalList personals={personalsData} client:load />
+    {
+      personals.map(async (personal: any) => {
+        const { Content, components } = await personal.render();
+        return (
+          <div id={personal.slug} style="display: none">
+            <Content />
+          </div>
+        );
+      })
+    }
+
+    <Footer />
+  </div>
+</Site>
