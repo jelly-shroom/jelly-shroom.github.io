@@ -38,10 +38,10 @@ jobs:
           node-version: "16"
       - name: Build auto version
         run: pnpm run build:auto
-      - run: ls -la dist # Debugging step
       - name: Build bioluminescence version
-        run: pnpm run build:bioluminescence
-      - run: ls -la dist/bioluminescence # Debugging step
+        run: |
+          pnpm run build:bioluminescence
+          mv dist dist_bioluminescence
       - name: Upload root version
         uses: actions/upload-pages-artifact@v3
         with:
@@ -49,7 +49,7 @@ jobs:
       - name: Upload bioluminescence version
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/bioluminescence
+          path: dist_bioluminescence
           name: bioluminescence
 
   deploy:

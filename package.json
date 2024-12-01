@@ -6,7 +6,7 @@
     "dev": "astro dev",
 
     "build:auto": "cross-env VERSION=auto astro check && astro build --outdir dist",
-    "build:bioluminescence": "cross-env VERSION=bioluminescence astro check && astro build --outdir dist/bioluminescence",
+    "build:bioluminescence": "cross-env VERSION=bioluminescence astro check && astro build --outdir dist_bioluminescence",
     "build": "pnpm run build:auto && pnpm run build:bioluminescence",
     "start": "astro dev",
     "preview": "astro preview",
