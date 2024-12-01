@@ -12,7 +12,9 @@
         : "bioluminescence";
     localStorage.setItem("version", currentVersion);
     const newPath =
-      currentVersion === "bioluminescence" ? "/bioluminescence/" : "/";
+      currentVersion === "bioluminescence"
+        ? "../../bioluminescence/pages/index.astro"
+        : "/";
     window.location.pathname = newPath; // Redirect to the new version
 
     location.reload(); // Reload the page to apply changes
@@ -22,7 +24,9 @@
   window.onload = () => {
     const savedVersion = localStorage.getItem("version") || "auto";
     const newPath =
-      savedVersion === "bioluminescence" ? "/bioluminescence/" : "/";
+      savedVersion === "bioluminescence"
+        ? "../../bioluminescence/pages/index.astro"
+        : "/";
 
     if (window.location.pathname !== newPath) {
       window.location.pathname = newPath; // Redirect to the correct version

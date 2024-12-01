@@ -11,5 +11,7 @@ const isBioluminescence = process.env.VERSION === 'bioluminescence';
 // https://astro.build/config
 export default defineConfig({
   srcDir: isBioluminescence ? './bioluminescence' : './src',
+  base: isBioluminescence ? '/bioluminescence' : '/',
+
   integrations: [svelte(), mdx()],
 });

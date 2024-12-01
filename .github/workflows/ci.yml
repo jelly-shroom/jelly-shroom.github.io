@@ -51,6 +51,7 @@ jobs:
         with:
           path: dist_bioluminescence
           name: bioluminescence
+      - run: ls -la dist_bioluminescence
 
   deploy:
     needs: build
