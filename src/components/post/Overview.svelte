@@ -19,7 +19,7 @@
 
 <div class="tagContainer">
   {#each tags as tag}
-    <Tag {tag} tagType="tagsGreen" />
+    <Tag {tag} />
   {/each}
 </div>
 
@@ -46,10 +46,6 @@
 
   h2 {
     text-align: center;
-  }
-
-  div :global(strong) {
-    color: var(--darkAccent);
   }
 
   @media screen and (max-width: 600px) {

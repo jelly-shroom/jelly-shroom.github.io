@@ -37,21 +37,19 @@ const featuredProjects = ["studygarden", "dr-trust", "rune-wars"];
     <Blobs client:load />
     <Particles client:load />
   </div>
-  <div class="glass-bg">
-    <div style="margin: auto; width: 70vw;">
-      <h2 id="featured-projects">featured projects</h2>
+  <div style="margin: auto; width: 70vw;">
+    <h2 style="margin-bottom: 2rem;">featured projects</h2>
 
-      <ProjectContainer>
-        {
-          featuredProjects.map(async (slug) => {
-            const project = await getEntry("projects", slug);
-            if (!project) return null;
-            return <ProjectItem project={{ slug, ...project.data }} />;
-          })
-        }
-      </ProjectContainer>
-      <ViewProjectsButton />
-    </div>
+    <ProjectContainer>
+      {
+        featuredProjects.map(async (slug) => {
+          const project = await getEntry("projects", slug);
+          if (!project) return null;
+          return <ProjectItem project={{ slug, ...project.data }} />;
+        })
+      }
+    </ProjectContainer>
+    <ViewProjectsButton />
     <Footer />
   </div>
 </Site>

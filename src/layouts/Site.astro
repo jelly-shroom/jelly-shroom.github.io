@@ -26,8 +26,8 @@ import "../styles/fonts.css";
     <div id="container">
       <div id="transitionOverlay"></div>
       <Cursor client:only />
-      <Blobs />
-      <Particles />
+      <Blobs client:load />
+      <Particles client:load />
       <slot name="header" />
       <slot />
     </div>

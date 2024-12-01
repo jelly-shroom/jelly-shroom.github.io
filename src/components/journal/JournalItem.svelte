@@ -37,7 +37,7 @@
     overflow: hidden;
     width: fit-content;
     padding: 1rem;
-    background-color: white;
+    background-color: var(--bioluminescent-bg);
 
     position: relative;
     display: flex;
@@ -51,7 +51,9 @@
   }
 
   .journalEntry:hover {
-    background-color: var(--lightAccent);
+    box-shadow:
+      0 0 20px rgba(0, 244, 255, 0.5),
+      0 0 4px 1px rgba(255, 255, 255, 1);
     color: white;
   }
 

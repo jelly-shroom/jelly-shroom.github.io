@@ -70,7 +70,7 @@
   }
 
   a:hover {
-    color: var(--darkAccent);
+    color: white;
   }
 
   a::after {
@@ -80,7 +80,9 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--darkAccent);
+    background-color: white;
+    box-shadow: 0 0 10px 0 var(--glow-primary);
+
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 
@@ -103,14 +105,14 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: var(--lightAccent);
+    color: white;
 
     transition: 0.25s;
   }
 
   .forward:hover,
   .back:hover {
-    color: var(--darkAccent);
+    text-shadow: 0 0 10px var(--glow-primary);
   }
 
   .back {

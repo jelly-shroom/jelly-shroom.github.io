@@ -16,7 +16,9 @@
 
 <style>
   .profileCard {
-    border: 1px solid var(--darkAccent);
+    border: 1px solid white;
+    box-shadow: 0 0 6px 0 var(--glow-primary);
+    filter: background-blur(5px);
     border-radius: 25px;
 
     padding: 2rem;
@@ -24,7 +26,7 @@
     margin-top: 4rem;
     margin-bottom: 2em;
 
-    color: var(--lightAccent);
+    color: white;
 
     display: flex;
     flex-direction: column;
@@ -50,8 +52,8 @@
     width: 50%;
   }
 
-  :global(.profileCard h3) {
-    color: var(--darkAccent);
+  :global(.profileCard p) {
+    text-shadow: 0 0 2px 0 var(--glow-primary);
   }
 
   div :global(h3) {

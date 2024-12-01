@@ -29,8 +29,4 @@
     font-family: "Work Sans";
     line-height: 1.5;
   }
-
-  :global(strong) {
-    color: var(--darkAccent);
-  }
 </style>

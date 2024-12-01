@@ -23,9 +23,7 @@ h2 {
   font-weight: 500;
   font-size: 1.5rem;
 
-  text-shadow:
-    0 0 1px #00f4ff,
-    0 0 30px #00f4ff;
+
 }
 
 h3 {
@@ -42,10 +40,6 @@ p {
   line-height: 1.5;
 }
 
-:root {
-  --glow-primary: #00f4ff;
-  --glow-secondary: #0091ff;
-}
 
 a,
 button,
@@ -74,17 +68,22 @@ body {
 }
 
 a {
-  color: var(--darkAccent);
+  color: white;
   text-decoration: none;
+
+  transition: 0.25s;
 }
 
 a:hover {
   cursor: none;
+  text-shadow:
+  0 0 6px #00f2ffb7;
 }
 
 strong {
   font-weight: 600;
-
+  text-shadow:
+  0 0 6px #00f2ffb7;
 }
 
 .glass-bg {
@@ -97,6 +96,11 @@ strong {
   min-height: 100vh;
 }
 
+.aboutMeInfo {
+  width: 70%;
+  margin: auto;
+}
+
 .button {
   display: inline-block;
 
@@ -104,20 +108,25 @@ strong {
   font-weight: 500;
   font-size: 1rem;
   text-transform: lowercase;
+  backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 
-  background-color: var(--lightAccent);
-  color: #fff;
-  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   padding: 1rem;
-  cursor: pointer;
 
   transition: 0.25s;
 }
 
 .button:hover {
-  background-color: var(--darkAccent);
+  border: 1px solid white;
+    color: white;
+    background-color: #a4faff5e;
+    box-shadow: 0 0 10px 0 var(--glow-primary);
 }
+
 
 
 @keyframes blurTransitionIn {
@@ -183,7 +192,8 @@ strong {
 }
 
 .externalLink {
-  color: var(--darkAccent);
+  color: white;
+  text-shadow: 0 0 6px 0 var(--glow-primary);
   text-decoration: underline;
   font-weight: bold;
 }
@@ -202,7 +212,7 @@ strong {
 
 #heroWrapper {
   position: relative;
-  height: 90vh;
+  height: 80vh;
   width: 100%;
 }
 

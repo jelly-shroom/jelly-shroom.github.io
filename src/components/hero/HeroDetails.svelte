@@ -46,7 +46,7 @@
   }
 
   a {
-    color: var(--lightAccent);
+    color: white;
     font-weight: 600;
     font-size: 1.5em;
     display: flex;
@@ -59,7 +59,7 @@
   }
 
   a:hover {
-    color: var(--darkAccent);
+    text-shadow: 0 0 10px var(--glow-primary);
   }
 
   a::after {
@@ -69,7 +69,8 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--darkAccent);
+    background-color: white;
+    box-shadow: 0 0 6px var(--glow-primary);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 

@@ -14,13 +14,10 @@
 
 <style>
   #heroTitle {
-    height: 90%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* left: fixed;
-    top: fixed; */
     margin-bottom: -2rem;
 
     gap: 1rem;

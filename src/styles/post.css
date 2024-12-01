@@ -1,7 +1,9 @@
 a {
-    color: var(--darkAccent);
+    color: white;
     text-decoration: underline;
     font-weight: bold;
+    
+    text-shadow: 0 0 6px 0 var(--glow-primary);
 }
 
 h1 {
@@ -101,7 +103,8 @@ pre {
 }
 
 .columnContainer strong {
-    color: var(--darkAccent);
+    color: white;
+    text-shadow: 0 0 6px 0 var(--glow-primary);
 }
 
 

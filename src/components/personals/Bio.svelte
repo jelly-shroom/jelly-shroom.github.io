@@ -33,7 +33,6 @@
     flex-shrink: 0;
   }
   a {
-    color: var(--darkAccent);
     font-weight: bold;
     text-decoration: underline;
   }

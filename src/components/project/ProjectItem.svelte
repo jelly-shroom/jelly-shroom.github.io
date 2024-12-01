@@ -22,7 +22,7 @@
 </script>
 
 <div class="project-wrapper">
-  <div class="timeline-dot"></div>
+  <div class="timeline-dot" />
 
   <a href={`/projects/${slug}`} class={itemClass}>
     {#if itemClass.includes("locked")}
@@ -47,22 +47,21 @@
     <img src={image.src} {alt} />
 
     <div class="content">
-      <div class="tagContainer">
-        {#each tags as tag}
-          <Tag {tag} />
-        {/each}
-      </div>
-
       <div class="description">
         <h2>
           {title}
         </h2>
+        <div class="tagContainer">
+          {#each tags as tag}
+            <Tag {tag} />
+          {/each}
+        </div>
         <p>
           {@html description}
         </p>
       </div>
     </div>
-    <div class="glow-overlay"></div>
+    <div class="glow-overlay" />
   </a>
 </div>
 
@@ -82,8 +81,10 @@
     transition: all 0.7s ease;
     margin-bottom: 2rem;
     padding: 1rem;
+    width: 100%;
 
     height: auto;
+    animation: fadeTransitionIn 0.5s ease-out forwards;
   }
 
   .portfolio-item:hover {
@@ -163,12 +164,17 @@
 
   .timeline-dot {
     flex-shrink: 0;
+    margin-left: 10px;
     top: 50%;
-    width: 16px;
-    height: 16px;
-    background: rgba(165, 251, 255);
+    width: 8px;
+    height: 8px;
+    background: white;
     border-radius: 50%;
     transform: translateY(-50%);
+    box-shadow:
+      0 0 6px 4px var(--glow-primary),
+      0 0 6px 1px var(--glow-primary);
+
     z-index: 100;
     transition: all 0.3s ease;
   }

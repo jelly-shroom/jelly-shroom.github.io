@@ -17,10 +17,6 @@
     margin-bottom: 1rem;
   }
 
-  div :global(strong) {
-    color: var(--darkAccent);
-  }
-
   @media screen and (max-width: 600px) {
     .header {
       margin-top: 4rem;

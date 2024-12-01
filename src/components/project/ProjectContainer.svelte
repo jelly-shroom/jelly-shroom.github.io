@@ -1,24 +1,12 @@
 <script>
   import { onMount } from "svelte";
-  let timelineElement;
-  let timelineLeft = 0;
-
-  onMount(() => {
-    if (timelineElement) {
-      const rect = timelineElement.getBoundingClientRect();
-      timelineLeft = rect.left;
-      window.addEventListener("resize", () => {
-        const newRect = timelineElement.getBoundingClientRect();
-        timelineLeft = newRect.left;
-      });
-    }
-  });
 </script>
 
 <div class="timeline-container">
-  <div bind:this={timelineElement} class="timeline-line"></div>
+  <div class="timeline-line" />
+
   <div class="column-contents">
-    <slot {timelineLeft} />
+    <slot />
   </div>
 </div>
 
@@ -30,13 +18,16 @@
 
   .timeline-line {
     position: absolute;
-    left: 8px;
-    width: 2px;
+    left: 14px;
+    width: 1px;
     height: 100%;
-    background: rgba(0, 244, 255, 0.3);
+    background: var(--glow-primary);
+
+    animation: illuminateLine 5s ease-out;
     z-index: 0;
 
     transform: translate(-50%, 0);
+    transform-origin: top;
   }
 
   .column-contents {
@@ -45,6 +36,15 @@
 
     grid-auto-flow: dense;
     gap: 2rem;
+  }
+
+  @keyframes illuminateLine {
+    from {
+      transform: translateX(-50%) scaleY(0);
+    }
+    to {
+      transform: translateX(-50%) scaleY(1);
+    }
   }
 
   @media screen and (max-width: 1400px) {

@@ -34,21 +34,20 @@
     margin: 8rem auto;
     max-width: 50%;
 
-    color: var(--darkAccent);
+    color: white;
   }
 
   .nextProjectButton {
-    border: 1px solid var(--darkAccent);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 25px;
 
     margin-top: 1rem;
 
     padding: 0.5rem;
-    /* padding-right: 1rem; */
-    color: var(--darkAccent);
-
     display: flex;
-
     transition: 0.25s;
   }
 
@@ -58,16 +57,16 @@
   }
 
   .nextProjectButton h2 {
-    color: var(--darkAccent);
+    color: rgba(255, 255, 255, 0.5);
 
     transition: 0.25s;
   }
 
   .nextProjectButton:hover {
-    border: 1px solid var(--darkAccent);
-    border-radius: 25px;
-    background-color: var(--darkAccent);
-    color: #ebebeb;
+    border: 1px solid white;
+    color: white;
+    background-color: #a4faff5e;
+    box-shadow: 0 0 10px 0 var(--glow-primary);
   }
   .nextProjectButton:hover h2 {
     color: white;

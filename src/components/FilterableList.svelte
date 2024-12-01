@@ -36,8 +36,8 @@
     border-radius: 100px;
     font-family: "Work Sans";
     font-size: small;
-    border: 1px solid var(--lightAccent);
-    color: var(--lightAccent);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
     background-color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
     text-transform: lowercase;
@@ -45,15 +45,17 @@
   }
 
   .filters:hover {
-    border: 1px solid var(--lightAccent);
+    border: 1px solid white;
     color: white;
-    background-color: var(--lightAccent);
+    background-color: #a4faff5e;
+    box-shadow: 0 0 10px 0 var(--glow-primary);
   }
 
   .filters.active {
-    border: 1px solid var(--darkAccent);
+    border: 1px solid white;
     color: white;
-    background-color: var(--darkAccent);
+    background-color: #a4faff5e;
+    box-shadow: 0 0 10px 0 var(--glow-primary);
   }
 
   @media screen and (max-width: 800px) {

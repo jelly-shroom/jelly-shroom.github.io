@@ -25,15 +25,16 @@
     margin: auto;
     width: 900px;
 
-    border: 1px solid var(--darkAccent);
     border-radius: 25px;
 
     padding: 1.5rem 1.5rem;
 
     margin-top: 8rem;
 
-    background: var(--darkAccent);
-    color: rgb(235, 235, 235);
+    border: 1px solid white;
+    color: white;
+    background-color: #a4faff5e;
+    box-shadow: 0 0 10px 0 var(--glow-primary);
   }
 
   :global(#linkToLive h2) {
@@ -64,8 +65,9 @@
   }
 
   a:hover {
-    background-color: white;
-    color: var(--darkAccent);
+    color: white;
+    box-shadow: 0 0 10px 0 var(--glow-primary);
+    background-color: #a4faff5e;
   }
 
   @media screen and (max-width: 800px) {

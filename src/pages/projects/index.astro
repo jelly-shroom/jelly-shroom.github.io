@@ -40,7 +40,7 @@ const tags = {
   />
 </html>
 <Site>
-  <div class="glass-bg">
+  <div>
     <ProjectList tags={tags} projects={projectData} client:load />
 
     <Footer />
@@ -48,14 +48,13 @@ const tags = {
 </Site>
 
 <style>
-  .glass-bg {
-    padding-right: 10%;
-    padding-left: 10%;
-    padding-top: 100px;
+  div {
+    width: 70%;
+    margin: auto;
   }
 
   @media (max-width: 800px) {
-    .glass-bg {
+    div {
       padding-right: 5%;
       padding-left: 5%;
       padding-top: 70px;

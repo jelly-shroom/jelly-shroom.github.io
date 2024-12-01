@@ -25,7 +25,7 @@
 <style>
   .contents {
     z-index: 0;
-    top: 30%;
+    top: 20%;
     left: 20%;
     transform: translate(0%, -50%);
     max-width: 60%;
@@ -37,9 +37,9 @@
     z-index: 0;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     .contents {
-      top: 20%;
+      top: 10%;
       max-width: 80%;
       left: 10%;
     }

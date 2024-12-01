@@ -17,7 +17,8 @@
     margin-bottom: 2rem;
   }
   .problem {
-    border: 1px solid var(--darkAccent);
+    border: 1px solid white;
+    box-shadow: 0 0 6px var(--glow-primary);
     border-radius: 25px;
     width: 50%;
 
@@ -25,23 +26,27 @@
     padding-right: 2.5rem;
     padding-left: 2.5rem;
 
-    color: var(--lightAccent);
+    color: white;
   }
 
   .problem :global(strong) {
-    color: var(--darkAccent);
+    color: white;
+    text-shadow: 0 0 10px var(--glow-primary);
   }
   .problem h2 {
-    color: var(--darkAccent);
+    color: white;
+    text-shadow: 0 0 10px var(--glow-primary);
   }
 
   .solution {
-    border: 1px solid var(--darkAccent);
+    border: 1px solid white;
+    box-shadow: 0 0 6px var(--glow-primary);
+
     border-radius: 25px;
 
     padding: 2rem 2.5rem;
 
-    background: var(--darkAccent);
+    background-color: #a4faff5e;
     color: #ebebeb;
 
     width: 50%;
@@ -52,6 +57,7 @@
   .solution :global(strong),
   .solution h2 {
     color: white;
+    text-shadow: 0 0 10px var(--glow-primary);
   }
 
   @media screen and (max-width: 800px) {

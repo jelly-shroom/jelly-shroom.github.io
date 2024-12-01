@@ -5,7 +5,10 @@
 
 <style>
   div {
-    background-color: var(--darkAccent);
+    border: 1px solid white;
+    background-color: #a4faff5e;
+    box-shadow: 0 0 10px 0 var(--glow-primary);
+
     border-radius: 25px;
     padding: 2rem;
     color: #ebebeb;
