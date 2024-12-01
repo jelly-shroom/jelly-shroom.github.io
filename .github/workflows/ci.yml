@@ -34,18 +34,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup-node
-        with:
-          node-version: "16"
+
       - name: Build auto version
         run: pnpm run build:auto
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
       - name: Build bioluminescence version
         run: |
           pnpm run build:bioluminescence
           mv dist dist_bioluminescence
-      - name: Upload root version
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
+
       - name: Upload bioluminescence version
         uses: actions/upload-pages-artifact@v3
         with:
