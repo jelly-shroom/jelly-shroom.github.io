@@ -6,26 +6,46 @@
   }
 
   window.toggleVersion = function () {
-    const currentVersion =
-      localStorage.getItem("version") === "bioluminescence"
-        ? "auto"
-        : "bioluminescence";
-    localStorage.setItem("version", currentVersion);
-    const newPath =
-      currentVersion === "bioluminescence" ? "/bioluminescence/" : "/";
-    window.location.pathname = newPath; // Redirect to the new version
+    const currentPath = window.location.pathname;
+    let newPath;
 
-    location.reload(); // Reload the page to apply changes
+    // Determine new path based on current path
+    if (currentPath.includes("/bioluminescence")) {
+      newPath = currentPath.replace("/bioluminescence", "");
+      localStorage.setItem("version", "auto");
+    } else {
+      newPath = "/bioluminescence" + currentPath;
+      localStorage.setItem("version", "bioluminescence");
+    }
+
+    // Only update URL and reload if there's an actual change
+    if (window.location.pathname !== newPath) {
+      window.history.pushState({}, "", newPath);
+      location.reload(); // Reload to apply changes
+    }
   };
 
-  // On page load, set the correct version
+  // On page load, set the correct version based on stored preference
   window.onload = () => {
     const savedVersion = localStorage.getItem("version") || "auto";
-    const newPath =
-      savedVersion === "bioluminescence" ? "/bioluminescence/" : "/";
+    let newPath;
 
-    if (window.location.pathname !== newPath) {
-      window.location.pathname = newPath; // Redirect to the correct version
+    if (
+      savedVersion === "bioluminescence" &&
+      !window.location.pathname.includes("/bioluminescence")
+    ) {
+      newPath = "/bioluminescence" + window.location.pathname;
+    } else if (
+      savedVersion === "auto" &&
+      window.location.pathname.includes("/bioluminescence")
+    ) {
+      newPath = window.location.pathname.replace("/bioluminescence", "");
+    }
+
+    // Only update URL and reload if there's an actual change
+    if (newPath && window.location.pathname !== newPath) {
+      window.history.replaceState({}, "", newPath);
+      location.reload(); // Reload to apply changes
     }
   };
 </script>
