@@ -30,7 +30,7 @@
     transform: translate(0%, -50%);
     max-width: 60%;
 
-    position: fixed;
+    position: absolute;
   }
 
   #scaleOnScroll {

@@ -19,8 +19,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    left: fixed;
-    top: fixed;
+    /* left: fixed;
+    top: fixed; */
     margin-bottom: -2rem;
 
     gap: 1rem;
