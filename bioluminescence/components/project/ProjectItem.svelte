@@ -24,7 +24,7 @@
 <div class="project-wrapper">
   <div class="timeline-dot" />
 
-  <a href={`/projects/${slug}`} class={itemClass}>
+  <a href={`/bioluminescence/projects/${slug}`} class={itemClass}>
     {#if itemClass.includes("locked")}
       <div class="lockedOverlay">
         <svg

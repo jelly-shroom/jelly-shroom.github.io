@@ -21,7 +21,7 @@
   export let itemClass: string = "journalEntry";
 </script>
 
-<a href={`/journal/${slug}`} class={itemClass}>
+<a href={`/bioluminescence/journal/${slug}`} class={itemClass}>
   <div class="imageWrapper">
     <img src={image} {alt} />
   </div>

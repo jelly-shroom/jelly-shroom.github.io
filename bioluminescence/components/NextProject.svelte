@@ -12,7 +12,7 @@
 <div class="nextProjectContainer">
   <h2>Next Project</h2>
 
-  <a class="nextProjectButton" href={`/projects/${slug}`}>
+  <a class="nextProjectButton" href={`/bioluminescence/projects/${slug}`}>
     <img src={image.src} {alt} />
     <div>
       <h2>
