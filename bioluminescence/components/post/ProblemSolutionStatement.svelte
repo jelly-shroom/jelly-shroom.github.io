@@ -1,0 +1,83 @@
+<div class="columnContainer">
+  <div class="problem">
+    <h2>Problem</h2>
+    <slot name="problem" />
+  </div>
+  <div class="solution">
+    <h2>Solution</h2>
+    <slot name="solution" />
+  </div>
+</div>
+
+<style>
+  .columnContainer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+  }
+  .problem {
+    border: 1px solid white;
+    box-shadow: 0 0 6px var(--glow-primary);
+    border-radius: 25px;
+    width: 50%;
+
+    padding: 2rem;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+
+    color: var(--dim-text);
+  }
+
+  .problem :global(strong) {
+    color: white;
+  }
+  .problem h2 {
+    color: white;
+  }
+
+  .solution {
+    border: 1px solid white;
+    box-shadow: 0 0 6px var(--glow-primary);
+
+    border-radius: 25px;
+
+    padding: 2rem 2.5rem;
+
+    background-color: #a4faff5e;
+    color: var(--dim-text);
+
+    width: 50%;
+
+    margin: auto;
+  }
+
+  .solution :global(strong),
+  .solution h2 {
+    color: white;
+  }
+
+  @media screen and (max-width: 800px) {
+    .problem,
+    .solution {
+      width: 100%;
+    }
+
+    .columnContainer {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .problem,
+    .solution {
+      padding: 1.75rem;
+    }
+
+    .columnContainer {
+      margin-bottom: 4rem;
+      margin-top: 4rem;
+    }
+  }
+</style>
