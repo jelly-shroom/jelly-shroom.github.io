@@ -12,7 +12,7 @@
         : "bioluminescence";
     localStorage.setItem("version", currentVersion);
     const newPath =
-      currentVersion === "bioluminescence" ? "/bioluminescence/" : "/auto/";
+      currentVersion === "bioluminescence" ? "/bioluminescence/" : "/";
     window.location.pathname = newPath; // Redirect to the new version
 
     location.reload(); // Reload the page to apply changes
@@ -22,7 +22,7 @@
   window.onload = () => {
     const savedVersion = localStorage.getItem("version") || "auto";
     const newPath =
-      savedVersion === "bioluminescence" ? "/bioluminescence/" : "/auto/";
+      savedVersion === "bioluminescence" ? "/bioluminescence/" : "/";
 
     if (window.location.pathname !== newPath) {
       window.location.pathname = newPath; // Redirect to the correct version
