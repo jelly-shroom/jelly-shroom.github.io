@@ -34,8 +34,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup-node
+      - run: npm run build:auto
+      - run: npm run build:bioluminescence
 
-      - run: pnpm build
+      # - run: pnpm build
       - name: Upload root version
         uses: actions/upload-pages-artifact@v3
         with:
