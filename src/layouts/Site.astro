@@ -1,7 +1,7 @@
 ---
 import Blobs from "../components/Blobs.svelte";
 import Navbar from "../components/Navbar.astro";
-import ButtonToggle from "../components/VersionToggle.svelte";
+import ButtonToggle from "../components/VersionToggle.astro";
 
 import "../styles/app.css";
 import "../styles/fonts.css";
@@ -21,7 +21,7 @@ import "../styles/fonts.css";
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>
-    <ButtonToggle client:only />
+    <ButtonToggle />
     <Navbar />
     <div id="container">
       <div id="transitionOverlay"></div>
