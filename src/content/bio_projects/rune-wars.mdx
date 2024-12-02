@@ -1,0 +1,205 @@
+---
+title: "Connecting people to each other and their bodies through a multiplayer AR game"
+description: "Rune Wars is a simple yet strategic multiplayer PvP game to help people connect with each other and exercise in a more engaging way while immersing them in a world of magic and mysticism."
+tags: ["<Award/> Immerse the Bay 2024 - Winner", "spatial design", "dev"]
+image: "../../images/covers/Rune Wars.jpg"
+alt: "Rune Wars"
+date: "11/1/2024"
+---
+import { SEO } from "astro-seo";
+
+import "../../../bioluminescence/styles/post.css";
+import Tag from "../../../bioluminescence/components/Tag.svelte";
+
+import Runes from "../../images/runeWars/runes.jpg";
+import RunicWalls from "../../images/runeWars/runicWalls.jpg";
+import RunicWallMaterial from "../../images/runeWars/runicWallsMaterial.jpg";
+import Onboarding from "../../images/runeWars/onboarding.jpg";
+import ShortStack from "../../images/runeWars/shortStack.jpg";
+
+import TeamLunch from "../../images/runeWars/teamLunch.jpg";
+import PostHackRest from "../../images/runeWars/postHackRest.jpg";
+import RealityHack from "../../images/runeWars/realityHack.jpg";
+import BeatSaber from "../../images/runeWars/beatSaber.jpg";
+
+import Overview from "../../../bioluminescence/components/post/Overview.svelte";
+import ProblemSolutionStatement from "../../../bioluminescence/components/post/ProblemSolutionStatement.svelte";
+import PageSection from "../../../bioluminescence/components/post/PageSection.svelte";
+import Gallery from "../../../bioluminescence/components/post/Gallery.svelte";
+import LinkToLive from "../../../bioluminescence/components/post/LinkToLive.svelte";
+import PhotoGallery from "../../../bioluminescence/components/PhotoGallery.svelte";
+import GalleryItem from "../../../bioluminescence/components/GalleryItem.svelte";
+
+<SEO
+  title="Jessica Sheng - Rune Wars"
+  description="Connecting people to each other and their bodies through a multiplayer AR game - a simple yet strategic multiplayer PvP game to help people connect with each other and exercise in a more engaging way while immersing them in a world of magic and mysticism."
+  openGraph={{
+    basic: {
+      title: "Jessica Sheng - Rune Wars",
+      type: "website",
+      image:
+        "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+    },
+  }}
+/>
+
+
+
+<div class="caseStudyVideo">
+<div class="video">
+  <iframe
+    width="100%"
+    height="100%"
+    src="https://www.youtube.com/embed/5Q7gmLzvGM8?si=vfevm6rAjZzTtyBx"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+</div>
+  <Overview
+    year="2024"
+    tags={["<Award/> snapchat spectacles - 3rd place", "duration - 36 hours", "team size - 4", "tools - blender, lens studio", "role - 3d designer, dev"]}
+  >
+
+  <h1 slot="header">
+    Rune Wars is the first competitive multiplayer AR game to be 
+    built on the Spectacles that connects people to each other and their bodies.
+  </h1>
+  <div slot="overviewDescription">
+    This project was created during the **Immerse the Bay 2024** hackathon at Stanford, where we 
+    were one of the first people who had the opportunity to develop for the **Snapchat Spectacles**.
+    <br />
+    In this hackathon, we wanted to make real world AR be more engaging and fun, which led to us creating a 
+    game that focuses on connecting people through a friendly, competitive environment while also encouraging 
+    them to exercise and move around. We wanted to capitalize on the unique opportunity provided by the Spectacles 
+    to develop an experience that can be used outdoors and retain the user's **freedom of movement**. The Spectacles 
+    also provided us with the perfect platform to blend the physical and digital worlds in a seamless way, so we wanted 
+    to explore how we can bring **fantastical elements** and stories of magic into the real world.
+  </div>
+</Overview>
+
+<ProblemSolutionStatement>
+  <p slot='problem'>
+    Within the realm of XR, there is one thing that repeatedly draws people in: **gaming**. While some of the most successful XR games 
+    do implement features to connect 
+    people to each other, they often lack a **physical component** that is a critical foundation of human connection. 
+  </p>
+
+  <p slot="solution">
+    **Rune Wars** transforms XR gaming by introducing **physical PvP** to foster **connection through competition**, where users actively move 
+    and compete in shared spaces. Through Spectacles' true AR, the game seamlessly **blends the real with the fantastical** to 
+    create an enhanced reality.
+  </p>
+</ProblemSolutionStatement>
+
+<PageSection>
+  <h2 slot="sectionTitle">Process</h2>
+  <p slot="description">
+    I mainly worked on creative direction and design for the project, creating the models and coming up with a compelling 
+    narrative for the game. We wanted to merge the competitive nature of PvP games with the mysticism and intrigue that fantasy 
+    games often bring to bring a unique experience to the players. Because Lens Studio is still a relatively new platform, each of us 
+    on the team ended up taking on a few features to develop and implement in the game.
+  </p>
+</PageSection>
+
+<Gallery
+  imgSrc={[
+    Runes.src
+  ]}
+  alt={[
+    "Blender viewport - runes"
+  ]}
+  uniqueID={["fullImg"]}
+></Gallery>
+<p class="caption">*Left runes done by my teammate. Original runic system designed by u/orbnus_ on Reddit.*</p>
+<Gallery
+  imgSrc={[
+    RunicWalls.src,
+    RunicWallMaterial.src,
+    Onboarding.src,
+    ShortStack.src
+  ]}
+  alt={[
+    "Blender viewport - rune walls",
+    "Blender viewport - rune walls material",
+    "Lens Studio - onboarding",
+    "Lens Studio - short stack"
+  ]}
+  uniqueID={[]}
+/>
+
+<LinkToLive
+  links={[
+    "https://devpost.com/software/treejans-two-trojans-two-trees",
+    "https://github.com/jelly-shroom/rune-wars",
+  ]}
+  buttonText={[`view project on devpost >`, `try it out on github >`]}
+>
+  <h2 slot="header">Next steps</h2>
+  <p slot="body">
+    We envision Rune Wars to be a game that redefines the way sports and eSports are played, **bridging the gap between the physical and digital worlds**. 
+    The Snap Spectacles is the first of its kind to provide a platform that is so versatile and accessible in everyday life. We imagine a future where 
+    players form teams to play against one another in eSports that involve **real, physical movement** tied in with strategy and skill.
+  </p>
+</LinkToLive>
+
+<PageSection>
+<h2 slot="sectionTitle">Reflections</h2>
+<div slot="description">
+    ### Everything is about the people
+    This is reaffirmed again and again with each event I go to. When you have motivated people to work with and figure things out together, 
+    the project becomes a lot more than just the end product. I am able to stay persistent so much more easily when I know I have others 
+    who will not give up either, and the whole project becomes a **shared experience** that we can all look back on and be proud of. A hackathon 
+    is the best place to learn with, about, and from others. Working so persistently on a project with a team that is just as driven as you are 
+    is an experience that I will always cherish. I love how **connected** we become when we are all working towards the same goal, and this is how 
+    strangers suddenly transform into what feels like friends of many years.
+    <br />
+    ### Special thanks to...
+    **Steven Le** - for being an amazing teammate and friend and letting me crash at your place for the hack. Your energy and enthusiasm for everything 
+    is always something I look forward to, and I'm so glad we got to work together again.
+    <br/> 
+    **Rylan Pozniak Daniels** - for being the best Snap rizzler ever. We've competed against each other a few times now, and I'm so glad we finally got to 
+    work together! I love how your brain works--you always keep things interesting and fun.
+    <br />
+    **Cole Lee** - for being the most cracked creative I could ever ask to work with. The video you made for the opening ceremony will be a core memory of mine. 
+    You come IN CLUTCH and elevated our project to a whole new level.
+    <br />
+    **Aidan Wolf** - for developing <a href="https://smileycap.gg/shortstack" target="_blank">ShortStack</a> and giving THE most useful tool to make Lens Studio so much easier to work with. Your enthusiasm for mentoring 
+    and helping out us hackers is extremely appreciated. I cannot express enough how thankful we are for your presence.
+    <br />
+    **StanfordXR** - for hosting such an amazing event. I am so glad to have finally met everyone in person! You all are so kind and welcoming, and I am so, so, so
+    happy to be a part of the XR community because of you. I want to make it known that it is precisely because of YOU guys that I love the XR community so much. 
+    Not because of SpatialSC, not because of the tech, not because of other cool professionals within the field, but because of StanfordXR. You guys are the best. 
+    I can't wait to see you all again.
+</div>
+
+</PageSection>
+<br /><br /><br /><br /><br />
+
+</div>
+
+<PhotoGallery galleryStyle="caseGallery">
+    <GalleryItem
+      image={RealityHack}
+      alt="reality hack acceptance"
+      caption="admission to reality hack as a winning perk!"
+    />
+    <GalleryItem
+      image={BeatSaber}
+      alt="Beat Saber"
+      caption="post-hack beat saber tourney"
+    />
+    <GalleryItem
+      image={PostHackRest}
+      alt="tabletop rest"
+      caption="Cole resting on the table after our hack..."
+    />
+    <GalleryItem
+      image={TeamLunch}
+      alt="Team lunch"
+      caption="the stanford dining experence :o"
+    />
+    
+
+</PhotoGallery>

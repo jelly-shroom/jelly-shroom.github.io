@@ -1,0 +1,63 @@
+---
+title: "Machine Lifeform"
+description: "A piece of fanart for NieR: Automata that features fully procedural textures."
+tags: ["art", "3d model"]
+image: "../../images/covers/Machine Lifeform.jpg"
+alt: "Machine Lifeform"
+date: "1/1/2019"
+---
+import { SEO } from "astro-seo";
+
+import "../../../bioluminescence/styles/post.css";
+import Tag from "../../../bioluminescence/components/Tag.svelte";
+
+import CoverImage from "../../images/machineLifeform/coverImage_MachineLifeform.jpg";
+import Nodes from "../../images/machineLifeform/nodes.jpg";
+
+import Overview from "../../../bioluminescence/components/post/Overview.svelte";
+import PageSection from "../../../bioluminescence/components/post/PageSection.svelte";
+import Gallery from "../../../bioluminescence/components/post/Gallery.svelte";
+
+<SEO
+  title="Jessica Sheng - Machine Lifeform"
+  description="Machine Lifeform - a piece of fanart for NieR: Automata that features fully procedural textures."
+  openGraph={{
+    basic: {
+      title: "Jessica Sheng - Machine Lifeform",
+      type: "A type.",
+      image:
+        "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+    },
+  }}
+/>
+
+<div class="caseStudy">
+<img src={CoverImage.src} alt="Machine Lifeform" class="fullImgCover"/>
+
+<Overview
+  year="2019"
+  tags={["individual project", "tools - blender"]}
+>
+
+<h1 slot="header">
+  A tribute to NieR: Automata.
+</h1>
+<div slot="overviewDescription">
+  <p>
+    This project features a fully procedural texture made from a series of node networks within Blender's scripting environment.
+  </p>
+</div>
+
+</Overview>
+
+<Gallery
+  imgSrc={[
+    Nodes.src
+  ]}
+  alt={[
+    "Nodes"
+  ]}
+  uniqueID={["fullImg"]} />
+
+
+</div>

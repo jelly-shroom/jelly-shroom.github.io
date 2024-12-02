@@ -76,9 +76,6 @@
   }
 
   @media screen and (max-width: 600px) {
-    .gooeyWrapper {
-      /* margin-left: -4rem; */
-    }
     .visible-title {
       font-size: 2.5em;
     }

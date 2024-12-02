@@ -1,0 +1,45 @@
+---
+title: "Obsessed"
+image: "https://images2.imgbox.com/86/5f/FRKHxP32_o.jpg"
+alt: "11/15/2024 doodle"
+date: "11/15/2024"
+---
+import { SEO } from "astro-seo";
+
+import "../../../bioluminescence/styles/journalEntry.css";
+
+import JournalHeading from "../../../bioluminescence/components/journal/JournalHeading.svelte";
+import JournalBody from "../../../bioluminescence/components/journal/JournalBody.svelte";
+
+
+
+<SEO
+  title="Jessica Sheng - Obsessed"
+  description="Exploring educational MR experiences through the Apple Vision Pro - an interactive experience that breaks down the components of the Wide5 HMD headset."
+  openGraph={{
+    basic: {
+      title: "Obsessed",
+      type: "website",
+      image:
+        "https://images2.imgbox.com/86/5f/FRKHxP32_o.jpg",
+    },
+  }}
+/>
+
+<img src={"https://images2.imgbox.com/86/5f/FRKHxP32_o.jpg"} alt={frontmatter.alt}/>
+<JournalHeading date={frontmatter.date} header={frontmatter.title} />
+<JournalBody>
+  <div slot="body">
+    I absolutely love a great story. Arcane has my heart. The execution of the story is top notch--from the characters to the plot to the animation. 
+    There are so many themes it explores, yet it is able to develop all of them so well. How??? It is able to explore so much and not take away 
+    from any of the other themes. Its characters are *real and flawed*, and the relationships between them are so complex. The world-building 
+    is intricate, and it actively shapes and reflects the characters' internal struggles. It is a tool to further develop the characters and 
+    the plot. The artistic choices within 
+    the animation style and the music are all so well thought out, with each change and shift serving to deepen our understanding of the characters. 
+    Most of all, Arcane doesn't rely on cheap drama or forced conflict--it finds moments in authentic character relationships and choices 
+    to drive the story forward. 
+    Everyting about Arcane is so well done. It is so 
+    difficult to create a piece of media that executes so well on so many levels, ultimately achieving a perfect harmony 
+    where every element works together to create something greater than the sum of its parts.
+  </div>
+</JournalBody>

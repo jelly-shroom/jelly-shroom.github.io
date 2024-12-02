@@ -1,0 +1,222 @@
+---
+title: "Streamlining access to electrowetting on dielectric (EWOD) technology via open-source"
+description: "eDrops Community is an open-source platform designed to <strong>democratize access</strong> to EWOD technology, enabling users to <strong>create and share</strong> their own EWOD projects and designs."
+tags: ["internship @ucla", "product design", "ui"]
+image: "../../images/covers/eDrops.jpg"
+alt: "eDrops Community"
+date: "5/1/2022"
+---
+import { SEO } from "astro-seo";
+
+import "../../../bioluminescence/styles/post.css";
+import Tag from "../../../bioluminescence/components/Tag.svelte";
+
+import Display from "../../images/eDrops/display.jpg";
+import CompetitiveAnalysis from "../../images/eDrops/analysis.png";
+import UISketches from "../../images/eDrops/sketches.png";
+import Wireframes from "../../images/eDrops/wireframes.png";
+import CoverImage from "../../images/covers/eDrops.jpg";
+import FinalUI from "../../images/eDrops/finalUI.png";
+import ColorProcess from "../../images/eDrops/colors.png";
+import Logic from "../../images/eDrops/projectLogic.png";
+
+import Overview from "../../../bioluminescence/components/post/Overview.svelte";
+import ProblemSolutionStatement from "../../../bioluminescence/components/post/ProblemSolutionStatement.svelte";
+import PageSection from "../../../bioluminescence/components/post/PageSection.svelte";
+import Gallery from "../../../bioluminescence/components/post/Gallery.svelte";
+import ProjectShowcase from "../../../bioluminescence/components/post/ProjectShowcase.svelte";
+import LinkToLive from "../../../bioluminescence/components/post/LinkToLive.svelte";
+
+<SEO
+  title="Jessica Sheng - eDrops Community"
+  description="Streamlining access to electrowetting on dielectric (EWOD) technology via open-source - eDrops Community is an open-source platform designed to democratize access to EWOD technology, enabling users to create and share their own EWOD projects and designs."
+  openGraph={{
+    basic: {
+      title: "Jessica Sheng - eDrops Community",
+      type: "A type.",
+      image:
+        "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+    },
+  }}
+/>
+
+<div class="caseStudy">
+  <img src={CoverImage.src} alt="eDrops Community" id = "eDropsCoverBanner" class="fullImgCover"/>
+
+<Overview
+  year="2022"
+  tags={["internship @ucla", "duration - 1 month", "team size - 3", "tools - figma, procreate", "role - ui designer, ux designer"]}
+>
+
+<h1 slot="header">
+  <a href="https://community.edroplets.org/" target="_blank">eDrops Community</a> is a platform dedicated to building a collaborative hub to inspire electrowetting 
+  on dielectric (EWOD) research and development.
+</h1>
+<div slot="overviewDescription">
+  <p>
+    During my internship at UCLA's micro and nano manufacturing lab, I was tasked with designing a 
+    website centered around building a **community** for digital microfluidics enthusiasts, welcoming both beginners 
+    and experts in the field. The goal was to create a platform that would inspire **collaboration and innovation** in the field of EWOD research and development.
+  </p>
+  <br />
+  <p>
+    eDrops Community is an **open-source platform** that provides a space for anyone interested in microfluidics to come together and share their projects and ideas.
+  </p>
+  <br />
+  <p>
+    Outside of designing the website, I was also tasked with creating creative videos showcasing the capabilities 
+    of UCLA's fabricated EWOD chips. Working with PhD students allowed me to gain firsthand experience in the research process and expose myself to the world of academia.
+  </p>
+</div>
+
+</Overview>
+
+<ProblemSolutionStatement>
+  <p slot='problem'>
+    The field of EWOD technology is currently in a **fragmented** state, with research and 
+    development scattered across various institutions that have **little collaboration** between them. 
+    Additionally, there is lack of resources to make this technology **accessible** to the public and beginners.
+  </p>
+
+  <p slot="solution">
+    eDrops Community is a platform that aims to **unify** the EWOD community by providing a space for researchers, 
+    students, and enthusiasts to come together and **inspire** one another. This platform features a forum for discussions 
+    and project library for users to **share** their work and resources.
+  </p>
+</ProblemSolutionStatement>
+
+<PageSection>
+  <h2 slot="sectionTitle">Research</h2>
+  <p slot="description">
+    EWOD technology is greatly **inaccessible** to the public due to its high level of skill entry, 
+    and the lack of standardization results in **no interoperability** between different devices 
+    produced by different institutions. This also leads to an inefficient production process, as 
+    individual labs are forced to design and manufacture their own chips from scratch.
+  </p>
+</PageSection>
+
+<Gallery
+  imgSrc={[Logic.src, CompetitiveAnalysis.src]}
+  alt={["Project Logic", "Competitive Analysis"]}
+  uniqueID={["fullImg", "fullImg"]}
+  galleryType="noGap"
+/>
+
+
+<PageSection>
+  <h2 slot="sectionTitle">Process</h2>
+  <p slot="description">
+    This project was my first exposure to working in a team alongside a developer and a project manager. 
+    Throughout the entire design process, I was in **constant communication** with the developer and manager 
+    to ensure that the designs were feasible and aligned with the project's goals.
+  </p>
+</PageSection>
+<br/>
+<Gallery
+  imgSrc={[UISketches.src, Wireframes.src, ColorProcess.src]}
+  alt={["UI Sketches", "Wireframes", "Color Process"]}
+  uniqueID={["fullImg", "fullImg", "fullImg"]}
+/>
+
+<br/>
+
+<PageSection>
+  <h2 slot="sectionTitle">Final design</h2>
+  <p slot="description">
+  </p>
+</PageSection>
+</div>
+
+<ProjectShowcase
+  image={FinalUI.src}
+  typeface={[
+    { className: "roboto-regular", displayName: "Roboto Regular" },
+    { className: "roboto-bold", displayName: "Roboto Bold" },
+  ]}
+  colorPalette={[
+    {
+      background: "#334155",
+      foreground: "#FFFFFF",
+    },
+    {
+      background: "#CBD5E1",
+      foreground: "#000000",
+    },
+    {
+      background: "#F8FAFC",
+      foreground: "#000000",
+    },
+    {
+      background: "#F1F5F9",
+      foreground: "#000000",
+    },
+    {
+      background: "#0369A1",
+      foreground: "#FFFFFF",
+    },
+  ]}
+>
+  <p slot="targetUser">People interested in EWOD technology, ages **18-65**</p>
+</ProjectShowcase>
+<br /><br /><br /><br />
+<LinkToLive
+  links={[
+    "https://community.edroplets.org/"
+  ]}
+  buttonText={[`check out edrops community! >`]}
+>
+  <h2 slot="header">Take a look</h2>
+  <p slot="body">
+    As of my current re-write of this case study (April 4, 2024), the eDrops Community website 
+    is still in development. But! At least it is now public, so feel free to check it out!
+  </p>
+</LinkToLive>
+<br />
+
+<div class="caseStudy">
+
+<PageSection>
+<h2 slot="sectionTitle">Reflections</h2>
+  <div  slot="description">
+      <h3>Academia is a scary place.</h3>
+        <p>
+            Just kidding! But in all seriousness, working with PhD students was a very eye-opening experience. 
+            While it may seem fun to go into research and just do a deep dive into a topic you're passionate about, 
+            seeing it with my own eyes made me realize that it's not all fun and games. I would watch the students 
+            stay in the lab day in and day out, conducting experiments and drafting up their own papers. Hearing about 
+            their experiences within academia made me realize doing a deep dive into a topic you're passionate about comes 
+            with a lot of **other responsibilities and stressors** that I hadn't considered before.
+        </p>
+
+        <br /><br />
+
+          <h3>Working with a team is completely different from working alone.</h3>
+          <p>
+              This was my first time working with a team on a project, and it was such an interesting experience. 
+              Before, I would be the one to make all the decisions and do all the work. In a team, it was more 
+              about **collaboration and communication**. Working with a developer ensured that my designs were feasible, 
+              and working with a project manager ensured that the project was on track according to their vision, rather 
+              than my own. All this meant that I had to be **flexible and open-minded** to other people's ideas and opinions. 
+              I would be sending emails back and forth with the developer and manager, asking if certain designs were possible 
+              and which ones would be the best to implement. It was a lot of back and forth, but it was a great learning experience.
+          </p>
+
+          <br /><br />
+
+          <h3>It's a lot of public speaking.</h3>
+          <p>
+              Every Friday we would have a group presentation to the professor to discuss our work throughout 
+              the week and next steps. It was definitely a nerve-wracking experience, especially since the professor was 
+              critical with his critiques, but it was a great way to practice my **public speaking** skills. While I wouldn't have 
+              voluntarily put myself through this experience, I am immensely grateful that I had to go through the process of defending 
+              my thought processes and decisions. This taught me so much about how to present my work in a way that is **understandable 
+              and engaging** to others while **cutting the BS**.
+          </p>
+          </div>
+
+</PageSection>
+</div>
+<br /><br /><br /><br />
+
+
+<img src={Display.src} class="imageFill" />

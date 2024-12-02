@@ -5,14 +5,14 @@ import NextProject from "../../../../bioluminescence/components/NextProject.svel
 import Footer from "../../../../bioluminescence/components/Footer.astro";
 
 export async function getStaticPaths() {
-  const projects = await getCollection("projects");
+  const projects = await getCollection("bio_projects");
   return projects.map((post) => ({ params: { slug: post.slug } }));
 }
 
 const { slug } = Astro.params;
 
 // use date
-const projects = (await getCollection("projects")).sort((a, b) =>
+const projects = (await getCollection("bio_projects")).sort((a, b) =>
   a.data.date > b.data.date ? -1 : 1
 );
 
