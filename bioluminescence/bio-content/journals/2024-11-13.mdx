@@ -1,0 +1,59 @@
+---
+title: "Community comes first"
+image: "https://images2.imgbox.com/91/af/ZWYu4dRL_o.jpg"
+alt: "11/13/2024 doodle"
+date: "11/13/2024"
+---
+import { SEO } from "astro-seo";
+
+import "../../styles/journalEntry.css";
+
+import JournalHeading from "../../components/journal/JournalHeading.svelte";
+import JournalBody from "../../components/journal/JournalBody.svelte";
+
+
+<SEO
+  title="Jessica Sheng - Community comes first"
+  description="Exploring educational MR experiences through the Apple Vision Pro - an interactive experience that breaks down the components of the Wide5 HMD headset."
+  openGraph={{
+    basic: {
+      title: "Community comes first",
+      type: "website",
+      image:
+        "https://images2.imgbox.com/91/af/ZWYu4dRL_o.jpg",
+    },
+  }}
+/>
+
+<img src={"https://images2.imgbox.com/91/af/ZWYu4dRL_o.jpg"} alt={frontmatter.alt}/>
+<JournalHeading date={frontmatter.date} header={frontmatter.title} />
+<JournalBody>
+  <div slot="body">
+    I have come to realize that community is the most important thing to me. With everything I get involved with, it is less about 
+    the work and more about being able to connect and foster strong relationships with the people around me. **My environment makes 
+    who I am**, so I am always looking for ways to surround myself with people who inspire me and make me feel good about myself. 
+    No matter how interested I am in exploring something, it will never become a passion if I am not able to share it with others. 
+    Some of the most important traits I look for in a community are **support, a sense of belonging, passion, and drive**. 
+    These are the things that make me feel like I am growing and learning from the people around me.
+    <br/> 
+    So, I will dedicate this entry to the communities that hold a special place in my heart.
+    <br/>
+    **IYA**--IYA is goated. It was my first exposure to a community of people who were all super driven and passionate about what they do. 
+    Being surrounded by IYA people has made me so much more proactive in my own life because the energy is absolutely contagious. What 
+    do you mean you are meeting with a VC today? It's only the third week of freshman year! Everyone is so inspiring and supportive of each other. 
+    Ideas are never met with discouragement, rather, they are met with enthusiasm and suggestions for improvement. IYA is my home.
+    <br/>
+    **StanfordXR**--Everyone within StanfordXR is so sweet. They are all so cracked as well! I was able to feel at home 
+    within the community almost immediately despite barely knowing me. It is so nice to be able to share my 
+    interests with others and have them be just as excited about it as I am, and because it is a new space, anything anyone does is all very experimental. 
+    Pursuing these experimental projects requires a lot of drive and vision, making this the perfect little bubble of creativity and innovation.
+    This is the space where everyone grows and learns from each other.
+    <br/>
+    **Hangar 18 (Upland location)**--Shoutout to my climbing gym! Going to the gym 4x a week during the summer has allowed me to really get to know some 
+    people. I see the same faces every time I go, and it is so nice to be able to share a smile and a quick chat with them. It also provides a good 
+    bonding experience when we are all struggling to finish a route. The climbing community is so supportive and encouraging! I remember moments 
+    when strangers would cheer me on or ask me about a route, and these conversations suddenly turn into advice on how to meal prep in college.
+    <br/>
+    Thank you to all the communities that have made me feel at home. I am grateful for the people I have met and the experiences I have had.
+  </div>
+</JournalBody>
