@@ -36,7 +36,7 @@ const featuredProjects = ["studygarden", "dr-trust", "rune-wars"];
     <Blobs client:load />
     <Particles client:load />
   </div>
-  <div style="margin: auto; width: 70vw;">
+  <div class="glass-bg">
     <h2 style="margin-bottom: 2rem;">featured projects</h2>
 
     <ProjectContainer>
@@ -52,3 +52,19 @@ const featuredProjects = ["studygarden", "dr-trust", "rune-wars"];
     <Footer />
   </div>
 </Site>
+
+<style>
+  .glass-bg {
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 100px;
+  }
+
+  @media (max-width: 800px) {
+    .glass-bg {
+      padding-right: 5%;
+      padding-left: 5%;
+      padding-top: 70px;
+    }
+  }
+</style>

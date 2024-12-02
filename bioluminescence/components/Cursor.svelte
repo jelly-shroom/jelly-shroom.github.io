@@ -1,5 +1,8 @@
 <script lang="ts">
   import { onMount, onDestroy } from "svelte";
+  // Detect if the device is a touch device
+  const isTouchDevice =
+    "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
   let cursorBlob: HTMLDivElement;
   let smallCircle: HTMLDivElement;
@@ -148,6 +151,7 @@
   }
 
   onMount(() => {
+    if (isTouchDevice) return;
     window.addEventListener("mousemove", trackMouseMovement);
 
     buildDots();

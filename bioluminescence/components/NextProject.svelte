@@ -98,7 +98,7 @@
 
   @media screen and (max-width: 800px) {
     .nextProjectContainer {
-      max-width: 70%;
+      max-width: 90%;
     }
     .nextProjectButton {
       flex-direction: column;
@@ -117,7 +117,7 @@
 
   @media screen and (max-width: 600px) {
     .nextProjectContainer {
-      max-width: 90%;
+      width: 90%;
     }
 
     .nextProjectButton h2,
