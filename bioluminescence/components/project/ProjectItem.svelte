@@ -137,12 +137,12 @@
   }
 
   .imageWrapper {
-    display: flex;
+    /* display: flex; */
     flex-shrink: 0;
 
     align-items: start;
     border-radius: 5px;
-    margin: auto;
+    margin: auto 0;
     background-color: var(--bioluminescent-bg);
     height: 100%;
     width: 40%;
