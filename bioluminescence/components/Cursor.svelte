@@ -26,8 +26,8 @@
       this.lockY = 0;
       this.angleX = 0;
       this.angleY = 0;
-      this.x = 0;
-      this.y = 0;
+      this.x = mousePosition.x;
+      this.y = mousePosition.y;
       this.scale = 1 - 0.03 * index;
       this.range = width / 2 - (width / 2) * this.scale + 2;
       this.limit = width * 0.75 * this.scale;
@@ -73,6 +73,16 @@
   function buildDots() {
     for (let i = 0; i < amount; i++) {
       dots.push(new Dot(i));
+    }
+  }
+
+  function setInitialSpanStyles() {
+    if (cursorBlob) {
+      const spans = cursorBlob.querySelectorAll("span");
+      spans.forEach((span) => {
+        span.style.width = `${NORMAL_DOT_SIZE}px`; // Initial width
+        span.style.height = `${NORMAL_DOT_SIZE}px`; // Initial height
+      });
     }
   }
 
@@ -139,7 +149,14 @@
 
   onMount(() => {
     window.addEventListener("mousemove", trackMouseMovement);
+
+    buildDots();
+    requestAnimationFrame(render);
+
     lastFrame = Date.now();
+
+    setInitialSpanStyles(); // Set initial styles for spans
+
     const hoverableElements = document.querySelectorAll(
       'a, button, [role="button"], .hoverable'
     );
@@ -147,21 +164,6 @@
       element.addEventListener("mouseenter", onMouseHover);
       element.addEventListener("mouseleave", onMouseHoverOut);
     });
-    buildDots();
-    requestAnimationFrame(render);
-  });
-
-  onDestroy(() => {
-    window.removeEventListener("mousemove", trackMouseMovement);
-
-    const hoverableElements = document.querySelectorAll(
-      'a, button, [role="button"], .hoverable'
-    );
-    hoverableElements.forEach((element) => {
-      element.removeEventListener("mouseenter", onMouseHover);
-      element.removeEventListener("mouseleave", onMouseHoverOut);
-    });
-    window.clearTimeout(timeoutID);
   });
 </script>
 

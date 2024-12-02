@@ -50,19 +50,46 @@
   };
 </script>
 
-<button onclick="toggleVersion()">Switch Version</button>
+<button onclick="toggleVersion()"
+  ><svg
+    viewBox="0 0 25 25"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15.9944 3.93582L14.5664 4.71682L15.9944 5.49783L16.7754 6.92584L17.5564 5.49783L18.9844 4.71682L17.5564 3.93582L16.7754 2.50781L15.9944 3.93582ZM10.5624 4.74943C6.90482 5.48603 4.15039 8.71726 4.15039 12.5918C4.15039 17.0101 7.73211 20.5918 12.1504 20.5918C15.1106 20.5918 17.697 18.9836 19.0806 16.5916C14.1422 16.5541 10.1504 12.5391 10.1504 7.59182C10.1504 6.61267 10.2817 5.65498 10.5624 4.74943ZM2.15039 12.5918C2.15039 7.06898 6.62754 2.59182 12.1504 2.59182H13.8841L13.016 4.09252C12.4375 5.09273 12.1504 6.2803 12.1504 7.59182C12.1504 11.4578 15.2844 14.5918 19.1504 14.5918C19.6122 14.5918 20.0626 14.5473 20.4979 14.4625L22.1805 14.1346L21.6376 15.7607C20.3127 19.7291 16.5671 22.5918 12.1504 22.5918C6.62754 22.5918 2.15039 18.1147 2.15039 12.5918ZM20.6504 7.00781L21.564 8.67824L23.2344 9.59182L21.564 10.5054L20.6504 12.1759L19.7368 10.5054L18.0664 9.59182L19.7368 8.67824L20.6504 7.00781Z"
+    ></path>
+  </svg>
+</button>
 
 <style>
   button {
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+
+    height: 75px;
+    width: 75px;
+    border-radius: 100px;
+    border: 1px solid var(--lightAccent);
+    color: var(--lightAccent);
+    background-color: rgba(255, 255, 255, 0.7);
+    text-transform: lowercase;
+    transition: 0.25s;
+  }
+
+  button:hover {
     background-color: var(--lightAccent);
-    border: none;
-    border-radius: 10px;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+  }
+
+  svg {
+    width: 40px;
+    height: 40px;
   }
 </style>

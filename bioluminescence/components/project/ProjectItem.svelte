@@ -53,14 +53,15 @@
         <h2>
           {title}
         </h2>
-        <div class="tagContainer">
-          {#each tags as tag}
-            <Tag {tag} />
-          {/each}
-        </div>
+
         <p>
           {@html description}
         </p>
+      </div>
+      <div class="tagContainer">
+        {#each tags as tag}
+          <Tag {tag} />
+        {/each}
       </div>
     </div>
     <div class="glow-overlay" />
@@ -121,6 +122,10 @@
   .content {
     padding: 1.5rem;
     color: var(--dim-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     gap: 1rem;
   }
 
@@ -137,11 +142,10 @@
   }
 
   .imageWrapper {
-    /* display: flex; */
     flex-shrink: 0;
 
     align-items: start;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: auto 0;
     background-color: var(--bioluminescent-bg);
     height: 100%;
@@ -152,13 +156,16 @@
     width: 100%;
     height: 100%;
     object-fit: fill;
-    border-radius: 5px;
+    border-radius: 10px;
 
     object-position: center center;
   }
 
   .description {
     color: var(--dim-text);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .portfolio-item.locked {
@@ -169,11 +176,21 @@
     position: absolute;
     z-index: 10;
     left: 50%;
-    transform: translate(-50%, 0%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+
+    backdrop-filter: contrast(0.7) blur(4px) brightness(0.7) saturate(0);
+    border-radius: 15px;
+
+    overflow: hidden;
+
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
     text-align: center;
   }
@@ -223,6 +240,10 @@
   @media screen and (max-width: 600px) {
     .portfolio-item {
       width: 100%;
+    }
+
+    .content p {
+      display: none;
     }
 
     .timeline-dot {
