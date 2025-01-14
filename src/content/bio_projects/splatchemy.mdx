@@ -1,0 +1,144 @@
+---
+title: "Reimagining digital placemaking through interactive 3D play"
+description: "Splatchemy transforms ordinary public spaces into interactive discovery zones where players combine everyday objects to create magical new combinations, breathing life into static environments with Web3D technology."
+tags: ["spatial design", "dev"]
+image: "../../images/covers/Splatchemy.jpg"
+alt: "Splatchemy!"
+date: "1/1/2025"
+---
+import { SEO } from "astro-seo";
+
+import "../../../bioluminescence/styles/post.css";
+import Tag from "../../../bioluminescence/components/Tag.svelte";
+
+import BTS1 from "../../images/splatchemy/bts1.jpg";
+import BTS2 from "../../images/splatchemy/bts2.jpg";
+
+import Overview from "../../../bioluminescence/components/post/Overview.svelte";
+import ProblemSolutionStatement from "../../../bioluminescence/components/post/ProblemSolutionStatement.svelte";
+import PageSection from "../../../bioluminescence/components/post/PageSection.svelte";
+import Gallery from "../../../bioluminescence/components/post/Gallery.svelte";
+import LinkToLive from "../../../bioluminescence/components/post/LinkToLive.svelte";
+import GalleryItem from "../../../bioluminescence/components/GalleryItem.svelte";
+
+<SEO
+  title="Jessica Sheng - Splatchemy!"
+  description="Splatchemy transforms ordinary public spaces into interactive discovery zones where players combine everyday objects to create magical new combinations, breathing life into static environments withWeb3D technology."
+  openGraph={{
+    basic: {
+      title: "Jessica Sheng - Splatchemy!",
+      type: "website",
+      image:
+        "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+    },
+  }}
+/>
+
+<div class="video">
+  <iframe
+    width="100%"
+    height="100%"
+    src="https://www.youtube.com/embed/enW8dC88_3o?si=2adD3-Yh6c0onwJQ"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<div class="caseStudyVideo">
+  <Overview
+    year="2025"
+    tags={["duration - 4 weeks", "individual project", "tools - blender, niantic studio"]}
+  >
+
+  <h1 slot="header">
+    Splatchemy! transforms spaces into playful discovery zones to reimagine 
+    public spaces.
+  </h1>
+  <div slot="overviewDescription">
+    **Splatchemy!** combines Gaussian splat technology with intuitive object interactions to create an experience 
+    that turns a simple park gazebo into a vibrant sanctuary where players can experiment and create. The game 
+    is designed to be a **Web3D experience**, allowing players to access the game from any platform and reimagine 
+    the world around them. 
+  </div>
+</Overview>
+
+<ProblemSolutionStatement>
+  <p slot='problem'>
+    Public spaces like parks and gazebos often remain **static and underutilized**. These spaces have the potential to 
+    be transformed into new, more engaging spaces that foster creativity and play. Splatchemy! aims to breathe 
+    life into these spaces through **gaussian splats and 3D objects**.
+  </p>
+
+  <p slot="solution">
+    Splatchemy! transforms static public spaces into interactive environments, creating new opportunities for
+    **community engagement** in public spaces, **creative exploration**, and **environmental appreciation** through digital augmetations.
+  </p>
+</ProblemSolutionStatement>
+
+<PageSection>
+  <h2 slot="sectionTitle">Process & Challenges</h2>
+  <p slot="description">
+    The development of Splatchemy! presented unique technical challenges that required unique solutions and 
+    workarounds. For example, there is currently no built-in prefab system to reuse preconfigured objects. 
+    I developed a workaround by iterating through all components of an entity and applying them to a newly spawned one, 
+    effectively cloning the object. This approach allowed me to dynamically spawn objects with consistent configurations.
+    <br />
+    This project was my first experience with 8th Wall, and I had to learn how to use the Niantic Studio from scratch. 
+    This was also my first deep dive into TypeScript and JavaScript, which provided an additional layer of complexity 
+    to the development process. The Niantic team provided such a great environment for learning and so many resources to 
+    help me get started. I am grateful for the opportunity to work with them.
+  </p>
+</PageSection>
+
+<Gallery
+  imgSrc={[
+    BTS1.src
+  ]}
+  alt={[
+    "Niantic Studio viewport"
+  ]}
+  uniqueID={["fullImg"]}
+></Gallery>
+<p class="caption">*Niantic Studio editor*</p>
+<Gallery
+  imgSrc={[
+     BTS2.src
+  ]}
+  alt={[
+    "Blender viewport - rune walls",
+  ]}
+  uniqueID={["fullImg"]}
+/>
+<p class="caption">*Code snippet for cloning entities*</p>
+<div class="columnContainer">
+<div>
+  ### Special thanks to...
+  **George Butler** - for being such an amazing mentor within the program. Your extensive programming expertise and constant support were invaluable. 
+  Thank you for all the support you offered both online and offline.
+  <br/>
+  **Evan Carlson** - for being so willing to help and provide technical guidance early on. Without you, 
+  I would have been lost in the sea of TypeScript and JavaScript struggling to understand Niantic Studio's API for ages. 
+  <br/>
+  **Pablo de la Hoya** - for your exceptional program leadership and ensuring we had access to all the Niantic resources we needed. 
+  Your guidance and support were instrumental in the success of this project.
+</div>
+</div>
+<LinkToLive
+  links={[
+    "https://jessicasheng.8thwall.app/ar-alchemist/",
+    "https://www.8thwall.com/blog/post/184714022580/splatchemy",
+  ]}
+  buttonText={[`play the game >`, `read niantic's blog post >`]}
+>
+  <h2 slot="header">Next steps</h2>
+  <p slot="body">
+    The vision for Splatchemy! extends beyond its current implementation, with potential to expand into a 
+    full-fledged game that allows players to explore and create in a variety of shareable environments. Through gaming, 
+    Splatchemy! aims to foster **creativity, community engagement, and environmental appreciation** in public spaces.
+  </p>
+</LinkToLive>
+
+</div>
+
