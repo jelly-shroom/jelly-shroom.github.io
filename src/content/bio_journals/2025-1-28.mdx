@@ -1,0 +1,59 @@
+---
+title: "A love letter to ICXR"
+image: "https://images2.imgbox.com/f6/80/BmLS3zTP_o.jpg"
+alt: "1/28/2025 doodle"
+date: "1/28/2025"
+---
+import { SEO } from "astro-seo";
+
+import "../../../bioluminescence/styles/journalEntry.css";
+
+import JournalHeading from "../../../bioluminescence/components/journal/JournalHeading.svelte";
+import JournalBody from "../../../bioluminescence/components/journal/JournalBody.svelte";
+
+
+<SEO
+  title="Jessica Sheng - A Love Letter to ICXR"
+  description=""
+  openGraph={{
+    basic: {
+      title: "A love letter to ICXR",
+      type: "website",
+      image:
+        "https://images2.imgbox.com/f6/80/BmLS3zTP_o.jpg",
+    },
+  }}
+/>
+
+<img src={"https://images2.imgbox.com/f6/80/BmLS3zTP_o.jpg"} alt={frontmatter.alt}/>
+<JournalHeading date={frontmatter.date} header={frontmatter.title} />
+<JournalBody>
+  <div slot="body">
+    Reality Hack is always such a special event for me. Just when I thought no experience could top my experience at Reality Hack last year,
+    this year's RH manages to take the win. It marked the beginning of my journey last year--my first real step into the 
+    world of XR and the introduction to some of my favorite people in this world. Last year, all I knew was SpatialSC and a single 
+    StanfordXR tree. We made many memories of sneaking around into random MIT buildings and going through an emotional rollercoaster 
+    of a hack. 
+    <br/>
+    Over the course of a year, I have gotten to know so many more ICXR members and can proudly say that I have become 
+    friends with some of the most amazing people. This year, we made memories of sneaking around the MIT tunnels and hacking in the craziest 
+    places like the gym of a random hotel.
+    The memories that I will cherish forever are the ones that sound absolutely insane on paper--turning an old chair into a makeshift 
+    roller coaster in the depths of MIT tunnels, pedaling away on an exercise bike at 3 AM while debugging code, and somehow 
+    managing to take care of a drunk friend through it all. These are the beautiful moments of chaos that make Reality Hack special.
+    <br/>
+    Reality Hack isn't just about pushing the boundaries of technology or creating innovative solutions, but rather the magic that happens 
+    when passionate people come together. Many hackathons I've experienced tend to feel like a race to the finish line, but Reality Hack 
+    pulses with a different energy. It's in the shared pain of sleep deprivation during coffee runs, the collective excitement when 
+    someone's project unexpectedly works, and the genuine amazement when we see each other's creations. 
+    <br/>
+    This year, my team tackled the Hardware Hack when none of us knew anything about hardware, and we somehow managed to place in the top 10 
+    in the entire hackathon. This wasn't done through the efforts of just my team--teams were constantly helping each other out, sharing 
+    tools and resources, and offering advice. Truly, **Hardware Hack is the real Community Hack**. 
+    <br/>
+    To my ICXR family: thank you for welcoming me into this incredible community. From those first tentative steps into the XR world till 
+    now, you've shown me what it means to be a part of **a community that is driven by a shared passion and an unapologetic 
+    desire to build cool shit**. Here's to many more adventures, late-night hacking sessions, and memories that blur the lines 
+    between reality and dreams. Until we meet again.
+  </div>
+</JournalBody>

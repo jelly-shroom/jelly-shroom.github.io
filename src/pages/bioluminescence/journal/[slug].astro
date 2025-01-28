@@ -5,14 +5,14 @@ import Navigation from "../../../../bioluminescence/components/journal/Navigatio
 import Footer from "../../../../bioluminescence/components/Footer.astro";
 
 export async function getStaticPaths() {
-  const journals = await getCollection("journals");
+  const journals = await getCollection("bio_journals");
   return journals.map((journals) => ({ params: { slug: journals.slug } }));
 }
 
 const { slug } = Astro.params;
 
 // use date
-const journals = (await getCollection("journals")).sort((a, b) =>
+const journals = (await getCollection("bio_journals")).sort((a, b) =>
   a.data.date > b.data.date ? -1 : 1
 );
 
@@ -44,11 +44,9 @@ const navigationData = {
 ---
 
 <Site>
-  <div class="glass-bg">
-    <div class="journal">
-      <Content />
-      <Navigation {...navigationData} />
-    </div>
-    <Footer />
+  <div class="journal">
+    <Content />
+    <Navigation {...navigationData} />
   </div>
+  <Footer />
 </Site>

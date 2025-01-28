@@ -1,7 +1,6 @@
 a {
     text-decoration: underline;
     font-weight: bold;
-
 }
 
 h1 {
@@ -13,7 +12,6 @@ h1 {
 .journal {
     width: 800px;
     margin: 0 auto;
-    padding-top: 120px;
 }
 
 img {
