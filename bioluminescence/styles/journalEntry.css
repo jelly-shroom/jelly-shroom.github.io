@@ -43,7 +43,9 @@ img {
 }
 
 @media screen and (max-width: 600px) {
-
+    .journal {
+        margin-top: -50px;
+    }
     .caption {
         margin-bottom: 2rem;
     }
