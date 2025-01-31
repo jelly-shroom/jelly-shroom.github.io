@@ -8,9 +8,9 @@
 
 <style>
   div {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: auto;
-    display: grid;
     gap: 1rem;
   }
 
