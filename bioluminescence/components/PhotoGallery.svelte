@@ -18,6 +18,15 @@
     max-width: 80%;
   }
 
+  .nudgePetPhotoGallery {
+    max-width: 80%;
+    grid-template-areas:
+      "a a a"
+      "b c d"
+      "e f g"
+      "h h h";
+  }
+
   .drTrustPhotoGallery {
     max-width: 80%;
     grid-template-areas:

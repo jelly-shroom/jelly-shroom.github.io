@@ -56,6 +56,8 @@
     font-weight: 900;
     width: 100%;
     flex-shrink: 0;
+
+    padding-left: 0.5rem;
   }
 
   /* Your existing media queries */
@@ -72,6 +74,10 @@
       justify-content: left !important;
 
       gap: 2em !important;
+    }
+
+    .visible-title {
+      padding-left: 0;
     }
   }
 

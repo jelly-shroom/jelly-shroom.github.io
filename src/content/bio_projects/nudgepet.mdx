@@ -1,0 +1,304 @@
+---
+title: "Nudging people towards mindfulness and healthier habits with virtual ESAs"
+description: "Not everyone has the resources to own an emotional support animal. Nudge Pet helps provide the same benefits an ESA provides by dynamically responding to your stress levels to help you stay aware of your mental state."
+tags: ["<Award/> MIT Reality Hack 2025 - finalist", "spatial design", "dev"]
+image: "../../images/covers/Nudge Pet.jpg"
+alt: "Nudge Pet"
+date: "1/20/2025"
+---
+import { SEO } from "astro-seo";
+
+import "../../../bioluminescence/styles/post.css";
+import Tag from "../../../bioluminescence/components/Tag.svelte";
+
+import DivergentIdeation from "../../images/nudgePet/divergentIdeation.jpg";
+import ConvergentIdeation from "../../images/nudgePet/convergentIdeation.jpg";
+import StateMachine from "../../images/nudgePet/stateMachine.jpg";
+import Rig from "../../images/nudgePet/blenderRig.jpg";
+import Texture from "../../images/nudgePet/blenderTexture.jpg";
+import Petting from "../../images/nudgePet/petSnuffles.gif";
+import Meditation from "../../images/nudgePet/meditation.gif";
+import OpenBCI from "../../images/nudgePet/openBCI.jpg";
+import Readings from "../../images/nudgePet/emotibitReadings.gif";
+
+import Snuffles from "../../images/nudgePet/snuffles.jpg";
+import HackerGirlie from "../../images/nudgePet/hackerGirlie.jpg";
+import GroupCircle from "../../images/nudgePet/groupCircle.jpg";
+import GymHack from "../../images/nudgePet/gymHack.jpg";
+import RealityHack from "../../images/nudgePet/realityHack.jpg";
+import Tunnel from "../../images/nudgePet/tunnel.jpg";
+import Intervention from "../../images/nudgePet/sleepingIntervention.jpg";
+import RealityCats from "../../images/nudgePet/realityCats.jpg";
+
+import Overview from "../../../bioluminescence/components/post/Overview.svelte";
+import ProblemSolutionStatement from "../../../bioluminescence/components/post/ProblemSolutionStatement.svelte";
+import PageSection from "../../../bioluminescence/components/post/PageSection.svelte";
+import Gallery from "../../../bioluminescence/components/post/Gallery.svelte";
+import LinkToLive from "../../../bioluminescence/components/post/LinkToLive.svelte";
+import PhotoGallery from "../../../bioluminescence/components/PhotoGallery.svelte";
+import GalleryItem from "../../../bioluminescence/components/GalleryItem.svelte";
+
+<SEO
+  title="Jessica Sheng - Nudge Pet"
+  description="Nudging people towards mindfulness and healthier habits with virtual ESAs - Not everyone has the resources to own an emotional support animal. Nudge Pet helps provide the same benefits an ESA provides by dynamically responding to your stress levels to help you stay aware of your mental state."
+/>
+
+<div class="video">
+  <iframe
+    width="100%"
+    height="100%"
+    src="https://www.youtube.com/embed/v8tnNr-b73s?si=RSbe88B1PiJz7byz"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<div class="caseStudyVideo">
+
+<Overview
+  year="2024"
+  tags={["<Award/> Top 10 finalists", "duration - 2.5 days", "team size - 5", "tools - blender, unity", "role - product manager, 3d artist, spatial designer"]}
+>
+
+<h1 slot="header">
+  Nudge Pet is a mixed reality widget that helps you stay aware of your mental and emotional state in instances where you are vulnerable. 
+</h1>
+<div slot="overviewDescription">
+  This project was created at the **MIT Reality Hack 2025**
+  hackathon, where our team was deeply inspired by one of our teammate's emotional 
+  support animal (ESA). Really, we simply wanted to **have fun** at this hack and build something 
+  we could all be proud of, and we did just that!
+  <br />
+  Because ESAs are not accessible to everyone, we wanted to create a virtual version that could provide the same benefits. We used 
+  the **MetaQuest 3** to create a **mixed-reality** experience that dynamically responds to your stress levels that 
+  are detected through **OpenBCI's EmotiBit**.
+</div>
+
+</Overview>
+
+<ProblemSolutionStatement>
+  <p slot='problem'>
+    **43%** of all behaviors are habitual, and these habits are formed by a cue, a routine, and a reward. In moments of 
+    stress or anxiety, it can be difficult to break these habits and form new ones. In these vulnerable moments, it's 
+    easy to **mindlessly** fall back into old habits that are detrimental to our mental health.
+  </p>
+
+  <p slot="solution">
+    Nudge Pet is a **mixed reality widget** that helps you stay aware of your mental state in instances where you are vulnerable. 
+    By providing a **virtual ESA** that dynamically responds to your stress levels, we aim to help you stay aware of your mental state 
+    and **nudge you towards healthier habits**.
+  </p>
+</ProblemSolutionStatement>
+
+<PageSection>
+  <h2 slot="sectionTitle">Research</h2>
+  <div slot="description">
+    Our research for NudgePet focused on two key areas: the psychological **benefits of human-animal interaction** 
+    and the use of **physiological signals to detect emotional states**.
+    <br />
+    ### Human-Animal interaction
+    Studies have shown that animals, particularly pets, can provide significant 
+    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5800290/" target="_blank">emotional support and stress relief for humans</a>. 
+    This is partly due to the perception of animals as 
+    <a href="https://vhil.stanford.edu/publications/augmented-reality/advantages-virtual-dogs-over-virtual-people-using-augmented-reality" target="_blank">non-judgmental entities</a>, 
+    which allows people to confide in them more easily. The unconditional acceptance provided by animals can be beneficial when human relationships are affected by mental illness. 
+    Animals can act as <a href="https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=2785&context=honorstheses" target="_blank">"social catalysts"</a>, 
+    helping pet owners form more friendships and social connections. 
+    <br/>
+    In the context of virtual pets, studies have demonstrated that interaction with computer-simulated animals can 
+    <a href="https://www.researchgate.net/publication/280764411_Interacting_with_a_Computer-Simulated_Pet_Factors_Influencing_Children's_Humane_Attitudes_and_Empathy" target="_blank">promote empathy and positive attitudes in children</a>. 
+    Virtual pets have also been used successfully to encourage healthy 
+    behaviors and provide comfort in <a href="https://www.scientificarchives.com/public/assets/articles/article-pdf-1665943119-649.pdf" target="_blank">therapeutic settings</a>.
+    <br/>
+    ### Physiological signals
+    To accurately assess users' emotional states, we focused on three key physiological signals:
+    <br/>
+    **Electrodermal Activity (EDA):** EDA has been shown to be one of the <a href="https://www.sciencedirect.com/science/article/abs/pii/S0166432817314006" target="_blank">most effective measures</a> 
+    of anxiety, emotional status, cognitive status, and physiological activation. It measures changes in the electrical 
+    properties of the skin related to sweat gland activity.
+    <br/>
+    **Photoplethysmography (PPG):** PPG can provide information on heart rate, respiration, oxygen levels, and hydration. 
+    While <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5900369/" target="_blank">not as precise as ECG</a> for heart 
+    rate variability (HRV) measurements, it offers a good balance between accuracy and 
+    convenience for wearable applications.
+    <br/>
+    **Body Temperature:** Measured using a thermistor, body temperature can provide 
+    <a href="https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2023.1102937/full" target="_blank">additional context for emotional state assessment</a>. 
+    <br/>
+    Research has shown that combining these physiological signals can provide a comprehensive picture of an individual's 
+    stress levels and emotional state. By integrating these research findings into NudgePet, we aimed to create 
+    a virtual companion that could effectively detect users' emotional states and provide appropriate support, 
+    leveraging the psychological benefits of human-animal interaction in a digital format.
+  </div>
+</PageSection>
+
+<PageSection>
+  <h2 slot="sectionTitle">Process</h2>
+  <p slot="description">
+    As the team formed and started discussing ideas, I naturally fell into the role of a **product manager**. I was responsible for 
+    setting the vision, defining the scope, and ensuring that the team was aligned on the goals and objectives. Because I was also 
+    the only one with experience in **3D modeling and spatial design**, I took on the additional role of creating the 3D assets 
+    and smoothly integrating them within Unity.
+  </p>
+</PageSection>
+
+<Gallery
+  imgSrc={[
+    DivergentIdeation.src,
+    ConvergentIdeation.src,
+  ]}
+  alt={[
+    "Divergent ideation",
+    "Convergent ideation",
+  ]}
+  uniqueID={[""]}
+/>
+<p class="caption">*We went through the whole design strategy process, going from divergent to convergent ideation. (I love to use "what if?" 
+statements. The key is to say them **out loud**--it's meant to foster conversation.)*</p>  
+
+<Gallery
+  imgSrc={[
+    Texture.src,
+    Rig.src,
+  ]}
+  alt={[
+    "Blender texturing",
+    "Blender rigging",
+  ]}
+  uniqueID={[""]}
+/>
+<p class="caption">*I had to work with a horrible pre-made rig to tweak animations for my custom model of Snuffles. While it was extremely 
+tedious and made me question whether it really was worth spending time on this, **it really did bring in that level 
+of polish needed to place us in the top 10**.*</p>  
+
+<Gallery
+  imgSrc={[
+    StateMachine.src,
+  ]}
+  alt={[
+    "Animator state machine",
+  ]}
+  uniqueID={["fullImg"]}
+/>
+<p class="caption">*Big state machine for Unity animations! I also had to make many tedious tweaks here...*</p>  
+
+<Gallery
+  imgSrc={[
+    Petting.src,
+    Meditation.src,
+  ]}
+  alt={[
+    "Pet interactions",
+    "Meditation environment",
+  ]}
+  uniqueID={[""]}
+/>
+<p class="caption">*Pet interactions shown on the left, and immersive meditative environment on the right for extremely high stress situations.*</p>  
+
+<Gallery
+  imgSrc={[
+    OpenBCI.src,
+    Readings.src,
+  ]}
+  alt={[
+    "Pet interactions",
+    "Meditation environment",
+  ]}
+  uniqueID={[""]}
+/>
+<p class="caption">*Props to my team for getting the hardware to work so smoothly! We all expected much more blockers from working with the hardware.*</p>  
+
+
+<LinkToLive
+  links={[
+    "https://devpost.com/software/nudgepet",
+    "https://github.com/StevenLe2012/nudge_pet",
+  ]}
+  buttonText={[`view project on devpost >`, `try it out on github >`]}
+>
+  <h2 slot="header">Next steps</h2>
+  <p slot="body">
+    We plan to refine our emotion detection algorithms to enhance accuracy and expand the range of pet behaviors and 
+    interventions to provide more tailored support. 
+    Implementing AI will allow the pet to **learn and adapt** to individual users over time, creating a more personalized experience. 
+    We aim to 
+    explore partnerships with mental health professionals to integrate Nudge Pet into therapeutic practices, potentially 
+    broadening its impact in supporting emotional well-being.
+  </p>
+</LinkToLive>
+
+<PageSection>
+<h2 slot="sectionTitle">Reflections</h2>
+  <div  slot="description">
+    ### Once again, it's all about the people (I literally say this every time but it's genuinely my biggest takeaway) 
+    This was all of our first times working with hardware and doing at **hardware hack**, yet we somehow managed to pull through and 
+    create a project that made it to the top 10 finalists. We were all incredibly proud of what we had accomplished in just 2.5 days. 
+    Last year, I didn't know what to expect and was just excited to be there and to learn from the experience. Since then, I think I have matured a 
+    little more as a professional and really wanted to just have fun with this hack. That's probably what made it such a life-changing 
+    experience for me while also being so successful for our team.
+    <br/>
+    ### Special thanks to...
+    All of the friends I have made at ICXR and others in this community. I love you all.
+    <br/>
+    ### If you want to hear more about my personal journey, check out my [journal entry](https://jessicasheng.me/journal/2025-1-28/)!
+  </div>
+
+</PageSection>
+<br /><br /><br /><br /><br />
+
+</div>
+
+<PhotoGallery galleryStyle="nudgePetPhotoGallery">
+    <GalleryItem    
+      image={RealityHack}
+      alt="Reality Hack"
+      caption=''
+      gridArea="b"
+    />
+    <GalleryItem
+      image={GroupCircle}
+      alt="Group circle"
+      caption=""
+      gridArea="c"
+    />
+    <GalleryItem
+      image={Tunnel}
+      alt="MIT tunnels"
+      caption=""
+      gridArea="d"
+    />
+    <GalleryItem
+      image={HackerGirlie}
+      alt="Me"
+      caption=""
+      gridArea="e"
+    />
+    <GalleryItem
+      image={Snuffles}
+      alt="snuffles"
+      caption=""
+      gridArea="f"
+    />
+    <GalleryItem
+      image={GymHack}
+      alt="gym hacking setup"
+      caption=""
+      gridArea="g"
+    />
+    <GalleryItem
+      image={Intervention}
+      alt="gym hacking setup"
+      caption=""
+      gridArea="h"
+    />
+    <GalleryItem
+      image={RealityCats}
+      alt="gym hacking setup"
+      caption=""
+      gridArea="a"
+    />
+
+
+</PhotoGallery>
