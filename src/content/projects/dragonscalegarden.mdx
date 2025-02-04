@@ -1,0 +1,84 @@
+---
+title: "Dragon Scale Garden"
+description: "Environment concept"
+tags: ["art", "illustration"]
+image: "../../images/covers/Dragonscale Garden.jpg"
+alt: "Dragon Scale Garden"
+date: "8/30/2024"
+---
+import { SEO } from "astro-seo";
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import Illustration from "../../images/dragonScaleGarden/illustration.jpg";
+import Sketch from "../../images/dragonScaleGarden/sketches.jpg";
+import Greyscale from "../../images/dragonScaleGarden/greyscale.jpg";
+import Colorways from "../../images/dragonScaleGarden/colorways.jpg";
+import Illustration2 from "../../images/dragonScaleGarden/illustration2.jpg";
+
+import Overview from "../../components/post/Overview.svelte";
+import Gallery from "../../components/post/Gallery.svelte";
+import PageSection from "../../components/post/PageSection.svelte";
+
+<SEO
+  title="Jessica Sheng - Dragon Scale Garden"
+  description="Dragon Scale Garden - Environment concept"
+  openGraph={{
+    basic: {
+      title: "Jessica Sheng - Dragon Scale Garden",
+      type: "A type.",
+      image:
+        "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+    },
+  }}
+/>
+
+<img src={Illustration.src} alt="Dragonscale garden" class="fullImgCover"/>
+
+<div class="caseStudy">
+
+<Overview
+  year="2019"
+  tags={["individual project", "tools - procreate"]}
+>
+    <h1 slot="header">
+        Environment concept for a dragonscale garden
+    </h1>
+    <div slot="overviewDescription">
+    <p>
+        Personal environment design and illustration for fun.
+    </p>
+    </div>
+
+</Overview>
+
+<PageSection>
+    <h2 slot="sectionTitle">Process</h2>
+</PageSection>
+</div>
+<Gallery
+  imgSrc={[Sketch.src]}
+  alt={["Sketch"]}
+  uniqueID={["fullImg"]}
+/>
+<br/>
+
+<br/>
+<Gallery
+  imgSrc={[Colorways.src]}
+  alt={["Colorway 1"]}
+  uniqueID={["fullImg"]}
+/>
+<br/>
+
+
+<PageSection>
+    <h2 slot="sectionTitle">Final illustrations</h2>
+</PageSection>
+
+<Gallery
+  imgSrc={[Illustration.src, Illustration2.src]}
+  alt={["Final two illustrations"]}
+  uniqueID={[""]}
+/>
