@@ -1,0 +1,43 @@
+---
+title: "Go all in"
+image: "https://images2.imgbox.com/7b/74/HPL5Qnak_o.jpg"
+alt: "2/1/2025 doodle"
+date: "2/1/2025"
+---
+import { SEO } from "astro-seo";
+
+import "../../../bioluminescence/styles/journalEntry.css";
+
+import JournalHeading from "../../../bioluminescence/components/journal/JournalHeading.svelte";
+import JournalBody from "../../../bioluminescence/components/journal/JournalBody.svelte";
+
+
+<SEO
+  title="Jessica Sheng - Go all in"
+  description=""
+  openGraph={{
+    basic: {
+      title: "Go all in",
+      type: "website",
+      image:
+        "https://images2.imgbox.com/7b/74/HPL5Qnak_o.jpg",
+    },
+  }}
+/>
+
+<img src={"https://images2.imgbox.com/7b/74/HPL5Qnak_o.jpg"} alt={frontmatter.alt}/>
+<JournalHeading date={frontmatter.date} header={frontmatter.title} />
+<JournalBody>
+  <div slot="body">
+    When I came to college, I realized that opportunity is everywhere. There are so many things to get involved with, 
+    and it is easy to get overwhelmed. I remember feeling like I had to do everything because I was afraid of missing out on 
+    something important, and it still is something I am trying to work on. I tend to have a multitude of interests and want to 
+    explore all of them, which results in a poor quality of work in some areas. I end up in a situation where I have to 
+    pick and choose which opportunities to prioritize, which **isn't fair to the people I am working with**.
+    <br/>
+    So, I've been trying to **go all in**. This year, I want to truly commit to the things that I do, and proactively let 
+    people know when I am unable to commit to something. I want to be able to give my all to the projects that I am working on, 
+    because that's the only way to not only create something meaningful, but also to be fair to the people I am working with. 
+    When you're spread too thin, you end up not being able to give your best to anything, and that's not fair to anyone.
+  </div>
+</JournalBody>
