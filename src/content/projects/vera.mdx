@@ -1,0 +1,80 @@
+---
+title: "Vera (Vex)"
+description: "Character design"
+tags: ["art", "illustration"]
+image: "../../images/covers/Vera.jpg"
+alt: "Vera (Vex)"
+date: "9/1/2024"
+---
+import { SEO } from "astro-seo";
+
+import "../../styles/post.css";
+import Tag from "../../components/Tag.svelte";
+
+import Illustration from "../../images/vera/illustration.jpg";
+import Sketch1 from "../../images/vera/sketches1.jpg";
+import Sketch2 from "../../images/vera/sketches2.jpg";
+import Sheet from "../../images/vera/sheet.jpg";
+
+import Overview from "../../components/post/Overview.svelte";
+import Gallery from "../../components/post/Gallery.svelte";
+import PageSection from "../../components/post/PageSection.svelte";
+
+<SEO
+  title="Jessica Sheng - Vera (Vex)"
+  description="Vera (Vex) - Creating and modeling a design that blends organic and hard surface modeling techniques together."
+  openGraph={{
+    basic: {
+      title: "Jessica Sheng - Vera (Vex)",
+      type: "A type.",
+      image:
+        "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+    },
+  }}
+/>
+
+<div style="height: 125px" />
+<div class="caseStudy">
+<img src={Illustration.src} alt="Vera (Vex)" class="fullImgCover"/>
+
+<Overview
+  year="2019"
+  tags={["individual project", "tools - procreate"]}
+>
+    <h1 slot="header">
+        Character design for Vera (Vex)
+    </h1>
+    <div slot="overviewDescription">
+    <p>
+        Personal character design and illustration for fun.
+    </p>
+    </div>
+
+</Overview>
+
+<PageSection>
+    <h2 slot="sectionTitle">Process</h2>
+</PageSection>
+<Gallery
+  imgSrc={[Sketch1.src]}
+  alt={["Sketch 1"]}
+  uniqueID={["fullImg"]}
+/>
+<p class="caption">*I like to capture the **feel** of the character first, which is why I have so many iterations of the face and its expressions. 
+The hair is another point I focus on, because I think that captures a lot about the personality of a character.*</p>
+
+<Gallery
+  imgSrc={[Sheet.src]}
+  alt={["Character sheet"]}
+  uniqueID={["fullImg"]}
+/>
+<p class="caption">*Character sheet*</p>
+
+<Gallery
+  imgSrc={[Sketch2.src]}
+  alt={["Illustration sketches"]}
+  uniqueID={["fullImg"]}
+/>
+<p class="caption">*For the illustration, I try to find the pose I feel will capture her personality the best.*</p>
+
+</div>
