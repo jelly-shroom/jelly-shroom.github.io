@@ -1,0 +1,311 @@
+---
+title: "Creating emotional connections to Honda cars through adaptive AI"
+description: "The future of Honda in 15 years will be supported by adaptive personalization powered by AI. The Honda Asimo Insight Asimo builds connections with each Honda driver, creating lasting bonds and redefining the car experience."
+tags: ["Honda", "spatial design", "dev"]
+image: "../../images/covers/Honda Asimo Insight.jpg"
+alt: "Honda Asimo Insight"
+date: "4/1/2025"
+---
+import { SEO } from "astro-seo";
+
+import "../../../bioluminescence/styles/post.css";
+import Tag from "../../../bioluminescence/components/Tag.svelte";
+
+import InitialIdeation from "../../images/hondaAsimoInsight/initialIdeation.jpg";
+import Personalization from "../../images/hondaAsimoInsight/personalization.jpg";
+import CarsAsSocial from "../../images/hondaAsimoInsight/carsAsSocial.jpg";
+import SharedOwnership from "../../images/hondaAsimoInsight/sharedOwnership.jpg";
+import Storyboard from "../../images/hondaAsimoInsight/storyboarding.jpg";
+import CarOriginal from "../../images/hondaAsimoInsight/carOriginal.jpg";
+import CarMod from "../../images/hondaAsimoInsight/carMod.jpg";
+import ThreeScenes from "../../images/hondaAsimoInsight/3sceneBrainstorm.jpg";
+
+import Overview from "../../../bioluminescence/components/post/Overview.svelte";
+import ProblemSolutionStatement from "../../../bioluminescence/components/post/ProblemSolutionStatement.svelte";
+import PageSection from "../../../bioluminescence/components/post/PageSection.svelte";
+import Gallery from "../../../bioluminescence/components/post/Gallery.svelte";
+import LinkToLive from "../../../bioluminescence/components/post/LinkToLive.svelte";
+import PhotoGallery from "../../../bioluminescence/components/PhotoGallery.svelte";
+import GalleryItem from "../../../bioluminescence/components/GalleryItem.svelte";
+
+<SEO
+  title="Jessica Sheng - Honda Asimo Insight"
+  description="The future of Honda in 15 years will be supported by adaptive personalization powered by AI. The Honda Asimo Insight Asimo builds connections with each Honda driver, creating lasting bonds and redefining the car experience."
+  openGraph={{
+    basic: {
+      title: "Jessica Sheng - Honda Asimo Insight",
+      type: "website",
+      image:
+        "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+    },
+  }}
+/>
+
+<div class="video">
+  <iframe
+    width="100%"
+    height="100%"
+    src="https://www.youtube.com/embed/maUV6P4aihs?si=v5QPZ6glAM_4knFn"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<div class="caseStudyVideo">
+  <Overview
+    year="2024"
+    tags={["honda", "duration - 2 months", "team size - 4", "tools - blender, unity, figma", "role - design engineer"]}
+  >
+
+  <h1 slot="header">
+    The Honda Asimo Insight is our vision of how mobility will evolve in the next 15 years, 
+    supported by adaptive personalization powered by AI.
+  </h1>
+  <div slot="overviewDescription">
+    This semester, I had the opportunity to work with Honda on a project that re-imagines the car experience. As my team and I explored the
+    future of Honda, we realized that the car experience is not just about the car itself, but about the **connections** it creates. We built off of 
+    Honda's existing Asimo AI to create a car that is not just a car, but a **companion**.
+    <br />
+    Asimo *is* Honda. Asimo is **human-centered**--it elevates the unique personal style of each Honda driver. Asimo provides **trust and comfort**--it 
+    deepens the bond between Honda and its drivers by adapting the car experience to each person's needs. Asimo adds **wonder**--it delights and 
+    re-imagines what it means to grow with your car, co-authoring your journey with you.
+  </div>
+</Overview>
+
+<ProblemSolutionStatement>
+  <p slot='problem'>
+    As the era changes, so do the new generation of Honda drivers. As Honda drivers, we want to feel a sense of **connection** to our cars. 
+    We want our cars to be more than just a mode of transportation--we want them to be a part of our lives. So, how might we create a car 
+    that the next generation of Honda drivers can connect with?
+  </p>
+
+  <p slot="solution">
+    The **Honda Asimo Insight** builds off of Honda's existing Asimo AI to create a car that truly knows *you*, adapting to each driver's 
+    unique needs and preferences to create a personalized experience. Asimo grows with you, learning from your habits and preferences, creating a bond that is built on
+    **trust** and **comfort**.
+  </p>
+</ProblemSolutionStatement>
+
+<PageSection>
+  <h2 slot="sectionTitle">Process</h2>
+  <p slot="description">
+    I mainly worked on the prototyping of this project, where I was responsible for the design and development of the Asimo Insight experience. We started off by brainstorming 
+    ideas for what we wanted to see in a car and spent hours discussing what our current in-car experiences are like and how we wanted to augment that. AI was a large part of our 
+    discussions, and we recognized early on that any AI implementation must be extremely **nuanced**. It is important to understand where the line is drawn between AI 
+    being a **helpful assistant** and **AI being intrusive**. Very early on, we decided that we needed to make creating a **human-centered** and **adaptive** experience our 
+    North Star.
+  </p>
+</PageSection>
+
+<Gallery
+  imgSrc={[InitialIdeation.src]}
+  alt={["Initial ideation"]}
+  uniqueID={["fullImg"]}
+  caption={["Initial ideation"]}
+
+  ></Gallery>
+<p class="caption">*Initial ideation--We brainstormed what our positive and negative experiences with cars are like and how we might improve them.*</p>
+
+<Gallery
+  imgSrc={[SharedOwnership.src, Personalization.src, CarsAsSocial.src]}
+  alt={["Shared Ownership", "Personalization", "Cars as Social"]}
+  uniqueID={["fullImg", "fullImg", "fullImg"]}
+  caption={["Shared Ownership", "Personalization", "Cars as Social"]}
+  ></Gallery>
+<p class="caption">*We narrowed down to three key aspects of the car that resonated with our team to move forward with: cars as social experiences, cars with shared ownership, and cars with hyper-personalization.*</p>
+</div>
+
+<Gallery
+  imgSrc={[Storyboard.src]}
+  alt={["Storyboard"]}
+  uniqueID={["fullImg"]}
+  caption={["Storyboard"]}
+  ></Gallery>
+<div class="caseStudyVideo">
+<p class="caption">*Right before working on the video demo, I created a storyboard to map out the interactions and story we wanted to show.*</p>
+
+<PageSection>
+  <h2 slot="sectionTitle">Mid-Project Check-In</h2>
+  
+  <div slot="description">
+    <br/>
+    <div class="video">
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://www.youtube.com/embed/WDuzhGY8yxs?si=eiYacP_6GjY8lM8W"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <br />
+      Our video demo aimed to showcase Asimo's ability to adapt to individual users within a car environment, emphasizing its role in bridging human-technology relationships. 
+      Our core concept revolved around illustrating how the system could aid a user and dynamically adapt to their needs, enhancing the overall experience. With 
+      so many of our features revolving around how technology interacts with the user, we also wanted to illustrate how the system could strengthen **interpersonal 
+      connections**--specifically, by helping a parent and child engage in meaningful 
+      conversation during shared rides. We did not want the Asimo to become a replacement for human interaction, but rather a **facilitator** of it.
+      <br />
+      ### But... It could be better
+      We realized that by trying to show off all the features we wanted to highlight, we had difficulty creating a **cohesive story**. While we successfully hinted at 
+      capabilities like weather adaptivity, automatic scheduling, and contextual awareness, these elements lacked a unifying thread that explained why they mattered to younger 
+      users. Honda's mentors encouraged us to rebuild the story around a singular emotional anchor: **what our generation truly desires from automotive technology**.
+      <br />
+      ### Back to the drawing board
+      We went back to the drawing board and re-evaluated our story. There were a couple of key aspects that we realized needed to be changed:
+      <br/>
+      * The model of the car needed to be more **minimalistic** and **futuristic**. We wanted to bring back physical buttons and create a more tactile experience within the car, 
+      but we also needed to make sure that the car felt like it was from the future. If we are not going to dive deep into the story of why the car has a more retro 
+      design during the presentation, we 
+      shouldn't include it in the prototype at all. It will only serve to confuse the audience.
+      * We needed to figure out a way to show why *we* would be attached to our Asimo Insight. Eventually, 
+      we decided to create 3 separate scenes, with each scene representing how the different members of our team would interact with the Asimo Insight.
+      * We were encouraged to push our ideas *even more*. We touched upon implementing AR and changing the lighting in the car, but we didn't could have gone further. 
+      What if the materials themselves were modular and adaptive? The world of AR brings in so many opportunities to create a more immersive experience.
+      * Lastly, we needed to figure out why this is uniquely Honda.
+  </div>
+</PageSection>
+<Gallery
+  imgSrc={[CarOriginal.src, CarMod.src]}
+  alt={["Car Original", "Car Mod"]}
+  uniqueID={["", ""]}
+  caption={["Car Mod"]}
+  ></Gallery>
+<p class="caption">*I modiifed the car model we used to simplify everything, so there are no distractions from the features we wanted our audience to focus on*</p>
+
+<Gallery
+  imgSrc={[ThreeScenes.src]}
+  alt={["3 Scenes"]}
+  uniqueID={["fullImg"]}
+  caption={["3 Scenes"]}
+  ></Gallery>
+<p class="caption">*We drafted out 3 separate scenes to show how our team members would interact with the Asimo Insight and why it matters to us.*</p>
+
+<PageSection>
+  <h2 slot="sectionTitle">Final Video Demonstrations</h2>
+  <div slot="description">
+  <br/>
+  ### Jessica's Asimo Insight: Relaxation + Emotional Intelligence
+  I am a student without a car. Unfortunately, that means I am a bird trapped within a cage, so I take any opportunity I get when I am home to drive my parents' car. 
+  It is not just the freedom that comes with driving that I love, but the fact that the car is one of the few completely isolated spaces I have to myself. I 
+  live in student housing with 3 other roommates, so it is rare to find a space that I can feel is **uniquely mine**.
+  <br/>
+    <div class="video">
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://www.youtube.com/embed/9kBkHJjajJw?si=C9jkWxOGsLcCPHcQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  <br />
+  My Asimo Insight is designed to seamlessly integrate with my **personal data** to respond to **current needs**. It understands that I have been stressed based off of my heartrate, 
+  calendar, and location data, and it uses this information to curate the most effective expereince to calm me down. More importantly, it is able to foster feelings of 
+  nostalgia and help me relive some of my most cherished memories through these experiences. Through connecting me with the people I love, it also **deepens the bond** I 
+  have with my Honda car.
+  <br />
+  ### Demi's Asimo Insight: Road Trip + Pet-Friendly AI
+  Demi loves to go on road trips with her dog. It helps her feel more in the present and provides a break from working too much in the digital world. Unfortunately, 
+  her dog, Bailey, gets really anxious on longer drives, and she often finds herself having to pause or adjust the trip to **make sure Bailey's okay**. 
+  <br/>
+    <div class="video">
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://www.youtube.com/embed/LwG7DrO3Q9k?si=L2fivsFTPqpD0biQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  <br />
+  Demi's Asimo Insight is designed to seamlessly adapt and respond to her pet's needs. It is able to remember Bailey's favorite sounds, scents, and toys, and 
+  it uses this information to create a **personalized experience** for both Demi and Bailey. It understands when Bailey is getting anxious and responds by
+  creating a calming experience. It is also able to take preventative measures to 
+  ensure that Bailey is always comfortable, such as adjusting the temperature and re-routing the trip to avoid bumpy roads.
+  <br />
+  ### Riya + Ezra's Asimo Insight: Safety + Shared Autonomy
+  Riya and Ezra both love to go out on trips with friends. Riya tends to be an anxious driver, so she often has trouble trying to connect and bond with her friends 
+  while driving at the same time. If any unexpected events happen, she often finds herself panicking and worries that she will not be able to handle the situation.
+  <br/>
+    <div class="video">
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://www.youtube.com/embed/ZPSujAbS4Mc?si=mSwVptkr8DZS1Zvh"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  <br />
+  Riya and Ezra's Asimo Insight is designed to help Riya feel more **comfortable and confident** while driving. It is able to take over the driving when Ezra starts 
+  experiencing a medical issue and helps Riya feel more at ease by taking over the driving and providing her with a calming experience through lighting, sound, and 
+  scent. Asimo adapts to Ezra's needs and lies him down, creating a safe space for him to rest.
+  </div>
+</PageSection>
+
+
+
+<LinkToLive
+  links={[
+    "https://github.com/thejellyshroom/rune-wars",
+    "https://www.figma.com/slides/19IgLZbm2nApSwr2CX282P/Honda-Insight-Final-Deck?node-id=58-138&t=LNTImwfoDHF0aVEN-0"
+  ]}
+  buttonText={[`view github files >`, `view presentation slides >`]}
+>
+  <h2 slot="header">Conclusion</h2>
+  <p slot="body">
+    The Asimo Insight is a car that is designed to adapt to each driver's unique needs and preferences. It is a **companion** that grows with you, creating 
+    **lasting bonds** and redefining the car experience. 
+  </p>
+</LinkToLive>
+
+<PageSection>
+<h2 slot="sectionTitle">Reflections</h2>
+<div slot="description">
+    ### The design process can be heartbreaking
+    It was so so unfortunate to see our original video demo not be as successful as we wanted it to be. But, as someone who has been in this field for a while, 
+    I knew it's just how it is. Sometimes, you spend hours working on something, and it just doesn't work out. **Proper communication** is usually the key to success, 
+    but when that isn't possible due to certain circumstances, you'll just have to be able to **adapt and pivot**.
+    <br/>
+
+    ### The life of a swiss army knife is an unfortunate one
+    I have skills in a wide variety of fields, from modeling and art to coding and prototyping. Something I realized early on in this project is that I actually 
+    **work faster on my own**. This isn't something I'd like to be the case, because **teamwork is so incredibly important** to produce good products. Working with others 
+    is just intrinsically fun, and I love being able to bounce ideas off of each other and getting to know my teammates. Unfortunately, it is just faster to find a 
+    model online and modify it to fit my needs than to try and communicate my needs to someone else and and wait for their assets. For example, I may need certain parts of the 
+    mesh separated to create a specific effect, or I may need the Blender animation to be at world origin in order to have the animation work properly in Unity. Much 
+    of this may get lost in translation, especially with the amount of tweaks we had to make rapidly. Trying to communicate these needs to my teammates would have taken significantly longer than just
+    doing it myself. Because I am familiar with the **entire pipeline**, I found myself taking on a lot of the work that I would have otherwise delegated to my teammates.
+    <br/>
+    If I were to do it all over again, I would make sure to **ask more of my teammates**. I still think I would have ended up doing a lot of the work and result 
+    in even more time spent on the project, but I think it would have been a more enjoyable experience. I feel like I didn't get to know my teammates as well as I would have liked, 
+    and that is almost always one of the most rewarding parts of a project.
+
+    <br/>
+    ### Special thanks to...
+    **Demi**, **Ezra**, and **Riya** for being such amazing teammates. Working with you guys was a pleasure, especially since I have never worked with any of you before. It 
+    was lovely getting to know each of your interests and how you all work. 
+
+    <br/>
+    Thank you to the Honda team for being so supportive and providing us with such amazing feedback! Thank you to **Andy**, **Tiffany**, **Jean**, **Mathiew**, and **Patrick** 
+    for being such amazing mentors. Without your support, we would not have been able to present our ideas in such a powerful way.
+
+    <br/>
+    Lastly, thank you to Professors **Carsten** and **Davina**. You have been a tremendous 
+    help in guiding us throughout the entire process, and it would not have been possible to create such a great project without your guidance.
+</div>
+
+</PageSection>
+<br /><br /><br /><br /><br />
+
+</div>

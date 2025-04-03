@@ -29,10 +29,17 @@ h3 {
   font-size: 1.25rem;
 }
 
-p {
+p{
   font-family: "Work Sans";
   line-height: 1.5;
 }
+
+ul, li {
+  font-family: "Work Sans";
+  line-height: 1.5;
+  margin-left: 1.5rem;
+}
+
 
 body {
   color: #333;
