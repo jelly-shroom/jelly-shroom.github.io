@@ -41,6 +41,12 @@ p {
   line-height: 1.5;
 }
 
+ul, li {
+  font-family: "Work Sans";
+  line-height: 1.5;
+  margin-left: 1.5rem;
+}
+
 
 a,
 button,
