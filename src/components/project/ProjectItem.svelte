@@ -90,9 +90,6 @@
     position: relative;
     display: flex;
     align-items: center;
-
-    cursor: pointer;
-
     animation: fadeTransitionIn 0.5s ease-out forwards;
   }
 

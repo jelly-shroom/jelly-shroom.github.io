@@ -50,7 +50,6 @@
 
     border-radius: 10px;
     padding: 1rem;
-    cursor: pointer;
 
     transition: 0.25s;
     color: white;

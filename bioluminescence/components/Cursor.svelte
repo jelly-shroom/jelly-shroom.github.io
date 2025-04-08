@@ -22,6 +22,19 @@
   let idle = false;
 
   class Dot {
+    index: number;
+    anglespeed: number;
+    lockX: number;
+    lockY: number;
+    angleX: number;
+    angleY: number;
+    x: number;
+    y: number;
+    scale: number;
+    range: number;
+    limit: number;
+    element: HTMLSpanElement;
+
     constructor(index = 0) {
       this.index = index;
       this.anglespeed = 0.03;

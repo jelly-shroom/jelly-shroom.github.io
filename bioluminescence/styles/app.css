@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  cursor: none;
 }
 
 h1 {
@@ -41,7 +42,8 @@ p {
   line-height: 1.5;
 }
 
-ul, li {
+ul,
+li {
   font-family: "Work Sans";
   line-height: 1.5;
   margin-left: 1.5rem;
@@ -51,13 +53,10 @@ ul, li {
 a,
 button,
 [role="button"] {
-  cursor: none;
   color: white;
 }
 
 body {
-  cursor: none;
-
   --nav-height: 100px;
   --lightAccent: #5f9e83;
   --darkAccent: #2e8b57;
@@ -79,10 +78,6 @@ a {
   text-decoration: none;
 
   transition: 0.25s;
-}
-
-a:hover {
-  cursor: none;
 }
 
 strong {

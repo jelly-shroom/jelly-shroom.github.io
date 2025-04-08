@@ -44,8 +44,6 @@
     flex-direction: column;
     justify-content: space-between;
 
-    cursor: pointer;
-
     animation: fadeTransitionIn 0.5s ease-out forwards;
     transition: 0.25s;
   }

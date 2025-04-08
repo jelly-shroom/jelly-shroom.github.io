@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  cursor: none;
 }
 
 h1 {
@@ -29,12 +30,13 @@ h3 {
   font-size: 1.25rem;
 }
 
-p{
+p {
   font-family: "Work Sans";
   line-height: 1.5;
 }
 
-ul, li {
+ul,
+li {
   font-family: "Work Sans";
   line-height: 1.5;
   margin-left: 1.5rem;
@@ -53,7 +55,9 @@ body {
   --imageFiller: #d1e3d9;
 }
 
-a {
+a,
+button,
+[role="button"] {
   color: var(--darkAccent);
   text-decoration: none;
 }
@@ -112,7 +116,6 @@ strong {
   border: none;
   border-radius: 10px;
   padding: 1rem;
-  cursor: pointer;
 
   transition: 0.25s;
 }
