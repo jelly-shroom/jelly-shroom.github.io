@@ -256,4 +256,18 @@
     background-color: rgb(255, 255, 255); // Different color to stand out
     pointer-events: none;
   }
+
+  //disable cursor if touch device
+  @media (hover: none) {
+    .cursorBlob,
+    .small-circle {
+      display: none;
+    }
+  }
+  @media (hover: hover) {
+    .cursorBlob,
+    .small-circle {
+      display: block;
+    }
+  }
 </style>

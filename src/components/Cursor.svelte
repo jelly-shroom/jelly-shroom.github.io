@@ -120,4 +120,18 @@
       background-color: rgba(255, 255, 255, 0.1);
     }
   }
+
+  /* //disable cursor if touch device */
+  @media (hover: none) {
+    .outline,
+    .cursor {
+      display: none;
+    }
+  }
+  @media (hover: hover) {
+    .outline,
+    .cursor {
+      display: block;
+    }
+  }
 </style>
