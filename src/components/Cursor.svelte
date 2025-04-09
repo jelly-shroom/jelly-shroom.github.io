@@ -128,10 +128,4 @@
       display: none;
     }
   }
-  @media (hover: hover) {
-    .outline,
-    .cursor {
-      display: block;
-    }
-  }
 </style>

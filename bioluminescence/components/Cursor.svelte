@@ -260,14 +260,9 @@
   //disable cursor if touch device
   @media (hover: none) {
     .cursorBlob,
+    .circle-container,
     .small-circle {
       display: none;
-    }
-  }
-  @media (hover: hover) {
-    .cursorBlob,
-    .small-circle {
-      display: block;
     }
   }
 </style>
