@@ -145,7 +145,7 @@
     let y = mousePosition.y;
 
     if (smallCircle) {
-      smallCircle.style.transform = `translate(${mousePosition.x}px, ${mousePosition.y}px)`;
+      smallCircle.style.transform = `translate(${mousePosition.x}px, ${mousePosition.y}px) translate(-50%, -50%)`;
     }
 
     dots.forEach((dot, index) => {
@@ -200,6 +200,10 @@
 </svg>
 
 <div bind:this={cursorBlob} class="cursorBlob">
+  <!-- Blobs will be created here by the Dot class -->
+</div>
+
+<div class="circle-container">
   <div bind:this={smallCircle} class="small-circle" />
 </div>
 
@@ -235,14 +239,21 @@
     }
   }
 
-  .small-circle {
-    z-index: inherit;
+  .circle-container {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  .small-circle {
     width: 12px; // Smaller size
     height: 12px;
     border-radius: 50%;
     background-color: rgb(255, 255, 255); // Different color to stand out
-    transform-origin: center center;
     pointer-events: none;
   }
 </style>
