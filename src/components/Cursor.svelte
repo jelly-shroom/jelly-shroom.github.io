@@ -17,41 +17,68 @@
   const isTouchDevice =
     "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
-  function moveCursor(e: MouseEvent) {
-    if (isTouchDevice) return;
+  // Store latest mouse coordinates
+  let mouseX = 0;
+  let mouseY = 0;
+  let rafId: number | null = null;
 
-    // Update outline position
-    outline.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
+  // Flag for hover state
+  let isHovered = false;
 
-    // Update cursor position
-    cursor.style.left = `${e.clientX}px`;
-    cursor.style.top = `${e.clientY}px`;
+  function scheduleUpdate(e: MouseEvent) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    // Only schedule an update if one isn't already pending
+    if (!rafId) {
+      rafId = requestAnimationFrame(updatePosition);
+    }
+  }
+
+  function updatePosition() {
+    // Apply styles using the latest coordinates
+    if (outline) {
+      outline.style.transform = `translate(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%))`;
+    }
+
+    // Apply hover styles based on the flag
+    if (outline) {
+      if (isHovered) {
+        outline.style.backgroundColor = expanded_bg;
+        outline.style.width = expanded_size + "px";
+        outline.style.height = expanded_size + "px";
+        outline.style.borderWidth = "2px";
+      } else {
+        outline.style.backgroundColor = original_bg;
+        outline.style.borderWidth = "1px";
+        outline.style.width = original_size + "px";
+        outline.style.height = original_size + "px";
+      }
+    }
+
+    if (cursor) {
+      // Use transform for the inner cursor as well
+      cursor.style.transform = `translate(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%))`;
+    }
+
+    // Allow the next frame to be requested
+    rafId = null;
   }
 
   function onMouseHover() {
-    if (outline) {
-      outline.style.backgroundColor = expanded_bg; // Change background color
-      outline.style.width = expanded_size + "px";
-      outline.style.height = expanded_size + "px";
-      outline.style.backdropFilter = expanded_blur; // Remove blur effect
-      outline.style.borderWidth = "2px"; // Optional: Change border width
-    }
+    isHovered = true;
+    // No need to request update here, mousemove will trigger it
   }
 
   function onMouseHoverOut() {
-    if (outline) {
-      outline.style.backgroundColor = original_bg; // Reset background color
-      outline.style.borderWidth = "1px"; // Optional: Reset border width
-      outline.style.width = original_size + "px";
-      outline.style.height = original_size + "px";
-      outline.style.backdropFilter = original_blur; // Reset blur effect
-    }
+    isHovered = false;
+    // No need to request update here, mousemove will trigger it
   }
   onMount(() => {
     if (isTouchDevice) return;
 
     // Add mouse listeners for movement
-    window.addEventListener("mousemove", moveCursor);
+    window.addEventListener("mousemove", scheduleUpdate);
     outline.style.backgroundColor = original_bg; // Set initial background color
 
     // Add hover effects to all links and hoverable elements
@@ -65,7 +92,10 @@
 
     // Cleanup event listeners when component is destroyed
     return () => {
-      window.removeEventListener("mousemove", moveCursor);
+      window.removeEventListener("mousemove", scheduleUpdate);
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+      }
       hoverableElements.forEach((element) => {
         element.removeEventListener("mouseenter", onMouseHover);
         element.removeEventListener("mouseleave", onMouseHoverOut);
@@ -80,21 +110,20 @@
 <style>
   .outline {
     mix-blend-mode: overlay;
-    width: 50px;
-    height: 50px;
+    width: 50px; /* Original size */
+    height: 50px; /* Original size */
     border-radius: 100%;
-    border: 1px solid #ffffff;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px); /* For Safari support */
+    border: 1px solid #ffffff; /* Original border */
+    background-color: rgba(255, 105, 180, 0.7); /* Original background */
     box-shadow: 0 4px 15px rgba(251, 153, 194, 0.2);
-    transition: all 200ms ease-out;
+    transition: all 200ms ease-out; /* Revert back to all */
     position: fixed;
     pointer-events: none;
     left: 0;
     top: 0;
     transform: translate(calc(-50% + 15px), -50%);
     z-index: 9999;
-    will-change: transform, backdrop-filter; /* Optimize performance */
+    will-change: transform; /* Optimize performance - removed backdrop-filter */
   }
 
   .cursor {
@@ -104,6 +133,8 @@
     background-color: rgb(255, 182, 193); /* Baby pink */
     /* opacity: 0.5; */
     position: fixed;
+    top: 0;
+    left: 0;
     transform: translate(-50%, -50%);
     pointer-events: none;
     transition:
@@ -115,13 +146,6 @@
   }
 
   /* Ensure backdrop-filter works in browsers that support it */
-  @supports (backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px)) {
-    .outline {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-  }
-
-  /* //disable cursor if touch device */
   @media (hover: none) {
     .outline,
     .cursor {

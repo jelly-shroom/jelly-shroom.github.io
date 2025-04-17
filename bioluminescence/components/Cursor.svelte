@@ -133,14 +133,13 @@
   }
 
   function render(timestamp: number) {
-    const delta = timestamp - lastFrame;
-    positioncursorBlob(delta);
+    positioncursorBlob();
 
     lastFrame = timestamp;
     requestAnimationFrame(render);
   }
 
-  function positioncursorBlob(delta: number) {
+  function positioncursorBlob() {
     let x = mousePosition.x;
     let y = mousePosition.y;
 
