@@ -123,7 +123,7 @@
     top: 0;
     transform: translate(calc(-50% + 15px), -50%);
     z-index: 9999;
-    will-change: transform; /* Optimize performance - removed backdrop-filter */
+    will-change: transform, width, height, background-color, border-width; /* Optimize performance */
   }
 
   .cursor {

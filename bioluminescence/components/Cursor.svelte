@@ -227,11 +227,11 @@
     :global(span) {
       position: absolute;
       display: block;
-      width: var(--dot-size);
-      height: var(--dot-size);
+      /* Initial size is now set dynamically in draw() */
       border-radius: 100px;
       background-color: var(--glow-primary);
       transform-origin: center center;
+      will-change: transform, width, height; /* Optimize dot animation */
       transition:
         width 0.3s ease,
         height 0.3s ease; // Add transition for smooth sizing
