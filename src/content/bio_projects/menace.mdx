@@ -3,12 +3,12 @@ title: "Transforming social media to prioritize discovery and community through 
 description: "The current social media landscape isolates users in <strong>echo chambers</strong>, limiting perspectives and understanding. Menace implements a unique navigation system to promote <strong>exploration</strong> of diverse topics and views."
 tags: ["product design", "ui"]
 image: "../../images/covers/Menace.jpg"
-alt: "hidden"
+alt: "menace"
 date: "2/1/2024"
 ---
 import { SEO } from "astro-seo";
-import "../../styles/post.css";
-import Tag from "../../components/Tag.svelte";
+import "../../../bioluminescence/styles/post.css";
+import Tag from "../../../bioluminescence/components/Tag.svelte";
 
 import KeyIdea from "../../images/menace/KeyIdea.png";
 import ClientColorPalette from "../../images/menace/ClientColorPalette.jpg";
@@ -33,13 +33,13 @@ import Display1 from "../../images/menace/Display1.jpg";
 import Display3 from "../../images/menace/Display3.jpg";
 import Display4 from "../../images/menace/Display4.jpg";
 
-import Overview from "../../components/post/Overview.svelte";
-import ProblemSolutionStatement from "../../components/post/ProblemSolutionStatement.svelte";
-import PageSection from "../../components/post/PageSection.svelte";
-import Gallery from "../../components/post/Gallery.svelte";
-import ProjectShowcase from "../../components/post/ProjectShowcase.svelte";
-import Typography from "../../components/post/Typography.svelte";
-import ColorPalette from "../../components/post/ColorPalette.svelte";
+import Overview from "../../../bioluminescence/components/post/Overview.svelte";
+import ProblemSolutionStatement from "../../../bioluminescence/components/post/ProblemSolutionStatement.svelte";
+import PageSection from "../../../bioluminescence/components/post/PageSection.svelte";
+import Gallery from "../../../bioluminescence/components/post/Gallery.svelte";
+import ProjectShowcase from "../../../bioluminescence/components/post/ProjectShowcase.svelte";
+import Typography from "../../../bioluminescence/components/post/Typography.svelte";
+import ColorPalette from "../../../bioluminescence/components/post/ColorPalette.svelte";
 
 <SEO
   title="Jessica Sheng - Menace"
@@ -54,10 +54,9 @@ import ColorPalette from "../../components/post/ColorPalette.svelte";
   }}
 />
 
-<div class="bannerImgCover">
-  <img src={CoverImage.src} alt="Menace" />
-</div>
 <div class="caseStudy">
+  <img src={CoverImage.src} alt="Menace" class="fullImgCover" />
+
 <Overview
   year="2024"
   tags={["contract", "duration - 5 weeks", "team size - 4", "tools - figma, procreate", "role - UI/UX designer, product lead"]}
