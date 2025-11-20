@@ -25,7 +25,8 @@
           d="M4.17 49.14a1.5 1.5 0 0 1-1-2.62l18.4-16.41a1.5 1.5 0 0 1 2 2.24L5.17 48.76a1.46 1.46 0 0 1-1 .38zm55.66 0a1.46 1.46 0 0 1-1-.38l-18.4-16.41a1.5 1.5 0 1 1 2-2.24l18.39 16.41a1.5 1.5 0 0 1-1 2.62z"
         ></path></svg
       >jlsheng@usc.edu</a
-    >
+    >    <a href="https://jellyshroom.com" target="_blank">v2: jellyshroom.com</a>
+
   </div>
 </div>
 

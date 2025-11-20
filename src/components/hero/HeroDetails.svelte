@@ -26,6 +26,7 @@
         ></path></svg
       >jlsheng@usc.edu</a
     >
+    <a href="https://jellyshroom.com" target="_blank">v2: jellyshroom.com</a>
   </div>
 </div>
 
