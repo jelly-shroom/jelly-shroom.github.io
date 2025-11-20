@@ -4,6 +4,7 @@ import Particles from "../components/Particles.svelte";
 import Navbar from "../components/Navbar.astro";
 import Cursor from "../components/Cursor.svelte";
 import ToggleButton from "../components/VersionToggle.astro";
+import VersionModal from "../components/VersionModal.svelte";
 
 import "../styles/app.css";
 import "../styles/fonts.css";
@@ -23,6 +24,7 @@ import "../styles/fonts.css";
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>
+    <VersionModal client:load />
     <ToggleButton />
     <Navbar />
     <div id="container">
